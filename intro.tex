@@ -4,241 +4,259 @@
 \chapter{Introduction}
 \label{ch:Introduction}
 
-\begin{epigraph}
-    \emph{If I have seen farther it is by standing on the shoulders of
-    Giants.} ---~Sir Isaac Newton (1855)
-\end{epigraph}
+%\begin{epigraph}
+ %   \emph{If I have seen farther it is by standing on the shoulders of
+  %  Giants.} ---~Sir Isaac Newton (1855)
+%\end{epigraph}
 
-This document provides a quick set of instructions for using the
-\class{ubcdiss} class to write a dissertation in \LaTeX. 
-Unfortunately this document cannot provide an introduction to using
-\LaTeX.  The classic reference for learning \LaTeX\ is
-\citeauthor{lamport-1994-ladps}'s
-book~\cite{lamport-1994-ladps}.  There are also many freely-available
-tutorials online;
-\webref{http://www.andy-roberts.net/misc/latex/}{Andy Roberts' online
-    \LaTeX\ tutorials}
-seems to be excellent.
-The source code for this docment, however, is intended to serve as
-an example for creating a \LaTeX\ version of your dissertation.
+%This document provides a quick set of instructions for using the
+%\class{ubcdiss} class to write a dissertation in \LaTeX. 
+%Unfortunately this document cannot provide an introduction to using
+%\LaTeX.  The classic reference for learning \LaTeX\ is
+%\citeauthor{lamport-1994-ladps}'s
+%book~\cite{lamport-1994-ladps}.  There are also many freely-available
+%tutorials online;
+%\webref{http://www.andy-roberts.net/misc/latex/}{Andy Roberts' online
+ %   \LaTeX\ tutorials}
+%seems to be excellent.
+%The source code for this docment, however, is intended to serve as
+%an example for creating a \LaTeX\ version of your dissertation.
 
-We start by discussing organizational issues, such as splitting
-your dissertation into multiple files, in
-\autoref{sec:SuggestedThesisOrganization}.
-We then cover the ease of managing cross-references in \LaTeX\ in
-\autoref{sec:CrossReferences}.
-We cover managing and using bibliographies with \BibTeX\ in
-\autoref{sec:BibTeX}. 
-We briefly describe typesetting attractive tables in
-\autoref{sec:TypesettingTables}.
-We briefly describe including external figures in
-\autoref{sec:Graphics}, and using special characters and symbols
-in \autoref{sec:SpecialSymbols}.
-As it is often useful to track different versions of your dissertation,
-we discuss revision control further in
-\autoref{sec:DissertationRevisionControl}. 
-We conclude with pointers to additional sources of information in
-\autoref{sec:Conclusions}.
+%We start by discussing organizational issues, such as splitting
+%your dissertation into multiple files, in
+%\autoref{sec:SuggestedThesisOrganization}.
+%We then cover the ease of managing cross-references in \LaTeX\ in
+%\autoref{sec:CrossReferences}.
+%We cover managing and using bibliographies with \BibTeX\ in
+%\autoref{sec:BibTeX}. 
+%We briefly describe typesetting attractive tables in
+%\autoref{sec:TypesettingTables}.
+%We briefly describe including external figures in
+%\autoref{sec:Graphics}, and using special characters and symbols
+%in \autoref{sec:SpecialSymbols}.
+%As it is often useful to track different versions of your dissertation,
+%we discuss revision control further in
+%\autoref{sec:DissertationRevisionControl}. 
+%We conclude with pointers to additional sources of informat%ion in
+%\autoref{sec:Conclusions}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Suggested Thesis Organization}
-\label{sec:SuggestedThesisOrganization}
-
-The \acs{UBC} \acf{FoGS} specifies a particular arrangement of the
-components forming a thesis.\footnote{See
-    \url{http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/order-components}}
-This template reflects that arrangement.
-
-In terms of writing your thesis, the recommended best practice for
-organizing large documents in \LaTeX\ is to place each chapter in
-a separate file.  These chapters are then included from the main
-file through the use of \verb+\include{file}+.  A thesis might
-be described as six files such as \file{intro.tex},
-\file{relwork.tex}, \file{model.tex}, \file{eval.tex},
-\file{discuss.tex}, and \file{concl.tex}.
-
-We also encourage you to use macros for separating how something
-will be typeset (\eg bold, or italics) from the meaning of that
-something. 
-For example, if you look at \file{intro.tex}, you will see repeated
-uses of a macro \verb+\file{}+ to indicate file names.
-The \verb+\file{}+ macro is defined in the file \file{macros.tex}.
-The consistent use of \verb+\file{}+ throughout the text not only
-indicates that the argument to the macro represents a file (providing
-meaning or semantics), but also allows easily changing how
-file names are typeset simply by changing the definition of the
-\verb+\file{}+ macro.
-\file{macros.tex} contains other useful macros for properly typesetting
-things like the proper uses of the latinate \emph{exempli grati\={a}}
-and \emph{id est} (\ie \verb+\eg+ and \verb+\ie+), 
-web references with a footnoted \acs{URL} (\verb+\webref{url}{text}+),
-as well as definitions specific to this documentation
-(\verb+\latexpackage{}+).
+Scales of the lower Convective Boundary Layer are well known.  Much work has been done on those of the Entrainment Region but it does not seem to have been as yet organized in the form of a scaling diagram.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Making Cross-References}
-\label{sec:CrossReferences}
+\section{Why do we care about Convective Boundary Layer Scales}
+\label{sec:WhydowecareaboutConvectiveBoundaryLayerScales}
 
-\LaTeX\ make managing cross-references easy, and the \latexpackage{hyperref}
-package's\ \verb+\autoref{}+ command\footnote{%
-    The \latexpackage{hyperref} package is included by default in this
-    template.}
-makes it easier still. 
+In general scales enable simplification of the expressions that describe a process by elimination 
+of deemed insignificant terms, getting rid of units and reducing magnitude to order 1.\\
 
-A thing to be cross-referenced, such as a section, figure, or equation,
-is \emph{labelled} using a unique, user-provided identifier, defined
-using the \verb+\label{}+ command.  
-The thing is referenced elsewhere using the \verb+\autoref{}+ command.
-For example, this section was defined using:
-\begin{lstlisting}
-    \section{Making Cross-References}
-    \label{sec:CrossReferences}
-\end{lstlisting}
-References to this section are made as follows:
-\begin{lstlisting}
-    We then cover the ease of managing cross-references in \LaTeX\
-    in \autoref{sec:CrossReferences}.
-\end{lstlisting}
-\verb+\autoref{}+ takes care of determining the \emph{type} of the 
-thing being referenced, so the example above is rendered as
-\begin{quote}
-    We then cover the ease of managing cross-references in \LaTeX\
-    in \autoref{sec:CrossReferences}.
-\end{quote}
+They enable parametrisations?  Need to find out about this or come up with nice way to say it.\\
 
-The label is any simple sequence of characters, numbers, digits,
-and some punctuation marks such as ``:'' and ``--''; there should
-be no spaces.  Try to use a consistent key format: this simplifies
-remembering how to make references.  This document uses a prefix
-to indicate the type of the thing being referenced, such as \texttt{sec}
-for sections, \texttt{fig} for figures, \texttt{tbl} for tables,
-and \texttt{eqn} for equations.
+  
+%The \acs{UBC} \acf{FoGS} specifies a particular arrangement of the
+%components forming a thesis.\footnote{See
+ %   \url{http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/order-components}}
+%This template reflects that arrangement.
 
-For details on defining the text used to describe the type
-of \emph{thing}, search \file{diss.tex} and the \latexpackage{hyperref}
-documentation for \texttt{autorefname}.
+%In terms of writing your thesis, the recommended best practice for
+%organizing large documents in \LaTeX\ is to place each chapter in
+%a separate file.  These chapters are then included from the main
+%file through the use of \verb+\include{file}+.  A thesis might
+%be described as six files such as \file{intro.tex},
+%\file{relwork.tex}, \file{model.tex}, \file{eval.tex},
+%\file{discuss.tex}, and \file{concl.tex}.
+
+%We also encourage you to use macros for separating how something
+%will be typeset (\eg bold, or italics) from the meaning of that
+%something. 
+%For example, if you look at \file{intro.tex}, you will see repeated
+%uses of a macro \verb+\file{}+ to indicate file names.
+%The \verb+\file{}+ macro is defined in the file \file{macros.tex}.
+%The consistent use of \verb+\file{}+ throughout the text not only
+%indicates that the argument to the macro represents a file (providing
+%meaning or semantics), but also allows easily changing how
+%file names are typeset simply by changing the definition of the
+%\verb+\file{}+ macro.
+%\file{macros.tex} contains other useful macros for properly typesetting
+%things like the proper uses of the latinate \emph{exempli grati\={a}}
+%and \emph{id est} (\ie \verb+\eg+ and \verb+\ie+), 
+%web references with a footnoted \acs{URL} (\verb+\webref{url}{text}+),
+%as well as definitions specific to this documentation
+%(\verb+\latexpackage{}+).
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Managing Bibliographies with \BibTeX}
-\label{sec:BibTeX}
+\section{Scales of the Connvective Boundary Layer}
+\label{sec:ScalesoftheConnvectiveBoundaryLayer}
+The convective boundary layer is turbulent due to convection.\\
 
-One of the primary benefits of using \LaTeX\ is its companion program,
-\BibTeX, for managing bibliographies and citations.  Managing
-bibliographies has three parts: (i) describing references,
-(ii)~citing references, and (iii)~formatting cited references.
+The dry case in the absence of horizontal winds.\\
 
-\subsection{Describing References}
+Important Scales: Monin Obvukov length, Richardson number, $\frac{h}{L}$
 
-\BibTeX\ defines a standard format for recording details about a
-reference.  These references are recorded in a file with a
-\file{.bib} extension.  \BibTeX\ supports a broad range of
-references, such as books, articles, items in a conference proceedings,
-chapters, technical reports, manuals, dissertations, and unpublished
-manuscripts. 
-A reference may include attributes such as the authors,
-the title, the page numbers, the \ac{DOI}, or a \ac{URL}.  A reference
-can also be augmented with personal attributes, such as a rating,
-notes, or keywords.
+scaling diagrams for the boundary layer.\\
+ 
+%\LaTeX\ make managing cross-references easy, and the \latexpackage{hyperref}
+%package's\ \verb+\autoref{}+ command\footnote{%
+ %   The \latexpackage{hyperref} package is included by default in this
+ 
+%   template.}
+%makes it easier still. 
 
-Each reference must be described by a unique \emph{key}.\footnote{%
-    Note that the citation keys are different from the reference
-    identifiers as described in \autoref{sec:CrossReferences}.}
-A key is a simple sequence of characters, numbers, digits, and some
-punctuation marks such as ``:'' and ``--''; there should be no spaces. 
-A consistent key format simiplifies remembering how to make references. 
-For example:
-\begin{quote}
-   \fbox{\emph{last-name}}\texttt{-}\fbox{\emph{year}}\texttt{-}\fbox{\emph{contracted-title}}
-\end{quote}
-where \emph{last-name} represents the last name for the first author,
-and \emph{contracted-title} is some meaningful contraction of the
-title.  Then \citeauthor{kiczales-1997-aop}'s seminal article on
-aspect-oriented programming~\cite{kiczales-1997-aop} (published in
-\citeyear{kiczales-1997-aop}) might be given the key
-\texttt{kiczales-1997-aop}.
+%A thing to be cross-referenced, such as a section, figure, or equation,
+%is \emph{labelled} using a unique, user-provided identifier, defined
+%using the \verb+\label{}+ command.  
+%The thing is referenced elsewhere using the \verb+\autoref{}+ command.
+%For example, this section was defined using:
+%\begin{lstlisting}
+%    \section{Making Cross-References}
+ %   \label{sec:CrossReferences}
+%\end{lstlisting}
+%References to this section are made as follows:
+%\begin{lstlisting}
+ %   We then cover the ease of managing cross-references in \LaTeX\
+  %  in \autoref{sec:CrossReferences}.
+%\end{lstlisting}
+%\verb+\autoref{}+ takes care of determining the \emph{type} of the 
+%thing being referenced, so the example above is rendered as
+%\begin{quote}
+%    We then cover the ease of managing cross-references in \LaTeX\
+%    in \autoref{sec:CrossReferences}.
+%\end{quote}
 
-An example of a \BibTeX\ \file{.bib} file is included as
-\file{biblio.bib}.  A description of the format a \file{.bib}
-file is beyond the scope of this document.  We instead encourage
-you to use one of the several reference managers that support the
-\BibTeX\ format such as
-\webref{http://jabref.sourceforge.net}{JabRef} (multiple platforms) or
-\webref{http://bibdesk.sourceforge.net}{BibDesk} (MacOS\,X only). 
-These front ends are similar to reference manages such as
-EndNote or RefWorks.
+%The label is any simple sequence of characters, numbers, digits,
+%and some punctuation marks such as ``:'' and ``--''; there should
+%be no spaces.  Try to use a consistent key format: this simplifies
+%remembering how to make references.  This document uses a prefix
+%to indicate the type of the thing being referenced, such as \texttt{sec}
+%for sections, \texttt{fig} for figures, \texttt{tbl} for tables,
+%and \texttt{eqn} for equations.
+
+%For details on defining the text used to describe the type
+%of \emph{thing}, search \file{diss.tex} and the \latexpackage{hyperref}
+%documentation for \texttt{autorefname}.
 
 
-\subsection{Citing References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scales for the Entrainmnet Region}
+\label{sec:ScalesfortheEntrainmnetRegion}
 
-Having described some references, we then need to cite them.  We
-do this using a form of the \verb+\cite+ command.  For example:
-\begin{lstlisting}
-    \citet{kiczales-1997-aop} present examples of crosscutting 
-    from programs written in several languages.
-\end{lstlisting}
-When processed, the \verb+\citet+ will cause the paper's authors
-and a standardized reference to the paper to be inserted in the
-document, and will also include a formatted citation for the paper
-in the bibliography.  For example:
-\begin{quote}
-    \citet{kiczales-1997-aop} present examples of crosscutting 
-    from programs written in several languages.
-\end{quote}
-There are several forms of the \verb+\cite+ command (provided
-by the \latexpackage{natbib} package), as demonstrated in
-\autoref{tbl:natbib:cite}.
-Note that the form of the citation (numeric or author-year) depends
-on the bibliography style (described in the next section).
-The \verb+\citet+ variant is used when the author names form
-an object in the sentence, whereas the \verb+\citep+ variant
-is used for parenthetic references, more like an end-note.
-\begin{table}
-\caption{Available \texttt{cite} variants; the exact citation style
-    depends on whether the bibliography style is numeric or author-year.}
-\label{tbl:natbib:cite}
-\centering
-\begin{tabular}{lp{3.25in}}\toprule
-Variant & Result \\
-\midrule
+%One of the primary benefits of using \LaTeX\ is its companion program,
+%\BibTeX, for managing bibliographies and citations.  Managing
+%bibliographies has three parts: (i) describing references,
+%(ii)~citing references, and (iii)~formatting cited references.
+
+%\subsection{Describing References}
+
+%\BibTeX\ defines a standard format for recording details about a
+%reference.  These references are recorded in a file with a
+%\file{.bib} extension.  \BibTeX\ supports a broad range of
+%references, such as books, articles, items in a conference proceedings,
+%chapters, technical reports, manuals, dissertations, and unpublished
+%manuscripts. 
+%A reference may include attributes such as the authors,
+%the title, the page numbers, the \ac{DOI}, or a \ac{URL}.  A reference
+%can also be augmented with personal attributes, such as a rating,
+%notes, or keywords.
+
+%Each reference must be described by a unique \emph{key}.\footnote{%
+ %   Note that the citation keys are different from the reference
+  %  identifiers as described in \autoref{sec:CrossReferences}.}
+%A key is a simple sequence of characters, numbers, digits, and some
+%punctuation marks such as ``:'' and ``--''; there should be no spaces. 
+%A consistent key format simiplifies remembering how to make references. 
+%For example:
+%\begin{quote}
+ %  \fbox{\emph{last-name}}\texttt{-}\fbox{\emph{year}}\texttt{-}\fbox{\emph{contracted-title}}
+%\end{quote}
+%where \emph{last-name} represents the last name for the first author,
+%and \emph{contracted-title} is some meaningful contraction of the
+%title.  Then \citeauthor{kiczales-1997-aop}'s seminal article on
+%aspect-oriented programming~\cite{kiczales-1997-aop} (published in
+%\citeyear{kiczales-1997-aop}) might be given the key
+%\texttt{kiczales-1997-aop}.
+
+%An example of a \BibTeX\ \file{.bib} file is included as
+%\file{biblio.bib}.  A description of the format a \file{.bib}
+%file is beyond the scope of this document.  We instead encourage
+%you to use one of the several reference managers that support the
+%\BibTeX\ format such as
+%\webref{http://jabref.sourceforge.net}{JabRef} (multiple platforms) or
+%\webref{http://bibdesk.sourceforge.net}{BibDesk} (MacOS\,X only). 
+%These front ends are similar to reference manages such as
+%EndNote or RefWorks.
+
+
+%\subsection{Citing References}
+
+%Having described some references, we then need to cite them.  We
+%do this using a form of the \verb+\cite+ command.  For example:
+%\begin{lstlisting}
+%    \citet{kiczales-1997-aop} present examples of crosscutting 
+%    from programs written in several languages.
+%\end{lstlisting}
+%When processed, the \verb+\citet+ will cause the paper's authors
+%and a standardized reference to the paper to be inserted in the
+%document, and will also include a formatted citation for the paper
+%in the bibliography.  For example:
+%\begin{quote}
+%    \citet{kiczales-1997-aop} present examples of crosscutting 
+%    from programs written in several languages.
+%\end{quote}
+%There are several forms of the \verb+\cite+ command (provided
+%by the \latexpackage{natbib} package), as demonstrated in
+%\autoref{tbl:natbib:cite}.
+%Note that the form of the citation (numeric or author-year) depends
+%on the bibliography style (described in the next section).
+%The \verb+\citet+ variant is used when the author names form
+%an object in the sentence, whereas the \verb+\citep+ variant
+%is used for parenthetic references, more like an end-note.
+%\begin{table}
+%\caption{Available \texttt{cite} variants; the exact citation style
+%    depends on whether the bibliography style is numeric or author-year.}
+%\label{tbl:natbib:cite}
+%\centering
+%\begin{tabular}{lp{3.25in}}\toprule
+%Variant & Result \\
+%\midrule
 % We cheat here to simulate the cite/citep/citet for APA-like styles
-\verb+\cite+ & Parenthetical citation (\eg ``\cite{kiczales-1997-aop}''
-    or ``(\citeauthor{kiczales-1997-aop} \citeyear{kiczales-1997-aop})'') \\
-\verb+\citet+ & Textual citation: includes author (\eg
-    ``\citet{kiczales-1997-aop}'' or
-    or ``\citeauthor{kiczales-1997-aop} (\citeyear{kiczales-1997-aop})'') \\
-\verb+\citet*+ & Textual citation with unabbreviated author list \\
-\verb+\citealt+ & Like \verb+\citet+ but without parentheses \\
-\verb+\citep+ & Parenthetical citation (\eg ``\cite{kiczales-1997-aop}''
-    or ``(\citeauthor{kiczales-1997-aop} \citeyear{kiczales-1997-aop})'') \\
-\verb+\citep*+ & Parenthetical citation with unabbreviated author list \\
-\verb+\citealp+ & Like \verb+\citep+ but without parentheses \\
-\verb+\citeauthor+ & Author only (\eg ``\citeauthor{kiczales-1997-aop}'') \\
-\verb+\citeauthor*+ & Unabbreviated authors list 
-    (\eg ``\citeauthor*{kiczales-1997-aop}'') \\
-\verb+\citeyear+ & Year of citation (\eg ``\citeyear{kiczales-1997-aop}'') \\
-\bottomrule
-\end{tabular}
-\end{table}
+%\verb+\cite+ & Parenthetical citation (\eg ``\cite{kiczales-1997-aop}''
+ %   or ``(\citeauthor{kiczales-1997-aop} \citeyear{kiczales-1997-aop})'') \\
+%\verb+\citet+ & Textual citation: includes author (\eg
+ %   ``\citet{kiczales-1997-aop}'' or
+%    or ``\citeauthor{kiczales-1997-aop} (\citeyear{kiczales-1997-aop})'') \\
+%\verb+\citet*+ & Textual citation with unabbreviated author list \\
+%\verb+\citealt+ & Like \verb+\citet+ but without parentheses \\
+%\verb+\citep+ & Parenthetical citation (\eg ``\cite{kiczales-1997-aop}''
+%    or ``(\citeauthor{kiczales-1997-aop} \citeyear{kiczales-1997-aop})'') \\
+%\verb+\citep*+ & Parenthetical citation with unabbreviated author list \\
+%\verb+\citealp+ & Like \verb+\citep+ but without parentheses \\
+%\verb+\citeauthor+ & Author only (\eg ``\citeauthor{kiczales-1997-aop}'') \\
+%\verb+\citeauthor*+ & Unabbreviated authors list 
+%    (\eg ``\citeauthor*{kiczales-1997-aop}'') \\
+%\verb+\citeyear+ & Year of citation (\eg ``\citeyear{kiczales-1997-aop}'') \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
 
-\subsection{Formatting Cited References}
+%\subsection{Formatting Cited References}
 
-\BibTeX\ separates the citing of a reference from how the cited
-reference is formatted for a bibliography, specified with the
-\verb+\bibliographystyle+ command. 
-There are many varieties, such as \texttt{plainnat}, \texttt{abbrvnat},
-\texttt{unsrtnat}, and \texttt{vancouver}.
-This document was formatted with \texttt{abbrvnat}.
-Look through your \TeX\ distribution for \file{.bst} files. 
-Note that use of some \file{.bst} files do not emit all the information
-necessary to properly use \verb+\citet{}+, \verb+\citep{}+,
-\verb+\citeyear{}+, and \verb+\citeauthor{}+.
+%\BibTeX\ separates the citing of a reference from how the cited
+%reference is formatted for a bibliography, specified with the
+%\verb+\bibliographystyle+ command. 
+%There are many varieties, such as \texttt{plainnat}, \texttt{abbrvnat},
+%\texttt{unsrtnat}, and \texttt{vancouver}.
+%This document was formatted with \texttt{abbrvnat}.
+%Look through your \TeX\ distribution for \file{.bst} files. 
+%Note that use of some \file{.bst} files do not emit all the information
+%necessary to properly use \verb+\citet{}+, \verb+\citep{}+,
+%\verb+\citeyear{}+, and \verb+\citeauthor{}+.
 
-There are also packages available to place citations on a per-chapter
-basis (\latexpackage{bibunits}), as footnotes (\latexpackage{footbib}),
-and inline (\latexpackage{bibentry}).
-Those who wish to exert maximum control over their bibliography
-style should see the amazing \latexpackage{custom-bib} package.
+%There are also packages available to place citations on a per-chapter
+%basis (\latexpackage{bibunits}), as footnotes (\latexpackage{footbib}),
+%and inline (\latexpackage{bibentry}).
+%Those who wish to exert maximum control over their bibliography
+%style should see the amazing \latexpackage{custom-bib} package.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Typesetting Tables}
