@@ -3,7 +3,127 @@
 
 \chapter{Introduction}
 \label{ch:Introduction}
+\setlength{\parindent}{0cm}
+Scales of the lower Convective Boundary Layer are well known.  Much work has been done on those of the Entrainment Region but it does not seem to have been as yet organized in the form of a scaling diagram. This thesis will focus on the dry convective case.  
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Why do we care about Convective Boundary Layer and Entrainment Scales}
+\label{sec:WhydowecareaboutConvectiveBoundaryLayerScales}
+
+Scaling simplifies expressions that describe a process by: elimination of deemed insignificant terms, 
+getting rid of units and reducing magnitude to O(1).\\
+
+Robust scales enable prediction and parametrisations of one set of phenomena in models whose focus is
+of a different scale.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scales of the Convective Boundary Layer}
+\label{sec:ScalesoftheConnvectiveBoundaryLayer}
+
+\subsection{Similarity Theory per Rolands Book.  What is similarity theory.  Outline the main ones for the CBL.} 
+
+Under a number of sets of conditions The Atmospheric Boundary Layer (ABL) exhibits predictable behavior
+and key variables can be identified from which dimensionless groups and scales are formed, 
+and parametrizations derived.
+ 
+One of such, the Convective Boundary Layer (CBL), is known to be driven by convection resulting from 
+suface heat flux ($\overline{w^{'}\theta^{'}}_{s}$).  It has a time varying height (h) at which turbulent
+kinetic energy (TKE), and tracer concentrations (c) sharply decrease and potential temperature ($\theta$)
+increases to $h \gamma$ where $\gamma$ is the lapse rate of the stable layer above.  Growth of the layer
+is driven by $\overline{w^{'}\theta^{'}}_{s}$ and impeded by $\gamma$ or, as in the case of interest here,
+the potential temperature inversion jump ($\Delta \theta$).  $Delta \theta$ is effectively strengthened
+by subsidence $W_{s}$ under anticyclonic conditions; warm dry advects downwards, reducing cloud formation
+and clearing the way for solar radiation.\\
+ 
+(Monin-Obvukhov - Surface Similarity)
+The surface layer is usually defined as the layer where the fluxes vary less than 10 percent of their 
+magitude with height so variables are simplified by representing them at one height ie the surface ($z_{0}$).
+Here the TKE is from both Convection and The Flux Richardson number, $R_{f}$ is a well established
+dimensionless stability parameter and is obtained by taking the Bouancy term over the negative of the Shear 
+term in the TKE equation:\\
+
+$R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u_{i}^{,}u_{j}^{'}} \right) \frac{\partial \overline{U_{i}}}{\partial x_{j}}}$ \\
+
+Assuming horizontal homogenaeity and ignoring the large scale vertical motions this is reduced to:\\
+
+$R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u^{,}w^{'}} \right) 
+\frac{\partial \overline{U}}{\partial z} + \left(\overline{v^{,}w^{'}} \right) \frac{\partial \overline{V}}{\partial z}}$ \\
+
+In the (neutral? need to check with Phil if this applies to CBL) surface layer the shear and stability terms can be nondimentionalized:\\
+
+$\psi_{M} = \frac{\partial M}{\partial z}\frac{kz}{u_{*}}, \psi_{M} = \frac{\partial \theta}{\partial z}\frac{kz}{\theta_{*}}$\\
+
+and $\psi_{M} = 1$\\
+
+and first order closure gives:\\
+
+$\left( \overline{w^{'}\theta^{'}} \right) = K_{H} \frac{\partial \overline{\theta}}{\partial z} = u_{*} \theta_{*}$ 
+and $\left( \overline{w^{'} u^{'}} \right) = K_{M} \frac{\partial M}{\partial z} = u_{*}^{2}$\\
+
+This scaling is applied to the denominator of $Ri_{f}$\\ giving
+
+$\frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{u_{*}^{2}  \frac{\partial \overline{M}}{\partial z}}$\\
+
+and the windshear is exchaged with its dimensionless form above.  Rearranging gives\\
+
+$z \left( \frac{kg \left( \overline{w^{'} \theta^{'}} \right) }{\overline{\theta} u_{*}^{3}} \right) = -\frac{z}{L} = \xi$      
+
+a commonly used dimensionless stability parameter for the neutral surface layer (need to verify with Phil that this applies in CBL).
+In the CBL, L becomes small as convective turbulence dominates and feels the surface more than the inversion.  Local free convection
+scales become important (Need to ask Douw Phil about relevence of L, and scaling diagram in my case)\\
+
+(Mixed Layer Similarity)\\
+
+In the Mixed Layer (ML) the convective turbulence is driven by the surface heat flux ($\overline{w^{'}\theta^{'}}_{0}$), the mixed layer 
+temperature ($\overline{\theta}$) and is impeded by the inversion or stable lapse rate above (ie h).   
+\cite{Stull-BLMetIntro}
+
+\subsection{scaling diagrams for the boundary layer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Scales for the Entrainment Region}
+\label{sec:ScalesfortheEntrainmnetRegion}
+
+\subsection{Boundary Layer Growth (Entrainment) Rate $W_{e}$}
+
+\subsection{What is the Entrainment Region} 
+Define it in terms of the average profile potential temperature and flux.
+
+Define in it terms of individual plumes, their local entrainment regions, and then in terms of the local height distributions.\\
+
+\subsection{Buoyancy Richardson Number and S}
+
+Talk about and maybe go through example of how richardson number is arrived at from nondimensionalizing an equation -- I think there's an old reference to help with this.Maybe Deardorf79/78?\\
+
+Where does S come frome?
+
+\subsection{Relating $Ri_{b}$, $S$ to Scales and Statistics}
+Relate $Ri$ to $S$\\
+
+\section{Research Goals}
+\label{sec:ResearchGoals}
+
+\subsection{How do the Flux and theta definitions of h and $\Delta h$ relate to eachother}
+
+Define entrainment zone in terms of average profile.\\
+
+\subsection{How do the Distributions of h behave and resulting definitions compare with those from the average profile}
+
+\subsection{Does the Scaling Diagram Accurately Represent the Entrainment Zone}
+
+Rolands study and explaination of the $L$ estimate and how $-\frac{h}{L}$ progresses throughout\\
+the day.\\
+
+\subsection{At higher resolution and more data points can previous relationships to scales/statistics and S and Ri be verified}
+
+
+
+\endinput
+
+Any text after an \endinput is ignored.
+You could put scraps here or things in progress.
 %\begin{epigraph}
  %   \emph{If I have seen farther it is by standing on the shoulders of
   %  Giants.} ---~Sir Isaac Newton (1855)
@@ -40,17 +160,6 @@
 %We conclude with pointers to additional sources of informat%ion in
 %\autoref{sec:Conclusions}.
 
-Scales of the lower Convective Boundary Layer are well known.  Much work has been done on those of the Entrainment Region but it does not seem to have been as yet organized in the form of a scaling diagram.  
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Why do we care about Convective Boundary Layer Scales}
-\label{sec:WhydowecareaboutConvectiveBoundaryLayerScales}
-
-In general scales enable simplification of the expressions that describe a process by elimination 
-of deemed insignificant terms, getting rid of units and reducing magnitude to order 1.\\
-
-They enable parametrisations?  Need to find out about this or come up with nice way to say it.\\
-
   
 %The \acs{UBC} \acf{FoGS} specifies a particular arrangement of the
 %components forming a thesis.\footnote{See
@@ -83,18 +192,6 @@ They enable parametrisations?  Need to find out about this or come up with nice 
 %as well as definitions specific to this documentation
 %(\verb+\latexpackage{}+).
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scales of the Connvective Boundary Layer}
-\label{sec:ScalesoftheConnvectiveBoundaryLayer}
-The convective boundary layer is turbulent due to convection.\\
-
-The dry case in the absence of horizontal winds.\\
-
-Important Scales: Monin Obvukov length, Richardson number, $\frac{h}{L}$
-
-scaling diagrams for the boundary layer.\\
  
 %\LaTeX\ make managing cross-references easy, and the \latexpackage{hyperref}
 %package's\ \verb+\autoref{}+ command\footnote{%
@@ -135,18 +232,3 @@ scaling diagrams for the boundary layer.\\
 %For details on defining the text used to describe the type
 %of \emph{thing}, search \file{diss.tex} and the \latexpackage{hyperref}
 %documentation for \texttt{autorefname}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scales for the Entrainmnet Region}
-\label{sec:ScalesfortheEntrainmnetRegion}
-
-A literature review?\\
-
-Talk about and maybe go through example of how richardson number is arrived at from nondimensionalizing an equation -- I think there's an old reference to help with this.Maybe Deardorf79/78?\\
-
-
-\endinput
-
-Any text after an \endinput is ignored.
-You could put scraps here or things in progress.
