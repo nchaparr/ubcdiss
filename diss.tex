@@ -368,7 +368,7 @@
 \textspacing		% begin one-half or double spacing
 
 %   10. Acknowledgements (optional)
-\include{ack}
+%\include{ack}
 
 %   11. Dedication (optional)
 
@@ -378,15 +378,13 @@
 \acresetall	% reset all acronyms used so far
 
 %    1. Introduction
-\include{intro}
-
-\include{methods}
-
-\include{results}
+%\include{intro}
 
 %    2. Main body
 % Generally recommended to put each chapter into a separate file
 %\include{relatedwork}
+%\include{methods}
+%\include{results}
 %\include{model}
 %\include{impl}
 %\include{discussion}
@@ -398,8 +396,11 @@
 %    5. Bibliography
 \begin{singlespace}
 \raggedright
+
 \bibliographystyle{abbrvnat}
 \bibliography{biblio}
+
+
 \end{singlespace}
 
 \appendix
