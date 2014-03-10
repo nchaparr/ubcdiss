@@ -1,124 +1,222 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{Introduction}
+\chapter{Introduction} 
 \label{ch:Introduction}
 \setlength{\parindent}{0cm}
-Scales of the lower Convective Boundary Layer are well known.  Much work has been done on those of the Entrainment Region but it does not seem to have been as yet organized in the form of a scaling diagram. This thesis will focus on the dry convective case.  
+Scaling simplifies an expression that describe a process by: elimination of terms deemed insignificant and units, 
+and reducing magnitude to O(1).  Robust scales enable prediction, and parametrization of one set of phenomena 
+in models whose focus is of a different scale.  Scales of the lower Convective Boundary Layer are well known.  Much work has been done on those of the Entrainment Zone 
+but it does not seem to have been as yet organized in the form of a scaling diagram.   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Why do we care about Convective Boundary Layer and Entrainment Scales}
-\label{sec:WhydowecareaboutConvectiveBoundaryLayerScales}
-
-Scaling simplifies expressions that describe a process by: elimination of deemed insignificant terms, 
-getting rid of units and reducing magnitude to O(1).\\
-
-Robust scales enable prediction and parametrisations of one set of phenomena in models whose focus is
-of a different scale.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scales of the Convective Boundary Layer}
 \label{sec:ScalesoftheConnvectiveBoundaryLayer}
 
-\subsection{Similarity Theory per Rolands Book.  What is similarity theory.  Outline the main ones for the CBL.} 
+Under certain sets of conditions The Atmospheric Boundary Layer (ABL) exhibits predictable behaviour.  
+Key variables can be identified from which dimensionless groups and scales are formed, and parametrizations derived.  One of such, the Convective Boundary Layer (CBL), is known to be driven by convection resulting from 
+surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$).  It has a time varying height (h) at which turbulent
+kinetic energy (TKE), and tracer concentration (c) sharply decreases and potential temperature ($\theta$)
+increases to that of the stable layer above.  Growth is driven by $\overline{w^{'}\theta^{'}}_{s}$ and 
+impeded by the stable lapse rate ($\gamma$) above  or the potential temperature inversion jump ($\Delta \theta$).  $\Delta \theta$ is effectively strengthened
+by subsidence $W_{L}$ under anticyclonic conditions; warm dry air advects downwards, reducing cloud formation
+and clearing the way for solar radiation.
 
-Under a number of sets of conditions The Atmospheric Boundary Layer (ABL) exhibits predictable behavior
-and key variables can be identified from which dimensionless groups and scales are formed, 
-and parametrizations derived.
- 
-One of such, the Convective Boundary Layer (CBL), is known to be driven by convection resulting from 
-suface heat flux ($\overline{w^{'}\theta^{'}}_{s}$).  It has a time varying height (h) at which turbulent
-kinetic energy (TKE), and tracer concentrations (c) sharply decrease and potential temperature ($\theta$)
-increases to $h \gamma$ where $\gamma$ is the lapse rate of the stable layer above.  Growth of the layer
-is driven by $\overline{w^{'}\theta^{'}}_{s}$ and impeded by $\gamma$ or, as in the case of interest here,
-the potential temperature inversion jump ($\Delta \theta$).  $Delta \theta$ is effectively strengthened
-by subsidence $W_{s}$ under anticyclonic conditions; warm dry advects downwards, reducing cloud formation
-and clearing the way for solar radiation.\\
- 
-(Monin-Obvukhov - Surface Similarity)
-The surface layer is usually defined as the layer where the fluxes vary less than 10 percent of their 
-magitude with height so variables are simplified by representing them at one height ie the surface ($z_{0}$).
-Here the TKE is from both Convection and The Flux Richardson number, $R_{f}$ is a well established
-dimensionless stability parameter and is obtained by taking the Bouancy term over the negative of the Shear 
-term in the TKE equation:\\
+\subsection{Surface Similarity: from $Ri_{f}$ to $-\frac{z}{L}$}
+\label{subsec:MoninObukhovLength}
+The surface layer is usually defined as the layer where fluxes vary less than 10 percent of their 
+magnitude with height.  So, variables are simplified by representing them at one height - the surface ($z_{0}$).
+Here the TKE is from both convection and shear.  The Flux Richardson number, $Ri_{f}$ is obtained by taking the buoyancy term over the negative of the shear 
+term from the TKE equation:\\
 
-$R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u_{i}^{,}u_{j}^{'}} \right) \frac{\partial \overline{U_{i}}}{\partial x_{j}}}$ \\
+\begin{equation}
+R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u_{i}^{'}u_{j}^{'}} \right) \frac{\partial \overline{U_{i}}}{\partial x_{j}}} \\
+\end{equation}
 
-Assuming horizontal homogenaeity and ignoring the large scale vertical motions this is reduced to:\\
+Assuming horizontal homogeneity and ignoring the large scale vertical motions this is reduced to:\\
 
-$R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u^{,}w^{'}} \right) 
-\frac{\partial \overline{U}}{\partial z} + \left(\overline{v^{,}w^{'}} \right) \frac{\partial \overline{V}}{\partial z}}$ \\
+\begin{equation}
+R_{f} = \frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{ \left(\overline{u^{,}w^{'}} \right) 
+\frac{\partial \overline{U}}{\partial z} + \left(\overline{v^{'}w^{'}} \right) \frac{\partial \overline{V}}{\partial z}} \\
+\end{equation}
 
-In the (neutral? need to check with Phil if this applies to CBL) surface layer the shear and stability terms can be nondimentionalized:\\
+In the surface layer the shear and stability terms can be nondimentionalized:\\
 
-$\psi_{M} = \frac{\partial M}{\partial z}\frac{kz}{u_{*}}, \psi_{M} = \frac{\partial \theta}{\partial z}\frac{kz}{\theta_{*}}$\\
+\begin{equation}
+\psi_{M} = \frac{\partial M}{\partial z}\frac{kz}{u_{*}}, \psi_{H} = \frac{\partial \theta}{\partial z}\frac{kz}{\theta_{*}}\\
+\end{equation}
 
-and $\psi_{M} = 1$\\
-
-and first order closure gives:\\
+and $\psi_{M} = 1$.  First order closure gives:\\
 
 $\left( \overline{w^{'}\theta^{'}} \right) = K_{H} \frac{\partial \overline{\theta}}{\partial z} = u_{*} \theta_{*}$ 
 and $\left( \overline{w^{'} u^{'}} \right) = K_{M} \frac{\partial M}{\partial z} = u_{*}^{2}$\\
 
-This scaling is applied to the denominator of $Ri_{f}$\\ giving
+This scaling is applied to the denominator of $Ri_{f}$ giving
 
-$\frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{u_{*}^{2}  \frac{\partial \overline{M}}{\partial z}}$\\
+\begin{equation}
+\frac{\left({\frac{g}{\overline{\theta_{v}}}} \right) \left(\overline{w^{'}\theta_{v}^{'}} \right)}{u_{*}^{2}  \frac{\partial \overline{M}}{\partial z}}\\
+\end{equation}
 
-and the windshear is exchaged with its dimensionless form above.  Rearranging gives\\
+and the wind shear is exchanged with its dimensionless form above.  Rearranging gives\\
 
-$z \left( \frac{kg \left( \overline{w^{'} \theta^{'}} \right) }{\overline{\theta} u_{*}^{3}} \right) = -\frac{z}{L} = \xi$      
+\begin{equation}
+z \left( \frac{kg \left( \overline{w^{'} \theta^{'}} \right) }{\overline{\theta} u_{*}^{3}} \right) = -\frac{z}{L} = \xi      
+\end{equation}
 
-a commonly used dimensionless stability parameter for the neutral surface layer (need to verify with Phil that this applies in CBL).
-In the CBL, L becomes small as convective turbulence dominates and feels the surface more than the inversion.  Local free convection
-scales become important (Need to ask Douw Phil about relevence of L, and scaling diagram in my case)\\
+a commonly used dimensionless stability parameter for the neutral surface layer.%does this apply to the CBL.
+%is there an imbalance in the amount of detail here wrt the amount of detail supporting research questions
+%should there be a reference here -- from phils notes
+\subsection{A Scaling Diagram for the Convective Boundary Layer}
 
-(Mixed Layer Similarity)\\
+In the lower CBL, L becomes small as convective turbulence dominates and is influenced more by the surface than the inversion.  Local free convection scales become important.  In the Mixed Layer (ML) convective turbulence is driven by the surface heat flux ($\overline{w^{'}\theta^{'}}_{0}$) and is impeded by the inversion or stable lapse rate at h. The ML temperature approaches a uniform, increasing value.   
+\cite{Stull-BLMetIntro}\\
 
-In the Mixed Layer (ML) the convective turbulence is driven by the surface heat flux ($\overline{w^{'}\theta^{'}}_{0}$), the mixed layer 
-temperature ($\overline{\theta}$) and is impeded by the inversion or stable lapse rate above (ie h).   
-\cite{Stull-BLMetIntro}
-
-\subsection{scaling diagrams for the boundary layer}
-
+Scales for these three CBL regions are concisely represented over a typical range of $-\frac{h}{L}$ in \citeauthor{HoltNieu86}'s scaling diagram 
+(\autoref{fig:Scaledi}).  A free convection layer begins to form when $-\frac{h}{L} > 10$ and dominates the surface layer when $-\frac{h}{L} \ge 100$.  
+At the time of 
+publication little was known of the scales above the convective ML so the authors assigned to the Entrainment Zone a constant scaled depth of 
+0.4h.  But, for example, at the onset of significant convection the entire initial CBL could be considered an Entrainment Zone. So, a constant scaled depth 
+with respect to time may not be representative.
+%(need to ask about Rolands use of a local $\overline{w^{'}\theta^{'}}$ as opposed to the surface value in the diagram)
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{pngs/Scaledi}
+    \caption{Scales of the CBL \cite{HoltNieu86}}
+    \label{fig:Scaledi}   % label should change
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scales for the Entrainment Region}
-\label{sec:ScalesfortheEntrainmnetRegion}
+\section{Scales for the Entrainment Zone (EZ)}
+\label{sec:ScalesfortheEntrainmnetZone}
+
+\subsection{Convective Boundary Layer Entrainment}
+\label{subsec:ConvectiveBoundaryLayerEntrainment}
+
+A turbulent fluid will entrain an adjoining or surrounding less turbulent fluid and the mean velocity at which the less turbulent fluid flows in is assumed proportional to a characteristic velocity of the turbulent region.  The entrainment velocity is then either: the rate at which the non turbulent fluid flows in or the rate at which the turbulent fluid expands.\\   
+
+The principal vehicles for turbulence in the CBL are buoyant thermals or plumes and they act against an inversion or stable lapse rate. In \cite{Turner86} \citeauthor{Turner86} draws a distinction between how surrounding air is mixed into thermals vs plumes and argues that in case of thermals it depends on the overall dynamics rather than turbulent velocity or length scales. Nonetheless he states estimates for the rise heights of both plumes and thermals in terms of their initial buoyancy and the stability against which they act.\\ 
+
+The CBL plumes or thermals rise, mixing surrounding air and expanding. They rise until their density is equal to or exceeds that of the surroundings. The plume then spreads, or overshoots and sinks with oscillation characterized by the Brunt Vasalla frequency $N = \sqrt{\frac{g}{\theta} \frac{d\theta}{dz}}$. Sinking can occur by convective overturning or recoil when $\Delta \theta$ or $\gamma$ is large.  Thus air from aloft is engulfed or trapped (entrained) and further mixing occurs at smaller scales.  Under these conditions the general consensus is that entrainment at the level of viscosity is unimportant. If there is no penetration of the layer above and the air reaches its density level unimpeded, this is considered encroachment rather than entrainment.\\ 
+\cite{Turner86}
 
 \subsection{Boundary Layer Growth (Entrainment) Rate $W_{e}$}
+\label{subsec:BoundaryLayerGrowth}
 
-\subsection{What is the Entrainment Region} 
-Define it in terms of the average profile potential temperature and flux.
+The CBL grows via thermals or plumes impinging upon the stable air aloft and entraining it. In line with the above the overall entrainment velocity  is its increase in height less large scale vertical motion IE subsidence under anticyclonic conditions.
 
-Define in it terms of individual plumes, their local entrainment regions, and then in terms of the local height distributions.\\
+\begin{equation}
+W_{e} = \frac{dh}{dt} - W_{L}  
+\end{equation}
 
-\subsection{Buoyancy Richardson Number and S}
+The speed at which the CBL advances vertically is proportional to the surface heat flux and inversely proportional to the inversion strength (or stability above).
 
-Talk about and maybe go through example of how richardson number is arrived at from nondimensionalizing an equation -- I think there's an old reference to help with this.Maybe Deardorf79/78?\\
+\begin{equation}
+W_{e} \propto \frac{\overline{w^{'}\theta^{'}}}{\Delta \theta}  
+\end{equation}
+\cite{Deardorff79}
+When scaled by a characteristic velocity which in our case is the convective velocity scale: 
 
-Where does S come frome?
+\begin{equation}
+W^{*} = \left( B h \right)^{\frac{1}{3}}  
+= \left( \frac{g}{\overline{\theta}} h \overline{w^{'}\theta^{'}_{s}} \right)^{\frac{1}{3}}
+\end{equation}
 
-\subsection{Relating $Ri_{b}$, $S$ to Scales and Statistics}
-Relate $Ri$ to $S$\\
+This expression assumes the following form
+
+\begin{equation}
+\frac{W_{e}}{W^{*}} \propto Ri^{*a}  
+\end{equation}
+
+where $Ri^{*} = \frac{g}{\overline{\theta}} \Delta \theta \frac{h}{w^{*2}}$ is a buoyancy Richardson Number. a is usually $-1$ but sometimes $-\frac{3}{2}$ as summarized by \citeauthor{Turner86} when $\frac{LN}{U}$ in our case $\frac{hN}{W^{*}}$ becomes sufficiently large (eg $\approx 6$) \cite{Turner86}.
+\\
+
+Alternatively $S = \frac{g}{\overline{\theta}} \gamma \frac{h^{2}}{w^{*2}}$,  the square of the ratio of the convective time scale to the Brunt Vasalla time scale, is used. \cite{Deardorff79}  Both are applicable in experiments where a constant $\overline{w^{'}\theta^{'}}_{s}$ acts against a stable $\gamma$ producing a convective turbulent ML capped by a $\Delta \theta$ \cite{Turner86}. It follows that $\Delta \theta$ must be a function of $\gamma$ and $\overline{w^{'}\theta^{'}}_{s}$.\\
+%the last reference to Turner may actually be a reference to a Deardorff study.
+\subsection{What is the Entrainment Zone?} 
+
+\begin{wrapfigure}{r}{0.55\textwidth}
+\vspace{-12mm}
+  \begin{center}
+    \includegraphics[scale=.25]{pngs/BLPotTemp}
+  \end{center}
+\vspace{-5mm}
+  \caption{CBL $\theta$ Profile \cite{Stull-BLMetIntro}}
+  \label{fig:BLPotTemp}
+\end{wrapfigure}
+
+In terms of an average or idealized $\theta$ (or c profile) if h is the point at which the gradient is maximum, then the Entrainment Zone (EZ)
+can be defined as the region bounded by the points at which; the profiles first deviate from the ML value, and resume the Free Atmospheric (FA) value.\\
+%reference for this -- maybe one of the analytical model studies
+\newpage
+\begin{wrapfigure}{r}{0.6\textwidth}
+    \begin{center}
+      \vspace{-12mm}
+    \includegraphics[scale=.8]{pngs/FluxProf}
+    \vspace{-5mm}
+    \end{center}
+    \caption{CBL Flux Profile \cite{Stull-BLMetIntro}}
+    \label{fig:CBLFluxProf}   % label should change
+\end{wrapfigure}
+
+The $\overline{w^{'}\theta^{'}}$ profile crosses zero, reaches a minimum (maximum negative) value and increases to zero again bounding a region of overall heating from above which also can be regarded as the EZ.\\
+
+Since the CBL is composed of buoyant plumes (or thermals) the top of the EZ can be defined at the tops of the highest but the bottom is not so clear from this perspective.  It's often defined as the level at which a high percentage of air is Free Atmosphere (FA) air. \cite{StullNelEl} \\
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{pngs/ELStull_Plumes}
+    \caption{CBL Plume Tops \cite{StullNelEl}}
+    \label{fig:CBLPlumTops}   % label should change
+\end{figure}
+
+
+The degree to which (the highest) CBL plumes overshoot the top of the ML (or the bottom of the EZ) is obviously related to the buoyant momentum and inversely related to the FA $\gamma$ or $\Delta \theta$.  So a relationship to the buoyancy Richardson Number ($Ri^{*}$) and scaled $W_{e}$ follows, where suggested values for b  are  $-\frac{1}{2}$ or $-\frac{1}{4}$ \cite{StullNelEl}.
+
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri^{* b} \propto \frac{W_{e}}{W_{*}}  
+\end{equation}  
+
+Clearly the h and $\Delta h$ based on the average $\theta$ profile is related to the distribution of local h values. So characteristics of the distribution should relate to $Ri^{*}$ \cite{SullMoengStev}, \cite{BrooksFowler2}.  
 
 \section{Research Goals}
 \label{sec:ResearchGoals}
 
-\subsection{How do the Flux and theta definitions of h and $\Delta h$ relate to eachother}
+Using a series of idealized Large Eddy Simulation (LES) ensembles which differ by $\overline{w^{'}\theta^{'}_{s}}$ and $\gamma$, behaviour of the CBL characteristic discussed will be compared with the results from prior studies.   This comparison will be guided by the following questions.
 
-Define entrainment zone in terms of average profile.\\
+\subsection{How do h and $\Delta h$ as defined by $\overline{w^{'} \theta^{'}}$ and $\overline{\theta}$  relate to each other?}
 
-\subsection{How do the Distributions of h behave and resulting definitions compare with those from the average profile}
+Analytical models for the CBL often start with the Reynold's averaged conservation equation for $\theta$ \cite{Deardorff79}
 
-\subsection{Does the Scaling Diagram Accurately Represent the Entrainment Zone}
+\begin{equation}
+\frac{D \overline{\theta}}{Dt} = -\frac{\partial \overline{w^{'} \theta^{'}}}{\partial z}
+\end{equation}
 
-Rolands study and explaination of the $L$ estimate and how $-\frac{h}{L}$ progresses throughout\\
-the day.\\
+If advection is assumed unimportant, points on a resulting $\overline{w^{'} \theta^{'}}$ profile correspond to changes in the $\overline{\theta}$ profile with time.  h has been defined as both the point at which the vertical gradient of $\theta$ is maximum and the point at which $\overline{w^{'} \theta^{'}}$ is minumum but these points do not coincide \cite{SullMoengStev}.
 
-\subsection{At higher resolution and more data points can previous relationships to scales/statistics and S and Ri be verified}
+\subsection{How does the distribution of $h_{max \frac{\partial \overline{\theta}}{\partial z}}$ determined locally behave?}
+The spread and skew should differ depending on initial $\gamma$ and $\overline{w^{'}\theta^{'}}_{s}$ 
+and throughout the run.  For example a large $\gamma$ would decrease any positive skew (less overshoot) 
+and increase in both parameters would reduce spread.\\
 
+Although related to, due to smoothing and discrete grid heights $h_{max \frac{\partial \overline{\theta}}{\partial z}}$ does not necessarily equal 
+$\overline{h_{max \frac{\partial {\theta}}{\partial z}}}$. Equivalence of the height of the highest plumes to the height at which the air is mostly FA air (top of the EZ) has been demonstrated but the lower EZ limit is not so clearly defined in terms of local h (IE lowest plumes).%need to check this 
+\cite{BrooksFowler2}. 
 
+\subsection{Can anything meaningful be added to the top of \citeauthor{HoltNieu86} 's Scaling Diagram}
+
+In \cite{StullNelEl} \citeauthor{StullNelEl} used measurements from the BLX and CIRCE field campaigns 
+to show a time varying $\frac{\Delta h}{h}$ ($\sim1.5$ to $\sim .25$).  It peaks in the late morning
+and decreases to an almost steady value by midday when $\overline{w^{'}\theta^{'}}$ begins to decrease. Change could be attributed to the CBL encountering different components of the residual nigh-time BL ($\gamma$) and  $-\frac{h}{L}$ does not directly account for this.      
+
+\subsection{Can previous relationships to $Ri^{*a}$ (or S) be verified, including both a = $-\frac{3}{2}$ and $-1$}
+
+It might be interesting to explore the possibility of differing $Ri^{*}$ dependence regimes by choosing parameters 
+($\gamma$ and $\overline{w^{'}\theta^{'}}$) such that $\frac{hN}{W^{*}}$ straddles 6 \cite{Turner86}. 
 
 \endinput
 
