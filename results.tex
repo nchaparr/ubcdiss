@@ -5,26 +5,90 @@
 \label{ch:results}
 
 \section{Runs}
+
+%description of runs ie 10 member ensembles each had delta x, delta y=25 and a region of delta z=5m enclosing the 
+%Entrainment zone, z=25 below  and streched to 100 above. 
+
 \label{sec:Runs}
 \begin{center}
-    \begin{tabular}{ | l | l | l | p{5cm} |}
+    \begin{tabular}{ | l | l | l | l |}
     \hline
-    $\overline{w^{'}\theta^{'}_{s}}$ / $\gamma$ & 10 (K/Km) & Max Temp & Summary \\ \hline
-    Monday & 11C & 22C & A clear day with lots of sunshine.  
-    However, the strong breeze will bring down the temperatures. \\ \hline
-    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-    across most of Scotland and Northern Ireland,
-    but rain reaching the far northwest. \\ \hline
-    Wednesday & 10C & 21C & Rain will still linger for the morning.
-    Conditions will improve by early afternoon and continue
-    throughout the evening. \\
-    \hline
-    \end{tabular}
+    $\overline{w^{'}\theta^{'}_{s}}$ / $\gamma$ & 10 (K/Km) & 5 (K/Km) & 2.5 (K/Km) \\ \hline
+     150 (W/m2)& \hspace{5mm} \ding{51} &\hspace{5mm} \ding{51}\footnotemark &  \\ \hline
+     100 (W/m2)& \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51} & \\ \hline
+     60 (W/m2) & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51}\\ \hline
+    \end{tabular}\\
+    \footnotetext{Incomplete run: EL exceded high resolution vertical grid after 7 hours}
 \end{center}
 
-%\section{Checking the Model}
-%\label{sec:CheckingtheModel}
 
+\section{Checking the Model}
+\label{sec:CheckingtheModel}
+\subsection{Spin Up Time, Convective Time Scale $\tau$}
+
+Time must be allowed for spin-up and turbulent mixing.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}
+recommended 10 eddie turnover times, and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} chose a 
+simulated time of 2 hours.  For all of the runs, 10 eddie turnover times were completed by 2 hours.
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledtimevstime}
+    \caption{Plots of Scaled Time vs Time for all runs}
+    \label{fig:ScaledTimevsTime}   % label should change
+\end{figure}
+
+A Measureable well mixed layer and entrainent layer develops after 2 hours.
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/theta_flux_profs}
+    \caption{Potential Temperature, it's vertical gradient and Flux Profiles for the 150/10 Run}
+    \label{fig:tempgradfluxprofs15010}   % label should change
+\end{figure}
+
+Fluxes are scaled well by the surface value after 2 hours.
+
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/scaled_theta_flux_profs}
+    \caption{Potential Temperature, it's scaled vertical gradient and scaled Flux Profiles for the 150/10 Run}
+    \label{fig:scaledtempgradfluxprofs15010}   % label should change
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rmswvels}
+    \caption{Root Mean Vertical Velocity Squared Profiles for 150/10 Run}
+    \label{fig:rmswvelprofs15010}   % label should change
+\end{figure}
+
+
+The horizontally averaged, ensemble averaged $\theta$ profiles exhibit a mixed layer of height dependent on
+$\overline{w^{,}\theta^{,}}_{s}$ and $\gamma$, topped by a region where the vertical gradient exceeds zero,
+passing through a maximum before resuming $gamma$.
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_profs2hrs}
+    \caption{Potential Tempertature Profiles at 2 hours}
+    \label{fig:pottempprofs2hrs}   % label should change
+\end{figure}
+
+The horizonally averaged, ensemble averaged $\overline{w^{,}\theta^{,}}$ profiles  decrease from the surface value, passing through zero to a minumum and increase to zero.
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/flux_profs2hrs}
+    \caption{$\overline{w^{,}\theta^{,}}_{s}$ Profiles at 2 hours}
+    \label{fig:fluxprofs2hrs}   % label should change
+\end{figure}
 
 %\subsection{$\theta$ and Flux}
 
