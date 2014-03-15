@@ -22,13 +22,14 @@
 \end{center}
 
 
-\section{Checking the Model}
+\section{Checking the Model based on Ensemble Averaged, Horizontally Averaged Profiles}
 \label{sec:CheckingtheModel}
 \subsection{Spin Up Time, Convective Time Scale $\tau$}
 
 Time must be allowed for spin-up and turbulent mixing.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}
 recommended 10 eddie turnover times, and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} chose a 
-simulated time of 2 hours.  For all of the runs, 10 eddie turnover times were completed by 2 hours.
+simulated time of 2 hours.  For all of the runs, 10 eddie turnover times were completed by 2 hours (Figure \ref{fig:ScaledTimevsTime}).\\
+
 
 \begin{figure}[!ht]
     \centering
@@ -38,7 +39,7 @@ simulated time of 2 hours.  For all of the runs, 10 eddie turnover times were co
     \label{fig:ScaledTimevsTime}   % label should change
 \end{figure}
 
-A Measureable well mixed layer and entrainent layer develops after 2 hours.
+A Measureable well mixed layer and entrainment layer develops after 2 hours (Figure \ref{fig:tempgradfluxprofs15010}).\\
 
 \begin{figure}[!ht]
     \centering
@@ -48,7 +49,7 @@ A Measureable well mixed layer and entrainent layer develops after 2 hours.
     \label{fig:tempgradfluxprofs15010}   % label should change
 \end{figure}
 
-Fluxes are scaled well by the surface value after 2 hours.
+Fluxes and root mean squared vertical velocity (Figure \ref{fig:rmswvelprofs15010}) are scaled well by the surface flux ($\overline{w^{,}\theta^{,}}_{s}$) and convective velocity scale ($w^{*}$) value after 2 hours (Figure \ref{fig:scaledtempgradfluxprofs15010}).\\
 
 
 \begin{figure}[!ht]
@@ -67,10 +68,11 @@ Fluxes are scaled well by the surface value after 2 hours.
     \label{fig:rmswvelprofs15010}   % label should change
 \end{figure}
 
+\subsection{Temperature, Heat Flux and Kinetic Energy}
 
 The horizontally averaged, ensemble averaged $\theta$ profiles exhibit a mixed layer of height dependent on
 $\overline{w^{,}\theta^{,}}_{s}$ and $\gamma$, topped by a region where the vertical gradient exceeds zero,
-passing through a maximum before resuming $gamma$.
+passing through a maximum (h) before resuming $\gamma$ (Figure \ref{fig:pottempprofs2hrs}).\\
 
 \begin{figure}[!ht]
     \centering
@@ -80,7 +82,8 @@ passing through a maximum before resuming $gamma$.
     \label{fig:pottempprofs2hrs}   % label should change
 \end{figure}
 
-The horizonally averaged, ensemble averaged $\overline{w^{,}\theta^{,}}$ profiles  decrease from the surface value, passing through zero to a minumum and increase to zero.
+
+The horizonally averaged, ensemble averaged $\overline{w^{,}\theta^{,}}$ profiles decrease from the surface value, passing through zero to a minumum and increase to zero.(Figure \ref{fig:fluxprofs2hrs})\\
 
 \begin{figure}[!ht]
     \centering
@@ -90,6 +93,20 @@ The horizonally averaged, ensemble averaged $\overline{w^{,}\theta^{,}}$ profile
     \label{fig:fluxprofs2hrs}   % label should change
 \end{figure}
 
+Each of the $\overline{\theta}$ and $\overline{w^{,}\theta^{,}}$ profiles has a region that can be defined as the Entrainment Zones.  The point of minimum $\overline{w^{,}\theta^{,}}$
+is lower than h.  \citeauthor{SullMoengStev} in \cite{SullMoengStev} noted that the minima of the individual flux quadrant profiles are closer or even coincide with h.\\
+
+Root mean velocity squared profiles show a dominance of vertical velocity in the mixed layer, with a peak in horizontal velocity within the entrainment layer where the vertical is inhibited (Figure \ref{fig:rmsvel150102hrs}). \\
+
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rmsvel2}
+    \caption{$\frac{\sqrt[]{u^{,2}}}{w^{*}}$ Profiles at 2 hours for the 150/10 Run}
+    \label{fig:rmsvel150102hrs}   % label should change
+\end{figure}
+
+     
 %\subsection{$\theta$ and Flux}
 
 %Profiles of horizonatally averaged ensemble averaged $\theta$.\\
