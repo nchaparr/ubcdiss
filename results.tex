@@ -10,7 +10,7 @@
 %Entrainment zone, z=25 below  and streched to 100 above. 
 
 \label{sec:Runs}
-\begin{center}
+\begin{table}
     \begin{tabular}{ | l | l | l | l |}
     \hline
     $\overline{w^{'}\theta^{'}_{s}}$ / $\gamma$ & 10 (K/Km) & 5 (K/Km) & 2.5 (K/Km) \\ \hline
@@ -19,7 +19,7 @@
      60 (W/m2) & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51}\\ \hline
     \end{tabular}\\
     \footnotetext{Incomplete run: EL exceded high resolution vertical grid after 7 hours}
-\end{center}
+\end{table}
 
 
 \section{Checking the Model based on Ensemble Averaged, Horizontally Averaged Profiles}
@@ -98,6 +98,11 @@ is lower than h.  \citeauthor{SullMoengStev} in \cite{SullMoengStev} noted that 
 
 Root mean velocity squared profiles show a dominance of vertical velocity in the mixed layer, with a peak in horizontal velocity within the entrainment layer where the vertical is inhibited (Figure \ref{fig:rmsvel150102hrs}). \\
 
+Two dimensional fft spectra of horizontal slices of the horizontal (\ref{fig:2dfftu602point5}) and vertical (\ref{fig:2dfftw602point5}) velocity perturbations taken at three
+different levels (below, within and above the Entrainment Layer) show peaks in energy at the larger scales.  Within the Mixed
+and Entrainment Layers the energy cascades to the smaller scales roughly according to a $\frac{-8}{3}$ slope.  Whereas
+above (or at the top of) the Entrainment Layer, where stability supresses turbulence, this slope is steeper.  (TODO: why non zero less than k=1, see scaling factor in script.  must justify slope.)  
+
 \begin{figure}[!ht]
     \centering
     % For the sake of this example, we'll just use text
@@ -106,7 +111,39 @@ Root mean velocity squared profiles show a dominance of vertical velocity in the
     \label{fig:rmsvel150102hrs}   % label should change
 \end{figure}
 
-     
+\begin{figure}[!ht]
+    \centering
+    % For the sake of this example, we'll just use text
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/2dffts_w}
+    \caption{Vertical Velocity Averaged 2D FFT Energy Densities vs Wavenumber ($k = \sqrt{k_{x}^{2}+k_{y}^{2}}$) for 60 / 2.5 Run}
+    \label{fig:2dfftw602point5}   % label should change
+\end{figure}
+
+\subsection{Visualization of Structures Within the Entrainment Layer}
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/theta_cont0}
+                \caption{}
+                \label{fig:}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/wvel_cont0}
+                \caption{}
+                \label{fig:tiger}
+        \end{subfigure}
+        \caption{}\label{fig:}
+\end{figure}
+
+
+\section{h and  $\Delta h$ based on Average Profiles}
+\label{sec:hdeltahavprofs}     
+
+
+
 %\subsection{$\theta$ and Flux}
 
 %Profiles of horizonatally averaged ensemble averaged $\theta$.\\
