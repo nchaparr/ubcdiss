@@ -3,10 +3,8 @@
 
 \chapter{Glossary}
 
-This glossary uses the handy \latexpackage{acroynym} package to automatically
-maintain the glossary.  It uses the package's \texttt{printonlyused}
-option to include only those acronyms explicitly referenced in the
-\LaTeX\ source.
+%%\makeglossaries
+
 
 % use \acrodef to define an acronym, but no listing
 \acrodef{UI}{user interface}
@@ -15,26 +13,42 @@ option to include only those acronyms explicitly referenced in the
 % The acronym environment will typeset only those acronyms that were
 % *actually used* in the course of the document
 \begin{acronym}[ANOVA]
-\acro{ANOVA}[ANOVA]{Analysis of Variance\acroextra{, a set of
-  statistical techniques to identify sources of variability between groups}}
-\acro{API}{application programming interface}
-\acro{CTAN}{\acroextra{The }Common \TeX\ Archive Network}
-\acro{DOI}{Document Object Identifier\acroextra{ (see
-    \url{http://doi.org})}}
-\acro{FoGS}[FoGS]{The Faculty of Graduate Studies}
-\acro{PDF}{Portable Document Format}
-\acro{RCS}[RCS]{Revision control system\acroextra{, a software
-    tool for tracking changes to a set of files}}
-\acro{TLX}[TLX]{Task Load Index\acroextra{, an instrument for gauging
-  the subjective mental workload experienced by a human in performing
-  a task}}
-\acro{UML}{Unified Modelling Language\acroextra{, a visual language
-    for modelling the structure of software artefacts}}
-\acro{URL}{Unique Resource Locator\acroextra{, used to describe a
-    means for obtaining some resource on the world wide web}}
-\acro{W3C}[W3C]{\acroextra{the }World Wide Web Consortium\acroextra{,
-    the standards body for web technologies}}
-\acro{XML}{Extensible Markup Language}
+\acro{ANOVA}[ANOVA]{Analysis of Variance, statistical 
+techniques to identify sources of variability between groups}
+
+% \acro{ $\overline{w^{,} \theta^{,}_{s}}$ }{Surface heat flux in $\frac{Watts}{meters^{2}}$}
+
+% \acro{$\gamma$}{Initial and upper potential temperature lapse rate in Kelvin}
+
+\acro{EL}[EL]{Entrainment Layer}
+\acro{ML}[ML]{Mixed Layer}
+\acro{CBL}[CBL]{Convective Boundary Layer}
+
+\acro{Ri}[Ri]{Richardson Number 
+\acroextra{, the bulk Richardson Number is 
+$\frac{gh}{\overline{\theta}_{ML}} \frac{\Delta \theta}{w^{*2}}$, 
+$\Delta \theta = \overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ 
+and the gradient Richardson Number is 
+$\frac{g}{\overline{\theta}_{ML}} \frac{\gamma h^{2} }{w^{*2}}$ 
+}}
+
+\acro{FFT}[FFT]{Fast Fourrier Transform}
+
+%\acro{FoGS}[FoGS]{The Faculty of Graduate Studies}
+%\acro{PDF}{Portable Document Format}
+%\acro{RCS}[RCS]{Revision control system\acroextra{, a software
+%    tool for tracking changes to a set of files}}
+%\acro{TLX}[TLX]{Task Load Index\acroextra{, an instrument for gauging
+%  the subjective mental workload experienced by a human in performing
+%  a task}}
+%\acro{UML}{Unified Modelling Language\acroextra{, a visual language
+%    for modelling the structure of software artefacts}}
+%\acro{URL}{Unique Resource Locator\acroextra{, used to describe a
+%    means for obtaining some resource on the world wide web}}
+%\acro{W3C}[W3C]{\acroextra{the }World Wide Web Consortium\acroextra{,
+%    the standards body for web technologies}}
+%\acro{XML}{Extensible Markup Language}
+
 \end{acronym}
 
 % You can also use \newacro{}{} to only define acronyms
