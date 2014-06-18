@@ -1,105 +1,32 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{Results}
+\chapter{discussion}
 \label{ch:results}
 \setlength{\parindent}{0cm}
 
 \section{Description of Runs}
 \FloatBarrier
 
-All 10 member cases of the ensemble were carried out on a 3.2 x 4.8 Km horizontal 
-domain ($\Delta x = \Delta y = 25m$, $nx=128$, $ny=192$).  
-$nx$, $ny$ were chosen based on the optimal distribution accross processor nodes.  
-The vertical grid ($nz=312$) was of higher resolution around the 
-entrainment layer (\acs{EL}) ($\Delta z = 5m$), and lower below and above it 
-($\Delta z = 10 \ to \ 100 m$). Grid size was chosen so that
-a full spectrum of turbulence would be resolved within the \acs{EL} 
-in line with the findings of \citeauthor{SullPat} in \cite{SullPat}.  The 7 runs
-vary depending on surface heat flux ($\overline{w^{'}\theta^{'}_{s}}$) 
-and initial lapse rate ($\gamma$).
+The domain for each individual case is small relative to that used by \citeauthor{SullMoengStev} in \cite{SullMoengStev}, \citeauthor{FedConzMir04} in \cite{FedConzMir04} and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} i.e. $5Km \times 5 Km$ in the horizontal.  \citeauthor{SullMoengStev} (\cite{SullMoengStev}) did a higher resolution run on a $3 Km \times 3 Km$ horizontal domain and noticed a higher $h$ but similar $h(\frac{time}{\tau})$ slope as the analogous run on a larger domain with lower resolution.  They speculated the smaller domain enforced a smaller limit on plume size, thus influencing the $h$ the height of maximum vertical average potential temperature gradient.\\
 
-%description of runs ie 10 member ensembles each had delta x, delta y=25 and a region of delta z=5m enclosing the 
-%Entrainment zone, z=25 below  and streched to 100 above. 
+\citeauthor{SullMoengStev}'s (\cite{SullMoengStev}) grid spacing for most of their runs was $\Delta x, y= 33.3$, $\Delta z=10$ except for the run on the smaller domain which had $\Delta x, y = 15$, $\Delta z=6.67$.  The highest resolution \citeauthor{FedConzMir04} used in \cite{FedConzMir04} used $\Delta x, y = 50$ and $\Delta z = 20$.  \cite{BrooksFowler2} in \cite{BrooksFowler2} used $\Delta x, y = 50$ and $\Delta z = 12$ except in resolution test runs where they used $\Delta x, y = 25$ and $\Delta z = 7.27$.  So the vertical resolution arount the entrainment region in this study is higher that the other LES studies.\\          
 
-\label{sec:Runs}
+\citeauthor{SullMoengStev}'s (\cite{SullMoengStev}) initial conditions consisted of a mixed layer topped by an inversion (weak or strong) topped by a constant lapse rate ($\gamma$ \approx 2.5 K/Km). They applied constant average surface heat fluxes ($\overline{w^{'}\theta^{'}}_{s}$) ranging from about $20 - 450 Watts/m^{2}$. \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) followed suit, in that their range of $Ri$s resulted from variation of initial inversion strength and $\overline{w^{'}\theta^{'}}_{s}$.  \citeauthor{FedConzMir04} in \cite{FedConzMir04} start with a finite \acs{ML} of constant $\overline{\theta}$ above which there's a constant lapse rate which they varied from  $1 - 10 K\Km$.\\ 
 
-\begin{table}[!ht]
-    \begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    $\overline{w^{'}\theta^{'}_{s}}$ / $\gamma$ & 10 (K/Km) & 5 (K/Km) & 2.5 (K/Km) \\ \hline
-     150 (W/m2)& \hspace{5mm} \ding{51} &\hspace{5mm} \ding{51}\footnotemark &  \\ \hline
-     100 (W/m2)& \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51} & \\ \hline
-     60 (W/m2) & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51} & \hspace{5mm} \ding{51}\\ \hline
-     
-%\end
-
-   
-\end{tabular}
-\caption{Runs in terms of $\overline{w^{'} \theta^{'}_{s}}$ and initial lapse rate $\gamma$}
-\label{fig:tableofruns}   
-\end{center}    
-\end{table}
-\footnotetext{Incomplete run: EL exceded high resolution vertical grid after 7 hours}
+I should talk about the way in which the entrainment regions were done with higher resolution.\\
 
 \clearpage
 
 \section{Relevant Definitions}
+
 \FloatBarrier
-In large eddy simulation (\acs{LES}) studies, the \acs{CBL} height is usually defined as either the point of minimum 
-$\overline{w^{'} \theta^{'}}$ or maximum $\frac{\partial \overline{\theta}}{\partial z}$.
-A notable exception is the work of \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} 
-where the authors favoured a statistically based definition using local tracer profiles.  Similarly, they define the 
-entrainment layer (\acs{EL}) in terms of the statistics of local profiles, 
-whereas elsewhere in the literature it is usually defined according to the zero crossings in 
-the vertical $\overline{w^{'} \theta^{'}}$ profile.\\
 
-Here, the \acs{CBL} height and \acs{EL} limits are defined based on the vertical  $\frac{\partial \overline{\theta}}{\partial z}$
-profile.  Namely, the \acs{CBL} height $h$ is the point where  $\frac{\partial \overline{\theta}}{\partial z}$ is maximum, the 
-lower \acs{EL} limit is the point at which  $\frac{\partial \overline{\theta}}{\partial z}$ first increases
-significantly from zero i.e. exceeds a threshold value above the surface layer, and the upper \acs{EL} limit $h_{1}$ is the point where
-$\frac{\partial \overline{\theta}}{\partial z}$ resumes $\gamma$. (Figure \ref{fig:hdefs})\\
+\citeauthor{SullMoengStev}'s (\cite{SullMoengStev}) compared 4 methods of determining \acs{CBL} height, two of which they based on the vertical $w^{'}\theta^{'}$ profile.  They defined it as the point at which the horizontally averaged profile is minimum, as well as an the $x$ averaged minimum of the $y$-averaged $w^{'}\theta^{'}(x,y)$ vertical profiles.  For both, the timeseries were alot less smooth than that for $z_{f}$ determined in this study.  Their gradient and contour methods produced smoother timeseries plots.  They determined the point of maximum vertical potential temperature gradient at each point in the horizontal domain, and then horizontally averaged.  Description of the contour method will be ommitted since it is not directly usefull. Their gradient based height is consitently higher than the fluxed based definitions i.e. the fluxed based definition overall is about 0.9 times the gradient definition. This and their finding that the slopes of both timeseseries are similar is in line with the findings of this study. They did not focus on \acs{EL} depth. For their Richardson number \acs{Ri} they calculated $\Delta \theta = \overline{\theta}(z_{f1})-\overline{\theta}(z_{f})$.  This value is likely to be smaller than  and probably not linearly related (with respect to time) to the $\Delta \theta$ used in this study. To be thorough, the various $\Delta and \delta \theta$s from all relevant studies should be compared, or the corresponding \acs{Ri}s. \\
 
-As \citeauthor{BrooksFowler2} point out in \cite{BrooksFowler2}, when using an average vertical 
-tracer profile there is no universal critereon for a significant gradient.  So a threshold value for the
-lower \acs{EL} limit ($h_{0}$) was chosen such that it was positive, small i.e. an order of magnitude 
-less than $\gamma$ and the same for all runs.  For the sake of rigor, the main corresponding result 
-was calculated based on two additional threshold values in Section \ref{subsec:deltahri}.\\
-
-The temperature jump is defined here as the difference in $\overline{\theta}$ accross the \acs{EL}.
-So, it is larger than those used by  \citeauthor{FedConzMir04} in \cite{FedConzMir04} to verify 
-their zero order model and \citeauthor{SullMoengStev} in \cite{SullMoengStev} (Table \ref{table:reldefs}).\\ 
- 
-%table outlining my definitions, and other comparable ones, ie brooks and fowlers aren't comparable
-% re justifying my arbitrary choice of threshold for the lower limit:  seee page 250 Brooks and Fowler. 
-%there must be other places in my key papers where the 'arbitraryness' is referred to.
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs}
-    \caption{Height Definitions }
-    \label{fig:hdefs}   % label should change
-\end{figure}
-
-\begin{table}[htbp]
-    %\begin{center}
-\centerline{
-    \begin{tabular}{| p{3cm}| p{3cm} | p{3cm} | p{3cm}| }
-    \hline
-      Description & This Study & Sullivan et al. \cite{SullMoengStev} & Fedorovich et al.\cite{FedConzMir04}  \\ \hline %&  Garcia and Mellado \cite{GarciaMellado}
-     CBL Height&$h$&$h$ & $z_{f}$ \\ \hline   %& $z_{enc} \approx z_{f0}$
-     Temperature Jump&$\Delta \theta = \overline{\theta}(h_{1})-\overline{\theta}(h_{0})$&$\Delta \theta = \overline{\theta}(z_{f1})-\overline{\theta}(z_{f})$ & $\Delta b = b_{0}(z_{f}) -b(z_{f0})$ \\ \hline %& $\Delta b = b_{0}(z_{f}) - b(z_{f}) $
-     &&&$\delta b = b(z_{f1})$ - $b(z_{f0})$ \\ \hline %& $\delta b = b(z_{f1})$ - $b(z_{f0})$
-     Convective Velocity Scale&$w_{*}= (h B_{s})^{\frac{1}{3}}$, $B_{s} = \frac{g}{\overline{\theta_{ML}}}\overline{w^{'}\theta^{'}}_{s}$&$w_{*}= (h B_{s})^{\frac{1}{3}}$, $B_{s} = \frac{g}{\overline{\theta_{ML}}}\overline{w^{'}\theta^{'}}_{s}$ & $w_{*}= (z_{f} B_{s})^{\frac{1}{3}}$\\ \hline %& $w_{*}= (z_{f0} B_{s})^{\frac{1}{3}}$
-     Time Scale&$\tau = \frac{h}{w^{*}}$ &$\tau = \frac{h}{w^{*}}$ & $\tau=N^{-1}$ \\ \hline %& $\frac{t}{\tau}=\frac{z_{enc}}{L_{0}}$, $L_{0}=\left(\frac{B_{s}}{N^{3}}\right)^{\frac{1}{2}}$
-  \end{tabular}
-}
-\caption{Comparison of relevant definitions with those from key publications.  
-$b=\frac{g}{\overline{\theta_{ML}}}\overline{\theta}$}
-\label{table:reldefs}   
-%\end{center}    
-\end{table}
+\citeauthor{FedConzMir04} in \cite{FedConzMir04} determined \acs{CBL} ehight and \acs{EL} depth from the horizontal and time ($100 \times 2s$) averaged vertical $w^{'}\theta^{'}$ profiles.  They used two difference buoyancy (temperature) jumps: $\Delta \theta = \overline{\theta}_{0}z_{f} - \overline{\theta}z_{f0}$ for comparison with the zero order model and $\delta \theta = \overline{\theta}z_{f1} - \overline{\theta}z_{f0}$ for comparison with the first order (gsm) model and analysis of the \acs{EL}.  Again, it would be usefull if I did a comparison of temperature jump comparisons.  They observed a decrease in \acs{EL} depth with increasing \acs{Ri} with possibly a $-1$ or $-\frac{1}{2}$ power law.  In our study all three flux based heights seem to remain a constant fraction of $h$, so at this point our results diverge from theirs.  Their grid spacing could be compared to two of the lower resolutions runs from \citeauthor{SullPat}'s (\cite{SullPat}) resolution study, whereas ours compares with the lowest resolution run of those with vertical flux profiles that converge.  Assuming higher resolution produces more physical results, their flux profiles may be unrealistically wide.  According to \citeauthor{SullPat} (\cite{SullPat}) \acs{CBL} growth rate may also be impacted by such differences in resolution.  Furthermore to compare their plots of scaled entrainment rate vs \acs{Ri}, we would need to reproduce their \acs{Ri} s in our framework.
+\\
+\citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) used tracer concentration profiles and compare a number of different corresponding \acs{CBL} height definitions.  Their scaling relations based on the fluxed based definitions can be compared to those in this study. Although their height and temperature jump used to calculate the Richardson number \acs{Ri} are quite different.  Their scaled entrainment rate vs \acs{Ri} shows quite alot of scatter and doesn't show an obvious trend in the absence of a fitted curve.  We find the $z_{f}$ has the same slope as $h$ with respect to time, so expect a similarly approximately linear scaled entrainment rate vs \acs{Ri} relationship. The definitions that perform best in this regard for are \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) are those based on the means of locally determined heights.  That based on the domain averaved tracer profile, ie the point of maximum vertical gradient, is directly comparable to our $h$.  I need to locate where it's said that they coincide.  This last definition does not produce a plot as correlated as ours.  Their scaled statistical \acs{EL} definitions based on the local verical gradient and the local wavelet covariance decrease with increasing \acs{Ri} similarly to ours, but their flux based definition ($2\times(z_{f1}-z_{f})$) show slight and oposite trends when averaged differently.  The latter is in line with what we found.\\
 
 \clearpage
 
@@ -108,61 +35,25 @@ $b=\frac{g}{\overline{\theta_{ML}}}\overline{\theta}$}
 \subsection{Time till well-mixed}%Spin Up Time according to the Convective Time Scale $\tau$}
 \FloatBarrier
 
-Time must be allowed to establish statistically steady turbulent flow.  \citeauthor{SullMoengStev} in 
-\cite{SullMoengStev} recommended 10 eddie turnover times based on the convective time scale 
-$\tau = \frac{h}{w^{*}} = \frac{h}{ \left( \frac{gh}{\overline{\theta}_{ML}}(\overline{w^{'} \theta^{'}_{s}}) \right)^{\frac{1}{3}} } $, 
-and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} chose a simulated time of 2 hours.  For all of 
-the runs, at least 10 eddie turnover times were completed by 2 simulated hours (Figure \ref{fig:ScaledTimevsTime}).  
-Although each run has a distinct convective velocity scale that increases with time ($w^{*}(time)$), 
-dividing boundary layer height ($h$) by it to obtain $\tau$ results in a collapse from 7 to 3 curves, 
-one for each $\gamma$.\\
+To establish statistially steady turbulent flow \citeauthor{SullMoengStev} in \cite{SullMoengStev}
+ran from the same random initial conditions on their coarse grid for more than ten eddie turnover times.
+Then they switched on the nested high resolution grid and contiued for another 4 eddie turnovers.  
+The work of \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) required 2 simulated hours before they
+judged the turbulence to be fully developed.  To initialize turbulence they added a small random perturbation
+to the temperature field. \citeauthor{FedConzMir04} (\cite) focus on the attainment of a quasi-steady
+state regime within which their zero order entrainment equation holds.  Their derivation aslo hinges
+upon parametrizations for Turbulent Kinetic Energy ($e$) and dissipation ($\epsilon$):
 
-A measureable well mixed layer (\acs{ML}) and \acs{EL} based on the horizontaly averaged, ensemble averaged
-potential temperature ($\overline{\theta}$) profile develops after 2 hours 
-(Figure \ref{fig:tempgradfluxprofs15010}).  After 2 or 3 hours the \acs{EL} is fully contained within the vertical 
-region of high resolution.\\
+\begin{equation}
+e=w^{*2}\Psi_{e}\left( \frac{z}{z_{i}} \right) \ \epsilon=\frac{w^{*3}}{z_{i}}\Psi_{\epsilon}\left( \frac{z}{z_{i}}\right)
+\end{equatio}
 
-Averaged heat fluxes ($\overline{w^{'}\theta^{'}}$) (Figure \ref{fig:scaledfluxprofs15010}) and 
-root mean squared vertical velocity perturbations ($\sqrt{w^{'2}}$) (Figure \ref{fig:rmswvelprofs15010})
-become self similar and are scaled well by the surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) 
-and the convective velocity scale ($w^{*}$) respectively after 2 hours.\\
+Where the two functions of dimensionless height integrate over the \acs{CBL} to constants, for example
 
+\begin{equation}
+\int^{z_{i}}_{0}\frac{e}{w^{*2}} = C_{e}
+\end{equation}
 
-\begin{figure}[!h]
-    \centering
-    % plot_height.py [master 03d2835] Round 1 of Plots in Results 
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledtimevstime}
-    \caption{Plots of scaled time vs time for all runs.  Scaled time is based on the convective time scale 
-    and can be thought of as the number of times an eddie has reached the top of the CBL. }
-    \label{fig:ScaledTimevsTime}   
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    % plot_dthetaflux.py [master 03d2835] Round 1 of Plots in Results
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/theta_flux_profs}
-    \caption{Vertical profiles of the ensemble and horizontally averaged potential temperature ($\overline{\theta}$), its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$)  
-     and heat flux ($\overline{w^{'}\theta^{'}}$) for the 150/10 run}
-    \label{fig:tempgradfluxprofs15010}   % label should change
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    % plot_dthetaflux.py [master 9883fda] Round 2 of Plots in Results
-    %\includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/scaled_theta_flux_profs}
-    %[master 41d073a] Mar52014 scaled_flux_profs by plot_dthetaflux.py
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/scaled_flux_profs}
-    \caption{$\overline{w^{'}\theta^{'}}$ and scaled $\overline{w^{'}\theta^{'}}$  vs scaled height for the 150/10 run}
-    \label{fig:scaledfluxprofs15010}   % label should change
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    %w_analysis.py [master 03d2835] Round 1 of Plots in Results
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rmswvels}
-    \caption{$\sqrt{w^{,2}}$ vs scaled height for the 150/10 run}
-    \label{fig:rmswvelprofs15010}   % label should change
-\end{figure}
 
 \clearpage
 \subsection{FFT Energy Spectra}
@@ -242,7 +133,7 @@ less  in magnitude than the zero order approximation ($-.2 \times \overline{w^{'
 
 \clearpage
 
-\subsection{Visualization of Structures Within the Entrainment Layer}
+\subsection{Visualization of Structures within the Entrainment Layer}
 \FloatBarrier
 
 Horizontal slices, at the three entrainment layer (\acs{EL}) levels, of the potential temperature 
