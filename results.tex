@@ -36,12 +36,19 @@ vary depending on surface heat flux ($\overline{w^{,}\theta^{,}_{s}}$) and initi
 \end{table}
 \footnotetext{Incomplete run: EL exceded high resolution vertical grid after 7 hours}
 
-\section{Checking the Model based on Ensemble Averaged, Horizontally Averaged Vertical Profiles}
+
+\section{Relevant Definitions}
+%table outlining my definitions, and other comparable ones, ie brooks and fowlers aren't comparable
+% re justifying my arbitrary choice of threshold for the lower limit:  seee page 250 Brooks and Fowler. 
+%there must be other places in my key papers where the 'arbitraryness' is referred to.
+
+
+\section{Verifying Model Output}
 \label{sec:CheckingtheModel}
-\subsection{Spin Up Time according to the Convective Time Scale $\tau$}
+\subsection{}%Spin Up Time according to the Convective Time Scale $\tau$}
 \FloatBarrier
 
-Time must be allowed for spin-up and turbulent mixing.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}
+Time must be allowed to establish statistically steady turbulent flow.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}
 recommended 10 eddie turnover times based on the convective time scale $\tau = \frac{h}{w^{*}} = \frac{h}{ \left( \frac{gh}{\overline{\theta}_{ML}}(\overline{w^{,} \theta^{,}_{s}}) \right)^{\frac{1}{3}} } $, 
 and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} chose a simulated time of 2 hours.  For all of the runs, 10 eddie 
 turnover times were completed by 2 hours (Figure \ref{fig:ScaledTimevsTime}).  Although each run has a distinct
@@ -90,8 +97,35 @@ well by $\overline{w^{,}\theta^{,}}_{s}$ and the convective velocity scale ($w^{
 \end{figure}
 
 \clearpage
+\subsection{}
+\FloatBarrier
 
-\subsection{Average Potential Temperature, Heat Flux and Kinetic Energy}
+Two dimensional \acs{FFT} power spectra taken of horizontal slices of $w^{,}$ (\ref{fig:scalardfftw602point5}) at three
+different levels ($h_{0}$, $h$ and $h_{1}$) are collapsed to one dimension by integrating around a semi-circle of positive wave-numbers.
+Isotropy in all radial directions is assumed and $k = \sqrt{k_{x}^{2} + k_{y}^{2}}$.  The resulting scalar density spectra show peaks in 
+energy at the larger scales, cascading to the lower scales roughly according to a $\frac{-5}{3}$ slope lower in the \acs{EL}.  At
+the top of the \acs{EL} where turbulence is supressed by stability, the slope is steeper.  The peak in energy occur at smaller scales
+at $h$ as compared to at $h_{0}$, indicating a change in the size of the dominant turbulent structures.\\
+
+\begin{figure}[htbp]
+    \centering
+    %fft_nchap.py [master 03d2835] Round 1 of Plots in Results
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/2dfftpow}
+    \caption{2D FFT energy densities of $w^{,}$ at $h_{0}$ vs wavenumber for the 60/2.5 run}
+    \label{fig:scalardfftw602point5}   % label should change
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % fft_chap.py [master 03d2835] Round 1 of Plots in Results
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scalarfftpow}
+    \caption{Scalar FFT  energy densities vs wavenumber ($k = \sqrt{k_{x}^{2}+k_{y}^{2}}$) for the 60/2.5 run}
+    \label{fig:2fftw602point5}   % label should change
+\end{figure}
+
+\clearpage
+
+\subsection{}%Average Potential Temperature, Heat Flux and Kinetic Energy}
 \FloatBarrier
 
 The $\overline{\theta}$ profiles exhibit an \acs{ML} of height $h_{0}$ (the point at which $\frac{\partial \overline{\theta}}{\partial z}$ first exceeds 0), 
@@ -127,36 +161,12 @@ are closer or even coincide with $h$.\\
 ($\sqrt{u^{,2}}$) profiles show a dominance of vertical velocity perturbation ($w^{'}$) in the \acs{ML}, with a peak in horizontal velocity
 ($u^{'}$ and $v^{'}$) within the \acs{EL} where the buoyancy driven $w^{'}$ is inhibited by stability (Figure \ref{fig:rmsvel150102hrs}). \\
 
-Two dimensional \acs{FFT} power spectra taken of horizontal slices of $w^{,}$ (\ref{fig:scalardfftw602point5}) at three
-different levels ($h_{0}$, $h$ and $h_{1}$) are collapsed to one dimension by integrating around a semi-circle of positive wave-numbers.
-Isotropy in all radial directions is assumed and $k = \sqrt{k_{x}^{2} + k_{y}^{2}}$.  The resulting scalar density spectra show peaks in 
-energy at the larger scales, cascading to the lower scales roughly according to a $\frac{-5}{3}$ slope lower in the \acs{EL}.  At
-the top of the \acs{EL} where turbulence is supressed by stability, the slope is steeper.  The peak in energy occur at smaller scales
-at $h$ as compared to at $h_{0}$, indicating a change in the size of the dominant turbulent structures.\\
-
-
 \begin{figure}[htbp]
     \centering
     %plot_vars.py [master 03d2835] Round 1 of Plots in Results
     \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rmsvel2}
     \caption{Vertical $\frac{\sqrt[]{u^{,2}}}{w^{*}}$ profiles at 2 hours for the 150/10 run}
     \label{fig:rmsvel150102hrs}   % label should change
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    %fft_nchap.py [master 03d2835] Round 1 of Plots in Results
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/2dfftpow}
-    \caption{2D FFT energy densities of $w^{,}$ at $h_{0}$ vs wavenumber for the 60/2.5 run}
-    \label{fig:scalardfftw602point5}   % label should change
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    % fft_chap.py [master 03d2835] Round 1 of Plots in Results
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scalarfftpow}
-    \caption{Scalar FFT  energy densities vs wavenumber ($k = \sqrt{k_{x}^{2}+k_{y}^{2}}$) for the 60/2.5 run}
-    \label{fig:2fftw602point5}   % label should change
 \end{figure}
 
 \clearpage
@@ -229,126 +239,6 @@ plumes are more defined.\\
 
 \clearpage
 
-\section{$h$ and  $\Delta h$ based on Average Profiles}
-\label{sec:hdeltahavprofs}     
-\FloatBarrier
-
-Covective Boundary Layer (CBL) height ($h$) (Fig. \ref{fig:hvstime}) grows rapidly initially with a steadily decreasing rate
-and is a linear function of scaled time (Fig \ref{fig:hvsscaledtime}).\\
-  
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/hvstime}
-    \caption{$h$ vs time for all runs}
-    \label{fig:hvstime}   % label should change
-\end{figure}
-
-
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py [master 01d5f21] he ves scaled time plot
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/hvsscaledtime}
-    \caption{$h$ vs scaled time for all runs}
-    \label{fig:hvsscaledtime}   % label should change
-\end{figure}
-
-%\begin{figure}[htbp]
-%    \centering
-    %plot_height.py [master 9cd73aa] delta h vs time  
-%    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/deltahstime}
-%    \caption{}
-%    \label{fig:deltahvstime}   % label should change
-%\end{figure}
-
-EL depth ($h_{1}-h_{0}=\Delta h$) (Fig. \ref{fig:deltahvstime1}) increases with time
-although not as rapidly as $h$.  It deepens with increasing $\overline{w^{,}\theta^{,}_{s}}$ 
-and narrows with increasing $\gamma$. \\
-
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py [master fd5c6b1] delta h vs time1  
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/deltahstime1}
-    \caption{$\Delta h$ vs time}
-    \label{fig:deltahvstime1}   % label should change
-\end{figure}
-
-The scaled upper EL limits (Fig. \ref{fig:scaleddeltahstime}) ($\frac{h_{1}}{h}$) collapse well 
-to an initial value of approximately 1.75, decreasing to about 1.5 .  $\frac{h_{0}}{h}$s appear 
-grouped according to $\gamma$ and increase with respect to time.\\  
-
-
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py [master 00908a6] sacleddeltastime 
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahstime}
-    \caption{Scaled EL limits vs time}
-    \label{fig:scaleddeltahstime}   % label should change
-\end{figure}
-
-Inverse Richardson Numbers (\acs{Ri}$^{-1}$) (bulk \acs{Ri}: $=\frac{gh}{\overline{\theta_{ML}}} \frac{\Delta \theta}{w^{*2}}$, $\Delta \theta = \overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ 
-and gradient \acs{Ri}: $=\frac{g}{\overline{\theta_{ML}}} \frac{\gamma h^{2} }{w^{*2}}$) decrease with respect to time, 
-clustering according to $\gamma$. (Fig. \ref{fig:invristime})\\
-
-\begin{figure}[htbp]
-
-\begin{minipage}[b]{0.5\linewidth}
-         
-        \subfloat[]{\label{main:a}
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime}}\\
-        \end{minipage}             
-\quad
-\begin{minipage}[b]{0.5\linewidth}
-        \subfloat[]{\label{main:d}
-          %plot_height [master fbd2dfd] invristime1
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime1}}\\
-       
-       \end{minipage}
-        \caption{Inverse bulk (a)  and gradient (b) Richardson Number vs time}
-        \label{fig:invristime}
-\end{figure}
-
-The entrainment rate ($w_{e}= \frac{dh}{dt}$) is determined from the slope of a second order polynomial fit to $h(time)$ (Fig. \ref{fig:hvstime}).  When scaled by ($w^{*}$) it is a roughly linear function 
-of the bulk $Ri^{-1}$, whereas it is asymptotic to a linear function of the gradient $Ri^{-1}$. (Fig. \ref{fig:scaledweinvri})\\    
-
-\begin{figure}[htbp]
-\begin{minipage}[b]{0.5\linewidth}
-        %plot_height [master fbd2dfd] invristime1
-        \subfloat[]{\label{main:a}
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri}}\\
-        \end{minipage}             
-\quad
-\begin{minipage}[b]{0.5\linewidth}
-        \subfloat[]{\label{main:d}          
-          %plot_height [master 01c3721] scaledweinvri1
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri1}}\\
-       
-       \end{minipage}
-        \caption{Scaled Entrainment rate vs inverse bulk (a)  and gradient (b) Richardson Number}
-        \label{fig:scaledweinvri}
-\end{figure}
-
-Although the scaled \acs{EL} depth decreases with increasing \acs{Ri} (gradient and bulk Fig \ref{fig:scaledeltahinvri})
-grouping according to $\gamma$ is evident.\\
-
-\begin{figure}[htbp]
-\begin{minipage}[b]{0.5\linewidth}
-        %plot_height [master c7af4de] scaleddeltahinvri
-        \subfloat[]{\label{main:a}
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri}}\\
-        \end{minipage}             
-\quad
-\begin{minipage}[b]{0.5\linewidth}
-        \subfloat[]{\label{main:d}          
-          %plot_height [master b9c30ad] scaleddeltahinvri1
-                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri1}}\\
-       
-       \end{minipage}
-        \caption{Scaled EL depth vs inverse bulk (a)  and gradient (b) Richardson Number}
-        \label{fig:scaledeltahinvri}
-\end{figure}
-
-\clearpage
 
 \section{Local Mixed Layer Heights ($h_{0}^{l}$)}
 \label{sec:locmlh}     
@@ -413,6 +303,8 @@ upward moving relatively cool air at $h_{1}$.\\
 Distributions of $h_{0}^{l}$ at 5 hours (Fig \ref{fig:localhhist}) show increased variance with increasing $\overline{w^{,}\theta^{,}_{s}}$
 and decreasing $\gamma$.  Due to the clustering according to $\gamma$ this progression is less effectively represented by plotting 
 variance against $Ri^{-1}$ (Fig. \ref{fig:varsvsinvri})
+
+%could put these sideways.  could do with checking the 2.5/60 low hs
 
 \begin{figure}[htbp]
 \caption{Histograms of $h^{l}_{0}$ for $\overline{w^{,}\theta^{,}_{s}} = 150 \ to \ 60$ (W \ $m^{2}$) (top to bottom) and $ \gamma = 10 to 2.5$ (K/Km) (left to right) at 5 hours}
@@ -488,7 +380,9 @@ $h$ and $\Delta h$.\\
 to visualize how the distributions are influenced by changes in $\overline{w^{,} \theta^{,}}$ and $\gamma$.  At $h_{0}$
 (Fig. \ref{fig:fluxquadsh0}) fast updraughts are relatively warm and are inhibited by increasing upper stability.  The spread
 in velocity increases with increasing $\overline{w^{,}\theta^{,}}_{s}$\\
-  
+
+%redo these with one colorbar see 
+%http://stackoverflow.com/questions/13784201/matplotlib-2-subplots-1-colorbar  
 
 \begin{figure}[htbp]
 %
@@ -603,36 +497,179 @@ as in Fig \ref{fig:conts2}. \\
 \label{fig:fluxquadsh1}
 \end{figure}
 
+\clearpage
+
+\section{$h$ and  $\Delta h$ based on Average Profiles}
+\label{sec:hdeltahavprofs}
+
+\FloatBarrier
+
+\subsection{Reminder of Relevant Definitions}
+\FloatBarrier
+%definitions
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs}
+    \caption{$h$ vs time for all runs}
+    \label{fig:hvstime}   % label should change
+\end{figure}
+
+\begin{table}[!ht]
+    \begin{center}
+    \begin{tabular}{ | p{3cm} | p{3cm} | p{3cm} |}
+    \hline
+     Sullivan, Moeng & Fedorovich, Conzemius &  Garcia, Mellado\\ \hline
+     $h$ & $z_{f}$& $z_{enc} \approx z_{f0}$ \\ \hline
+     $\Delta \theta = \overline{\theta}(z_{f1})-\overline{\theta}(z_{f})$ & $\Delta b = b_{0}(z_{f}) -b(z_{f})$ & $\Delta b = b_{0}(z_{f}) - b(z_{f}) $\\ \hline
+      & $\delta b = b(z_{f1})$ - $b(z_{f0})$ & $\delta b = b(z_{f1})$ - $b(z_{f0})$\\ \hline
+      $w_{*}= (h B_{s})^{\frac{1}{3}}$, $B_{s} = \frac{g}{\overline{\theta_{ML}}}\overline{w^{'}\theta^{'}}_{s}$ & $w_{*}= (z_{f} B_{s})^{\frac{1}{3}}$ & $w_{*}= (z_{f0} B_{s})^{\frac{1}{3}}$\\ \hline
+      $\tau = \frac{h}{w^{*}}$ & $\tau=N^{-1}$ & $\frac{t}{\tau}=\frac{z_{enc}}{L_{0}}$, $L_{0}=\left(\frac{B_{s}}{N^{3}}\right)^{\frac{1}{2}}$\\ \hline
+ 
+   
+\end{tabular}
+\caption{Relevant definitions from three key publications}
+\label{fig:}   
+\end{center}    
+\end{table}
+%\footnotetext[1]{Fedorovich et al and Garcia et al use buoancy instead of $\theta$, but they are interchangeable for this purpose}
 
 
-%\subsection{$\theta$ and Flux}
 
-%Profiles of horizonatally averaged ensemble averaged $\theta$.\\
+\subsection{$\frac{w_{e}}{w^{*}}$ vs $Ri^{-1}$}
+\FloatBarrier
+Covective Boundary Layer (CBL) height ($h$) (Fig. \ref{fig:hvstime}) grows rapidly initially with a steadily decreasing rate
+and is a linear function of scaled time (Fig \ref{fig:hvsscaledtime}).\\
+  
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/hvstime}
+    \caption{$h$ vs time for all runs}
+    \label{fig:hvstime}   % label should change
+\end{figure}
 
-%We expect to see formation of a measureable mixed layer with uniform temperature topped by an entrainment region.\\
+%need flux height scaled by h plot
 
-%Get $\theta_{t+1} -  \theta_{t}$ profiles to predict flux profiles: $\frac{d\theta}{dz} = \overline{w^{'}\theta^{'}}$ so points at where sucessive $\theta$ profiles intersect should more or less correspond to points of zero flux crossing.  Points at which $\theta$s decrease most from one time to the next, should correspond to negative peak in fluxes.\\
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_h_f_time}
+    \caption{$\frac{z_{f}}{h}$ vs Time}
+    \label{fig:hvstime}   % label should change
+\end{figure}
 
-%Compare Flux profiles to predicted flux profiles to $\theta$ profiles.\\
 
-%Some type of quadrant analysis : plots of horizontally averaged ensemble averaged upwarm, downwarm, upcold, downcold alongside average flux.\\
+%redo Ri with Delta theta (?)
 
-%\subsection{2d FFTs}
+%Do a log log plot of the below? to confirm the -1 slope? 
 
-%\subsection{Root Mean Squared Velocity Profiles}
+%get slope to compare with other work.
 
-%\section{h, and EL Limits based on Average Profiles}
+Inverse Richardson Numbers (\acs{Ri}$^{-1}$) (bulk \acs{Ri}: $=\frac{gh}{\overline{\theta_{ML}}} \frac{\Delta \theta}{w^{*2}}$, $\Delta \theta = \overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ 
+and gradient \acs{Ri}: $=\frac{g}{\overline{\theta_{ML}}} \frac{\gamma h^{2} }{w^{*2}}$) decrease with respect to time, 
+clustering according to $\gamma$. (Fig. \ref{fig:invristime})\\
 
-%\subsection{Definitions}
+\begin{figure}[htbp]
 
-%\subsection{Plots}
+\begin{minipage}[b]{0.5\linewidth}
+         
+        \subfloat[]{\label{main:a}
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime}}\\
+        \end{minipage}             
+\quad
+\begin{minipage}[b]{0.5\linewidth}
+        \subfloat[]{\label{main:d}
+          %plot_height [master fbd2dfd] invristime1, see branches named accordingly
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime1}}\\
+       
+       \end{minipage}
+        \caption{Inverse bulk (a)  and gradient (b) Richardson Number vs time}
+        \label{fig:invristime}
+\end{figure}
 
-%\section{Scaling Relationships of $W_{e}$ and $\Delta h$}
-%\label{sec:Scaling Relationships of $W_{e}$ and $\Delta h$}
+The entrainment rate ($w_{e}= \frac{dh}{dt}$) is determined from the slope of a second order polynomial fit to $h(time)$ (Fig. \ref{fig:hvstime}).  When scaled by ($w^{*}$) it is a roughly linear function 
+of the bulk $Ri^{-1}$, whereas it is asymptotic to a linear function of the gradient $Ri^{-1}$. (Fig. \ref{fig:scaledweinvri})\\    
 
-%\section{Local Mixed Layer Height Distriubutions}
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth}
+        %plot_height [master fbd2dfd] invristime1
+        \subfloat[]{\label{main:a}
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri}}\\
+        \end{minipage}             
+\quad
+\begin{minipage}[b]{0.5\linewidth}
+        \subfloat[]{\label{main:d}          
+          %plot_height [master 01c3721] scaledweinvri1
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri1}}\\
+       
+       \end{minipage}
+        \caption{Scaled Entrainment rate vs inverse bulk (a)  and gradient (b) Richardson Number}
+        \label{fig:scaledweinvri}
+\end{figure}
 
-%\section{Flux Quadrant Analysis}
+\subsection{$\frac{\Delta h}{h}$ vs $Ri^{-1}$}
+\FloatBarrier
+
+EL depth ($h_{1}-h_{0}=\Delta h$) (Fig. \ref{fig:deltahvstime1}) increases with time
+although not as rapidly as $h$.  It deepens with increasing $\overline{w^{,}\theta^{,}_{s}}$ 
+and narrows with increasing $\gamma$. \\
+
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py [master fd5c6b1] delta h vs time1  
+    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/deltahstime1}
+    \caption{$\Delta h$ vs time}
+    \label{fig:deltahvstime1}   % label should change
+\end{figure}
+
+The scaled upper EL limits (Fig. \ref{fig:scaleddeltahstime}) ($\frac{h_{1}}{h}$) collapse well 
+to an initial value of approximately 1.75, decreasing to about 1.5 .  $\frac{h_{0}}{h}$s appear 
+grouped according to $\gamma$ and increase with respect to time.\\  
+
+%need flux based el limits scaled by either h or hf
+
+Although the scaled \acs{EL} depth decreases with increasing \acs{Ri} (gradient and bulk Fig \ref{fig:scaledeltahinvri})
+grouping according to $\gamma$ is evident.\\
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth}
+        %plot_height [master c7af4de] scaleddeltahinvri
+        \subfloat[]{\label{main:a}
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri}}\\
+        \end{minipage}             
+\quad
+\begin{minipage}[b]{0.5\linewidth}
+        \subfloat[]{\label{main:d}          
+          %plot_height [master b9c30ad] scaleddeltahinvri1
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri1}}\\
+       
+       \end{minipage}
+        \caption{Scaled EL depth vs inverse bulk (a)  and gradient (b) Richardson Number}
+        \label{fig:scaledeltahinvri}
+\end{figure}
+
+
+%need bit about new definitions
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\linewidth}
+        %plot_height [master c7af4de] scaleddeltahinvri
+        \subfloat[]{\label{main:a}
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_4}}\\
+        \end{minipage}             
+\quad
+\begin{minipage}[b]{0.5\linewidth}
+        \subfloat[]{\label{main:d}          
+          %plot_height [master b9c30ad] scaleddeltahinvri1
+                \includegraphics[scale=.36]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri1_1}}\\
+       
+       \end{minipage}
+        \caption{}
+        \label{fig:}
+\end{figure}
+
+
 
 \endinput
 
