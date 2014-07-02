@@ -1,0 +1,360 @@
+%% The following is a directive for TeXShop to indicate the main file
+%%!TEX root = diss.tex
+
+\chapter{Concepts}
+\label{ch:Conceptss}
+\setlength{\parindent}{0cm}
+
+\section{Modelling the Convective Boundary Layer}
+\label{CBLModels}
+
+\subsection{Analytical Models}
+The most common analytical models for the Convective Boundary layer (\acs{CBL}) can be subdivided into: (i) zero order
+and (ii) first order bulk models.\\
+
+Zero order bulk models assume a Mixed Layer (\acs{ML}) of constant potential temperature topped
+by an infinitessimally thin layer accross with there is a temperature jump.  The assumed vertical heat flux ($w^{,}\theta^{,}$) profiles are
+linearly decreasing from the surface up, reaching a maximum negative value proportional to the surface value (usually -.2)
+at the temperature inversion and going to zero over an infinitessimally small layer.  Equations for the evolution of ML or inversion height (Entrainment Relation),
+and average mixed layer temperature and temperature jump at the inversion are derived from the reynolds average conservation of enthalpy
+euqation integrated over the ML, simplified and closed according to the entrainment relation and assumptions such as those mentioned above.  
+So relevant quantities are ensemble averaged.\\
+
+\cite{Deardorff79}
+
+First order models assume an Entrainment layer (\acs{EL}) of finite depth at the top of the ML, defined by two heights:
+the top of the ML ($h_{0}$) and the point where free atmospheric characteristics are resumed ($h_{1}$).  The derivations are more complex and 
+examples of implifying assumptions about the \acs{EL} are: $\Delta h = h_{1} - h_{0} = 0$ (Betts, see \cite{Deardorff79}), $\Delta h$ or maximum 
+overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the relevant vertical velocity scale and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$
+is the Brunt-Vaisalla frequency (Stull 1972 see dropbox folder) and that between $h_{0}$ and $h_{1}$ $\overline{\theta} = \overline{\theta}_{ML} + f(x,t) \Delta \overline{\theta}$ where
+$f(x,t) \Delta \overline{\theta}$ is a dimensionless shape factor \cite{Deardorff79}.\\
+
+Although validation or development of these models is beyond the scope of thisthesis, mention of them is necessary to give context to the scaling 
+parameters and relationships to be considered. \\         
+
+\subsection{Numerical Models using the Navier Stokes Equations: Large Eddie Simulation}
+
+Direct Numerical Simulataions (\acs{DNS}) solve the Navier Stokes Equations without use of sub grid scale closure, i.e. all range of spatial
+and temportal turbulence must be resolved.  A Large Eddy Simulation (\acs{LES}) filters out the smaller scales leaving them to 
+a sub grid scale closure model.  General Circulation Models (\acs{GCM}) can model global processes, so their subgrid scale can span the
+an LES domain, and they use a grid based on spherical coordinates.\\
+
+(paper from Douws 571c justifying LES use)
+
+\acs{LES} has steadily, repeatedly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} applied this relatively 
+new method in \cite{Deardorff72} for this purpose.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}, \citeauthor{FedConzMir04} in \cite{FedConzMir04}
+and \citeauthor{BrooksFowler2} in cite{BrooksFowler2} used it to observe the structure and scaling behaviour of the \acs{EL}.\\
+
+The technique has been widely used to closely simulate measurement campaigns as well as more idealized conditions whereby scaling relations, parametrizations
+and analystical models can be tested. (references? tie in to what i'm using it for)
+\\
+
+\subsection{Choice of Grid Sizes}
+
+\citeauthor{SullPat} in \cite{SullPat} investigated \acs{LES} solution convergence for modelling the \acs{CBL} over a range of grid sizes.
+They found that the shapes of key variable vertical profiles ($\overline{\theta}$ and $\overline{w^{,}\theta^{,}}$), particularly in the \acs{EL} 
+as well as entrainment rate ($w_{e}$) varied and began to converge at higher resolution.  Of particular interest is the variation
+in shape of the vertical $\overline{\theta}$ profile within the \acs{EL}.  The height over which $\overline{\theta}$ increases
+from the \acs{ML} value to the free atmosphere value is elongates with decreased resolution.\\
+
+Of highest importance is the resolution in the vertical to resolve the steep gradients within the \acs{EL}. 
+Although comparable horizontal resolution is needed to maintain reasonable aspect ratio, 3D isotropy is thought to be unecessary.
+2D isotropy is sufficient.\\
+
+Choice of grid size must also consider the scaling distance between the eddies containing the most energy
+and the smallest resolved eddies.  Domain size must also be considered in order to allow fully turbulent fields to develop independently of the periodic sidewall 
+boundary conditions. In particular at later simulation times ($t > 8hrs$) when large structures develop.  
+(I'm afraid my domain is too small) These consideratons must be balances with the computational time and 
+resource avaiability.\\
+
+\subsection{Choice of Initial Conditions}
+
+Both \citeauthor{SullMoengStev} and \citeauthor{BrooksFowler1} in \cite{SullMoengStev} and \cite{BrooksFowler1} chose to
+start with a finite layer of uniform tempertaure and or tracer concentration topped by a temperature jump.  These inital conditions
+are an idealization of a realistic potential temperature sounding.  Due to entrainment a temperature jump
+also evolves when a \acs{CBL} grows against stable linear stratification ($\gamma$) (\cite{Turner86}, \cite{FedConzMir04} and \cite{GarciaMellado}).
+This jump is a direct result of the \acs{CBL} growth and warming rates and $\gamma$.
+ 
+\subsection{An Ensemble}
+
+Using a true ensemble of individual cases varying by a pseudo-random small temerature perturbation from unform distribution,
+means that true ensemble averages and so temperature peturbations can be calculated.  The turbulent veloctiy perturbations are 
+prognosed by the \acs{LES} and the temperature is diagnosed.  Given the individual cases produce realistic turbulence,
+ ie resolved, (statistically independent?) eddies, thermals and plumes, and ensemble provides an advantage in terms
+ of point-sample size.       
+
+\subsection{The Equilibrium Entrainment Regime}
+
+The equilibrium or quasi-equilibrium entrainment regime is reached when the time evolution of turbulence kinetic energy (\acs{TKE})
+ and its dissipation are negligible and there is negligible energy lost through gravity waves.  This regime is assumed for the derivation of
+the zero order model based entrainment relation as in \cite{FedConzMir04}.  \citeauthor{GarciaMellado} in \cite{GarciaMellado} plot the 
+terms of the terms of the evolution equation for \acs{TKE}, integrated from the surface to the top of the domain (? $z_{\infty}$) 
+and show the the balancing of the buoyancy (driven TKE) term by the dissipation term.  They say this regime is also characterised 
+by a rate of \acs{CBL} growth that is much slower than their time scale ($\frac{z_{enc}}{L_{0}}$, $L_{0} = \left(\frac{B_{0}}{N^{3}} \right)^{\frac{1}{2}}$)
+and proportional to the square root of time.  % phil wants me to show this  
+
+
+The energy term profiles become more or less self similar when scaled by $w^{*}$. Finally
+\citeauthor{FedConzMir04} in \cite{FedConzMir04} say it is characterized by a(n approximately) constant entrainment ratio ($\frac{B_{i}}{B_{s}}$) and
+and a constant stability ratio ($\frac{N^{2}\delta z_{i}}{\delta b} \approx 1.2$).   
+
+\section{Seeing the \acs{CBL} and \acs{EL}}
+\label{SeingCBL}
+\subsection{plumes, thermals}
+To establish that the simulated \acs{CBL} is behaving realitically visual representations of the key variables are observed.
+\citeauthor{SchmidtSchu} in \cite{SchmidtSchu} used vertical profiles of the horizontally averaged (equivalent to ensemble averaged
+by ergodic assumption) $\theta$, $w^{,}\theta^{,}$ and $w^{,2}$.  For example using their $\overline{\theta}$ profiles they observed
+a developing \acs{ML} and the effects of heating by entrainment of warm air from above, in addition to from the surface,  
+and the resulting development of an inversion, ie a point at which the gradient is steeper than the inititial lapse rate ($\gamma$).  Vertical profiles of the velocities and heat flux
+showed a \acs{CBL} above which turbulence sharply decreases and the $\overline{w^{}\theta^{,}}$ profiles provided a clear
+visual for the location and depth of the \acs{EL} where it became negative as entrainment became more important as well
+as a definition for \acs{CBL} height at the point where it is minimum.\\
+
+A more direct visual is obtained using horizontal contour plots of the turbulent quantities. \citeauthor{SchmidtSchu} in \cite{SchmidtSchu}
+and later \citeauthor{SullMoengStev} in \cite{SullMoengStev} showed the spoke like patterns of the upward moving thermals as they become plumes impinging on
+the stable air aloft.\\    
+\subsection{energy spectra, ffts, the circular integration to one a scalar spectrum}
+
+To confirm there is sufficient scale separation between the dominant eddies and the grid size
+the \acs{FFT} energy of the velocity fields should be plotted against wavenumber.  For example
+ the power spectrum of the 3 dimentional domain should obey Kolmagorov's $\frac{-11}{3}$ power law
+
+\begin{equation}
+\phi(k) = Ck^{\frac{-11}{3}}
+\end{equation}
+
+Analoguosly in 2D is a $\frac{-8}{3}$ power law but it is difficult to represent visually.
+If radial isotropy is assumed and the the power function is integrated around a circle 
+(or semicircle if only considering the positive wavenumbers), the scalar result should
+obey the $\frac{-5}{3}$ power law for 1 dimension.
+
+
+\begin{equation}
+\Phi(r) = \int \phi(r) r d\theta = \int Cr^{\frac{-8}{3}} r d\theta = \pi \frac{-3}{8} C r^{\frac{-5}{3}}, \ r=\sqrt{k_{x}^{2} + k_{y}^{2}}
+\end{equation}
+ 
+Whether there is sufficient scale separation between the dominant turbulent structures
+and the grid sizes would be obvious from a  plot of $log(\Phi(r))$ vs $log(r)$.
+
+\section{Boundary Layer Height and Entrainment Layer Limits: Definitions}
+\label{sec:BLhdeltah}
+In \cite{Deardorff72}, \citeauthor{Deardorff72} confirmed using \acs{LES} that the inversion height ($z_{i}$) was the most important
+lengh scale for the \acs{CBL}.  In earlier studies, the later of which for example would be \cite{SchmidtSchu}, they use this
+term to describe the point of minimum $\overline{w^{,}\theta^{,}}$ which was more recently (\cite{SullMoengStev}) shown to be 
+distinct from the vertical location of the maximum $\overline{\theta}$ gradient.   There are differences between the \acs{CBL}
+height definitions in analytical and numerical studies as compared with those used for measurements.  For example \citeauthor{FedConzMir04}
+in \cite{FedConzMir04} use the point of minimum $\overline{w^{,}\theta^{,}}$ and lable it $z_{i}$, whereas \citeauthor{Traum11} in \cite{Traum11}
+use three methods based on LIDAR backscatter profile.  Other definitions include those that are turbulence based such as the height below which
+the vertical velocity is significantly correlatedd with itself (\cite{Traum11}), ie the height of the dominant turbulent structures
+and those based on statistics of locally determined heights (\cite{BrooksFowler2})\\
+
+Likewise, definitions of the \acs{EL} limits vary, as is summarized well by both \cite{BrooksFowler2} and \cite{Traum11}.  There is the idea that
+it is a local vertical distance over which a quantity such as $\theta$ or tracer concentration transitions from an \acs{CBL} value to an upper atmosphere
+value.  This might be explained by plumes reaching different heights, with intermittent periods of relative inactivity over time.  At any point in time
+there will be a range of local \acs{ML} heights and the \acs{EL} can be viewed as some function of the range over which they vary (\cite{StullNelEl} ).
+These two concepts can then be combined as in \cite{BrooksFowler1}.\\     
+
+(Need to say what I'm useing and why, mention of Sullivan and Moeng!)
+\section{Boundary Layer height and Entrainment Layer Limits: Measurement Techniques}
+\label{sec:BLMeas}
+
+A full and detailed discussion about \acs{CBL} height determination is beyond the scope of this
+thesis. (cite traumner and brooks and fowler) LIDAR backscatter profiles seem to dominate recent 
+measurement campaigns \cite{Traum11}.  They clearly represent the difference between the \acs{CBL} 
+and the upper atmosphere in terms of aerosol concentration.  So techniques such as 
+\citeauthor{BrooksFowler2}'s wavelet algorithm and \citeauthor{SteynBaldHoff}'s idealized profile 
+fit are important.\\
+
+Numerical models have the advantage of easily producing $\overline{w^{,}\theta^{,}}$ profiles
+on which analytical models are based as well as Tracer concentration, and potential temperature profiles.
+So it's important to form a logical bridge from the analytical models from which scaling relations
+are derived to actual measurements. Obtaining the $\overline{w^{,}\theta^{,}}$ based height(s) (minimum and zero
+crossings) from LES output is trivial.  LES produced \acs{CBL} Potential temperature profiles have a 
+real-world counterpart (soundings).  \citeauthor{SullMoengStev} in \cite{SullMoengStev} identified the 
+point of maximum gradient in the profile and used this as their \acs{CBL} height.  But this method
+fails when there is local variation in the profile for example due to waves, and the resulting
+gradients exceed that marking the transition from \acs{ML} to the upper atmosphere.\\
+
+For a uniform $\overline{w^{,}\theta^{,}}$ which causes a \acs{CBL} to rise against a constant $\gamma$
+the local $\theta$ profiles can be approximated by three regions similar to a first order analytical model:
+the \acs{ML} (a contstant $\theta$), \acs{EL} and the upper atmopshere ($\gamma$).  At least two 
+of these three regions are approximately linear.  \citeauthor{Vieth} in \cite{Vieth} applied a two line
+fit to data according to the minimum residual sum of squares (\acs{RSS}).  This can easily be extended
+to three lines where the key points are those where one line ends and another begins ie, the top of the 
+\acs{ML}, and the top of the \acs{EL}.  If strictly adhering to the analytical model \acs{EL} should be
+approximated by a curve (3rd degree polynomial) but hundreds of local profiles where observed, and none
+had a distinct \acs{EL} similar to that of the idealized or averaged profile.\\
+
+\subsection{Justification of $h_{0}$ threshold}
+
+Brooks and Fowler state that for the difinition of an entrainment zone using a mean scalar profile there
+ is not clear definition of what a significant gradient is.  Given my mean profiles of the vertical potential
+temperature gradient remain close to zero in the mixed layer, but decreases from the surface and then
+increases gradually.  A threshold value must be chosen to separate the layer where it increases gradually
+from that where the increase is sharper (EL.).  This threshold value must be greater than zero, and less
+than $\gamma$ and the same for all runs.  The lowest $\gamma$ is .0025.  I chose a value of .0002, 
+but verified that my main result  remained consistant with values of .0001 and .0004.
+see scaleddeltahinvri plots 5 and 6, and theta grad profs 6 and 5.
+
+
+\section{Entrainment Layer Statistics}
+\label{sec:EntLayStat}
+Since the concept of the \acs{CBL} \acs{EL} is basd on plume heights distributed over time
+or space, a statistical perspective is natural.  Relationship between the distrubutions of 
+\acs{CBL} heights ($h$) and Richardson Number is expected.  A visualization of
+ the 2D distributions of the local $w^{,}\theta^{,}$ quadrants and their behaviour 
+with respect to Richardson Number would compliment and further the insight given
+by \citeauthor{SullMoengStev} in \cite{SullMoengStev}.\\
+
+\citeauthor{BrooksFowler2} found the statistically based definitions $h$ yielded clearer 
+relationships to Richardson number in \cite{BrooksFowler2} and proposed a measure of \acs{EL}
+depth based on statistics of the local \acs{EL}.  \citeauthor{SullMoengStev} obsereved 
+Richardson Number dependece on the second order statistics of the local $h$.\\
+
+Having a large sample of local data points might be an advantage.  A comparison of the
+local $h$  surface could be compared with upper horizontal slices of $\theta^{,}$ and 
+$w^{,}$.  Visualization of the distributions of local $h$ using histograms, paying attention
+to for example their spread and skew with relation to $\gamma$ and $\overline{w^{'}\theta^{'}}$
+would lend support to scaling relationships based on the averaged profiles.\\
+
+\section{Parameters, Scales and Scaling Relations -- Velocity, time, height, surface flux, stability}
+
+\subsection{Convective Velocity Scale: $w^{*}$}
+Given an average surface heat flux ($\overline{w^{,}\theta^{,}}_{s}$) a surface buoyancy flux can be defined as 
+$\frac{g}{\overline{\theta}}\overline{w^{,}\theta^{,}}$ from which the convective velocity scale is obtained by
+multiplying by the appropriate length scale.  Since the result is in $\frac{m^{3}}{s^{3}}$ a cube root is applied.\\
+
+\begin{equation}
+w^{*} = \left( \frac{gh}{\overline{\theta}}\overline{w^{,}\theta^{,}} \right)
+\end{equation}
+
+\citeauthor{Deardorff70} (\cite{Deardorff70}) confirmed that this effectively scaled the vertical turbulent velocity
+perturbations in the \acs{CBL}.\\
+
+It logically follows that the time for a plume to reach the top of the \acs{CBL} is
+
+\begin{equation}
+\tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}\overline{w^{,}\theta^{,}} \right)}
+\end{equation}
+
+where $h$ is \acs{CBL} height.
+
+\subsection{Richardson Numbers}
+
+The Flux Richardson ($R_{f}$) expresses the balance between turbulent mechanical energy and buoyancy.  It's obtained from the ration of these two terms
+ in the Turbulent Kinetic Energy budget equation (\cite{Stull-BLMetIntro}):
+
+\begin{equation}
+\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{,}\theta^{,}} \right) - \overline{u_{i}^{,}u_{j}^{,}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( u_{j}^{,}e^{,} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( u_{i}^{,} p^{,} \right) }{\partial x_{i}} - \epsilon
+\end{equation}
+
+\begin{equation}
+R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{,}\theta^{,}} \right)}{\overline{u_{i}^{,}u_{j}^{,}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}
+\end{equation}
+ 
+Assuming horizontal homogenaiety and neglecting subsidence
+  
+\begin{equation}
+R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{,}\theta^{,}} \right)}{\overline{u^{,}w^{,}}\frac{\partial \overline{U}}{\partial z} + \overline{v^{,}w^{,}}\frac{\partial \overline{V}}{\partial z}}
+\end{equation}
+
+Applying first order closer to the flux terms (i.e. assuming they are proportional to the vertical gradients)  gives the gradient Richardson Number ($R_{g}$)
+
+\begin{equation}
+R_{g} = \frac{ \frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\left( \frac{ \partial \overline{U}}{\partial z} \right)^{2} + \left( \frac{\partial \overline{V}}{\partial z} \right)^{2}} 
+\end{equation}
+
+which is usually used to express the balance between shear and buoyancy driven turbulence, but in the \acs{EL} buoancy acts to supress turbulence.  
+Applying a bulk approximation the to the numerator, and expressing it in terms of scales yields a ratio of two square of time scales
+
+\begin{equation}
+R_{g} = \frac{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\frac{U^{*2}}{L^{2}}} = N^{2}\frac{L^{2}}{U^{*}}
+\end{equation}
+
+
+and applying the bulk approximation to both the numerator and the denomnitor yields
+
+\begin{equation}
+R_{b} = \frac{\frac{g}{\overline{\theta}} \Delta \overline{\theta} L}{U^{*}}
+\end{equation}
+A natural choice of length and veloctiy scales for the \acs{CBL} are $h$ and $w^{*}$.  \citeauthor{EllTurn} (\cite{EllTurn}) suggested and confirmed a relationship between the entrainment rate and this form of 
+Richardson number based on tank experiments.  This parameter can be justified and arrived at by considering the principal forcings of the system, or from non-dimensionalizing the entrainment relation  deriived
+analyitically, i.e. (\cite{Deardorff72})
+
+\begin{equation}
+w_{e} \propto \frac{\overline{w^{,}\theta^{,}}_{s}}{\Delta \overline{\theta}}
+\end{equation}
+
+\begin{equation}
+\frac{w_{e}}{w^{*}} \propto  \frac{\overline{w^{,}\theta^{,}}_{s}}{\Delta \overline{\theta} w*{*}} = Ri_{b}^{-1}
+\end{equation}
+ 
+
+In one or other of its forms this parameter has become central to any study on \acs{CBL} entrainment (\cite{SullMoengStev}, \cite{FedConzMir04}, \cite{Traum11}, \cite{BrooksFowler2})
+
+\subsection{Scaling Relationships}
+
+(relationship of height to scaled time, check sull moeng and fed conz)
+
+The relationship between the scaled entrainment rate $w_{e}$ and Richardson Number as summarized by \citeauthor{Traum11} in 
+\cite{Traum11} can in general be expressed as follows:
+
+\begin{equation}
+\frac{w_{e}}{V} \propto Ri^{-a}
+\end{equation}
+
+where a ranges from 1 to 2.  The value of 1.5 predominates among the water-tank experiments, and 
+it is equal to 1 in the \acs{LES} studies.  Although, \citeauthor{FedConzMir04} perceive deviation
+towards 1.5 at higher stability (or stronger inversion) in both theirs and \citeauthor{SullMoengStev}'s 
+results.  This is in line with \citeauthor{Turner86}'s discussion in \cite{Turner86}.\\
+
+\citeauthor{DearWill80} suggested the importance considering the scaled depth of the \acs{EL} in \acs{CBL} 
+entrainment analysis or prediction and put forward a relationship between it and the Richardson Number
+which has been further examined in subsequent related studies.  
+
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri^{-b}
+\end{equation}   
+
+As summarized in \cite{Traum11} b ranges from .25 to 1.  (unclear what Brooks and Fowler got for either of these
+relationships) Of the three principle \acs{LES} studies (\cite{BrooksFowler2}, \cite{FedConzMir04}, \cite{SullMoengStev})
+one (\cite{FedConzMir04}) varied the upper lapse rate ($\gamma$).  However, it seems their grid spacing 
+was large compared to those at wich solutions converged in \cite{SullPat}
+
+(connectionn to models, sero, first order jump models, for example sull moengs section on how the 1rst order jump model
+better matches the enntrainment rate)
+
+(gather materials for statistics section)
+
+\begin{table}[!ht]
+    \begin{center}
+    \begin{tabular}{ | l | p{5cm} | p{5cm} |}
+    \hline
+     Parameter & Definition & Explaination \\ \hline
+     $h$&  height of maximum $\frac{\partial \overline{\theta}}{\partial z}$& \acs{CBL} height \\ \hline
+     $h_{0}$& height where $\frac{\partial \overline{\theta}}{\partial z}$ first exceeds 0 by a threshold& lower \acs{EL} limit\\ \hline
+     $h_{1}$& height where $\frac{\partial \overline{\theta}}{\partial z}$ resumes $\gamma$& upper \acs{EL} limit\\ \hline
+     $\Delta h$& $h_{1} - h_{0}$ & \acs{EL} depth\\ \hline
+     $\Delta \theta$ & $\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & Temperature Jump over the \acs{EL}\\ \hline
+     $h^{l}_{0}$& see section \label{sec:BLMeas}  & local \acs{ML} height\\ \hline
+     $w^{*}$ & $\left( \frac{gh}{\overline{\theta}}\overline{w^{,}\theta^{,}} \right)$ & Convective Velocty Scale\\ \hline
+     $\tau$ & $\frac{h}{w^{*}}$ & Time scale for plume to reach \acs{CBL} top\\ \hline
+     $Ri_{g}$ & $\frac{g}{\overline{\theta_{ML}}} \frac{\gamma h^{2} }{w^{*2}}$ & Gradient Richardson Number for \acs{CBL} entrainment \\ \hline
+     $Ri_{b}$ & $\frac{g}{\overline{\theta_{ML}}} \frac{\Delta \theta h }{w^{*2}}$ & Bulk Richardson Number for \acs{CBL} entrainment \\ \hline
+     % \end
+
+   
+\end{tabular}
+\caption{}
+\label{fig:}   
+\end{center}    
+\end{table}
+%\footnotetext{Incomplete run: EL exceded high resolution vertical grid after 7 hours}
+
+(construct a table of the scales used and scaling relations considered in this thesis)
+
+
+\endinput
+
+Any text after an \endinput is ignored.
+You could put scraps here or things in progress.
