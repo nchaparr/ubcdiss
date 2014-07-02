@@ -192,18 +192,28 @@ The LES studies of \citeauthor{SullMoengStev} \cite{SullMoengStev}, \citeauthor{
 
 \citeauthor{FedConzMir04} \cite{FedConzMir04} varied their cases by upper lapse rate ($\gamma$) over a typical range found in the troposphere IE $1 - 10 K / Km$, whereas \citeauthor{SullMoengStev} \cite{SullMoengStev} and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} varied surface heat flux and initial inversion ($\Delta \theta$).  To obtain a range of Richardson numbers (\acs{Ri}) we varied both surface heat flux ($w^{'}\theta^{'}$) and upper lapse rate ($\gamma$).\\
 
-\subsection{}
+\subsection{Verifying that the Model output is realistic}
 
 Since unlike the other LES studies, we initialize with a constant surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) working against a constant lapse rate ($\gamma$), it would be good to see the formation of a convective boundary layer with the expected average profiles.\\
 
 Given our concern about a slightly smaller domain than usual, we would like to make sure each of the individual cases are producing coherent turbulent structures and that there is adequate scale separation between the structures with highest energy and the grid size.\\
 
-\citeauthor{SullMoengStev} \cite{SullMoengStev} showed with effective visual aids some of the details of the dynamics in the \acs{EL}.  It would be important to at least confirm our setup is producing comparable motions of warm and cool air in this region.
+\citeauthor{SullMoengStev} \cite{SullMoengStev} showed with effective visual aids some of the details of the dynamics in the \acs{EL}.  It would be important to at least confirm our setup is producing comparable motions of warm and cool air in this region.\\  
 
 
-  
+\subsection{Local Mixed Layer Heights}
 
-\subsection{}
+The average profiles must correspond to the average of the local profiles.  Local potential temperatures are expected to be less smooth and their variance in height corresponds to the depth of the average entrainment layer.  \citeauthor{SullMoengStev} \cite{SullMoengStev} used a centered differencing gradient method to find the local convective boundary layer (\acs{CBL}) heights. \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} apply a wavelet of dilation comparable to \acs{EL} depth the to local tracer profiles to determine the location of the \acs{EL} and then a narrower wavelet to determine the limits.  Since the local profiles are not smooth, and there is often upper variabilty of similar and greater magnitude than that which separates the mixed layer (\acs{ML}) from the layer above it the gradient method is not reliable.  A typical tracer profile is quite different to a potential temperature profile IE it goes from a large value in the \acs{CBL} to a much lower value above.  So an ideal approximation might be a step function.  Usually the variation accross the \acs{EL} is much greater than any local variation.  The vertical potential temperature gradient profile in this study could be approximated by step function but there is variance usually above the \acs{EL} which is of comparable magnitude to that accross it.  So a wavelet technique might not be as well suited. \citeauthor{SteynBaldHoff} in \cite{SteynBaldHoff} fitted an idealized curve to tracer profiles (Lidar backscatter).  So we apply this idea and the multi-linear regression method outlined by \citeauthor{Vieth} in \cite{Vieth} to our local potential temperature profiles.  The result is a three line fit, one line for each of the layers IE the \acs{ML} of almost constant potentia temperature, the \acs{EL} over which transition to the stable layer above occurs, and the stable layer of constant lapse rate $\gamma$.  From
+this the height of the mixed layer (\acs{ML}) can readily be determined and the distribution of local \acs{ML} heights ($h^{l}_{0}$) should correspond to the concept of the \acs{EL}.  We would expect increased stability ($\gamma$) to reduce the disortion of the inversion interface and so the variation in $h^{l}_{0}$. Increased surface heat flux ($w^{'}\theta^{'}_{s}$) would increase the overall magnitude of $h^{l}_{0}$ so histograms would represent these effects.  We would expect also the $h^{l}_{0}$ surface to correspond to coherent plumes of warm and cool air.  In particular hight $h^{l}_{0}$ should correspond to impinging cool plumes at the top of the \acs{EL}.
+
+\subsection{Flux Quadrants}
+
+
+
+
+
+
+
 
 Analytical models for the CBL often start with the Reynold's averaged conservation equation for $\theta$ \cite{Deardorff79}
 
