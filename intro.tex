@@ -212,9 +212,36 @@ Since the average potential temperature profile represents the results of warmin
 
 \subsection{Choice of height definitions}
 
+Bulk models assume that the region of transition from the \acs{ML} value to the free atmospheric value in the potential temperature or buoyancy profile corresponds to the region of negative potential temperature or buoyancy flux (\citeauthor{Deardorff79} \cite{Deardorff79}, \citeauthor{FedConzMir04} \cite{FedConzMir04}).  But although the  height of maximum average potential temperature gradient or average of local maximum potential temperature gradient used as \acs{CBL} height (\citeauthor{SullMoengStev}, \cite{SullMoengStev} and \citeauthor{GarciaMellado} \cite{GarciaMellado}) there does not seem to be an example in the literature where the \acs{EL} limits are defined in terms of the average potential temperature profile for the purpose of measurement. So here, we test this framework in terms of two scaling relationships, IE define both the \acs{CBL} height and \acs{EL} limits in terms of the average vertical potential temperature gradeient. It follows that the temperature jump ($\Delta \theta$) is defined as the difference accross the \acs{EL}.  This is 1st order type definition.  An approximation to the zero order definition would be the difference between the \acs{ML} value and the value at $h$ on the initial temperature profile.       
+
 \subsection{$\frac{w_{e}}{w^{*}}$ vs $Ri$}
 
+The relationship of scaled entrainment velocity to Richardson number \acs{Ri} is well established.  (\citeauthor{Deardorff79} \cite{Deardorff79} \citeauthor{DearWill80}, \cite{DearWill80}, \citeauthor{Stull-BLMetIntro} \cite{Stull-BLMetIntro}) and can be reached by first integrtating the reynolds averaged thermodynamic equation, neglecting radiation, and large scale advection, accross the inversion.  When the inversion depth is assumed infinitessimly small and there is no turbulence at the upper limit, and the flux at the lower limit is assumed a proportion of the surface flux this becomes
+
+\begin{equation}
+w_{e} \propto \frac{\overline{w^{'}\theta^{'}}}{\Delta \theta}
+\end{equation}
+
+and scaling by the convective velocity scale gives, the following
+
+\begin{equation}
+\frac{w_{e}}{w^{*}} \propto Ri^{-1}
+\end{equation}
+
+So this relationship is based on a simplified zero order framework.  Strictly the lengthscale and $\Delta \theta$ should be from within this framework.  But we will use our 1st order framework definition to test this scaling relationship for all runs.  We will compare our $\Delta \theta$ with the zero order approximation and those defined elsewhere in the literature.  This may enable comparison with other findings, in regards to this relationship.  There is some discussion in the literature about the power exponent of the Richarson number \acs{Ri} and it seems the two major contenders are $-1$ and $-\frac{3}{2}$.  The latter has been discussed in the context of a shift in entrainment mechanism from eddy turnover to recoil at higher \acs{Ri} (\citeauthor{Turner86} \cite{Turner86}), under conditions of a large upper lapse rate ($\gamma$) \citeauthor{DearWill80} \cite{DearWill80}. \citeauthor{FedConzMir04} \cite{FedConzMir04} asser that it is inferred when the first order $Ri$ is used IE when the temperature jump accross the \acs{EL} is used. Whereas \citeauthor{SullMoengStev} in \cite{SullMoengStev} speculate a power law other than $-1$ may apply at lower $Ri$.  We will plot our data in log-log coordinates to observe which if any power law applies to our results.
+
 \subsection{$\frac{\Delta h}{h}$ vs $Ri$}
+
+Relationship of the scaled \acs{EL} depth to Richardson number arises from a momentum balance where the depth is considered to be related to the overshoot of the plumes (\citeauthor{Stull73} \cite{Stull73}, \citeauthor{DearWill80} \cite{DearWill80}).  This in turn is a function of the plumes velocity at the top of the \acs{CBL} and the buoyancy difference between it and the surrounding stable air.  When the velocity at the top is assumed to be proportional the the convective velocity scale ($w^{*}$) this becomes
+
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri^{-1}
+\end{equation}
+
+\citeathor{Boers89} in \cite{Boers89} arrived at a $-\frac{1}{2}$ power law relationship using an energy balance.  IE they equate the difference in potential and thermal energy before and after distortion of the inversion interface to the kinetic energy before distortion. Output and measurements have resulted in power laws ranging from  $-1$ to $-\frac{1}{4}$ (\citeauthor{Traum11} \cite{Traum11}).\\
+
+Given that our principal definition of the \acs{EL} has not been used before we would be happy to see any relationship to \acs{Ri}.  Once we establish there is one, we will use log-log coordinates to see which power law best fits.\\
+
 
 \endinput
 
