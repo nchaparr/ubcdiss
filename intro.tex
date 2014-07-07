@@ -5,39 +5,120 @@
 \label{ch:Introduction}
 \setlength{\parindent}{0cm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Dry Convective Boundary Layer Entrainment Layer}
+\section{Motivation}
 \label{sec:}
 
+Atmospheric boundary layer growth by entrainment driven by convecive thermals acting against a stable lapse rate
+or inversion makes for an interesting topic.  (list of studies) It is a subsection of a broader topic of interest in geophysical fluid dynamics ie that of entrainment of a fluid into a turbulent fluid accross a density interface.  It involves the buoyant suppression of buoancy driven plumes, and subsequent trapping and mixing of the more buoyant air from accross the buoyancy/density gradient or jump.\\
+
+Boundary layer height and prediction there of are important for calculating tracer IE pollutant concentrations
+and the limiting sizes of turbulant structures.  (Steyn Baldi Hoff) Also the rate at which the boundary layer entrains air from above
+enables calculation of the rate at which tracers transported long range are drawn in an mixed with the air we breathe.\\
+
+In combination with the lifting condensation level, knowledge of entrainment layer depth allows predictions pertaining
+to the formation of cumulous clouds for example if the \acs{EL} is above the lifting condensation a high percentage of cloud cover
+would be expected.  Parametrizations for both \acs{CBL} growth and \acs{EL} depth are used in Mesoscale models and GCMs.  Further along the vein of prediction and parametrization it is an attractive goal to develop a robust set of scales such that a similarity theory as analogous to MO theory for the surface for this region could be developed (quote from GarciaMellado, Sorbjan1999).\\
+
+Bulk analyitical models underly certain parametrizations and scaling relatiohships (Traumner) and are validated by measurements 
+and output from LES and DNS models. The two important categories referenced here are the zero order whcih
+assume an infinitessimly thin entrainment layer and the 1st order which includes an entrainment layer of finite depth
+and there is discussion in the literature as to whether explicit consideration of the \acs{EL} depth is required. Both
+types typically relies on the simplified reynolds averaged thermodynamic equation 
+
+\begin{equation}
+\frac{D \overline{\theta}}{Dt} = -\frac{\partial \overline{w^{'}\theta^{'}}}{\partial z}
+\end{equation}
+
+relating average potential temperature to average vertical turbulent potential temperature flux, as well as idealized vertical profiles for both.  So verification of the resulting entrainment equation by LES using ensemble averaged $\theta$ and $w^{'}\theta^{'}$ logically follows.  So far, horizontal and time averaging has been
+used but we will run an ensemble of cases, and apply true ensemble averaging as well as horizontaly averaging to get smooth vertical profiles.\\  
+
+
+Studies in which the scaling relation or parametrizations for $\Delta h$ is verified (Deardorf tank, SullMoengStev, Fed, BrooksFow, GarciaMellado) refer to the potential temperature or buoyancy inversion region but do not define the entrainment layer \acs{EL} limits it in terms of the 
+vertical average potential temperature profile.  So it seemed like an obvious opportunity to try.\\
+
+Convective boundary layer entrainment depends most critically on surface heat flux and upper lapse rate (Fed04 from Sorbjan1996) 
+but so far similar studies (ie those verifying the entrainment rate and entrainment layer depth relations) have focused on acheiving 
+a range of Richardson numbers by varying $\overline{w^{'}\theta^{'}}_{s}$ and the temperature jump (SullMoeng, BrooksFow), whereas Fedorovich varied the upper lapse rate while maintaining a constant surface heat flux.  We choose to vary these two key external parameters, allowing a $\Delta \theta$ to develop with penetrative convection and entrainment.  Garcia and mellado came out after our runs were done, but they seem to vary both. \\
+
+Sullivan and Pattons resolution study showed the sensitivity of the heat flux and potential temperature profiles to grid size in particular in the vertical and in the entrainment layer.  This strongliy influenced our decision to apply a higher resolution within the entrainment layer than the previous similar LES studies.\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relevant Background}
+\label{sec:}
+\subsection{The Convective Boundary Layer (CBL)}
 idealized
-overland
+
+over land
+
 plumes / thermals working against stable lapse rate, and inversion strengthened by subsidence
 
+what these plumes, updraughts and downdraughts look like, from LES and measurments (schmitschu, traum, stullcrum)
+
+a turbulent mixed layer -- kolmagorov cascade?
+
+local to average profiles
+
+I can talk about measurements and model output
+
+I can talk about an imposed strenghtened inversion by for example subsidence, as well as a jump arising
+from overshoot and subsequent entrainment.
+
+Talk about regimes in here, the equilibriium one.
+
+Talk about the cbl in terms of potential tempertature and heat fluxes ie well mixed uniform potential temperature in
+the mixed layer, transition to upper lapse rate.  warming due to heat flux from the surface, and also from the entrainment
+of warmer air from aloft. mixed layer you have warm updraughts and cool downdraughts overall.  this changes at the top.
+the warm thermal plumes now relatively cool, they rise impinge and sink due to exceeding their buoyancy level, so their
+now is warmer downward moving air and upward cool air.
 
 \subsection{Convective Boundary Layer Height}
 \label{subsec:}
 
 description, ie point where turbulent kinetic energy, tracer concentrations decrease, air becomes less homogenous.
-definitions 
+
+definitions: from measurements from models, slip mine in here, the local one AND the average one. 
+
 the temperature profile
+
 measurement techniques for measurements, and models.
 
 \subsection{Convective Boundary Layer Growth by Entrainment}
 \label{subsec:}
 
-\subsection{}
+The different regimes -- mention shear but focus on stability, use traumner, sullivan and moeng
+as well as turner's review. overturn vs recoil.  trapping of pockets between plumes.  mention internal 
+wavebreaking but say it hasn't been seen in studies directly comparable to ours.
+
+\subsection{The Convective Boundary Layer Entrainment Layer}
 \label{subsec:}
+
+locally, ie horizontal 2d, to horizontal average, to idealized/model representation.
+
+lower layer, more turbulent upper layer stability with intermittent turbulence
+GarciaMellado's two layer structure makes perfect sense.
+
+what this looks like from measurements eg lidar traum and LES sullmoeng.
+
+how it looks in terms of temperature.  then the movement of up and down warm and cool air ie the 
+fluxes.  
+
+traumner talks about two concepts, statistical vs transition zone concept -- by the way it seems the transition zone concept
+was implimented by fitting a curve of which the transition zone was a parameter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelling the Convective Boundary Layer and Entrainment Layer}
 \label{sec:}
 
-\subsection{Analytical or Bulk Models}
+\subsection{Bulk Analyitical Models}
 \label{subsec:}
 
+\subsection{Numerical Simulations}
+\label{subsec:}
+
+cover initial conditions here, ie delta theta vs constant lapse rate
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scales of the CBL Entrainment Layer}
+\section{Scales of the CBL and Entrainment Layer}
 \label{sec:}
 
 \subsection{Length Scale}
@@ -47,8 +128,40 @@ measurement techniques for measurements, and models.
 \subsection{Convective Velocity Scale}
 \label{subsec:}
 
+this scales the vertical velocity perturbations in the cbl. 
+can i tie in something about the joint distributions of theta and w?
+ie talk about the $\theta^{'}$ and $w^{'}$
+for example $w^{'}$ are driven by $\overline{w^{'}\theta^{'}}$
+must refer to Sorbjan
+
+\subsection{Convective Time Scale}
+\label{}
+
+ mention the brunt vaisalla time scale as used by Fed and Garcia
+
 \subsection{Convective Temperature Scale}
 \label{}
+
+here I must refer to sorbjan.  $\theta^{'}$ is influenced by $\overline{w^{'}\theta^{'}}_{s}$
+in the lower part of the \acs{CBL} but by $\gamma$ in the upper \acs{CBL} and \acs{EL}
+
+\subsection{Richardson Number}
+\label{}
+
+\subsection{Relationship of Entrainment Rate and Entrainment Layer Depth to Richardson Number}
+
+equilibrium entrainment regime
+
+derivation of the scaled entrainment relation to Ri by integration of the thermodynamic equation over an infinitessimely small layer.
+
+mention of two main power law relationships
+
+sequence of publications katophilips, deardorff, sullmoeng, fed, bandf
+
+two ways of deriving relation of scaled entrainment depth to ri: stull momentum balance ie plumes decelerate due to bouancy difference
+and boers energy balance
+
+list of publications where its verified, deardorf, fed, band f.  a bit about the disagreement between deardorf and bandf
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Goals}
