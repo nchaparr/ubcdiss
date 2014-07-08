@@ -46,48 +46,93 @@ Sullivan and Pattons resolution study showed the sensitivity of the heat flux an
 \section{Relevant Background}
 \label{sec:}
 \subsection{The Convective Boundary Layer (CBL)}
-idealized
 
-over land
+The convective boundary layer over land starts to grow at rapidly at sunrise reaching a peak at midday with the peak in solar irradiation.
+Convective turbulence and the dominant upward vertical motions die down towards the evening and as surface cools. In the morning as the 
+surface warms relative to the environment instability causes thermals to develop and rise with buoyancy driven momentum. The are adjacent to 
+and closely associated with cooler slower downdraughts.  The thermals or thermal plumes are of uniform potential temperature and tracer 
+concentration at their cores and entrain surrounding air laterally as they rise, as well as trapping and mixing in stable warm from above. 
+(\citeathor{Stull-BLMetIntro} \cite{Stull-BLMetIntro}, \citeauthor{CrumStullEl} \cite{CrumStullEl}) In cases of stromg convection, 
+Buoyantly driven turbulence dominates and shear is insignificant. (\citauthor{DirLEddy} \cite{DirLEddy}) Thermals rise, overshoot their
+natural buouancy level and overturn or recoil, trapping pockets (or whisps) of warm stable air which then becomes turbulently mixed.  This
+overshoot and subsequent entrainment of the warmer air from aloft augments the warming cased by the surface heat flux.  A potential
+temperature jump results, but an inversion may also be imposed and strengthened for example by subsidence.  
 
-plumes / thermals working against stable lapse rate, and inversion strengthened by subsidence
+Lidar images show the overall structure of the convective boundary layer (\acs{CBL}) with the rising thermals, impinging on the air above.
+(\citeauthor{CrumStullEl} \cite{CrumStullEl}, \citeauthor{Traum11} \cite{Traum11}) This has been effectively modelled by large eddy simulation
+by \citeauthor{SchmidtSchu} in \cite{SchmidtSchu} where using horizontal slices at various levels show how the thermals apparently merge 
+with some distance from the surface.  At the top of the \acs{CBL} they observed thermal tips impinging with concurrent periferal downward motions.
+This is supported in the visual tools used by \citeauthor{SullMoengStev} \cite{SullMoengStev}.  They show vertical cross sections of relatively cooler thermal plumes and trapped warmer air as well as the closely associated upward motion of cooler air and downward motion of warmer air.\\ 
 
-what these plumes, updraughts and downdraughts look like, from LES and measurments (schmitschu, traum, stullcrum)
+On average these convective turbulent structures create a mixed layer \acs{ML} with eddy scales cascading from approximately the \acs{CBL} height 
+to molecular diffusion according to the Kolmagorav power law.  Here potential temperature is close to uniform and average heat
+flux is positive and decreasing. Warming is from both the surface heat flux ($w^{'}\theta^{'}_{s}$) and the flux of entrained stable air at the
+ inversion ($w^{'}\theta^{'}_{i}$).  Since the \ac{ML} is mainly comprised of warm updraughts and cool downdraughts the $w^{'}\theta^{'}_{s}$ 
+is on average positive, turning negative in the entrainment layer \acs{EL} where the updraughts are now relatively cool and there is downward
+movement of warm air from above.  Above the \acs{ML} the air becomes more stable with altitude and on average this reflects as transition from
+a uniform \acs{ML} potential temperature to the stable lapse rate.  A peak in the gradient represents regions where thermal plumes are at points 
+higher than their natural buoyancy level. \\
 
-a turbulent mixed layer -- kolmagorov cascade?
-
-local to average profiles
-
-I can talk about measurements and model output
-
-I can talk about an imposed strenghtened inversion by for example subsidence, as well as a jump arising
-from overshoot and subsequent entrainment.
-
-Talk about regimes in here, the equilibriium one.
-
-Talk about the cbl in terms of potential tempertature and heat fluxes ie well mixed uniform potential temperature in
-the mixed layer, transition to upper lapse rate.  warming due to heat flux from the surface, and also from the entrainment
-of warmer air from aloft. mixed layer you have warm updraughts and cool downdraughts overall.  this changes at the top.
-the warm thermal plumes now relatively cool, they rise impinge and sink due to exceeding their buoyancy level, so their
-now is warmer downward moving air and upward cool air.
+\citeauthor{StullNelEl} in \cite{StullNelEl} outlines the stages of \acs{CBL} growth as the sublayers of the nocturnal
+boundary layer are entrained, untill the previous days capping inversion is reached and a quasi-steady state growth 
+is attained.  The \acs{EL} depth relative to \acs{CBL} height varies throughout these stages and its relationship
+to scaled entrainment rate forms a hysteresis.  The studies based on LES output typically represent this last quasi-steady
+phase, since there is usually a constant heat flux working against an inversion and or a stable lapse rate. 
+(\citeauthor{SchmidtSchu} \cite{SchmidtSchu}, \citeauthor{Sorbjan} \cite{Sorbjan}, \citeauthor{SullMoengStev} \cite{SullMoengStev}, 
+\citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2})  
 
 \subsection{Convective Boundary Layer Height}
 \label{subsec:}
 
-description, ie point where turbulent kinetic energy, tracer concentrations decrease, air becomes less homogenous.
+The \acs{ML} is fully turbulent with an on average uniform temperature. Aerosol and water vapour concentrations 
+decrease dramatically with transition to the stable upper atmpsphere.  So any of these characterstics can support
+a definition of \acs{CBL} height.  \citeauthor{StullNelEl} define height in terms of percentage of \acs{ML} air
+and identified by eye from Lidar backscatter images in \cite{StullNelEl}.  \citeauthor{Traum11} used
+the four most commonly used automated methods applied to Lidar images: identifying a suitable threshold value 
+above which the air is categorized as \acs{ML} air,  locating the point of minimum (largest negative) 
+vertical gradient, fitting an idealized curve to the profile from which a location of minimum vertical
+gradient can be easily determined, and using wavelet covariance in \cite{Traum11}.\\
 
-definitions: from measurements from models, slip mine in here, the local one AND the average one. 
+The use of Lidar dominates studies based on measurement. In numerical modelling studies there
+is the advantage of having plently of points to average over as well as the ability to directly
+measure veritcal heat flux. \citeauthor{BrooksFowler2} \cite{BrooksFowler2}
+applied their wavelet technique to local vertical tracer profiles in their \acs{LES} study as well as using the
+gradient method (IE locating the point of minimum vertical gradient).  For comparison they also used the point of 
+miniumum average vertical heat flux (\overline{w^{'}\theta^{'}}).  This last definition has been the common
+in \acs{LES} studies and has frequently been referred to as $z_{i}$ (inversion height) (\citeathor{DearWill80} 
+\cite{DearWill80}, \citeauthor{Sorbjan1} \cite{Sorbjan1}, \citeauthor{FedConzMir04} \cite{FedConzMir04}).
+ \citeauthor{SullMoengStev} \cite{SullMoengStev} clarified that this point did not correspond to the
+average point of maximum vertical potential temperature gradient, whereas the upper extrema of the four vertical
+heat flux quadrants (upward moving warm air, dowward moving warm air, upward moving cool air, downward moving
+cool air) more or less did. They defined \acs{CBL} height based on local vertical potential temperature gradients
+and applied horizontal averaging as well as other methods, including two based on the average vertical heat flux
+,for comparison.\\
 
-the temperature profile
-
-measurement techniques for measurements, and models.
+None of the \acs{LES} studies so far define the height in terms of the average potential temperature profile
+even though bulk models, from which \acs{CBL} growth parametrizations stem, rely on an idealized version thereof.
+\citeauthor{GarciaMellado} do include it as one of their measures of \acs{CBL} height in their direct numerical
+simulation study (\acs{DNS}) \cite{GarciaMellado}.       
 
 \subsection{Convective Boundary Layer Growth by Entrainment}
 \label{subsec:}
 
-The different regimes -- mention shear but focus on stability, use traumner, sullivan and moeng
-as well as turner's review. overturn vs recoil.  trapping of pockets between plumes.  mention internal 
-wavebreaking but say it hasn't been seen in studies directly comparable to ours.
+In the quasi-steady regime the \acs{CBL} grows by trapping pockets of warm stable air between
+or adjacent to impinging thermal plumes.  \citeauthor{Traum11} \cite{Traum11} summarize two
+relevant buoyancy driven regimes of entrainment:\\
+
+Non turbulent fluid can be engulfed between or in the overturning of thermal plumes. This kind of
+event was seen by \citeathor{SullMoengStev} in \cite{SullMoengStev} when the iversion was weak. 
+\citeauthor{Traum11}'s observations in \cite{Traum11} support this.\\
+
+Impinging thermal plumes distort the inversion interface dragging whisps of warm stable air down
+at their edges or during recoil under a strong inversion or lapse rate. This type of event is supported 
+by the finding  of both \citeathor{SullMoengStev} \cite{SullMoengStev} and \citeauthor{Traum11} \cite{Traum11}.\\
+
+Under atmospheric conditions shear induced stabilities do occur, and in some laboratory studies 
+under very high stability the breaking of internal waves have been observed.  Both processes are 
+believed to result in some entrainment but we dismiss since the former is insignificant relative
+to and the latter has not so far been observed in measurements or modeled output of the 
+atmospheric \acs{CBL} (\citeauthor{Traum11} \cite{Traum11}, \citeathor{SullMoengStev} \cite{SullMoengStev})
 
 \subsection{The Convective Boundary Layer Entrainment Layer}
 \label{subsec:}
@@ -128,6 +173,17 @@ cover initial conditions here, ie delta theta vs constant lapse rate
 \subsection{Convective Velocity Scale}
 \label{subsec:}
 
+Given an average surface heat flux ($\overline{w^{,}\theta^{,}}_{s}$) a surface buoyancy flux can be defined as 
+$\frac{g}{\overline{\theta}}\overline{w^{,}\theta^{,}}$ from which the convective velocity scale is obtained by
+multiplying by the appropriate length scale.  Since the result is in $\frac{m^{3}}{s^{3}}$ a cube root is applied.\\
+
+\begin{equation}
+w^{*} = \left( \frac{gh}{\overline{\theta}}\overline{w^{,}\theta^{,}} \right)
+\end{equation}
+
+\citeauthor{Deardorff70} (\cite{Deardorff70}) confirmed that this effectively scaled the vertical turbulent velocity
+perturbations in the \acs{CBL}.\\
+
 this scales the vertical velocity perturbations in the cbl. 
 can i tie in something about the joint distributions of theta and w?
 ie talk about the $\theta^{'}$ and $w^{'}$
@@ -137,7 +193,15 @@ must refer to Sorbjan
 \subsection{Convective Time Scale}
 \label{}
 
- mention the brunt vaisalla time scale as used by Fed and Garcia
+It logically follows that the time for a plume to reach the top of the \acs{CBL} is
+
+\begin{equation}
+\tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}\overline{w^{,}\theta^{,}} \right)}
+\end{equation}
+
+where $h$ is \acs{CBL} height.
+
+mention the brunt vaisalla time scale as used by Fed and Garcia
 
 \subsection{Convective Temperature Scale}
 \label{}
@@ -147,6 +211,58 @@ in the lower part of the \acs{CBL} but by $\gamma$ in the upper \acs{CBL} and \a
 
 \subsection{Richardson Number}
 \label{}
+
+The Flux Richardson ($R_{f}$) expresses the balance between turbulent mechanical energy and buoyancy.  It's obtained from the ration of these two terms
+ in the Turbulent Kinetic Energy budget equation (\cite{Stull-BLMetIntro}):
+
+\begin{equation}
+\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{,}\theta^{,}} \right) - \overline{u_{i}^{,}u_{j}^{,}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( u_{j}^{,}e^{,} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( u_{i}^{,} p^{,} \right) }{\partial x_{i}} - \epsilon
+\end{equation}
+
+\begin{equation}
+R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{,}\theta^{,}} \right)}{\overline{u_{i}^{,}u_{j}^{,}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}
+\end{equation}
+ 
+Assuming horizontal homogenaiety and neglecting subsidence
+  
+\begin{equation}
+R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{,}\theta^{,}} \right)}{\overline{u^{,}w^{,}}\frac{\partial \overline{U}}{\partial z} + \overline{v^{,}w^{,}}\frac{\partial \overline{V}}{\partial z}}
+\end{equation}
+
+Applying first order closer to the flux terms (i.e. assuming they are proportional to the vertical gradients)  gives the gradient Richardson Number ($R_{g}$)
+
+\begin{equation}
+R_{g} = \frac{ \frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\left( \frac{ \partial \overline{U}}{\partial z} \right)^{2} + \left( \frac{\partial \overline{V}}{\partial z} \right)^{2}} 
+\end{equation}
+
+which is usually used to express the balance between shear and buoyancy driven turbulence, but in the \acs{EL} buoancy acts to supress turbulence.  
+Applying a bulk approximation the to the numerator, and expressing it in terms of scales yields a ratio of two square of time scales
+
+\begin{equation}
+R_{g} = \frac{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\frac{U^{*2}}{L^{2}}} = N^{2}\frac{L^{2}}{U^{*}}
+\end{equation}
+
+
+and applying the bulk approximation to both the numerator and the denomnitor yields
+
+\begin{equation}
+R_{b} = \frac{\frac{g}{\overline{\theta}} \Delta \overline{\theta} L}{U^{*}}
+\end{equation}
+A natural choice of length and veloctiy scales for the \acs{CBL} are $h$ and $w^{*}$.  \citeauthor{EllTurn} (\cite{EllTurn}) suggested and confirmed a relationship between the entrainment rate and this form of 
+Richardson number based on tank experiments.  This parameter can be justified and arrived at by considering the principal forcings of the system, or from non-dimensionalizing the entrainment relation  deriived
+analyitically, i.e. (\cite{Deardorff72})
+
+\begin{equation}
+w_{e} \propto \frac{\overline{w^{,}\theta^{,}}_{s}}{\Delta \overline{\theta}}
+\end{equation}
+
+\begin{equation}
+\frac{w_{e}}{w^{*}} \propto  \frac{\overline{w^{,}\theta^{,}}_{s}}{\Delta \overline{\theta} w*{*}} = Ri_{b}^{-1}
+\end{equation}
+ 
+
+In one or other of its forms this parameter has become central to any study on \acs{CBL} entrainment (\cite{SullMoengStev}, \cite{FedConzMir04}, \cite{Traum11}, \cite{BrooksFowler2})
+
 
 \subsection{Relationship of Entrainment Rate and Entrainment Layer Depth to Richardson Number}
 
