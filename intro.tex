@@ -52,8 +52,8 @@ Convective turbulence and the dominant upward vertical motions die down towards 
 surface warms relative to the environment instability causes thermals to develop and rise with buoyancy driven momentum. The are adjacent to 
 and closely associated with cooler slower downdraughts.  The thermals or thermal plumes are of uniform potential temperature and tracer 
 concentration at their cores and entrain surrounding air laterally as they rise, as well as trapping and mixing in stable warm from above. 
-(\citeathor{Stull-BLMetIntro} \cite{Stull-BLMetIntro}, \citeauthor{CrumStullEl} \cite{CrumStullEl}) In cases of stromg convection, 
-Buoyantly driven turbulence dominates and shear is insignificant. (\citauthor{DirLEddy} \cite{DirLEddy}) Thermals rise, overshoot their
+(\citeauthor{Stull-BLMetIntro} \cite{Stull-BLMetIntro}, \citeauthor{CrumStullEl} \cite{CrumStullEl}) In cases of stromg convection, 
+Buoyantly driven turbulence dominates and shear is insignificant. (\citeauthor{DirLEddy} \cite{DirLEddy}) Thermals rise, overshoot their
 natural buouancy level and overturn or recoil, trapping pockets (or whisps) of warm stable air which then becomes turbulently mixed.  This
 overshoot and subsequent entrainment of the warmer air from aloft augments the warming cased by the surface heat flux.  A potential
 temperature jump results, but an inversion may also be imposed and strengthened for example by subsidence.  
@@ -98,8 +98,8 @@ is the advantage of having plently of points to average over as well as the abil
 measure veritcal heat flux. \citeauthor{BrooksFowler2} \cite{BrooksFowler2}
 applied their wavelet technique to local vertical tracer profiles in their \acs{LES} study as well as using the
 gradient method (IE locating the point of minimum vertical gradient).  For comparison they also used the point of 
-miniumum average vertical heat flux (\overline{w^{'}\theta^{'}}).  This last definition has been the common
-in \acs{LES} studies and has frequently been referred to as $z_{i}$ (inversion height) (\citeathor{DearWill80} 
+miniumum average vertical heat flux ($\overline{w^{'}\theta^{'}}$).  This last definition has been the common
+in \acs{LES} studies and has frequently been referred to as $z_{i}$ (inversion height) (\citeauthor{DearWill80} 
 \cite{DearWill80}, \citeauthor{Sorbjan1} \cite{Sorbjan1}, \citeauthor{FedConzMir04} \cite{FedConzMir04}).
  \citeauthor{SullMoengStev} \cite{SullMoengStev} clarified that this point did not correspond to the
 average point of maximum vertical potential temperature gradient, whereas the upper extrema of the four vertical
@@ -121,31 +121,36 @@ or adjacent to impinging thermal plumes.  \citeauthor{Traum11} \cite{Traum11} su
 relevant buoyancy driven regimes of entrainment:\\
 
 Non turbulent fluid can be engulfed between or in the overturning of thermal plumes. This kind of
-event was seen by \citeathor{SullMoengStev} in \cite{SullMoengStev} when the iversion was weak. 
+event was seen by \citeauthor{SullMoengStev} in \cite{SullMoengStev} when the iversion was weak. 
 \citeauthor{Traum11}'s observations in \cite{Traum11} support this.\\
 
 Impinging thermal plumes distort the inversion interface dragging whisps of warm stable air down
 at their edges or during recoil under a strong inversion or lapse rate. This type of event is supported 
-by the finding  of both \citeathor{SullMoengStev} \cite{SullMoengStev} and \citeauthor{Traum11} \cite{Traum11}.\\
+by the finding  of both \citeauthor{SullMoengStev} \cite{SullMoengStev} and \citeauthor{Traum11} \cite{Traum11}.\\
 
 Under atmospheric conditions shear induced stabilities do occur, and in some laboratory studies 
 under very high stability the breaking of internal waves have been observed.  Both processes are 
 believed to result in some entrainment but we dismiss them since the former is insignificant 
  and the latter has not so far been observed in measurements or modeled output of the 
-atmospheric \acs{CBL} (\citeauthor{Traum11} \cite{Traum11}, \citeathor{SullMoengStev} \cite{SullMoengStev})
+atmospheric \acs{CBL} (\citeauthor{Traum11} \cite{Traum11}, \citeauthor{SullMoengStev} \cite{SullMoengStev})
 
 \subsection{The Convective Boundary Layer Entrainment Layer}
 \label{subsec:}
 
-lower layer, more turbulent upper layer stability with intermittent turbulence --scales according to fft?
-GarciaMellado's two layer structure makes perfect sense.
+The \acs{ML} is fully turbulent but at the top is characterised by stable air with intermittant turbulence due
+to the higher reaching thermal plumes. \citeauthor{GarciaMellado} demonstrate that the entrainment layer \acs{EL}
+ is subdivided in terms of length and buoancy scales.  That is to say, the lower region is comprised of mostly
+turbulent air with pockets of stable warmer air that are quickly mixed, and so scales with the convective scales.
+Whereas the upper region is mostly stable apart from the impinging thermal plumes so scaling here is more influenced
+by the lapse rate $\gamma$.\\  
 
-what this looks like from measurements eg lidar traum and LES sullmoeng.
+In the \acs{EL} the average vertical heat flux ($\overline{w^{'}\theta^{'}}$) switches sign relative to in the \acs{ML}.
+The fast updraughts are now cool (quadrant II) relative to the average potential temperature and there is downward movement of 
+warm air (quadrant IV) from the stable layer above.  In their analysis of the four flux quadrants \acs{SullMoengStev}
+concluded that overall dynamic in this region is downward motion of warm air since the other three quadrants effectively 
+cancel.\\
 
-how it looks in terms of temperature.  then the movement of up and down warm and cool air ie the 
-fluxes.
-
-In terms of tracer concentration for example based on a Lidar backscatter profile there are two ways to conceptually
+In terms of tracer concentration and for example based on a Lidar backscatter profile, there are two ways to conceptually
 define the entrainment layer (\acs{EL}).  It can be thought of as the range in space (or time) over which local height
 varies. (\citeauthor{CrumStullEl} \cite{CrumStullEl}) There is also a local region over which the concentration (or back
 scatter intensity) transitions from \acs{ML} to upper free atmospheric value (\citeauthor{Traum11} \cite{Traum11}).  The latter
@@ -153,21 +158,90 @@ can be estimated using both curve-fitting and wavelet techniques.(\citeauthor{Tr
 \cite{SteynBaldHoff}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2}). \citeauthor{Traum11} \cite{Traum11} compared the
 two, found them to differ and seem to favour the latter based on how correlated the corresponding scaling relations were.\\
 
-BandF statistics of local el.  most models use flux based el.
-
-locally, ie horizontal 2d, to horizontal average, to idealized/model representation.
+\citeauthor{BrooksFowler2} apply a wavelet technique to tracer profiles for the determination of 
+\acs{EL} limits, in their \acs{LES} study in \cite{BrooksFowler2}.  But it is more common in numerical modelling and laboratory studies
+for the \acs{EL} limits to be defined based on the average vertical heat flux ($\overline{w^{'}\theta^{'}}$) IE the points
+at which it goes from positive to negative and the point at which it goes from negative to zero. (\citeauthor{DearWill80} \cite{DearWill80}
+,\citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{GarciaMellado} \cite{GarciaMellado}). Bulk first order models assume
+the region of negative $\overline{w^{'}\theta^{'}}$ coincides with the region where the average potential temperature $\overline{\theta}$
+transitions from the \acs{ML} value to that corresponding to the stable lapse rate above $\gamma$. (\citeauthor{Deardorff79} \cite{Deardorff79}, 
+\cite{FedConzMir04} \cite{FedConzMir04}).  But no modelling studies use the vertical $\overline{\theta}$ to define the entrainment layer (\acs{EL}).  Since the \acs{ML} $\overline{\theta}$ from a numerical model is not strictly constant (\citeauthor{FedConzMir04} \cite{FedConzMir04}), 
+for the lower \acs{EL} limit, a threshold value for $\overline{\theta}$ or its vertical gradient would have to be chosen.  \citeauthor{BrooksFowler2} encountered inconsistencies when determining the \acs{EL} limits from the average tracer profile \cite{BrooksFowler2}.  But the their tracer profile is different to a simulated $\overline{\theta}$ profile whose \acs{ML} value increases in time predictably based on the vertical heat flux from the surface and the \acs{CBL} top or inversion.             
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelling the Convective Boundary Layer and Entrainment Layer}
 \label{sec:}
 
-\subsection{Bulk Analyitical Models}
+\subsection{Bulk Analytical Models}
 \label{subsec:}
+Bulk analytical models for the Convective Boundary layer (\acs{CBL}) can be subdivided into: (i) zero order
+and (ii) first order bulk models.\\
+
+Zero order bulk models assume a Mixed Layer (\acs{ML}) of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitessimally 
+thin layer accross with there is a temperature jump ($\Delta \theta$). A constant lapse rate above the inversion is assumed.  
+The assumed vertical heat flux ($\overline{w^{,}\theta^{,}}$) profiles are linearly decreasing from the surface up, reaching 
+a maximum negative $\overline{w^{,}\theta^{,}}_{i}$ value proportional to the surface value (usually -.2)
+at the temperature inversion and going to zero accross the jump.  Evolution equations for the evolution of \acs{CBL} height,
+ $\overline{\theta}_{ML}$ and $\Delta \theta$ are deriven this basis.
+
+For example, if the \acs{CBL} height is rising as a result air is being drawn in from the stable layer above and decreasing in enthalpy.
+The decrease in enthalpy is so $c_{p}\rho\Delta \theta \frac{dh}{dt}$ per unit of horizontal area.  Since above the 
+inversion is stable \citeauthor{Tennekes73} in \cite{Tenekes73} equates this enthalpy loss to the average vertical flux at the inversion 
+IE
+
+\begin{equation}
+\Delta \theta \frac{dh}{dt} = -\overline{w^{'}\theta^{'}}_{i} 
+\end{equation}  
+
+The warming rate of the \acs{ML} is arrived at using the simplified reynolds averaged conservation of enthalpy
+
+\begin{equation}
+\frac{\partial \overline{\theta}_{ML}}{\partial t} = -\frac{\partial}{\partial z}\overline{w^{'}\theta^{'}}
+\end{equation}
+
+which based on the assumed constant slope of the vertical heat flux becomes
+
+\begin{equation}
+\frac{\partial \overline{\theta}_{ML}}{\partial t} = \overline{w^{'}\theta^{'}}_{i}-\overline{w^{'}\theta^{'}}_{0}
+\end{equation}
+
+and the evolution of the temperature jump ($\Delta \theta$) depends on the rate of \acs{CBL} height ($h$) increase, 
+the upper lapse rate $\gamma$ and the warming rate of the \acs{ML}
+  
+\begin{equation}
+\frac{d\Delta \theta}{dt} = \gamma\frac{dh}{dt} - \frac{d\overline{\theta}_{ML}}{dt}
+\end{equation}
+
+An assumption about the vertical heat flux at the inversion, such as the entrainment ratio, closes this set.
+
+\begin{equation}
+\frac{\overline{w^{'}\theta^{'}}_{i}}{\overline{w^{'}\theta^{'}}_{0}} = -.2
+\end{equation}
+
+
+\citeauthor{Tennekes73} \cite{Tennekes73}
+
+The relevant quantities are idealized ensemble averages. There is some variation among such models for example the rate equation for 
+$h$ (entrainment relation) can be derived based on the turbulent kinetic energy budget (\citeauthor{FedConzMir04} \cite{FedConzMir04}).
+But they are all based on the simplified $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles outlined above.  
+
+First order models assume an Entrainment layer (\acs{EL}) of finite depth at the top of the ML, defined by two heights:
+the top of the ML ($h_{0}$) and the point where free atmospheric characteristics are resumed ($h_{1}$).  The derivations are more complex and 
+examples of simplifying assumptions about the \acs{EL} are: $\Delta h = h_{1} - h_{0} = Constant$, $\Delta h$ or maximum 
+overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the relevant vertical velocity scale and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$ is the Brunt-Vaisalla frequency  and that between $h_{0}$ and $h_{1}$ $\overline{\theta} = \overline{\theta}_{ML} + f(x,t) \Delta \overline{\theta}$ where $f(x,t) \Delta \overline{\theta}$ is a dimensionless shape factor (\citeauthor{Deardorff79} \cite{Deardorff79}, \citeauthor{Stull73} \cite{Stull73}).\\
+
+Although development of these models is beyond the scope of this thesis, mention of them is necessary to give context to the scaling 
+parameters and relationships under consideration. \\         
 
 \subsection{Numerical Simulations}
 \label{subsec:}
 
-cover initial conditions here, ie delta theta vs constant lapse rate
+Numerical simulation of the convective boundary layer is carried out by solving the Navier Stokes equations usually simplified according to an approxiamtion (eg bousinesq, anelastic) on a discrete grid.  Types of simulations can roughly be grouped according to the scales of motion they resolve.  In Direct Numerical Simulataions (\acs{DNS}) the full range of spatial and temporal turbulence are resolved from the size of the domain down to the smallest dissipative scales IE the Kolmagorov microscales.  This requires a dense numberical grid, ie many grid points and so can be computationally expensive.  In a Large Eddy Simulation (\acs{LES}) smaller scales are filtered out and parametrized by sub grid scale closure model. General Circulation Models (\acs{GCM}) solve the Navier Stokes on a spherical grid (representing a planet) and parametrize smaller scale processes including convection and cloud cover.\\
+
+\acs{LES} has steadily, repeatedly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} applied this relatively 
+new method in \cite{Deardorff72} for this purpose.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}, \citeauthor{FedConzMir04} in \cite{FedConzMir04} and \citeauthor{BrooksFowler2} in cite{BrooksFowler2} used it to observe the structure and scaling behaviour of the \acs{EL}.\\
+
+[cover initial conditions here, ie delta theta vs constant lapse rate?]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Scales of the CBL and Entrainment Layer}
