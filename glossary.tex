@@ -7,35 +7,77 @@
 
 
 % use \acrodef to define an acronym, but no listing
-\acrodef{UI}{user interface}
-\acrodef{UBC}{University of British Columbia}
+%\acrodef{UI}{user interface}
+%\acrodef{UBC}{University of British Columbia}
 
 % The acronym environment will typeset only those acronyms that were
 % *actually used* in the course of the document
-\begin{acronym}[ANOVA]
-\acro{ANOVA}[ANOVA]{Analysis of Variance, statistical 
-techniques to identify sources of variability between groups}
+%\begin{acronym}[ANOVA]
+%\acro{ANOVA}[ANOVA]{Analysis of Variance, statistical 
+%techniques to identify sources of variability between groups}
 
 % \acro{ $\overline{w^{,} \theta^{,}_{s}}$ }{Surface heat flux in $\frac{Watts}{meters^{2}}$}
 
 % \acro{$\gamma$}{Initial and upper potential temperature lapse rate in Kelvin}
 
+\begin{acronym}
 \acro{EL}[EL]{Entrainment Layer}
+\end{acronym}
+
+\begin{acronym}
 \acro{ML}[ML]{Mixed Layer}
+\end{acronym}
+
+\begin{acronym}
 \acro{CBL}[CBL]{Convective Boundary Layer}
+<<<<<<< HEAD
 \acro{LES}{LES}{Large Eddy Simulation}
 \acro{DNS}{DNS}{Direct Numerical Simulation}
 \acro{GCM}{GCM}{Global Circulation Model}
 \acro{TKE}{TKE}{Turbulence Kinetic Energy}
+=======
+\end{acronym}
+
+\begin{acronym}
+\acro{LES}[LES]{Large Eddy Simulation}
+\end{acronym}
+
+\begin{acronym}
+\acro{FA}[FA]{Free Atmosphere}
+\end{acronym}
+
+\begin{acronym}
+\acro{GCM}[GCM]{General Circulation Model}
+\end{acronym}
+
+\begin{acronym}
+\acro{DNS}[DNS]{Direct Numerical Simulation}
+\end{acronym}
+
+
+
+\begin{acronym}
+\acro{FFT}[FFT]{Fast Fourrier Transform}
+\end{acronym}
+
+%\acro{DNS}{DNS}{Direct Numerical Simulation}
+%\acro{GCM}{GCM}{Global Circulation Model}
+%\acro{TKE}{TKE}{Turbulence Kinetic Energy}
+
+\begin{acronym}
+>>>>>>> d8cf906e5491d4cf0bd9a8062eb773746ac0ee2a
 \acro{Ri}[Ri]{Richardson Number 
 \acroextra{, the bulk Richardson Number is 
 $\frac{gh}{\overline{\theta}_{ML}} \frac{\Delta \theta}{w^{*2}}$, 
 $\Delta \theta = \overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ 
-and the gradient Richardson Number is 
-$\frac{g}{\overline{\theta}_{ML}} \frac{\gamma h^{2} }{w^{*2}}$ 
 }}
+\end{acronym}
 
-\acro{FFT}[FFT]{Fast Fourrier Transform}
+%\acro{FFT}[FFT]{Fast Fourrier Transform}
+
+%\end{acronym}
+\endinput
+
 
 %\acro{FoGS}[FoGS]{The Faculty of Graduate Studies}
 %\acro{PDF}{Portable Document Format}
@@ -52,7 +94,6 @@ $\frac{g}{\overline{\theta}_{ML}} \frac{\gamma h^{2} }{w^{*2}}$
 %    the standards body for web technologies}}
 %\acro{XML}{Extensible Markup Language}
 
-\end{acronym}
 
 % You can also use \newacro{}{} to only define acronyms
 % but without explictly creating a glossary
