@@ -8,45 +8,22 @@
 \section{Motivation}
 \label{sec:}
 
-The convective atmospheric boundary layer (\acs{CBL}) over land grows when thermals act against a stable lapse 
-rate ($\gamma$) or temperature inversion entraining the air from above.  Thermals are driven by convection, and stability causes 
-them to overturn or recoil, resulting in the downward flux of non-turbulent air into the turbulently mixed layer 
-(\acs{ML}).  These opposing buoyant forcings make for interesting dynamics.\\
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/first_order.pdf}
+    \caption{}
+    \label{fig:}   % label should change
+\end{figure}
 
-\acs{CBL} height ($h$) and prediction thereof are important for calculating pollutant concentrations
-and the limiting size of turbulent structures.  Knowing the rate at which the \acs{CBL} entrains air from above
-enables calculation of the rate at which species from above are incorporated. This would
-apply for example in the event of a plume of dust or ash that has been transported long range.\\
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/zero_order.pdf}
+    \caption{}
+    \label{fig:}   % label should change
+\end{figure}
 
-In combination with the lifting condensation level, knowledge of entrainment layer (\acs{EL}) depth allows predictions pertaining
-to the formation of cumulus clouds.  For example if the \acs{EL} is above the lifting condensation level a high percentage of cloud cover
-would be expected.  Parametrizations for both \acs{CBL} growth and \acs{EL} depth are used in mesoscale and general circulation models
-(\acs{GCM}s).  Furthermore it is an attractive goal to develop a robust set of scales for this region, analogous to Monin-Obukhov theory.\\
-
-Bulk analytical models underlie certain parametrizations for \acs{CBL} growth and are validated by measurements 
-and output from numerical models (\citeauthor{Traum11} \cite{Traum11}, \citeauthor{FedConzMir04} \cite{FedConzMir04}). 
-Zero order bulk models assume an infinitesimally thin entrainment layer and first order bulk models include an entrainment layer of finite depth.
-There has been discussion in the literature as to whether explicit consideration of the \acs{EL} depth is required (\citeauthor{SullMoengStev} \cite{SullMoengStev}, \citeauthor{FedConzMir04} \cite{FedConzMir04}). Both typically rely on the simplified reynolds averaged thermodynamic equation. 
-
-\begin{equation}
-\frac{D \overline{\theta}}{Dt} = -\frac{\partial \overline{w^{'}\theta^{'}}}{\partial z}
-\end{equation}
-
-relating ensemble averaged potential temperature ($\overline{\theta}$) to ensemble averaged vertical turbulent potential temperature flux ($\overline{w^{'}\theta^{'}}$), and idealized vertical profiles for both.  So verification of these models using ensemble averaged $\theta$ and $w^{'}\theta^{'}$ logically follows.  So far, horizontal and time averaging has been used according to the ergodic assumption.\\
-
-Numerical and laboratory studies in which parametrizations for the entrainment layer depth ($\Delta h$) is verified 
-depend conceptually on the potential temperature or inversion region.  But none define the entrainment layer (\acs{EL}) limits
-in terms of the vertical $\overline{\theta}$ profile (\citeauthor{DearWill80} \cite{DearWill80}, \citeauthor{FedConzMir04} \cite{FedConzMir04}, 
-\citeauthor{BrooksFowler2} \cite{BrooksFowler2}, \citeauthor{GarciaMellado} \cite{GarciaMellado}).  So there is an opportunity to run an ensemble of cases to get true ensemble averaged vertical profiles, which can be horizontally averaged for additional smoothing, and define the \acs{EL} limits in terms of the vertical $\overline{\theta}$ profile.\\
-
-\acs{CBL} entrainment depends most critically on surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) and upper lapse rate ($\gamma$) 
-(\citeauthor{Sorbjan} \cite{Sorbjan}, \citeauthor{FedConzMir04} \cite{FedConzMir04}).  Both \citeauthor{SullMoengStev} (\cite{SullMoengStev}) and \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) vary vertical surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) and inversion strength 
-($\Delta \theta$) while using a constant upper lapse rate ($\gamma$) to obtain a range of conditions.  Whereas \citeauthor{FedConzMir04} 
-\cite{FedConzMir04} (\cite{FedConzMir04}) varied $\gamma$. \citeauthor{SullPat} (\cite{SullPat}) demonstrated the sensitivity of the 
-vertical $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles to vertical grid size in particular in the \acs{EL}.  Our choice of 
-grid sizes is strongly influenced by this study.  We vary our conditions with different $\overline{w^{'}\theta^{'}}_{s}$ and $\gamma$, and 
-apply vertical resolution which corresponds to that at which solutions began to converge in \citeauthor{SullPat} (\cite{SullPat})
-and exceeds that of the other comparable studies.\\    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Relevant Background}
@@ -452,7 +429,7 @@ So here, we test this framework in terms of two relevant parametrizations.  That
 \begin{figure}[htbp]
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=.5]{/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs}
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs}
     \caption{Height Definitions}
     \label{fig:hdefs}   % label should change
 \end{figure}
