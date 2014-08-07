@@ -107,7 +107,7 @@ Although \citeauthor{BrooksFowler2} apply a wavelet technique to tracer profiles
 
 Since $\overline{\theta}$ modeled by an \acs{LES} is not strictly constant with respect to height in the \acs{ML} (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}), a threshold value for $\overline{\theta}$ or its vertical gradient must be chosen to identify the lower \acs{EL} limit.  In their \citeyear{BrooksFowler2} \acs{LES} study \citeauthor{BrooksFowler2} encountered inconsistencies when determining the \acs{EL} limits from the average tracer profile.  Although the their tracer profile was quite different to a simulated \acs{CBL} $\overline{\theta}$ profile, this could serve as cautionary note.\\             
 
-Our understanding of the the characterstics and dynamics of the atmospheric \acs{CBL} and its entrainment layer (\acs{EL}) evolves with the increasing body of measurement (\citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}), laboratory (\citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}) and numerical studies (\citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}, \citeauthor{} \citeyear{}). Parametrizations are derived based on analytical models and are validated using \acs{LES} output and measurements (\citeauthor{} \cite{}, \citeauthor{} \cite{}).  
+Our understanding of the the characterstics and dynamics of the atmospheric \acs{CBL} entrainment layer (\acs{EL}) evolves with the increasing body of measurement (\citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{StullNelEl} \citeyear{StullNelEl}), laboratory (\citeauthor{DearWill80} \citeyear{DearWill80}) and numerical studies (\citeauthor{Deardorff72} \citeyear{Deardorff72}, \citeauthor{Sorbjan} \citeyear{Sorbjan}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}, \citeauthor{GarciaMellado} \citeyear{GarciaMellado}). Parametrizations are derived based on analytical models and are validated using \acs{LES} output and measurements (\citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{Boers89} \cite{Boers89}).  So the relationship between theory, numerical simulation and measurement is inextricable and any study based on one must refer to at least one of the others.\\  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelling the Convective Boundary Layer and Entrainment Layer}
@@ -115,195 +115,187 @@ Our understanding of the the characterstics and dynamics of the atmospheric \acs
 
 \subsection{Bulk Analytical Models}
 \label{subsec:}
-Bulk analytical models for the Convective Boundary layer (\acs{CBL}) can be subdivided into: (i) zero order
-and (ii) first order bulk models.\\
+Bulk analytical models for the Convective Boundary layer (\acs{CBL}) derived based on average, vertical profiles
+of \acs{ML} quantities can be subdivided into: (i) zero order as represented in Figure \ref{fig:0order} and 
+(ii) first (and higher) order bulk models as represented in Figure \ref{fig:1order}. The order refers to the \acs{EL}.\\
 
-Zero order bulk models assume a Mixed Layer (\acs{ML}) of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitesimally 
-thin layer across which there is a temperature jump ($\Delta \theta$) and above which is a constant lapse rate ($\gamma$).  
-The assumed vertical heat flux ($\overline{w^{'}\theta^{'}}$) profile is linearly decreasing from the surface up, reaching 
-a maximum negative $\overline{w^{'}\theta^{'}}_{h}$ value which is a constant proportion of the surface value (usually -.2)
-at the temperature inversion, and decreasing to zero ac-cross the jump.  Equations for the evolution of \acs{CBL} height,
- $\overline{\theta}_{ML}$ and $\Delta \theta$ are derived on this basis.\\
+Zero order bulk models assume a Mixed Layer (\acs{ML}) of uniform potential temperature ($\overline{\theta}_{ML}$) 
+topped by an infinitesimally thin layer across which there is a temperature jump ($\delta \theta$) and above which 
+is a constant lapse rate ($\gamma$).  The assumed average vertical turbulent heat flux ($\overline{w^{'}\theta^{'}}$) 
+decreases linearly from the surface up, reaching a maximum negative value ($\overline{w^{'}\theta^{'}}_{h}$) which  
+is a constant proportion of the surface value (usually $-.2\overline{w^{'}\theta^{'}}_{h}$) at the temperature inversion, 
+and decreasing to zero accross the jump.  Equations for the evolution of \acs{CBL} height, $\overline{\theta}_{ML}$ 
+and $\Delta \theta$ are derived on this basis (\citeauthor{Tennekes73} \citeyear{Tennekes73}).\\
 
-For example, if the \acs{CBL} height ($h$) is rising, air is being drawn in from the stable layer above and decreasing in enthalpy.
-So, the decrease in enthalpy is $c_{p}\rho\Delta \theta \frac{dh}{dt}$ per unit of horizontal area.  Since above the 
-inversion is stable \citeauthor{Tennekes73} in \cite{Tennekes73} equates this enthalpy loss to the average vertical flux at the inversion.
+If the \acs{CBL} height ($h$) is rising, air is being drawn in from the stable layer above and cooled i.e. it is
+decreasing in enthalpy.  The rate of decrease in enthalpy with respect to time is $c_{p}\rho\Delta \theta \frac{dh}{dt}$ 
+per unit of horizontal area.  Since the lapse rate above the inversion is stable \citeauthor{Tennekes73} 
+(\citeyear{Tennekes73}) equates this enthalpy loss to the average vertical turbulent heat flux at the inversion
 
 \begin{equation}
 \Delta \theta \frac{dh}{dt} = -\overline{w^{'}\theta^{'}}_{h} 
-\end{equation}  
+\end{equation}.  
 
-The \acs{ML} warming rate is arrived at via the simplified reynolds averaged conservation of enthalpy
+The \acs{ML} warming rate is arrived at via the simplified Reynolds averaged conservation of enthalpy, for which
+the full derivation is shown in an appendix
 
 \begin{equation}
 \frac{\partial \overline{\theta}_{ML}}{\partial t} = -\frac{\partial}{\partial z}\overline{w^{'}\theta^{'}}
-\end{equation}
+\end{equation}.
 
-which based on the assumed constant slope of the vertical heat flux becomes
+Assuming $\overline{w^{'}\theta^{'}$ has a constant slope this becomes
 
 \begin{equation}
 \frac{\partial \overline{\theta}_{ML}}{\partial t} = \frac{\overline{w^{'}\theta^{'}}_{s}-\overline{w^{'}\theta^{'}}_{h}}{h}
-\end{equation}
+\end{equation},
 
 and the evolution of the temperature jump ($\Delta \theta$) depends on the rate of \acs{CBL} height ($h$) increase, 
 the upper lapse rate $\gamma$ and the \acs{ML} warming rate
   
 \begin{equation}
 \frac{d\Delta \theta}{dt} = \gamma\frac{dh}{dt} - \frac{d\overline{\theta}_{ML}}{dt}
-\end{equation}
+\end{equation}.
 
-An assumption about the vertical heat flux at the inversion ($h$), such as the entrainment ratio, closes this set.
+An assumption about the vertical heat flux at the inversion ($h$), such as the entrainment ratio, closes this set
 
 \begin{equation}
 \frac{\overline{w^{'}\theta^{'}}_{h}}{\overline{w^{'}\theta^{'}}_{s}} = -.2
-\end{equation}
+\end{equation}.\\
 
-
-(\citeauthor{Tennekes73} \cite{Tennekes73})\\
-
-The relevant quantities are idealized ensemble averages. There is some variation within this class of model, for example 
-the rate equation for $h$ (entrainment relation) can alternatively be derived based on the turbulent kinetic energy budget 
+The relevant quantities in equations 2.2 through 2.6 are idealized, ensemble averages. There is some variation within this class of model, for example the rate equation for $h$ (entrainment relation) can alternatively be derived based on the turbulent kinetic energy budget 
 (\citeauthor{FedConzMir04} \cite{FedConzMir04}).  But they are all based on the simplified $\overline{\theta}$ and 
 $\overline{w^{'}\theta^{'}}$ profiles outlined above.\\  
 
-First order models assume an entrainment layer (\acs{EL}) of finite depth at the top of the ML, defined by two heights:
+First (and higher) order models assume an entrainment layer (\acs{EL}) of finite depth at the top of the ML, defined by two heights:
 the top of the ML ($h_{0}$) and the point where free atmospheric characteristics are resumed ($h_{1}$).  The derivations are more complex and 
-examples of simplifying assumptions about the \acs{EL} are: 
-\begin{itemize}
-\item{$\Delta h = h_{1} - h_{0} = Constant$
-}
-\item{$\Delta h$ or maximum 
-overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the relevant vertical velocity scale and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$ is the Brunt-Vaisalla frequency}
- \item{and that between $h_{0}$ and $h_{1}$ $\overline{\theta} = \overline{\theta}_{ML} + f(z,t) \Delta \theta$ where $f(z,t)$ is a dimensionless shape factor}
-\end{itemize}
- (\citeauthor{Deardorff79} \cite{Deardorff79}, \citeauthor{Stull73} \cite{Stull73}).\\
+involve assumptions about the \acs{EL} i.e.: 
 
-Although development of these models is beyond the scope of this thesis, mention of them is necessary to give context to the scaling 
-relationships or parametrizations considered. \\         
+\begin{itemize}
+\item{$\Delta h = h_{1} - h_{0} = Constant$ (\citeauthor{Betts74} \citeyear{Betts74})}
+
+\item{$\Delta h = h_{1} - h_{0}$ is related to the zero-order jump at $h$ by two right angled triangles with opposite sides
+of lengths $h_{1} - h$ and $h - h_{0}$ (\citeauthor{BatchGryn} \citeyear{BatchGryn})}
+
+\item{$\Delta h$ or maximum overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the convective vertical velocity scale to be defined in section \ref{subsec:convel} and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$ is the Brunt-Vaisala frequency (\citeauthor{Stull73} \citeyear{Stull73}}
+ 
+\item{For $h_{0}<z<h_{1}$ $\overline{\theta} = \overline{\theta}_{ML} + f(z,t) \Delta \theta$ where $f(z,t)$ is a dimensionless shape factor (\citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04})}
+\end{itemize}
+ .\\
+
+Although development of these models is beyond the scope of this thesis, they are mentioned to give context to the parametrizations considered. \\         
 
 \subsection{Numerical Simulations}
 \label{subsec:}
 
-Numerical simulation of the convective boundary layer (\acs{CBL}) is carried out by solving the Navier Stokes equations, simplified according to a suitable approximation, on a discrete grid.  Types of simulations can be grouped according to the scales of motion they resolve.  In direct numerical simulations (\acs{DNS}) the full range of spatial and temporal turbulence are resolved from the size of the domain down to the smallest dissipative scales i.e. the Kolmagorov micro-scales.  This requires a dense numerical grid and so can be computationally prohibitive.  In a large eddy simulation (\acs{LES}) smaller scales are filtered out and parametrized by sub grid scale closure model. General circulation models (\acs{GCM}) solve the Navier Stokes equations on a spherical grid and parametrize smaller scale processes including convection and cloud cover.\\
+Numerical simulation of the convective boundary layer (\acs{CBL}) is carried out by solving the Navier Stokes equations, simplified according to a suitable approximation, on a discrete grid.  Types of simulations can be grouped according to the scales of motion they resolve.  In direct numerical simulations (\acs{DNS}) the full range of spatial and temporal turbulence are resolved from the size of the domain down to the smallest dissipative scales i.e. the Kolmagorov micro-scales.  This requires a dense numerical grid and so can be computationally prohibitive.\\
 
-\acs{LES} has steadily, repeatedly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} applied this relatively 
-new method in \cite{Deardorff72} for this purpose.  \citeauthor{SullMoengStev} in \cite{SullMoengStev}, \citeauthor{FedConzMir04} in \cite{FedConzMir04} and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} used it to observe the structure and scaling behaviour of the \acs{EL}.\\
+In a large eddy simulation (\acs{LES}) smaller scales are filtered out and parametrized by sub grid scale closure model. General circulation models (\acs{GCM}) solve the Navier Stokes equations on a spherical grid and parametrize smaller scale processes including convection and cloud cover.  \acs{LES} has steadily, repeatedly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} (\citeyear{Deardorff72}) applied this relatively new method for this purpose.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}), \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} used it to observe the structure and scaling behaviour of the \acs{EL}.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Scales of the CBL and Entrainment Layer}
+\section{Scales of the \acs{CBL} and \acs{EL}}
 \label{sec:scales}
 
 \subsection{Length Scale ($h$)}
 \label{subsec:}
 
-\citeauthor{Deardorff72} in \cite{Deardorff72} demonstrated that the inversion base height
-scales the sizes of the dominant turbulent structures in penetrative convection.
-This was taken to be the height of minimum average vertical heat flux ($z_{f}$) 
-(\citeauthor{DearWill80} \cite{DearWill80}).  Since then, the concept of 
-\acs{CBL} height ($h$) has remained reasonably consistent in that it is measured at the inversion or point,
-above the surface layer, of maximum change in tracer concentration or potential temperature ($\theta$). Turbulence based concepts, 
-such as the velocity variance and the distance over which velocity is correlated with itself,
-are related but represent the current turbulent dynamics rather than the turbulence history (\citeauthor{Traum11} \cite{Traum11}).\\
+\citeauthor{Deardorff72} \citeyear{Deardorff72} demonstrated that dominant turbulent structures in penetrative convection
+scale with inversion height which was taken to be the height of minimum average vertical heat flux ($z_{f}$) 
+(\citeauthor{DearWill80} \citeyear{DearWill80}).  Since then, the definition of \acs{CBL} height ($h$) has 
+remained  unchanged i.e. it is the height of the inversion or vertical point,
+above the surface layer, of maximum change in tracer concentration or potential temperature ($\theta$). There are
+alternatives. For example turbulence based definitions, such as the velocity variance and the distance over which 
+velocity is correlated with itself, represent the current turbulent dynamics rather than the recent turbulence history
+as does $h$ (\citeauthor{Traum11} \citeyear{Traum11}).\\
 
 \subsection{Convective Velocity Scale ($w^{*}$)}
-\label{subsec:}
+\label{subsec:convel}
 
 Given an average surface vertical heat flux ($\overline{w^{'}\theta^{'}}_{s}$) a surface buoyancy flux can be defined as 
-$\frac{g}{\overline{\theta}}\overline{w^{'}\theta^{'}}$ from which the convective velocity scale is obtained by
-multiplying by the appropriate length scale.  Since the result is in $\frac{m^{3}}{s^{3}}$ a cube root is applied.\\
+$\frac{g}{\overline{\theta}}\overline{w^{'}\theta^{'}}_{s}$ from which the convective velocity scale is obtained by
+multiplying by the appropriate length scale.  Since the result is in $\frac{m^{3}}{s^{3}}$ a cube root is applied\\
 
 \begin{equation}
-w^{*} = \left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}} \right)^{\frac{1}{3}}
-\end{equation}\\
+w^{*} = \left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}}_{s} \right)^{\frac{1}{3}}
+\end{equation}.\\
 
-\citeauthor{Deardorff70} (\cite{Deardorff70}) confirmed that this effectively scaled the vertical turbulent velocity
-perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s work in \cite{Sorbjan} supports this, even at the 
+\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity
+perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work  supports this, even at the 
 \acs{CBL} top.  $\frac{dh}{dt}$ and $w^{'}$ are driven by $\overline{w^{'}\theta^{'}}_{s}$ and inhibited by  $\gamma$. 
 The influence of $\gamma$ on $w^{'}$ is indirectly accounted for via $h$ in $w^{*}$.\\
 
 \subsection{Convective Time Scale ($\tau$)}
 \label{sec:}
 
-It logically follows that the time for a thermal to reach the top of the \acs{CBL} is
+It logically follows that the time-scale one which a thermal travelling at velocity 
+scaled by $w^{*}$ to reach the top of the \acs{CBL}, i.e. travel a distance $h$ is
 
 \begin{equation}
 \tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}} \right)^{\frac{1}{3}}}
-\end{equation}
+\end{equation}.
 
- \citeauthor{SullMoengStev} showed a linear relationship
- between $h$ and time scaled by this time scale in \cite{SullMoengStev}. The time scale
- associated with the buoyant thermals overshooting and sinking (Brunt-Vaisala
-frequency) is another obvious choice (\citeauthor{FedConzMir04} \cite{FedConzMir04}).
-The ratio of these two time-scales forms a parameter which characterizes this system.
-(see \citeauthor{Sorbjan}\cite{Sorbjan} and \citeauthor{Deardorff79} \cite{Deardorff79}) 
+ This is also referred to as the convective overturn time scale.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) 
+showed a linear relationship between $h$ and time scaled by $\tau$ . An alternative is the time scale
+ associated with the buoyant thermals overshooting and sinking (Brunt-Vaisala frequency) (\citeauthor{FedConzMir04} \cite{FedConzMir04}).  The ratio of these two time-scales forms a parameter which characterizes this system (see \citeauthor{Sorbjan}\citeyear{Sorbjan} and \citeauthor{Deardorff79} \citeyear{Deardorff79}). 
 
 
-\subsection{Convective Temperature Scale ($\theta^{*}$)}
+\subsection{Temperature Scales ($\theta^{*}$ and $\gamma$)}
 \label{sec:}
 
 The \acs{CBL} temperature fluctuations $\theta^{'}$ are influenced by $\overline{w^{'}\theta^{'}}$ from both the surface and the \acs{CBL} top.
 \citeauthor {Deardorff70} (\cite{Deardorff70}) showed that an effective scale based on the convective velocity scale is
 
 \begin{equation}
-\theta^{*} = \frac{\overline{w^{'}\theta^{'}}}{w^{*}}
+\theta^{*} = \frac{\overline{w^{'}\theta^{'}}_{s}}{w^{*}}
 \end{equation} 
 
-Whereas \citeauthor{Sorbjan} (\cite{Sorbjan}) showed that as with proximity to the \acs{CBL} top the effects of $\gamma$ become more important.
+Whereas \citeauthor{Sorbjan} (\cite{Sorbjan}) showed that with proximity to the \acs{CBL} top the effects of $\gamma$ become more important.
  
 \subsection{Buoyancy Richardson Number (\acs{Ri})}
 \label{sec:}
 
-The flux Richardson ($R_{f}$) number expresses the balance between turbulent mechanical energy and buoyancy.  It's obtained from the ratio of these two terms in the turbulent kinetic energy budget equation (\citeauthor{Stull-BLMetIntro} \cite{Stull-BLMetIntro}):
+The flux Richardson ($R_{f}$) number expresses the balance between mechanical and buoyant production of turbulent kinetic energy (\acs{TKE}) and is obtained from the ratio of these two terms in the turbulent kinetic energy budget equation (\citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}):
 
 \begin{equation}
-\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{'}\theta^{'}} \right) - \overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( u_{j}^{'}e^{'} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( u_{i}^{'} p^{'} \right) }{\partial x_{i}} - \epsilon
+\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{'}\theta^{'}} \right) - \overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( \overline{u_{j}^{'}e^{'}} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( \overline{u_{i}^{'} p^{'}} \right) }{\partial x_{i}} - \epsilon
 \end{equation}
 
 \begin{equation}
 R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{'}\theta^{'}} \right)}{\overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}
-\end{equation}
+\end{equation}.
  
-Assuming horizontal homogeneity and neglecting subsidence
+Assuming horizontal homogeneity and neglecting subsidence yields
   
 \begin{equation}
 R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{'}\theta^{'}} \right)}{\overline{u^{'}w^{'}}\frac{\partial \overline{U}}{\partial z} + \overline{v^{'}w^{'}}\frac{\partial \overline{V}}{\partial z}}
-\end{equation}
+\end{equation}.
 
-Applying first order closer to the flux terms, i.e. assuming they are proportional to the vertical gradients, gives the gradient Richardson number ($R_{g}$)
+Applying first order closure to the flux terms, i.e. assuming they are proportional to the vertical gradients, gives the gradient Richardson number ($R_{g}$)
 
 \begin{equation}
 R_{g} = \frac{ \frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\left( \frac{ \partial \overline{U}}{\partial z} \right)^{2} + \left( \frac{\partial \overline{V}}{\partial z} \right)^{2}} 
-\end{equation}
+\end{equation},
 
-which expresses the balance between shear and buoyancy driven turbulence, but in the \acs{EL} buoyancy acts to suppress buoyancy driven turbulence.  
-Applying a bulk approximation to the denominator, and expressing it in terms of scales yields a ratio of two square of time scales
+which expresses the balance between shear and buoyancy production of \acs{TKE}.  However, in the \acs{EL} buoyancy acts to suppress buoyant production of \acs{TKE}.  Applying a bulk approximation to the denominator, and expressing it in terms of scales yields a squared ratio of two time scales
 
 \begin{equation}
 R_{g} = \frac{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\frac{U^{*2}}{L^{2}}} = N^{2}\frac{L^{2}}{U^{*2}}
-\end{equation}
+\end{equation},
 
 
-and applying the bulk approximation to both the numerator and the denominator yields
+where $U^{*}$ and $L^{*}$ are appropriate velocity and length scales.  Applying the bulk approximation to both the numerator and denominator yields
+the bulk Richardson number:
 
 \begin{equation}
 R_{b} = \frac{\frac{g}{\overline{\theta}} \Delta \theta L}{U^{*2}}
-\end{equation}
+\end{equation}.
 
-A natural choice of length and velocity scales for the \acs{CBL} are $h$ and $w^{*}$.  \citeauthor{EllTurn} (\cite{EllTurn}) suggested and confirmed a relationship between the entrainment rate and this form of 
-Richardson number (\acs{Ri}) based on tank experiments.  This parameter can be justified and arrived at by considering the principal forcings of the system, or from non-dimensionalizing the entrainment relation  derived
-analytically (\citeauthor{Tennekes73}  \cite{Tennekes73}, \citeauthor{Deardorff72} \cite{Deardorff72}).
+A natural choice of length and velocity scales for the \acs{CBL} are $h$ and $w^{*}$ giving the convective or buoyancy Richardson number:
 
 \begin{equation}
-w_{e} \propto \frac{\overline{w^{'}\theta^{'}}_{s}}{\Delta \theta}
-\end{equation}
+Ri = \frac{\frac{g}{\overline{\theta}} \Delta \theta h}{w^{*2}}
+\end{equation}.
 
-\begin{equation}
-\frac{w_{e}}{w^{*}} \propto  \frac{\overline{w^{'}\theta^{'}}_{s}}{\Delta \theta w^{*}} = Ri^{-1}
-\end{equation}
- 
-
-In one or other of its forms this parameter has become central to any study on \acs{CBL} entrainment (\citeauthor{SullMoengStev} \cite{SullMoengStev}, \citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{Traum11} \cite{Traum11}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2})
-
+\acs{Ri} can be arrived at by considering the principal forcings of the system, or from non-dimensionalizing the entrainment relation  derived analytically (\citeauthor{Tennekes73}  \cite{Tennekes73}, \citeauthor{Deardorff72} \cite{Deardorff72}). It is central to any study on \acs{CBL} entrainment (\citeauthor{SullMoengStev} \cite{SullMoengStev}, \citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{Traum11} \cite{Traum11}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2}).
 
 \subsection{Relationship of Entrainment Rate and Entrainment Layer Depth to Richardson Number}
 
@@ -315,7 +307,6 @@ over the growing \acs{CBL}. (\citeauthor{Tennekes73} \cite{Tennekes73}, \citeaut
 \begin{equation}
 \frac{w_{e}}{w^{*}} \propto  Ri^{-a}
 \end{equation}
-
 
 It has been verified in numerous laboratory and numerical studies (\citeauthor{DearWill80} \cite{DearWill80}, \citeauthor{SullMoengStev} \cite{SullMoengStev}, \citeauthor{FedConzMir04} \cite{FedConzMir04}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2}).  But there is still some 
 unresolved discussion as the the exact value of a.  It seems there are two possible values, $-\frac{3}{2}$ and $-1$, the first of which \citeauthor{EllTurn} (\cite{EllTurn}) suggested occurs at high stability when buoyant recoil of impinging thermals becomes more important than their convective overturning.  \citeauthor{FedConzMir04} (\cite{FedConzMir04}) arrive at this power law through an \acs{Ri} obtained using the potential temperature jump across the \acs{EL}.\\
