@@ -3,13 +3,33 @@
 \section{Potential Temperature: $\theta$}
 
 \begin{equation}
-\theta = T \left(\frac{p_{0}}{p} \left)^{\frac{R_{d}}{c_{p}}} 
+\theta = T \left(\frac{p_{0}}{p} \right)^{\frac{R_{d}}{c_{p}}} 
 \end{equation}
 
 $p_{0}$ and $P$ are a reference pressure and pressure respectively. 
 
 \begin{equation}
 \frac{c_{p}}{\theta}\frac{d\theta}{dt} = \frac{c_{p}}{T} \frac{dT}{dt} - \frac{R_{d}}{p}\frac{dp}{dt} 
+\end{equation}
+
+If changes in pressure are negligible compared to overall pressure, as in the case of that part atmosphere that extends from the surface to 2Km above it. 
+
+\begin{equation}
+c_{p}\frac{d\theta}{\theta} = c_{p}\frac{dT}{T} - \frac{R_{d}}{p}\frac{dp}{p} 
+\end{equation}
+
+\begin{equation}
+\frac{d\theta}{\theta} = \frac{dT}{T} 
+\end{equation}
+
+and if 
+
+\begin{equation}
+\frac{d\theta}{dT} \approx 1 
+\end{equation}
+
+\begin{equation}
+\frac{d\theta}{\theta} = \frac{dT}{T} 
 \end{equation}
 
 \section{Second Law of Thermodynamics}
@@ -29,8 +49,75 @@ Using the first law and the equation of state for an ideal gas
 \frac{q}{T} = \frac{1}{T} \left(\frac{dh}{dt} - \alpha \frac{dp}{dt}\right) =  \frac{c_{p}}{T} \frac{dT}{dt} - \frac{R_{d}}{p} \frac{dp}{dt}
 \end{equation}
 
+so
 
+\begin{equation}
+\frac{ds}{dt} = \frac{q}{T} =  \frac{c_{p}}{\theta}\frac{d\theta}{dt}
+\end{equation}
 
+For a dry adiabatic atmmosphere
+
+\begin{equation}
+\frac{ds}{dt} =  \frac{c_{p}}{\theta}\frac{d\theta}{dt} = 0
+\end{equation}
+
+\section{Reynolds Decomposition and Simplification of Conservation of Enthalpy for a dry Atmosphere}
+
+\begin{equation}
+\frac{\partial \theta}{\partial t} + u_{i}\frac{\partial \theta}{\partial x_{i}} = \nu_{\theta} \frac{\partial^{2}\theta}{\partial x_{i}^{2}} - \frac{1}{c_{p}}\frac{\partial Q^{*}}{\partial x_{i}}
+\end{equation}
+
+$\nu$ and $Q^{*}$ are the thermal diffusivity and net radiation respectively.  If we ignore these two effects then (adiabatic?)
+
+\begin{equation}
+\frac{\partial \theta}{\partial t} + u_{i}\frac{\partial \theta}{\partial x_{i}} = 0
+\end{equation}
+
+\begin{equation}
+\theta = \overline{\theta} + \theta^{'}, \theta = \overline{u_{i}} + u_{i}^{'} 
+\end{equation}
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial \theta^{'}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \overline{\theta}}{\partial x_{i}} + \overline{u_{i}}\frac{\partial \theta^{'}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
+\end{equation}
+
+Averaging and getting rid of average variances and their linear products
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
+\end{equation}
+
+Ignoring mean winds
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
+\end{equation}
+
+using flux form
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial(u_{i}^{'}\theta^{'})}{\partial x_{i}} - \theta^{'}\frac{\partial u_{i}^{'}}{\partial x_{i}}= 0
+\end{equation}
+
+under the bousinesq assumption $\Delta \dot u_{i} = 0$
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial(u_{i}^{'}\theta^{'})}{\partial z}
+\end{equation}
+
+ignoring horizontal fluxes
+
+\begin{equation}
+\frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial(w^{'}\theta^{'})}{\partial z}
+\end{equation}
+
+\section{Reynolds averaged Turbulence Kinetic Energy Equation}
+
+\begin{equation}
+\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{'}\theta^{'}} \right) - \overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( \overline{u_{j}^{'}e^{'}} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( \overline{u_{i}^{'} p^{'}} \right) }{\partial x_{i}} - \epsilon
+\end{equation}
+
+$e$ is turbulence kinetic energy (TKE).  $p$ is pressure.  $\rho$ is density.  $\epsilon$ is viscous dissipation.
 
 %This would be any supporting material not central to the dissertation.
 %For example:
@@ -39,7 +126,5 @@ Using the first law and the equation of state for an ideal gas
 %    experiments conducted during the course of research.
 %\item Copies of questionnaires and survey instruments.
 %\end{itemize}
-
-
 
 \endinput
