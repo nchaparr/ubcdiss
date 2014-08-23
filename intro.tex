@@ -8,11 +8,11 @@
 \section{Motivation}
 \label{sec:Mot}
 
-The daytime convective atmospheric boundary layer (\acs{CBL}) over land starts to grow at sunrise when the surface becomes warmer than the air above it.  Coherent turbulent structures (thermals) begin to form and rise since their relative warmth causes them to be less dense and so buoyant.  The temperature profile of the residual nightime boundary layer is stable i.e. potential temperature ($\theta$) increases with height.  The thermals rise to their neutral bouoyancy level overshoot and then overturn or recoil concurrently dragging down warm stable air from above which is subsequently mixed into the growing turbulent mixed layer (\acs{ML}) (\citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}).  This mixing at the top of the \acs{CBL} is known as entrainment and the region over which it occurs, the entrainment layer (\acs{EL}).\\
+The daytime convective atmospheric boundary layer (\acs{CBL}) over land starts to grow at sunrise when the surface becomes warmer than the air above it.  Coherent turbulent structures (thermals) begin to form and rise since their relative warmth causes them to be less dense and so buoyant.  The temperature profile of the residual nightime boundary layer is stable i.e. potential temperature ($\theta$) increases with height.  The thermals rise to their neutral bouoyancy level overshoot and then overturn or recoil concurrently dragging down warm stable air from above which is subsequently mixed into the growing turbulent mixed layer (\acs{ML}) (\citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}).  This mixing at the top of the \acs{CBL} is known as entrainment and the region over which it occurs, the entrainment layer (\acs{EL}). A commonly referred to simplified concetpual model of this case is the dry shear free \acs{CBL} without large scale winds or subsidence (\citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04} \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}). This model provides an intellecually accessible framework used to understand the dynamic and complex \acs{CBL} and its \acs{EL}.\\
 
 \acs{CBL} height (h) and the prediction thereof are important for calculating the concentration of any species as well as the sizes of the turbulent structures.  In combination with the lifting condensation level knowledge of \acs{EL} depth allows predictions pertaining to the formation of cumulous clouds.  For example cloud cover increases as more thermals rise above their lifting condensation level.  Parametrizations for both \acs{CBL} growth and \acs{EL} depth are required in mesoscale and general circulation models (\acs{GCM}s).  Furthermore it is an attractive goal to develop a robust set of scales for this region analogous to Monin-Obvukov Theory (\citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}, \citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{SteynBaldHoff} \citeyear{SteynBaldHoff}, \citeauthor{StullNelEl} \citeyear{StullNelEl}, \citeauthor{Sorbjan} \citeyear{Sorbjan})\\
 
-Atmospheric \acs{CBL} entrainment has been studied as a separate phenomenon (BandF, SullMoeng, StulNelEl, Trau) as well as part of the broader topic of entrainment in geophysical flows (TurnerEl). There is broad agreement as to the fundamental scaling parameters and relationships involved.  However, their is ongoing discussion about how the important heights are defined and measured (bandf, trau) and the exact forms of the relationships (trau, fed, sull, turnel.)
+Atmospheric \acs{CBL} entrainment has been studied as a separate phenomenon (\citeauthor{StullNelEl} \citeyear{StullNelEl}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}) as well as part of the broader topic of entrainment in geophysical flows (\citeauthor{Turner86} \citeyear{Turner86}). There is broad agreement as to the fundamental scaling parameters and relationships involved.  However, the discussion as to how the parameters are defined and measured (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}, \citeauthor{Traum11} \citeyear{Traum11}) and the exact forms of the resulting relationships (\citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04} \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}) continues.  This prompts me to ask the research questions I outline in Section \ref{sec:resquest}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +29,7 @@ On average these convective turbulent structures create a fully turbulent mixed 
 \citeauthor{StullNelEl} (\citeyear{StullNelEl}) outline the stages of \acs{CBL} growth from when the sub-layers of the nocturnal boundary layer are entrained, until the previous day's capping inversion is reached and a quasi-steady growth is attained.  The \acs{EL} depth relative to \acs{CBL} height varies throughout these stages and its relationship to scaled entrainment is hysteresial.  Numerical studies typically represent this last quasi-steady phase involving a constant $\overline{w^{'}\theta^{'}}_{s}$ working against an inversion and or a stable $\gamma$ (\citeauthor{SchmidtSchu} \cite{SchmidtSchu}, \citeauthor{Sorbjan} \citeyear{Sorbjan}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  
 
 \subsection{Convective Boundary Layer Height ($h$)}
-\label{subsec:}
+\label{subsec:cblh}
 
 The \acs{ML} is fully turbulent with an on uniform average potential temperature ($\overline{\theta}$). Aerosol and water vapour concentrations decrease dramatically with transition to the stable upper free atmosphere (\acs{FA}).  So any of these characteristics can support
 a definition of \acs{CBL} height ($h$).  \citeauthor{StullNelEl} (\citeyear{StullNelEl}) defined $h$ in terms of the percentage of \acs{ML} air
@@ -37,7 +37,7 @@ and identified it by eye from Lidar back-scatter images.  \citeauthor{Traum11} (
 and the maximum wavelet covariance. \acs{CBL} height detection is a wide and varied field.  Both \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{Traum11} \citeyear{Traum11} provide more thorough reviews.\\
 
 Numerical models produce hundreds of local horizontal points
-from which smooth averaged vertical profiles be obtained, and statistically robust relationships inferred. \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) applied a wavelet technique to identify the point of maximum covariance in a local vertical tracer profiles in their large eddy simulation (\acs{LES}) study.  They compared this method to the gradient method i.e. locating the point of maximum vertical gradient, as well as the point of minimum $\overline{w^{'}\theta^{'}}$.  This last definition is common among \acs{LES} and laboratory studies where it has been referred to as the inversion height (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{Sorbjan1} \citeyear{Sorbjan1}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}).  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) clarified that the extrema of the four $\overline{w^{'}\theta^{'}}$ quadrants ($\overline{w^{'+}\theta^{'+}}$), $\overline{w^{'-}\theta^{'+}}$, $\overline{w^{'+}\theta^{'-}}$, $\overline{w^{'-}\theta^{'-}}$) in the \acs{EL} more or less correspond to the average point of maximum $\frac{\partial \overline{\theta}}{\partial z}$, whereas the point of minimum $\overline{w^{'}\theta^{'}}$ was consistently lower. They defined \acs{CBL} height based on local $\frac{\partial \theta}{\partial z}$ and applied horizontal averaging as well as two methods based on $\overline{w^{'}\theta^{'}}$
+from which smooth averaged vertical profiles be obtained, and statistically robust relationships inferred. \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) applied a wavelet technique to identify the point of maximum covariance in a local vertical tracer profiles in their large eddy simulation (\acs{LES}) study.  They compared this method to the gradient method i.e. locating the point of maximum vertical gradient, as well as the point of minimum $\overline{w^{'}\theta^{'}}$.  This last definition is common among \acs{LES} and laboratory studies where it has been referred to as the inversion height (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{Sorbjan1} \citeyear{Sorbjan1}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}).  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) clarified that the extrema of the four $\overline{w^{'}\theta^{'}}$ quadrants (upward warm: $\overline{w^{'+}\theta^{'+}}$, downward warm: $\overline{w^{'-}\theta^{'+}}$, upward cool: $\overline{w^{'+}\theta^{'-}}$, downward cool: $\overline{w^{'-}\theta^{'-}}$) in the \acs{EL} more or less correspond to the average point of maximum $\frac{\partial \overline{\theta}}{\partial z}$, whereas the point of minimum $\overline{w^{'}\theta^{'}}$ was consistently lower. They defined \acs{CBL} height based on local $\frac{\partial \theta}{\partial z}$ and applied horizontal averaging as well as two methods based on $\overline{w^{'}\theta^{'}}$
 for comparison.\\
 
 So far, no published \acs{LES} study so far defines the height in terms of the $\overline{\theta}$ or $\frac{\partial \overline{\theta}}{\partial z}$ profile even though analyitical models, from which \acs{CBL} growth parametrizations stem, rely on an idealized version thereof. \citeauthor{GarciaMellado} \citeyear{GarciaMellado} do include it as one of their measures of \acs{CBL} height in their direct numerical
@@ -68,6 +68,14 @@ The \acs{ML} is fully turbulent but the top is characterised by stable air with 
 In terms of tracer concentration and for example based on a Lidar backscatter profile, there are two ways to conceptually define the entrainment layer (\acs{EL}).  It can be thought of as the range in space (or time) over which local \acs{CBL} height varies (\citeauthor{CrumStullEl} \citeyear{CrumStullEl}) or a local region over which the concentration (or back-scatter intensity) transitions from \acs{ML} to free atmospheric (\acs{FA}) values (\citeauthor{Traum11} \citeyear{Traum11}).  The latter can be estimated using either curve-fitting and wavelet techniques (\citeauthor{Traum11} \cite{Traum11}, \citeauthor{SteynBaldHoff} \cite{SteynBaldHoff}, \citeauthor{BrooksFowler2} \cite{BrooksFowler2}).\\
 
 Although \citeauthor{BrooksFowler2} apply a wavelet technique to tracer profiles for the determination of \acs{EL} limits, in their \acs{LES} study (\cite{BrooksFowler2}) it is more common in numerical modelling and laboratory studies for the \acs{EL} limits to be defined based on the average vertical turbulent heat flux ($\overline{w^{'}\theta^{'}}$) i.e. the point at which it goes from positive to negative values, and the point at which it goes from a negative value to zero as shown in Figure \ref{fig:1stord} (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{GarciaMellado} \citeyear{GarciaMellado}). Analytical models based on the representation in Figure \ref{fig:1stord} assume the region of negative $\overline{w^{'}\theta^{'}}$ coincides with the region where $\overline{\theta}$ transitions from the \acs{ML} value to the \acs{FA} value. (\citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}) but no modelling studies use the vertical $\overline{\theta}$ profile to define the (\acs{EL}).\\
+
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/first_order.pdf}
+    \caption{}
+    \label{fig:1storder}   % label should change
+\end{figure}
 
 Since $\overline{\theta}$ modeled by an \acs{LES} is not strictly constant with respect to height in the \acs{ML} (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}), a threshold value for $\overline{\theta}$ or its vertical gradient must be chosen to identify the lower \acs{EL} limit.  In their \citeyear{BrooksFowler2} \acs{LES} study \citeauthor{BrooksFowler2} encountered inconsistencies when determining the \acs{EL} limits from the average tracer profile.  Although their tracer profile was quite different to a simulated \acs{CBL} $\overline{\theta}$ profile, this could serve as cautionary note.\\             
 
@@ -139,15 +147,6 @@ The relevant quantities in equations 2.2 through 2.6 are idealized, ensemble ave
 (\citeauthor{FedConzMir04} \cite{FedConzMir04}).  But they are all based on the simplified $\overline{\theta}$ and 
 $\overline{w^{'}\theta^{'}}$ profiles outlined above.\\  
 
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/first_order.pdf}
-    \caption{A further simplified version of Figure \ref{fig:1stord}.  The \acs{EL} is infinitessimely thin.}
-    \label{fig:1storder}   % label should change
-\end{figure}
-
-
 First (and higher) order models assume an entrainment layer (\acs{EL}) of finite depth at the top of the ML, defined by two heights:
 the top of the ML ($h_{0}$) and the point where free atmospheric characteristics are resumed ($h_{1}$).  The derivations are more complex and 
 involve assumptions about the \acs{EL} i.e.: 
@@ -180,14 +179,7 @@ In a large eddy simulation (\acs{LES}) smaller scales are filtered out and param
 \subsubsection{Length Scale ($h$)}
 \label{subsubsec:}
 
-\citeauthor{Deardorff72} (\citeyear{Deardorff72}) demonstrated that dominant turbulent structures in penetrative convection
-scale with inversion height which was taken to be the height of minimum average vertical heat flux:$z_{f}$ 
-(\citeauthor{DearWill80} \citeyear{DearWill80}).  Since then, the definition of \acs{CBL} height ($h$) has 
-remained  unchanged i.e. it is the height of the inversion or the vertical point,
-above the surface layer, of maximum change in tracer concentration or potential temperature ($\theta$). There are
-alternatives. For example turbulence based definitions, such as the velocity variance and the distance over which 
-velocity is correlated with itself, represent the current turbulent dynamics rather than the recent turbulence history
-as does $h$ (\citeauthor{Traum11} \citeyear{Traum11}).\\
+\citeauthor{Deardorff72} (\citeyear{Deardorff72}) demonstrated that dominant turbulent structures in penetrative convection scale with \acs{CBL} height which he referred to as the inversion height but measured at the height of minimum average vertical heat flux:$z_{f}$ (\citeauthor{DearWill80} \citeyear{DearWill80}).  Since then, the distinction between the two has been clarified as in Section \ref{subsec:cblh} and here $h$ refers strictly to the height of maximum average potential temperature gradient. There are alternatives. For example turbulence based definitions, such as the velocity variance and the distance over which velocity is correlated with itself, represent the current turbulent dynamics rather than the recent turbulence history as does $h$ (\citeauthor{Traum11} \citeyear{Traum11}).\\
 
 \subsubsection{Convective Velocity Scale ($w^{*}$)}
 \label{subsubsec:convel}
@@ -200,16 +192,12 @@ multiplying by the appropriate length scale.  Since the result is in $\frac{m^{3
 w^{*} = \left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}}_{s} \right)^{\frac{1}{3}}
 \end{equation}.\\
 
-\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity
-perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work  supports this, even at the 
-\acs{CBL} top.  $\frac{dh}{dt}$ and $w^{'}$ are driven by $\overline{w^{'}\theta^{'}}_{s}$ and inhibited by  $\gamma$. 
-The influence of $\gamma$ on $w^{'}$ is indirectly accounted for via $h$ in $w^{*}$.\\
+\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work supports this, even at the \acs{CBL} top.  The rate of \acs{CBL} growth ($\frac{dh}{dt}$) depends on the magnitude of $w^{'}$ which is driven by $\overline{w^{'}\theta^{'}}_{s}$. Stability aloft suppresses $\frac{dh}{dt}$ so influence of $\gamma$ is indirectly accounted for via $h$ in $w^{*}$.\\
 
 \subsubsection{Convective Time Scale ($\tau$)}
 \label{subsubsec:}
 
-It logically follows that the time which a thermal travelling at velocity 
-$w^{*}$ takes to reach the top of the \acs{CBL}, i.e. travel a distance $h$ is
+It logically follows that the time which a thermal travelling at velocity $w^{*}$ takes to reach the top of the \acs{CBL}, i.e. travel a distance $h$ is
 
 \begin{equation}
 \tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}} \right)^{\frac{1}{3}}}
@@ -234,11 +222,7 @@ Whereas \citeauthor{Sorbjan} (\citeyear{Sorbjan}) showed that with proximity to 
 \subsubsection{Buoyancy Richardson Number (\acs{Ri})}
 \label{subsubsec:}
 
-The flux Richardson ($R_{f}$) number expresses the balance between mechanical and buoyant production of turbulent kinetic energy (\acs{TKE}) and is obtained from the ratio of these two terms in the \acs{TKE} budget equation (\citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}):
-
-\begin{equation}
-\frac{\partial \overline{e}}{\partial t} + \overline{U}_{j} \frac{\partial \overline{e}}{\partial x_{j}} = \delta_{i3}  \frac{g}{\overline{\theta}} \left( \overline{u_{i}^{'}\theta^{'}} \right) - \overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}} - \frac{ \partial \left( \overline{u_{j}^{'}e^{'}} \right)}{\partial x_{j}} - \frac{1}{\overline{\rho}} \frac{\partial \left( \overline{u_{i}^{'} p^{'}} \right) }{\partial x_{i}} - \epsilon
-\end{equation}
+The flux Richardson ($R_{f}$) number expresses the balance between mechanical and buoyant production of turbulent kinetic energy (\acs{TKE}) and is obtained from the ratio of these two terms in the \acs{TKE} budget equation (See Appendix, \citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}):
 
 \begin{equation}
 R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{'}\theta^{'}} \right)}{\overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}
@@ -400,7 +384,7 @@ The reference temperature, $T_{0}$, can be replaced by $\overline{\theta}_{ML}$ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Research Questions}
-\label{sec:}
+\label{sec:resquest}
 
 An effective, simplified conceptual model of the dry, shear-free \acs{CBL} in the absence of large scale winds is represented in Figure \ref{fig:1stord}.  Turbulent mixing via upward moving thermals and corresponding cooler dowdraughts renders the average potential temperature $\overline{\theta}$ effectively constant within the \acs{ML}.  The average vertical turbulent heat flux ($\overline{w^{'}\theta^{'}}$) is positive and decreases as the thermals approach the \acs{CBL} top.  In the \acs{EL} there is a mixture of turbulent thermals and relatively warmer stable air.  The proportion of the latter increasing with proximity to the free atmosphere (\acs{FA}) above.  In the \acs{EL} $\overline{w^{'}\theta^{'}}$ becomes negative as the thermals, which are now relatively cool, impinge on the \acs{FA} and turn downward pulling warmer air with them.  The dimensionless parameter that represents the forcings under these conditions, and is ubiquitous in the corresponding literature, is the convective or buoyancy Richardson number: \acs{Ri} $=\frac{\frac{g}{\overline{\theta}_{ML}}\Delta \theta h}{w^{*2}}$ ( \citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}, \citeauthor{GarciaMellado} \citeyear{GarciaMellado}).  $h$ is the \acs{CBL} height and $w^{*}$ is the convective velocity scale (\citeauthor{Deardorff70} \citeyear{Deardorff70}) to be defined later.\\   
 
