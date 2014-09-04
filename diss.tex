@@ -153,7 +153,8 @@
 %% We use \citeeg{} to provide examples
 \usepackage[numbers,sort&compress]{natbib}
 \newcommand{\citeeg}[1]{\citep[e.g.,][]{#1}}
-
+%\usepackage[nottoc,notlof,notlot]{tocbibind} 
+\renewcommand\bibname{References}
 %% The titlesec package provides commands to vary how chapter and
 %% section titles are typeset.  The following uses more compact
 %% spacings above and below the title.  The titleformat that follow
@@ -163,6 +164,7 @@
 \titleformat*{\subsection}{\singlespacing\raggedright\bfseries\large}
 \titleformat*{\subsubsection}{\singlespacing\raggedright\bfseries}
 \titleformat*{\paragraph}{\singlespacing\raggedright\itshape}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\bfseries}
 
 %% The caption package provides support for varying how table and
 %% figure captions are typeset.
@@ -239,12 +241,12 @@
     citebordercolor={0.8 0.8 0.8},filebordercolor={0.8 0.8 0.8},%
     linkbordercolor={0.8 0.8 0.8},pagebordercolor={0.8 0.8 0.8},%
     urlbordercolor={0.8 0.8 0.8},%
-    pagebackref,linktocpage%
+    linktocpage%pagebackref,
     ]{hyperref}
 %% The following change how the the back-references text is typeset in a
 %% bibliography when `backref' or `pagebackref' are used
-\renewcommand\backrefpagesname{\(\rightarrow\) pages}
-\renewcommand\backref{\textcolor{greytext} \backrefpagesname\ }
+%\renewcommand\backrefpagesname{\(\rightarrow\) pages}
+%\renewcommand\backref{\textcolor{greytext} \backrefpagesname\ }
 
 %% The following uses most defaults, which causes hyperlinks to be
 %% surrounded by colourful boxes; the colours are only visible in
@@ -406,10 +408,11 @@
 %    5. Bibliography
 \begin{singlespace}
 \raggedright
-
-\bibliographystyle{abbrvnat}
+\bibliographystyle{ametsoc}
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
 \bibliography{biblio}
-
 
 \end{singlespace}
 
