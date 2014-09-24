@@ -27,7 +27,7 @@ Lidar images such as Figure \ref{fig:DuPeFla} show the overall structure of the 
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=1]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/DuPeFla}
-    \caption{Lidar backscatter image of the \acs{CBL} from \citeauthor{DuPeFla} \citeyear{DuPeFla}.  The horizontal distance between the two peaks corresponds to approximately 1700 meters.}
+    \caption[Lidar backscatter image of the \acs{CBL}]{Lidar backscatter image of the \acs{CBL} from \citeauthor{DuPeFla} \citeyear{DuPeFla}.  The horizontal distance between the two peaks corresponds to approximately 1700 meters.}
     \label{fig:DuPeFla}   % label should change
 \end{figure}
 
@@ -37,7 +37,7 @@ This has been effectively modelled using large eddy simulation (\acs{LES}) by \c
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=1.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/SullMoeng}
-    \caption{Flow visualization from \citeauthor{SullMoengStev} \citeyear{SullMoengStev} showing a modelled \acs{CBL} thermal enveloping \acs{FA} air.}
+    \caption[Visualization of entrainment from an \acs{LES}]{Flow visualization from \citeauthor{SullMoengStev} \citeyear{SullMoengStev} showing a modelled \acs{CBL} thermal enveloping \acs{FA} air.}
     \label{fig:SullMoeng}   % label should change
 \end{figure}
 
@@ -47,7 +47,7 @@ On average these convective turbulent structures create a fully turbulent mixed 
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.55]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/first_order.pdf}
-    \caption{Idealized vertical average profiles for a dry \acs{CBL} in the absence of large scale winds or subsidence. (a) $\overline{\theta}_{ML}$ is the average mixed layer potential temperature. $h$ is the height of maximum gradient in the $\overline{\theta}$ profile. $\overline{\theta}_{0}$ (dotted line) is the initial $\overline{\theta}$ profile which has a slope $\gamma$. The mixed layer, entrainment layer and free atmosphere are denoted \acs{ML}, \acs{EL} and \acs{FA} respectively.  (b) $\overline{w^{'}\theta^{'}}$ is the average surface turbulent heat flux.  The EL limits (dashed lines) enclose the region of negative $\overline{w^{'}\theta^{'}}$.}
+    \caption[Idealized vertical average profiles for a dry \acs{CBL}]{Idealized vertical average profiles for a dry \acs{CBL} in the absence of large scale winds or subsidence. (a) $\overline{\theta}_{ML}$ is the average mixed layer potential temperature. $h$ is the height of maximum gradient in the $\overline{\theta}$ profile. $\overline{\theta}_{0}$ (dotted line) is the initial $\overline{\theta}$ profile which has a slope $\gamma$. The mixed layer, entrainment layer and free atmosphere are denoted \acs{ML}, \acs{EL} and \acs{FA} respectively.  (b) $\overline{w^{'}\theta^{'}}$ is the average surface turbulent heat flux.  The EL limits (dashed lines) enclose the region of negative $\overline{w^{'}\theta^{'}}$.}
     \label{fig:1storder}   % label should change
 \end{figure}
 
@@ -114,7 +114,7 @@ Bulk  models for the Convective Boundary layer (\acs{CBL}) based on average, ver
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.55]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/zero_order.pdf}
-    \caption{Simplified version of Figure is \ref{fig:1storder} such that the \acs{EL} is infinitesimely thin. (a) $h$ is the height of the  inversion and $\delta \theta$ the corresponding temperature jump, that is, the difference between $\overline{\theta}_{ML}$ and $\overline{\theta}_{0}(h)$. This is different, although related, to the jump across the \acs{EL} in Figure \ref{fig:1storder} $\Delta \theta$. (b) The $\overline{w^{'}\theta^{'}}$ profile is linear and decreasing until it reaches a maximum negative value at $h$ of $-.2(\overline{w^{'}\theta^{'}})_{s}$. Here there is a discontinuity as it jumps to zero.}
+    \caption[Zero order \acs{CBL}]{Simplified version of Figure is \ref{fig:1storder} such that the \acs{EL} is infinitesimely thin. (a) $h$ is the height of the  inversion and $\delta \theta$ the corresponding temperature jump, that is, the difference between $\overline{\theta}_{ML}$ and $\overline{\theta}_{0}(h)$. This is different, although related, to the jump across the \acs{EL} in Figure \ref{fig:1storder} $\Delta \theta$. (b) The $\overline{w^{'}\theta^{'}}$ profile is linear and decreasing until it reaches a maximum negative value at $h$ of $-.2(\overline{w^{'}\theta^{'}})_{s}$. Here there is a discontinuity as it jumps to zero.}
     \label{fig:0order}   % label should change
 \end{figure}
 
@@ -393,7 +393,7 @@ A simplified conceptual model of the dry, shear-free \acs{CBL} in the absence of
 The relationship between scaled \acs{EL} depth and \acs{Ri} 
 
 \begin{equation} 
-\frac{\Delta h}{h} \propto  \acs{Ri}^{b} \tag{\ref{eq:ervsri}}
+\frac{\Delta h}{h} \propto  \acs{Ri}^{b} \tag{\ref{eq:dhvsri}}
 \end{equation}
 
 has been explored and justified in field measurement, laboratory and numerical studies.  There is disagreement with respect to its exact form, in part stemming from variation in height and $\theta$ jump definitions, but in general its magnitude relative to h decreases with increasing \acs{Ri}. Although referred to in most relevant studies and relied upon in analytical models, the vertical average potential temperature profile has not been used to define the \acs{EL} (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{StullNelEl} \citeyear{StullNelEl}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Boers89} \citeyear{Boers89}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}). This leads me to ask \textbf{Q2: Can the \acs{EL} limits be defined based on the $\overline{\theta}$ profile and what is the relationship of the resulting depth ($\Delta h$) to \acs{Ri}?}\\
@@ -402,7 +402,7 @@ has been explored and justified in field measurement, laboratory and numerical s
 A further simplification to the dry, shear-free, \acs{CBL} model without large scale velocities, is to regard the \acs{EL} depth as infinitesimly small as in Figure \ref{fig:0order}.  The relationship of the scaled, time rate of change of $h$ (entrainment rate: $w_{e}$) to \acs{Ri} can be derived based on this model (\citeauthor{Tennekes73} \citeyear{Tennekes73}, \citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04})
 
 \begin{equation}
-\frac{w_{e}}{w^{*}} \propto  \acs{Ri}^{a}. \tag{\ref{eq:dhvsri}}
+\frac{w_{e}}{w^{*}} \propto  \acs{Ri}^{a}.\tag{\ref{eq:ervsri}} 
 \end{equation}
  
 This will be referred to as the entrainment relation.  Although that there is such a relationship is well established, discussion as to the power exponent of \acs{Ri} is unresolved and results from studies justify values of both $-\frac{3}{2}$ and $-1$. See \citeauthor{Traum11} (\citeyear{Traum11}) for a summary and review.  \citeauthor{Turner86} (\citeyear{Turner86}) explains this disparity in terms of entrainment mechanism such that the higher value occurs when thermals recoil rather than overturn in response to a stronger $\theta$ jump (or inversion).  Whereas \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) notice a deviation from the lower power ($-1$) at lower \acs{Ri} and attribute it to the effect of a the shape of $\overline{\theta}$ within a thicker \acs{EL}.  Both \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) show how the definition of the $\theta$ jump influences the time rate  of change of \acs{Ri} and so effects $a$. \textbf{Q3: How does defining the $\theta$ jump based on the vertical $\overline{\theta}$ profile across the \acs{EL} as in Figure \ref{fig:1storder} vs at the inversion ($h$) as in Figure \ref{fig:0order}, affect the entrainment relation and in particular $a$?}\\
@@ -431,7 +431,7 @@ Here I define the \acs{CBL} height as the location of maximum vertical $\overlin
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs.pdf}
-    \caption{Height definitions based on the average vertical profiles. $\theta_{0}$ is the inital potential temperature.}
+    \caption[Height definitions]{Height definitions based on the average vertical profiles. $\theta_{0}$ is the inital potential temperature.}
     \label{fig:hdefs}   % label should change
 \end{figure}
 
@@ -446,7 +446,7 @@ Here I define the \acs{CBL} height as the location of maximum vertical $\overlin
        & &$\Delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \Delta \theta h}{w^{*2}}$ \\ \hline
       \end{tabular}
 %}
-\caption{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
+\caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
 \label{table:reldefs}   
 \end{center}    
 \end{table}
