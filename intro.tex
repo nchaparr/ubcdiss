@@ -92,7 +92,7 @@ Shear induced instabilities do occur at the top of the atmospheric boundary laye
 \subsection{The CBL Entrainment Layer (EL)}
 \label{subsec:}
 
-The \acs{ML} is fully turbulent but the top is characterized by stable air with intermittent turbulence due to the higher reaching thermals. \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) demonstrate that the \acs{EL} is subdivided in terms of length and buoyancy scales.  That is, the lower region is comprised of mostly turbulent air with pockets of stable warmer air that are quickly mixed, and so scales with the convective scales (see section \ref{subsec:scales}). Whereas the upper region is mostly stable apart from the impinging thermals so scaling here is more influenced by the lapse rate ($\gamma$).  In the \acs{EL} the average vertical heat flux, $\overline{w^{'}\theta^{'}}$, switches sign relative to that in the \acs{ML}.  The fast updraughts are now relatively cool $\overline{w^{'+}\theta^{'-}}$.  In their analysis of the four $\overline{w^{'}\theta^{'}}$ quadrants \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) concluded that the overall net dynamic in this region is downward motion of warm air ($\overline{w^{'-}\theta^{'+}}$) from the free atmosphere (\acs{FA}) since the other three quadrants effectively cancel.\\
+The \acs{ML} is fully turbulent but the top is characterized by stable air with intermittent turbulence due to the higher reaching thermals. \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) demonstrate that the \acs{EL} is subdivided in terms of length and buoyancy scales.  That is, the lower region is comprised of mostly turbulent air with pockets of stable warmer air that are quickly mixed, and so scales with the convective scales (see section \ref{subsec:scales}). Whereas the upper region is mostly stable apart from the impinging thermals so scaling here is more influenced by the lapse rate ($\gamma$).  In the \acs{EL} the average vertical heat flux, $\overline{w^{'}\theta^{'}}$, switches sign relative to that in the \acs{ML}.  The fast updraughts are now relatively cool $\overline{w^{'+}\theta^{'-}}$.  In their analysis of the four $\overline{w^{'}\theta^{'}}$ quadrants \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) concluded that the net dynamic in this region is downward motion of warm air ($\overline{w^{'-}\theta^{'+}}$) from the free atmosphere (\acs{FA}) since the other three quadrants effectively cancel.\\
 
 In terms of tracer concentration, and for example based on a Lidar backscatter profile, there are two ways to conceptually define the \acs{EL}.  It can be thought of as the range in space (or time) over which local \acs{CBL} height varies (\citeauthor{CrumStullEl} \citeyear{CrumStullEl}) or a local region over which the concentration (or back-scatter intensity) transitions from \acs{ML} to \acs{FA} values (\citeauthor{Traum11} \citeyear{Traum11}).  The latter can be estimated using either curve-fitting or wavelet techniques (\citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{SteynBaldHoff} \citeyear{SteynBaldHoff}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).\\
 
@@ -193,7 +193,7 @@ Given an average surface vertical heat flux $(\overline{w^{'}\theta^{'}})_{s}$ a
 w^{*} = \left( \frac{gh}{\overline{\theta}}(\overline{w^{'}\theta^{'}})_{s} \right)^{\frac{1}{3}}.
 \end{equation}\\
 
-\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work supports this, even at the \acs{CBL} top.  The \acs{CBL} entrainment rate ($w_{e} = \frac{dh}{dt}$) depends on the magnitude of $w^{'}$ which is driven by $\overline{w^{'}\theta^{'}}_{s}$. Stability aloft suppresses $\frac{dh}{dt}$ so influence of $\gamma$ is indirectly accounted for via $h$ in $w^{*}$.\\
+\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity perturbations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work supports this, even at the \acs{CBL} top.  The \acs{CBL} entrainment rate ($w_{e} = \frac{dh}{dt}$) depends on the magnitude of $w^{'}$ which is driven by $(\overline{w^{'}\theta^{'}})_{s}$. Stability aloft suppresses $\frac{dh}{dt}$ so the influence of $\gamma$ is indirectly accounted for via $h$ in $w^{*}$.\\
 
 \subsubsection{Convective Time Scale ($\tau$)}
 \label{subsubsec:}
@@ -201,7 +201,7 @@ w^{*} = \left( \frac{gh}{\overline{\theta}}(\overline{w^{'}\theta^{'}})_{s} \rig
 It follows that the time a thermal, travelling at velocity scaled by $w^{*}$, takes to reach the top of the \acs{CBL} i.e. travel a distance $h$ is scaled by
 
 \begin{equation}
-\tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}\overline{w^{'}\theta^{'}} \right)^{\frac{1}{3}}}.
+\tau = \frac{h}{\left( \frac{gh}{\overline{\theta}}(\overline{w^{'}\theta^{'}})_{s} \right)^{\frac{1}{3}}}.
 \end{equation}
 
  This is also referred to as the convective overturn time scale.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) 
@@ -226,7 +226,7 @@ Whereas \citeauthor{Sorbjan} (\citeyear{Sorbjan}) showed that with proximity to 
 The flux Richardson ($R_{f}$) number expresses the balance between mechanical and buoyant production of turbulent kinetic energy (\acs{TKE}) and is obtained from the ratio of these two terms in the \acs{TKE} budget equation (See Appendix, \citeauthor{Stull-BLMetIntro} \citeyear{Stull-BLMetIntro}):
 
 \begin{equation}
-R_{f} = \frac{\frac{g}{\overline{\theta}} \left( \overline{w^{'}\theta^{'}} \right)}{\overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}.
+R_{f} = \frac{\frac{g}{\overline{\theta}}( \overline{w^{'}\theta^{'}})_{s}}{\overline{u_{i}^{'}u_{j}^{'}}\frac{\partial \overline{U}_{i}}{\partial x_{j}}}.
 \end{equation}
  
 Assuming horizontal homogeneity and vertically constant subsidence yields
@@ -261,66 +261,6 @@ Ri = \frac{\frac{g}{\overline{\theta}} \Delta \theta h}{w^{*2}}.
 
 Where $\Delta \theta$ can be replaced by $\delta \theta$ as in \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}).  \acs{Ri} can also be arrived at by considering the principal forcings of the system, or from non-dimensionalizing the entrainment relation  derived analytically (\citeauthor{Tennekes73}  \citeyear{Tennekes73}, \citeauthor{Deardorff72} \citeyear{Deardorff72}). It is central to any study on \acs{CBL} entrainment (\citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).
 
-\subsubsection{Relationship of Entrainment Rate to Richardson Number}
-\label{subsec:erri}
-The relationship between scaled entrainment rate and the buoyancy Richardson number (\acs{Ri})
-
-\begin{equation}\label{eq:ervsri}
-\frac{w_{e}}{w^{*}} \propto Ri^{a}
-\end{equation}
-
-is arrived at according to the zero order bulk model through thermodynamic arguments, or by integration of the conservation of enthalpy or turbulent kinetic energy equations over the growing \acs{CBL}. (\citeauthor{Tennekes73} \citeyear{Tennekes73}, \citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}). It has been verified in numerous laboratory and numerical studies (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}), but there is still some 
-unresolved discussion as the the exact value of a.  It seems there are two possible values, $-\frac{3}{2}$ and $-1$, the first of which \citeauthor{Turner86} (\citeyear{Turner86}) suggested occurs at high stability when buoyant recoil of impinging thermals becomes more important than their convective overturning. Assume that an impinging thermal supplies kinetic energy ($K$) per unit time and per unit area for entrainment, in terms of appropriate length and time scales $L^{*}$ and $t^{*}$ as follows 
-
-\begin{equation}
-K \propto \frac{\overline{\rho} L^{*3} U^{*2}}{L^{*2} t^{*}},
-\end{equation}
-
-and that the corresponding change in potential energy per unit time and area of the rising \acs{CBL} is
-
-\begin{equation}
-\Delta P \propto g \Delta \theta h \frac{d h}{ dt}.  
-\end{equation}
-
-If $L^{*}$ is the penetration depth of the thermals travelling at velocity scaled by $w^{*}$ against a decelerating force
-$g \frac{\Delta \rho}{\overline{\rho}}$
-
-\begin{equation}
-L^{*} = \frac{w^{*2} \overline{\theta}}{\Delta \theta}.  
-\end{equation}
-
-and $t^{*}$ is the response time of the inversion layer to a thermal of length $h$
-
-\begin{equation}
-t^{*} = \sqrt{h \frac{\overline{\theta}}{g \Delta \theta}}  
-\end{equation}
-
-then assuming all of $K$ is transferred to the change in potential energy ($\Delta P$) and using the \acs{CBL} velocity, yields
-
-%\begin{equation}
-%\frac{\overline{\rho} L^{*} U^{*2}}{t^{*}} \propto g \Delta \rho h \frac{dh}{dt}
-%\end{equation},
-
-%\begin{equation}
-%\frac{\overline{\rho} \frac{w^{*2} \overline{\rho}}{\Delta \rho} U^{*2}}{\sqrt{h \frac{\overline{\rho}}{g \Delta \rho}}} \propto g \Delta \rho h \frac{dh}{dt}
-%\end{equation},
-
-%\begin{equation}
-%\frac{\overline{\rho} \frac{w^{*2} \overline{\rho}}{\Delta \rho} U^{*2}}{\sqrt{h \frac{\overline{\rho}}{g \Delta \rho}} g \Delta \rho h} \propto  \frac{dh}{dt}
-%\end{equation}
-
-\begin{equation}
-\frac{\frac{dh}{dt}}{w^{*}} \propto \frac{w^{*2} \overline{\theta}}{g \Delta \theta h} \sqrt{\frac{\overline{\theta} w^{*2}}{g \Delta \theta h}},
-\end{equation}
-
-i.e.
-
-\begin{equation}
-\frac{w_{e}}{w^{*}} \propto Ri^{-\frac{3}{2}}.
-\end{equation}
-
-Adding further complexity to this discussion, \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) suggest that this power law relationship ($a = -\frac{3}{2}$) can be arrived at through defining the $\theta$ jump across the \acs{EL} (see Figure \ref{fig:1storder}).\\
-
 %TODO: switch order to match results
 
 \subsubsection{Relationship of Entrainment Layer Depth to Richardson Number}
@@ -342,7 +282,7 @@ d \propto \frac{w^{*2}}{\frac{g}{\overline{\theta}_{ML}} \Delta \theta}.
 If the \acs{EL} depth is proportional to the overshoot distance ($d$) then
 
 \begin{equation}
-\frac{\Delta h}{h} \propto \frac{w^{*2}}{\frac{g}{\overline{\theta}_{ML}} h \Delta \theta} = Ri^{-1}. 
+\frac{\Delta h}{h} \propto \frac{w^{*2}}{\frac{g}{\overline{\theta}_{ML}} \Delta \theta h} = Ri^{-1}. 
 \end{equation} 
 
 Alternatively, \citeauthor{Boers89} \citeyear{Boers89} integrated the internal ($U$), potential ($P$) and kinetic ($K$) energy over a hydrostatic atmosphere
@@ -381,14 +321,60 @@ The reference temperature, $T_{0}$, can be replaced by $\overline{\theta}_{ML}$ 
 \begin{equation}
 \frac{\Delta h}{h} \propto Ri^{-\frac{1}{2}}
 \end{equation}
+\subsubsection{Relationship of Entrainment Rate to Richardson Number}
+\label{subsec:erri}
+The relationship between scaled entrainment rate and the buoyancy Richardson number (\acs{Ri})
 
+\begin{equation}\label{eq:ervsri}
+\frac{w_{e}}{w^{*}} \propto Ri^{a}
+\end{equation}
+
+is arrived at according to the zero order bulk model through thermodynamic arguments, or by integration of the conservation of enthalpy or turbulent kinetic energy equations over the growing \acs{CBL}. (\citeauthor{Tennekes73} \citeyear{Tennekes73}, \citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}). It has been verified in numerous laboratory and numerical studies (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}), but there is still some 
+unresolved discussion as the the exact value of a.  It seems there are two possible values, $-\frac{3}{2}$ and $-1$, the first of which \citeauthor{Turner86} (\citeyear{Turner86}) suggested occurs at high stability when buoyant recoil of impinging thermals becomes more important than their convective overturning. Assume that an impinging thermal supplies kinetic energy ($K$) per unit time and per unit area for entrainment, in terms of appropriate length and time scales $L^{*}$ and $t^{*}$ as follows 
+
+\begin{equation}
+K \propto \frac{\overline{\rho} L^{*3} U^{*2}}{L^{*2} t^{*}},
+\end{equation}
+
+and that the corresponding change in potential energy per unit time and area of the rising \acs{CBL} is
+
+\begin{equation}
+\Delta P \propto g \Delta \theta h \frac{d h}{ dt}  
+\end{equation}
+
+where $\Delta \theta$ can be replaced with $\delta \theta$.  If $L^{*}$ is the penetration depth of the thermals travelling at velocity scaled by $w^{*}$ against a decelerating force
+$g \frac{\Delta \theta}{\overline{\theta}}$
+
+\begin{equation}
+L^{*} = \frac{w^{*2} \overline{\theta}}{\Delta \theta}.  
+\end{equation}
+
+and $t^{*}$ is the response time of the inversion layer to a thermal of length $h$
+
+\begin{equation}
+t^{*} = \sqrt{h \frac{\overline{\theta}}{g \Delta \theta}}  
+\end{equation}
+
+then assuming all of $K$ is transferred to the change in potential energy ($\Delta P$) and using the covective velocity scaled, yields
+
+\begin{equation}
+\frac{\frac{dh}{dt}}{w^{*}} \propto \frac{\overline{\theta} w^{*2}}{g \Delta \theta h} \sqrt{\frac{\overline{\theta} w^{*2}}{g \Delta \theta h}},
+\end{equation}
+
+i.e.
+
+\begin{equation}
+\frac{w_{e}}{w^{*}} \propto Ri^{-\frac{3}{2}}.
+\end{equation}
+
+Adding further complexity to this discussion, \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) suggest that this power law relationship ($a = -\frac{3}{2}$) can be arrived at through defining the $\theta$ jump across the \acs{EL} rather than at $h$ (see Figure \ref{fig:1storder}).\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Research Questions}
 \label{sec:resquest}
 
-A simplified conceptual model of the dry, shear-free \acs{CBL} in the absence of large scale winds is represented in Figure \ref{fig:1storder}.  The two principal external parameters in this case, are the average vertical turbulent surface heat flux $(\overline{w^{'}\theta^{'}})_{s}$ and the upper lapse rate ($\gamma$) (\citeauthor{FedConzMir04} \citeyear{FedConzMir04},\citeauthor{Sorbjan} \citeyear{Sorbjan}).  They have opposing effects, that is $\overline{w^{'}\theta^{'}}_{s}$ drives upward turbulent velocity ($w^{'+}$) and so \acs{CBL} growth ($w_{e}$) whereas $\gamma$  suppresses it.  Conversely they both cause positive turbulent potential temperature perturbations ($\theta^{'+}$) and so warming of the \acs{CBL}.  In the \acs{EL} the thermals from the surface are now relatively cool.  They turn downwards as they interact with the stable \acs{FA} concurrently bringing down warmer air.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) demonstrated these dynamics by partitioning $w^{'} \theta^{'}$ into four quadrants.  \citeauthor{Sorbjan} (\citeyear{Sorbjan}) asserted and showed that in this region the turbulent potential temperature perturbations ($\theta^{'}$) are strongly influenced by $\gamma$ whereas the turbulent vertical velocity perturbations ($w^{'}$) are almost independent thereof. Inspired by these two studies and to gain some insight into the dynamics of this idealized \acs{CBL} I ask \textbf{Q1: How do the distributions of local \acs{CBL} height, and the joint distributions of $w^{'}$ and $\theta^{'}$ within the \acs{EL}, vary with $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$?}\\
+A simplified conceptual model of the dry, shear-free \acs{CBL} in the absence of large scale winds is represented in Figure \ref{fig:1storder}.  The two principal external parameters in this case, are the average vertical turbulent surface heat flux $(\overline{w^{'}\theta^{'}})_{s}$ and the upper lapse rate ($\gamma$) (\citeauthor{FedConzMir04} \citeyear{FedConzMir04},\citeauthor{Sorbjan} \citeyear{Sorbjan}).  They have opposing effects, that is to say $(\overline{w^{'}\theta^{'}})_{s}$ drives upward turbulent velocity ($w^{'+}$) and so \acs{CBL} growth ($w_{e}$) whereas $\gamma$  suppresses it.  Conversely they both cause positive turbulent potential temperature perturbations ($\theta^{'+}$) and so warming of the \acs{CBL}.  In the \acs{EL} the thermals from the surface are now relatively cool.  They turn downwards as they interact with the stable \acs{FA} concurrently bringing down warmer air.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) demonstrated these dynamics by partitioning $\overline{w^{'} \theta^{'}}$ into four quadrants.  \citeauthor{Sorbjan} (\citeyear{Sorbjan}) asserted and showed that in this region the turbulent potential temperature perturbations ($\theta^{'}$) are strongly influenced by $\gamma$ whereas the turbulent vertical velocity perturbations ($w^{'}$) are almost independent thereof. Inspired by these two studies and to gain some insight into the dynamics of this idealized \acs{CBL} I ask \textbf{Q1: How do the distributions of local \acs{CBL} height, and the joint distributions of $w^{'}$ and $\theta^{'}$ within the \acs{EL}, vary with $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$?}\\
 
 The relationship between scaled \acs{EL} depth and \acs{Ri} 
 
@@ -412,20 +398,20 @@ This will be referred to as the entrainment relation.  Although that there is su
 \label{sec:Approach}
 \subsubsection{General Setup}
 
-I modelled the dry shear free \acs{CBL} and \acs{EL} using \acs{LES}, specifically the cloud resolving model System for Atmospheric Modelling (SAM) to be outlined in Chapter 3.  An ensemble of 10 cases was run to obtain true ensemble averages and turbulent potential temperature variances ($\theta^{'}$), each case had a domain of area 3.2 x 4.8 Km$^{2}$. Grid spacing was influenced by the resolution study of \citeauthor{SullPat} (\citeyear{SullPat}) and the vertical grid within the \acs{EL} was of higher resolution than that applied in other comparable work.  The runs were initialized with a constant $\overline{w^{'}\theta^{'}}_{s}$ acting a against a uniform $\gamma$.  So, the  $\theta$ jump arose from the overshoot of the thermals, rather than being initially imposed as in \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}).\\
+I modelled the dry shear free \acs{CBL} and \acs{EL} using \acs{LES}, specifically the cloud resolving model System for Atmospheric Modelling (SAM) to be outlined in Chapter 3.  An ensemble of 10 cases was run to obtain true ensemble averages and turbulent potential temperature variances ($\theta^{'}$), each case had a domain of area 3.2 x 4.8 Km$^{2}$. Grid spacing was influenced by the resolution study of \citeauthor{SullPat} (\citeyear{SullPat}) and the vertical grid within the \acs{EL} was of higher resolution than that applied in other comparable work.  The runs were initialized with a constant $(\overline{w^{'}\theta^{'}})_{s}$ acting a against a uniform $\gamma$.  So, the  $\theta$ jump arose from the overshoot of the thermals, rather than being initially imposed as in \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}).\\
 
 \subsubsection{Verifying Output}
 
 Before addressing the questions stated in Section \ref{sec:resquest} I will examine the modeled output to make sure it represents a realistic turbulent \acs{CBL} in Chapter 3 section 2. I will verify that the averaged vertical profiles are as expected and coherent thermals are being produced.  FFT energy density spectra will show if there is adequate scale separation between the structures of greatest energy and the grid spacing, and that realistic, isotropic turbulence is being modelled.  
 
 \subsubsection{Q1}     
-The \acs{EL} can be thought of in terms of the distribution of individual thermal heights, or local heights. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) measured local height by locating the vertical point of maximum $\theta$ gradient, and observed the effects of varying \acs{Ri} on the resulting distributions. However this method is problematic when gradients in the upper profile exceed that at the inversion (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  \citeauthor{SteynBaldHoff} (\citeyear{SteynBaldHoff}) fitted an idealized curve to a lidar backscatter profile.  This method produces a smooth curve based on the full original profile on which a maximum can easily be located.  I will apply a multi-linear regression method outlined in \citeauthor{Vieth} (\citeyear{Vieth}) to the local $\theta$ profile, representing the \acs{ML}, \acs{EL} and \acs{FA} each with a separate line segment. From this fit, I will locate the \acs{ML} top ($h^{l}_{0}$).  I'll observe how the resulting distributions are effected by changes in $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$ using histograms and verify that the 2d horizontal $h^{l}_{0}$ surface corresponds to the location of the thermals in the \acs{EL}, in Chapter 3 Section 3.\\
+The \acs{EL} can be thought of in terms of the distribution of individual thermal heights, or local heights. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) measured local height by locating the vertical point of maximum $\theta$ gradient, and observed the effects of varying \acs{Ri} on the resulting distributions. However this method is problematic when gradients in the upper profile exceed that at the inversion (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  \citeauthor{SteynBaldHoff} (\citeyear{SteynBaldHoff}) fitted an idealized curve to a lidar backscatter profile.  This method produces a smooth curve based on the full original profile on which a maximum can easily be located.  I will apply a multi-linear regression method outlined in \citeauthor{Vieth} (\citeyear{Vieth}) to the local $\theta$ profile, representing the \acs{ML}, \acs{EL} and \acs{FA} each with a separate line segment. From this fit, I will locate the \acs{ML} top ($h^{l}_{0}$).  I'll observe how the resulting distributions are effected by changes in $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$ using histograms in Chapter 3 Section 3.\\
 
-\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke the turbulent vertical heat flux $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan} \acs{LES} study \citeauthor{Sorbjan} showed that in the \acs{EL}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at three levels within the \acs{EL} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ in Chapter 3 Section 4.\\    
+\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke the turbulent vertical heat flux $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan} \acs{LES} study \citeauthor{Sorbjan} showed that in the \acs{EL}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at three levels within the \acs{EL} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ and hone in specifically on the entrained air at $h$ in Chapter 3 Section 4.\\    
 
 \subsubsection{Q2}
        
-Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EL} limits are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower limit requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Chapter 3 section 5.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EL} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EL} depth to \acs{Ri} (equation 2.1).  As well as observing this relationship using the height defininitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with the \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Chapter 3 section 4.\\  
+Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EL} limits are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower limit requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Chapter 3 section 5.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EL} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EL} depth to \acs{Ri} (equation 2.1).  As well as observing this relationship using the height defininitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Chapter 3 section 4.\\  
 
 \begin{figure}[htbp]
     \centering
@@ -441,9 +427,9 @@ Here I define the \acs{CBL} height as the location of maximum vertical $\overlin
     \begin{tabular}{ p{2cm} p{4cm}  p{3cm}  p{3cm} p{3cm} }
     %\hline
       \acs{CBL} Height & \acs{ML} $\overline{\theta}$ & $\theta$ Jump & \acs{Ri} \\ \hline 
-       $h$ & $\overline{\theta}_{ML} = \frac{1}{h}\int^{h}_{0}\overline{\theta}(z)dz$ & $\delta \theta=\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & \acs{Ri}$_{\Delta}=\frac{\frac{g}{\overline{\theta}_{ML}}\delta \theta h}{w^{*2}}$  \\ [.3cm] %\hline
+       $h$ & $\overline{\theta}_{ML} = \frac{1}{h}\int^{h}_{0}\overline{\theta}(z)dz$ & $\Delta \theta=\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & \acs{Ri}$_{\Delta}=\frac{\frac{g}{\overline{\theta}_{ML}}\Delta \theta h}{w^{*2}}$  \\ [.3cm] %\hline
         
-       & &$\Delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \Delta \theta h}{w^{*2}}$ \\ \hline
+       & &$\delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \delta \theta h}{w^{*2}}$ \\ \hline
       \end{tabular}
 %}
 \caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
@@ -452,7 +438,7 @@ Here I define the \acs{CBL} height as the location of maximum vertical $\overlin
 \end{table}
 
 \subsubsection{Q3}
-As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiate entrainment, which in turn depends on the magnitude of \acs{Ri}.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in table \ref{table:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
+As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiates entrainment, which in turn depends on the magnitude of \acs{Ri}.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in table \ref{table:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
 
 \endinput
 
