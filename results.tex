@@ -5,21 +5,20 @@
 \label{ch:results}
 \setlength{\parindent}{0cm}
 
-Each 10 member ensemble run was allowed a period of time to develop the three layer structure (\acs{ML}, \acs{EL}
-and \acs{FA}) as seen from the vertical average potential temperature ($\overline{\theta}$) and vertical 
-turbulent heat flux ($\overline{w^{'}\theta^{'}}$) profiles in Section \ref{sec:CheckingtheModel}.
-The convective time scale ($\tau$) for a thermal to reach the \acs{CBL} top ($h$) was seen to depend
-on $\gamma$, signalling the importance of this external parameter. \acs{FFT} spectra of turbulent 
-velocity perturbations the \acs{ML} showed a satisfactory inertial subrange and several coherent 
-impinging thermals were observed in the \acs{EL} at any given time after 2-3 hours, indicating that 
-realistic turbulence was being simulated.\\
+In Section \ref{sec:CheckingtheModel} vertical profiles of the ensemble and horizontally averaged potential
+temperature and heat flux ($\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$) will be checked for the development
+ of the expected three layer structure (\acs{ML}, \acs{EL} and \acs{FA}).  In order to verify that there is sufficient
+scale separation and so an adequate inertial subrange \acs{FFT} energy spectra of the turbulent velocity perturbations 
+will be plotted. To convince the reader (and myself) that multiple coherent thermals are being produced 2d visualisations
+will be shown at the three heights: $h_{0}$, $h$ and $h_{1}$.\\
 
-Using a multi-linear regression method in Section \ref{subsec:locmlh} , the local \acs{ML} heights ($h^{l}_{0}$) 
-were determined.  Their distributions approached similarity when scaled by $h$, showing variation in the lower 
-limit with variation in $\gamma$.  The tops of the local vertical $\theta$ profiles differ from each other as well 
-as from the average profile, but a uniform \acs{ML} is evident. 2D distributions of the local turbulent perturbations,
-$w^{'}$ and $\theta^{'}$ show some variation with $\gamma$ when scaled by the convective scales $w^{*}$ and $\theta^{*}$
-in Section \ref{subsec:fluxquadrants}.  Focus is then narrowed to the average downward moving warm quadrant at $h$ ($\overline{w^{'-}\theta^{'+}}_{h}$, $\overline{w^{'-}}_{h} \ where \ \theta^{'} >0$ and $\overline{\theta^{'+}}_{h} \ where \ w^{'} < 0 $) to examine the direct influence of $\gamma$ on entrainment.\\    
+Section \ref{sec:q1} will focus on answering \textbf{Q1: How do the distributions of local \acs{CBL} height, and the joint distributions of $w^{'}$ and $\theta^{'}$ within the \acs{EL}, vary with $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$?}  The distributions local \acs{ML} heights at each horizontal point, in each ensemble member, will be plotted as histograms to visualize the effects of $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$.  For the same reason the joint distributions of local potential temperature and velocity perturbations ($\theta^{'}$ and $w^{'}$) at $h_{0}$, $h$ and $h_{1}$ will be plotted.  Focus will then be narrowed to the average downward moving warm quadrant at $h$ ($\overline{w^{'-}\theta^{'+}}_{h}$, $\overline{w^{'-}}_{h} \ where \ \theta^{'} >0$ and $\overline{\theta^{'+}}_{h} \ where \ w^{'} < 0 $) to examine the direct influence of $\gamma$ on entrainment.\\       
+
+To answer \textbf{Q2: Can the \acs{EL} limits be defined based on the $\overline{\theta}$ profile and what is the relationship} 
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri ^{b}\tag{\ref{eq:dhvsri}}
+\end{equation}
+\textbf{of the resulting depth ($\Delta h$) to \acs{Ri}?} Equation \ref{eq:dhvsri} is plotted using height definitions based on the $\frac{\partial \overline{\theta}}{\partial z}$ as in Figure \ref{fig:hdefs} and Table \ref{table:reldefs} in Section \ref{sec:deltahri}.  Since the choice of a threshold to determing the lower \acs{EL} limit is somewhat arbritrary plots will be reproduced using two aditional values.    
 
 Initially, in Section \ref{sec:deltahri}, the \acs{CBL} height and \acs{EL} limits are defined based on the vertical  $\frac{\partial \overline{\theta}}{\partial z}$ profile.  For comparison with results from other studies these heights also based on the vertical $\overline{w^{'}\theta^{'}}$ profiles as shown in Figure \ref{fig:hdefs}.  As \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) point out, when using an average vertical tracer profile there is no universal criterion for a significant gradient.  So a threshold value for the lower \acs{EL} limit ($h_{0}$) was chosen such that it was positive, small i.e. an order of magnitude less than $\gamma$ and the same for all runs.  For the sake of rigor, plots of the relationship
 
@@ -100,7 +99,6 @@ one for each $\gamma$.\\
 
 Figure \ref{fig:tempgradfluxprofs1005} shows a measurable well mixed layer (\acs{ML}) and \acs{EL} based on the horizontally averaged, ensemble averaged potential temperature ($\overline{\theta}$) profile, by 2 hours.  After 2 or 3 hours the \acs{EL} is fully contained within the vertical region of high resolution.  Figure \ref{fig:tempgradfluxprofs1005} shows that the averaged heat fluxes ($\overline{w^{'}\theta^{'}}$) become self similar and are scaled well by the surface heat flux $(\overline{w^{'}\theta^{'}})_{s}$ by 2 hours.\\
 
-
 \begin{figure}[htbp]
     \centering
     % plot_dthetaflux.py [master 03d2835] Round 1 of Plots in Results
@@ -119,6 +117,14 @@ Figure \ref{fig:tempgradfluxprofs1005} shows a measurable well mixed layer (\acs
     \caption[$\overline{w^{'}\theta^{'}}$ scaled by $(\overline{w^{'}\theta^{'}})_{s}$]{$\overline{w^{'}\theta^{'}}$ and scaled $\overline{w^{'}\theta^{'}}$  vs scaled height for the 100/5 run}
     \label{fig:scaledfluxprofs15010}   % label should change
 \end{figure}
+
+Each 10 member ensemble run was allowed a period of time to develop the three layer structure (\acs{ML}, \acs{EL}
+and \acs{FA}) as seen from the vertical average potential temperature ($\overline{\theta}$) and vertical 
+turbulent heat flux ($\overline{w^{'}\theta^{'}}$) profiles. The convective time scale ($\tau$) for a thermal 
+to reach the \acs{CBL} top ($h$) was seen to depend on $\gamma$, signalling the importance of this external parameter. 
+\acs{FFT} spectra of turbulent velocity perturbations the \acs{ML} showed a satisfactory inertial subrange and several coherent 
+impinging thermals were observed in the \acs{EL} at any given time after 2-3 hours, indicating that 
+realistic turbulence was being simulated.\\
 
 \clearpage
 
@@ -212,8 +218,7 @@ with both up and down-welling.\\
 \clearpage
 
 \section{Local Statistics (Q1)}
-
-\textbf{Q1: How do the distributions of local \acs{CBL} height, and the joint distributions of $w^{'}$ and $\theta^{'}$ within the \acs{EL}, vary with $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$?}\\
+\label{sec:q1}
 
 \subsection{Local Mixed Layer Heights ($h_{0}^{l}$)}
 \label{subsec:locmlh}     
@@ -492,6 +497,19 @@ The curves representing $\overline{\theta^{'+}}_{h} \ where \ \overline{w^{'}}_{
         \label{fig:downwarm_theta1}
 \end{figure}
 
+Using a multi-linear regression method, the local \acs{ML} heights ($h^{l}_{0}$) 
+were determined.  Their distributions approached similarity when scaled by $h$, showing variation in the lower 
+limit with variation in $\gamma$.  The tops of the local vertical $\theta$ profiles differ from each other as well 
+as from the average profile, but a uniform \acs{ML} is evident. 2D distributions of the local turbulent perturbations,
+$w^{'}$ and $\theta^{'}$ show some variation with $\gamma$ when scaled by the convective scales $w^{*}$ and $\theta^{*}$
+that is the spread of $w^{'}$ narrows while that of $\theta^{'}$ increases and even shifts further positive.  Plots of the
+average downward moving quadrant $(\overline{w^{'-}\theta^{'+}})_{h}$ at $h$ show dependence on $(\overline{w^{'}\theta^{'}})_{s}$.
+Breaking $(\overline{w^{'-}\theta^{'+}})_{h}$ into it's two components reveals dependence on both $(\overline{w^{'}\theta^{'}})_{s}$
+and $\gamma$. The average downward moving velocity $\overline{w^{'-}}_{h}$ at points where there is a positive perturbation
+show clear dependence on $w^{*}$ whereas the average positive potential temperature perturbation $\overline{\theta^{'+}}$ where 
+$w$ is negative seem to approach a constant value of $\gamma \Delta h$. So the temperature of the entrained warm air 
+depends on $\gamma$.
+
 \clearpage
 
 %\section{$h$ and  $\Delta h$ based on Average Profiles}
@@ -502,15 +520,8 @@ The curves representing $\overline{\theta^{'+}}_{h} \ where \ \overline{w^{'}}_{
 \section{Relationship of Entrainment Layer Depth to Richardson Number (Q2)}
 \label{sec:deltahri}
 \FloatBarrier
-\textbf{Q2: Can the \acs{EL} limits be defined based on the $\overline{\theta}$ profile and what is the relationship} 
 
 
-\begin{equation}
-\frac{\Delta h}{h} \propto Ri ^{b}\tag{\ref{eq:dhvsri}}
-\end{equation}
-
-
-\textbf{of the resulting depth ($\Delta h$) to \acs{Ri}?}\\
 
 The scaled upper EL limits ($\frac{h_{1}}{h}$) collapse well in Figure \ref{fig:scaledELlims} (a) 
 to an initial value of approximately 1.15, decreasing to about 1.1.  $\frac{h_{0}}{h}$s appear 
