@@ -8,25 +8,28 @@
 \section{Description of Runs}
 \FloatBarrier
 
-\citeauthor{SullPat} (\citeyear{SullPat}) found that up to a point the shapes of the vertical average potential temperature and average vertical heat flux profiles within the entrainment layer (\acs{EL}) vary depending on grid size.  The resolution at which variation ceases or diminishes to insignificance is listed in Table \ref{table:grid}.
+The domain for each individual case is small relative to that used by \citeauthor{SullMoengStev} in \cite{SullMoengStev}, \citeauthor{FedConzMir04} in \cite{FedConzMir04} and \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} i.e. $5Km \times 5 Km$ in the horizontal.  \citeauthor{SullMoengStev} (\cite{SullMoengStev}) did a higher resolution run on a $3 Km \times 3 Km$ horizontal domain and noticed a lower convective boundary layer height ($h$) but similar slope in $h$ with respect to scaled time when compared with the analogous run on a larger domain with lower resolution.  They speculated the smaller domain enforced a smaller limit on plume size, thus influencing $h$. But according to \citeauthor{SullPat} (\cite{SullPat}) grid size also impacts $h$. \\
 
 \begin{table}[htbp]
     \begin{center}
 %\centerline{
     \begin{tabular}{ p{2cm} p{2cm}  p{2cm}  p{2cm} p{2cm} }
     %\hline
-Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m) & \\ \hline
-      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10&  \\ \hline 
-      \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  &  \\ [.3cm] %\hline
-      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12  &  \\ \hline
-    \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8&  \\ \hline
+Publication & $\Delta z$ in\acs{EL} & Domain Size\\ \hline
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & &  \\ \hline 
+      \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) &  &  \\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) &  &  \\ \hline
     \end{tabular}
 %}
-\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. That used for resolution tests is not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
-\label{table:grid}   
+\caption[]{Vertical Resolution and domain size in key publications}
+\label{table:reldefs}   
 \end{center}    
 \end{table}
 
+
+\citeauthor{SullMoengStev}'s (\cite{SullMoengStev}) grid spacing for most of their runs was $\Delta x, y= 33.3$, $\Delta z=10$ except for the run on the smaller domain which had $\Delta x, y = 15$, $\Delta z=6.67$.  The highest resolution \citeauthor{FedConzMir04} used in \cite{FedConzMir04} was $\Delta x, y = 50$ and $\Delta z = 20$.  \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} used $\Delta x, y = 50$ and $\Delta z = 12$ except in resolution test runs where they used $\Delta x, y = 25$ and $\Delta z = 7.27$.  So the vertical resolution around the entrainment region in this study ($\Delta z= 5m$) is higher that the other LES studies. Both \citeauthor{SullMoengStev} (\cite{SullMoengStev}) and \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) use varying grids in the vertical, such that the region around the entrainment layer (\acs{EL}) is of higher resolution than elsewhere. We do the same in this study and noticed slight kinks in some of the profiles where the transition to and form higher resolution occurs. We will perform one run on a uniform vertical grid at $\Delta z=5m$ to verify that this does not effect the results.\\          
+
+\citeauthor{SullMoengStev}'s (\cite{SullMoengStev}) initialized with a layer of constant potential temperature topped by an inversion topped by a constant lapse rate ($\gamma \approx 2.5 K/Km$). They applied constant average surface heat fluxes ($\overline{w^{'}\theta^{'}}_{s}$) ranging from about $20 - 450 \ Watts/m^{2}$. \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) followed suit, in that their range of Richardson numbers (\acs{Ri}) resulted from variation of initial inversion ($\Delta \theta$) strength and average surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$).  \citeauthor{FedConzMir04} in \cite{FedConzMir04} start with a finite layer of constant average potential temperature ($\overline{\theta}$) above which there was a constant lapse rate which they varied from  $1 - 10 \ K/Km$. In this study we begin with a constant $\overline{w^{'}\theta^{'}}_{s}$ acting against uniform potential temperature lapse rate.  \citeauthor{SchmidtSchu} point out in \cite{SchmidtSchu} that as a convectively mixed layer (\acs{ML}) grows against a stable lapse rate ($\gamma$) overshoot of the plumes to buoyancy levels above their own, and subsequent entrainment causes a sharp temperature gradient. (see Table \ref{fig:tableofruns}) 
 
 %\clearpage
 
