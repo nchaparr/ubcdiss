@@ -8,24 +8,32 @@
 \section{Description of Runs}
 \FloatBarrier
 
-\citeauthor{SullPat} (\citeyear{SullPat}) found that up to a point the shapes of the vertical average potential temperature and average vertical heat flux profiles within the entrainment layer (\acs{EL}) vary depending on grid size.  The resolution at which variation ceases or diminishes to insignificance is listed in Table \ref{table:grid}.
+\citeauthor{SullPat} (\citeyear{SullPat}) found that the shapes of the vertical average potential temperature ($\overline{\theta}$) and average vertical heat flux ($\overline{w^{'}}\theta^{'}$) profiles, as well as the measured \acs{CBL} height vary depending on grid size.  The resolution at which variation diminishes to insignificance is listed in Table \ref{table:grid}.  Untill this point the $\overline{\theta}$ and $\overline{w^{'}}\theta^{'}$ profiles are such that the \acs{EL} is a larger portion of the \acs{CBL} and measrured \acs{CBL} height is higher overall.\\
+
 
 \begin{table}[htbp]
     \begin{center}
 %\centerline{
-    \begin{tabular}{ p{2cm} p{2cm}  p{2cm}  p{2cm} p{2cm} }
+    \begin{tabular}{ p{4cm} p{2cm}}
     %\hline
-Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m) & \\ \hline
+Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m)\\ \hline
       \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10&  \\ \hline 
-      \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  &  \\ [.3cm] %\hline
-      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12  &  \\ \hline
+      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  &  \\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12\\ \hline
     \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8&  \\ \hline
+    This study & 25, 25, 5\\ \hline 
+      
     \end{tabular}
 %}
-\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. That used for resolution tests is not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
-\label{table:grid}   
+\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. Those used for resolution tests are not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
+\label{table:gridcomp}   
 \end{center}    
 \end{table}
+
+The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller horizontal domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. Given the results of \citeauthor{SullPat} (\citeyear{SullPat}), it could have been due to the grid.\\   
+
+The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here.  Visualizations of horizontal and vertical slices, clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height but remaining on the order of 100s of meters. \\             
+
 
 
 %\clearpage
