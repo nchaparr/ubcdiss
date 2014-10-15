@@ -35,7 +35,7 @@ As \citeauthor{Turner86} discusses in his \citeyear{Turner86} review of turbulen
 
 The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. However, given the results of \citeauthor{SullPat} (\citeyear{SullPat}) it could have been an effect of the grid.  Visualizations of horizontal and vertical slices clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height, but remaining less than or on the order of 100 meters.\\   
 
-A comparison of how the \acs{Ri}s were calculated will be left for a later section, but the range was dependent on variation in $\gamma$ and less so on $\overline{w^{'}\theta^{'}}$.  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) imposed a $\theta$ jump of varying strength topped by a constant $\gamma$.  Whereas \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) initialized with a layer of uniform $\theta$ topped by a constant $\gamma$ which was different for each run.\\    
+A comparison of how the \acs{Ri}s were calculated will be left for a later section, but the range was dependent on variation in $\gamma$ and less so on $\overline{w^{'}\theta^{'}}$.  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) imposed a $\theta$ jump of varying strength topped by a constant $\gamma$.  Whereas \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) initialized with a layer of uniform $\theta$ topped by a constant $\gamma$ which was different for each run.  Thesis authors did not vary average surface heat flux ($(\overline{w^{'}\theta^{'}})_{s}$).  They also used a timescale based on $\gamma$ rather than the convective timescale $\tau$.  The results of this study support this, in that the effects of varying $(\overline{w^{'}\theta^{'}})_{s}$ seem to be offset by $h$ and $\tau = \frac{h}{w^{*}}$ depends solely on $\gamma$.\\    
 
 %\clearpage
 
@@ -45,8 +45,34 @@ A comparison of how the \acs{Ri}s were calculated will be left for a later secti
 
 Locating the \acs{ML} height using the multi-linear regression method employed proved more reliable, based on inspection of hundreds of local vertical $\theta$  profiles.  For a large proportion of these profiles it was impossible even by eye to locate a reliable \acs{CBL} height based on a maximum in the vertical gradient. The distributions were seen to broaden with increased $ (\overline{w^{'}\theta^{'})_{s} $ and narrow with increased $ \gamma $.  When normalized by the height of the maximum average vertical potential gradient ($h$) what apparantly remains is the effect of $\gamma$ on the lower limit or lowest percentile.  The result is an overall narrowing of the scaled distributions with $\gamma$.\\  
 
-Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) conclusion that $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So positive fluctuations due representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative.  The former can easily be explained in terms of an increased lapse rate above ($\gamma$).
+Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So positive fluctuations due representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative.  The former can easily be explained in terms of an increased lapse rate above ($\gamma$).\\
 
+The downward moving warm quadrant ($w^{'-}\theta^{'+}$) at $h$ represents warmer free atmosphere air that is being entrained.  So it's magnitude at a certain point in time is a measure of heating at a successive time in the region below.  In Figure \ref{fig:downwarm} the magnitude increases with respect to time is grouped according to $(\overline{w^{'}\theta^{'}})_{s}$.  Indeed it is an increasing proportion of  $(\overline{w^{'}\theta^{'}})_{s}$ and Figures \ref{fig:downwarm_wvel} and \ref{fig:downwarm_theta} show that its increase is primarily due to the increased positive temperature variance ($\theta^{'+}$).  While the velocity of downward warm quadrant $w^{'-}$ quickly approaches a constant proportion of $w^{*}$, the magnitude of temperature fluctuation approaches a constant proportion of $\gamma \Delta h$ rather than the convective temperature scale $\theta^{*}$.  So the positive horizontal variance in temperature is related to difference in temperature over $\Delta h$ of the inital lapse rate $\gamma$.  The relationship between the horizontal and vertical variance in temperature is clearly shown in the plots of each in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) and \citeauthor{SullMoengStev}'s (\citeyear{SullMoengStev}) and \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado}). Their peaks within the acs{EL} seem to coincide.  In the mixed layer vigorous horizontal and vertical motion renders both close to zero.\\             
+
+\subsection{Relationship of Entrainment Layer Depth to Richardson Number}
+
+None of the comparable \acs{LES} studies define the \acs{EL} based ont the vertical $\frac{\partial \overline{\theta}}{\partial z}$ profile.  Yet, here, when the profile is scaled by $\gamma$ the resulting scaled \acs{EL} depth as defined in Figure \ref{fig:hdefs1} shows a dependence on Richardson number (\acs{Ri}) 
+
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri ^{b} \tag{\ref{eq:dhvsri}}
+\end{equation}
+
+
+which appears to have an exponent of $-\frac{1}{2}$, as predicted and seen by \citeauthor{Boers89} (\citeyear{Boers89}), at lower \acs{Ri} (higher \acs{Ri}$^{-1}$) possibly increasing to $-1$ at higher \acs{Ri}.  It is possible that there is a change in entrainment mechanism. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) observed enfolding and engulfment at lower \acs{Ri}.  Whereas at higher \acs{Ri} when motion is more restricted, entraiment seemed to occur via trapping of thinner whisps at the edge of an upward moving thermal.  \citeauthor{Turner86} (\citeyear{Turner86}) also distiguishes between entrainment by convective overturning and recoil.\\    
+
+
+Although their heights are defined differently,  \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) see an exponent of of $-\frac{1}{2}$.  They say the decrease in the overall depth is due to a slight decrease in the scaled top limit over time.  However based on their plot, it seems to go from about .5 to .2           
+
+
+\begin{table}[htbp]
+\begin{center}
+%\centerline{
+\begin{tabular}{ p{5cm} p{4cm}}
+    %\hline
+Publication & \acs{EL} & \acs{CBL} height & $\Delta \theta$\\ \hline
+\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & $z_{f1} - z_{f0}$ & $z_{f}$ &  $\overline{\theta}(z_{f1})-\overline{\theta}(z_{f0})$\\ [.3cm] %\hline
+\citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & $2 \times (z_{f} - z_{f0})$ & $z_{f}$ & average of local values\\ \hline
+\end{tabular}
  
 \FloatBarrier
 
