@@ -5,22 +5,21 @@
 \label{ch:results}
 \setlength{\parindent}{0cm}
 
-\section{Description of Runs}
+\section{Comparison of general Set-up}
 \FloatBarrier
 
-\citeauthor{SullPat} (\citeyear{SullPat}) found that the shapes of the vertical average potential temperature ($\overline{\theta}$) and average vertical heat flux ($\overline{w^{'}}\theta^{'}$) profiles, as well as the measured \acs{CBL} height vary depending on grid size.  The resolution at which variation diminishes to insignificance is listed in Table \ref{table:grid}.  Untill this point the $\overline{\theta}$ and $\overline{w^{'}}\theta^{'}$ profiles are such that the \acs{EL} is a larger portion of the \acs{CBL} and measrured \acs{CBL} height is higher overall.\\
-
+\citeauthor{SullPat} (\citeyear{SullPat}) found that the shapes of the vertical average potential temperature ($\overline{\theta}$) and average vertical heat flux ($\overline{w^{'}}\theta^{'}$) profiles, as well as the measured \acs{CBL} height vary depending on grid size.  The resolution at which convergence begins is listed in Table \ref{table:gridcomp}.  Untill this point the $\overline{\theta}$ and $\overline{w^{'}}\theta^{'}$ profiles are such that the \acs{EL} is a larger portion of the \acs{CBL} and measured \acs{CBL} height is higher overall.  Overall they concluded that vertical resolution was more critical.  This compliments the conclusion \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) when discussing their resolution test.  That is, to capture the steep vertical gradients in the \acs{EL} requires high resolution.\\
 
 \begin{table}[htbp]
     \begin{center}
 %\centerline{
-    \begin{tabular}{ p{4cm} p{2cm}}
+    \begin{tabular}{ p{5cm} p{4cm}}
     %\hline
 Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m)\\ \hline
-      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10&  \\ \hline 
-      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  &  \\ [.3cm] %\hline
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10  \\ \hline 
+      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  \\ [.3cm] %\hline
       \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12\\ \hline
-    \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8&  \\ \hline
+    \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8  \\ \hline
     This study & 25, 25, 5\\ \hline 
       
     \end{tabular}
@@ -30,312 +29,26 @@ Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m)\\ \hline
 \end{center}    
 \end{table}
 
-The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller horizontal domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. Given the results of \citeauthor{SullPat} (\citeyear{SullPat}), it could have been due to the grid.\\   
+The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here. In the \acs{EL} where turbulence is intermittent, the dominant energy containing structures are smaller, and decay to the grid-size is steeper.\\
 
-The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here.  Visualizations of horizontal and vertical slices, clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height but remaining on the order of 100s of meters. \\             
+As \citeauthor{Turner86} discusses in his \citeyear{Turner86} review of turbulent entrainment, the important of smaller scale processes, ie at the molecular level are relatively unimportant.  Large scale engulfment and trapping between thermals dominates. Yet, the steep vertical, and surely horizontal, gradients within the \acs{EL} remain motivational for \acs{DNS} studies such as \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}).  Among these author's conclusions was that the production and destruction rates of \acs{TKE}, as well as the entrainment ratio used to calculate the entrainment rate, were effectively independent of molecular scale processes.\\  
 
+The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. However, given the results of \citeauthor{SullPat} (\citeyear{SullPat}) it could have been an effect of the grid.  Visualizations of horizontal and vertical slices clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height, but remaining less than or on the order of 100 meters.\\   
 
-
-%\clearpage
-
-\section{Relevant Definitions}
-
-\FloatBarrier
-
-See Table \ref{table:reldefs}.\\
-
-\citeauthor{SullMoengStev} (\cite{SullMoengStev}) compared four methods of determining \acs{CBL} height, two of which they based on the vertical average heat flux ($\overline{w^{'}\theta^{'}}$) profile. For both, the time-series were a lot less smooth than that for $z_{f}$ determined in this study.  Their gradient and contour methods produced smoother time-series plots.  The former, they determined from the horizontal average of the local heights of maximum vertical potential temperature gradient.  Description of the contour method will be omitted since it is not directly useful. Their gradient based height is consistently higher than the heat flux based definitions i.e. the flux based definition overall is about 0.9 times the gradient definition. This is in line with the findings of this study. They did not focus on \acs{EL} depth. For their Richardson number (\acs{Ri}) they calculated $\Delta \theta = \overline{\theta}(z_{f1})-\overline{\theta}(z_{f})$.  This value is likely to be smaller than, and not necessarily proportionally to the $\Delta \theta$ used in this study. \\
-
-%TODO: tables for comparison of heights and delta thetatas for 1 the delta h ri relationship and 2 the we ri reltanship.
-
-%TODO: set up for comparisons of the two relationships.  so most of this has to go -- waffley.  must mention bandfs delta h based on flux
-%and feds comment about this ie z_f - z_f0 is constant but z_f1-z_f0 changes slowly.  
-
-\citeauthor{FedConzMir04} in \cite{FedConzMir04} determined \acs{CBL} height and \acs{EL} depth from the horizontal and time ($100 \times 2s$) averaged vertical $\overline{w^{'}\theta^{'}}$ profiles.  They used two difference buoyancy ($\frac{g\overline{\theta}}{\overline{\theta_{ML}}}$) jumps: $\Delta b = \overline{\theta}_{0}z_{f} - \overline{\theta}z_{f0}$ for comparison with the zero order model and $\delta \theta = \overline{\theta}z_{f1} - \overline{\theta}z_{f0}$ for comparison with the first order model and analysis of the \acs{EL}.\\  
-
-%They observed a decrease in \acs{EL} depth with increasing \acs{Ri} with possibly a $-1$ or $-\frac{1}{2}$ power law.  In our study all three flux based heights seem to remain a constant fraction of $h$, so at this point our results diverge from theirs.  Their grid spacing could be compared to two of the lower resolutions runs from \citeauthor{SullPat}'s (\cite{SullPat}) resolution study, whereas ours compares with the lowest resolution run of those with vertical flux profiles that converge.  Assuming higher resolution produces more physical results, their flux profiles may be unrealistically wide.  According to \citeauthor{SullPat} (\cite{SullPat}) \acs{CBL} growth rate may also be impacted by such differences in resolution.  Furthermore to compare their plots of scaled entrainment rate vs \acs{Ri}, we would need to reproduce their \acs{Ri} s in our framework.
-
-\citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) used tracer concentration profiles and compare a number of different corresponding \acs{CBL} height definitions.  Although their height and temperature jump used to calculate the Richardson number (\acs{Ri}) are quite different, their scaling relations based on the fluxed based definitions can be compared to those in this study. For example the corresponding scaled entrainment rate vs \acs{Ri} plot has a lot of scatter.\\
-
-The definitions that perform best in relation to \acs{Ri} for \citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) are those based on the means of locally determined heights.  That based on the domain averaged tracer profile, ie the point of maximum vertical gradient, is directly comparable to our $h$. Although, this last definition does not produce a plot as correlated as ours.\\  
-
-Their scaled statistical \acs{EL} definitions based on the local vertical gradient and the local wavelet covariance decrease with increasing \acs{Ri} similarly to ours, but their flux based definition ($2\times(z_{f1}-z_{f})$) show slight and opposite trends when averaged differently.  The latter is in line with what we found.\\
-
-
-The height definitions in this study are all based on the average vertical potential temperature gradient ($\overline{\theta}$).  It seems to be assumed that the region, where the average potential temperature increases significantly from its mixed layer (\acs{ML}) value through the maximum to that of the free atmosphere, corresponds to the \acs{EL} as enclosed by the zero levels in the average potential temperature flux profiles (\citeauthor{Deardorff79} \cite{Deardorff79}, \citeauthor{FedConzMir04} 
-\cite{FedConzMir04}, \citeauthor{GarciaMellado} \cite{GarciaMellado}).  But the average potential temperature profile is not used to quantitatively define the \acs{EL}.\\
-
-\citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) discuss the draw-backs of defining the \acs{EL} based on the 
-gradient of an average tracer profile.  Specifically the inconsistency in the size of the gradient
-relative to a maximum, at the average \acs{EL} limits as defined based on the local limits. They
-found the relative size had significant scatter and varied according to \acs{Ri}. Their maximum and the manner in which they determine is not reproducible in our framework but their conclusion could serve as a caution.\\  
-
-Since in the \acs{ML} on average there is a gradual increase through zero in average potential temperature above the surface layer, rather than a region where the gradient is zero.  So a threshold value must be chosen to identify the lower limit of the \acs{EL}.  This threshold should be less than the upper lapse rate ($\gamma$), positive and consistent for all runs.  It was chosen by looking at the gradient profile and selecting a point which looked reasonable. The principal result was plotted at three different thresholds based on the unscaled gradient ($\frac{\partial \overline{\theta}}{\partial z}$) profiles.\\
-
-The upper \acs{EL} limit is defined as the point at which the average vertical potential temperature gradient resumes $\gamma$.  These two limits then represent: the point above the surface layer at which the air on average begins to be less turbulently mixed, and the lowest point at which the air is unaffected as yet by the convected turbulence.  Our principal length scale $h$ is the point at which the gradient is maximum i.e. the point at which on average the air differs greatest from that directly above it. Our $\Delta \theta$ is the difference in average potential temperature ($\overline{\theta}$) over the \acs{EL}.  We compare $h$ with the fluxed based definitions.
-  
-%\clearpage
-
-\section{Verifying the Model Output}
-\label{sec:CheckingtheModel}
-\subsection{Time till well-mixed}%Spin Up Time according to the Convective Time Scale $\tau$}
-\FloatBarrier
-
-To establish statistically steady turbulent flow \citeauthor{SullMoengStev} in \cite{SullMoengStev}
-ran from the same random initial conditions on their coarse grid for more than ten eddy turnover times.
-Then they switched on the nested high resolution grid and continued for another 4 Odie turnovers.  
-\citeauthor{BrooksFowler2} (\cite{BrooksFowler2}) waited 2 simulated hours before they
-judged the turbulence to be fully developed.  To initialize turbulence they added a small random perturbation
-to the temperature field.\\ 
-
-\citeauthor{FedConzMir04} (\cite{FedConzMir04}) focus on the attainment of a quasi-steady
-state regime within which their zero order entrainment equation holds.  Their derivation also hinges
-upon parametrizations for turbulent kinetic energy ($e$) and dissipation ($\epsilon$):
-
-\begin{equation}
-e=w^{*2}\Psi_{e}\left( \frac{z}{z_{i}} \right) \ \epsilon=\frac{w^{*3}}{z_{i}}\Psi_{\epsilon}\left( \frac{z}{z_{i}}\right)
-\end{equation}
-
-Where the two functions of dimensionless height integrate over the \acs{CBL} to constants, for example
-
-\begin{equation}
-\int^{z_{i}}_{0}\frac{e}{w^{*2}}dz = C_{e}
-\end{equation}
-
-In the referenced regime, \acs{CBL} growth is much slower than the convective velocity scale ($w^{*}$),
-there is a constant entrainment ratio $-\frac{\overline{w^{'}\theta^{'}}_{min}}{\overline{w^{'}\theta^{'}}_{s}}$
-and change in the total $e$ and it's escape from the boundary layer through waves are negligible relative
-to the buoyant production and dissipation rate.  The resulting entrainment equation predicts a $\frac{1}{2}$
-power law relationship between the normalized height, $z_{i}B_{s}^{-\frac{1}{2}} N^{\frac{3}{2}}$ and time
-$tN$.  Since variation in $\overline{\theta}$ results in
-less than 3 percent variation in $N$, when the surface heat flux $B_{s}$ and $\gamma$ are constant
-this roughly translates to a $\frac{1}{2}$ power law relationship between $h$ and time.  In our study we find this to be the case (see Figure \ref{fig:hvstime1}).\\
-  
-We also observe self similarity of the scaled flux profiles, and so a constant entrainment ratio (see Figure \ref{fig:scaledfluxprofs15010}). By 2 hours of simulated time, at least 10 eddy turnover times have elapsed and by 3 hours the \acs{EL} is fully within the region of high vertical resolution.  Worth noting is the collapse in scaled time curves from 7 to 3 according to upper lapse rate ($\gamma$) (see Figure \ref{fig:ScaledTimevsTime}).
-
-%\clearpage
-\subsection{FFT Energy Spectra}
-\FloatBarrier
-
-Based on the scalar \acs{FFT} energy plots taken at the top of the \acs{ML} there is a cascade from the larger
-to the smaller scales following the $-\frac{5}{3}$ power law (see Figure \ref{fig:2fftw602point5}). The \acs{CBL} is fully turbulent at this point
-but further into the entrainment layer (\acs{EL}) there are large areas of little or no vertical velocity
-interspersed with isolated impinging plumes.  So the dominant structures are smaller
-and there is a steeper decay to the lower scales.  In this the \acs{FFT} plots and the contour plots in Figures \ref{fig:conts1} and \ref{fig:conts} compliment
-each-other.  Furthermore there seems to be adequate scale separation between the dominant turbulent structures and the grid size, as well as isotropic turbulence.
+A comparison of how the \acs{Ri}s were calculated will be left for a later section, but the range was dependent on variation in $\gamma$ and less so on $\overline{w^{'}\theta^{'}}$.  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) imposed a $\theta$ jump of varying strength topped by a constant $\gamma$.  Whereas \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) initialized with a layer of uniform $\theta$ topped by a constant $\gamma$ which was different for each run.\\    
 
 %\clearpage
 
-\subsection{Ensemble and horizontally averaged vertical Potential Temperature $\overline{\theta}$ 
-and Heat Flux profiles $\overline{w^{'}\theta^{'}}$}
-%Average Potential Temperature, Heat Flux and Kinetic Energy}
-\FloatBarrier
+\section{Local \acs{ML} heights}
 
-\citeauthor{SchmidtSchu} point out in \cite{SchmidtSchu} that as a convectively mixed layer (\acs{ML})
-grows against a stable lapse rate ($\gamma$) overshoot of the plumes to levels above their buoyancy causes
-a sharp temperature gradient.  The sharpest vertical gradient in the area averaged potential temperature ($\overline{\theta}$)
-profile corresponds to the vertical level at which the average potential temperature (Figure \ref{fig:pottempprofs2hrs}) differs greatest from that one level above.  Once a plume has overshot, envelopment or pinching off (\citeauthor{SullMoengStev} 
-\cite{SullMoengStev}) of warm air from above causes a more gradual increase in temperature.  
-Where this occurs is regarded here as the entrainment layer \acs{EL}.  In the averaged potential temperature 
-profile it is represented by an increase in the vertical gradient. On the horizontal plane it would be composed 
-of areas of \acs{ML} air interspersed with pockets of warmer air from above.  The ratio of \acs{ML} to stable air 
-increases with proximity to the \acs{ML}.  This progression is seen in the average profile as a decrease in the
-vertical gradient to close to zero (Figure \ref{fig:hdefs}).  Our average potential temperature profiles in Figure \ref{fig:pottempprofs2hrs} show a well mixed \acs{ML} overshooting
-and growing against $\gamma$.  \acs{CBL} growth increases with $\overline{w^{'}\theta^{'}_{s}}$ and is inhibited 
-by $\gamma$.  The \acs{ML} warming rate is strongly influenced by $\overline{w^{'}\theta^{'}_{s}}$ and $\gamma$.\\
+\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) determined local \acs{CBL} height by locating the point of maximum gradient.  Analysis of the resulting distributions showed dependence of standard deviation and skewness on Richardson number.  The normalized standard deviation decreased with increased \acs{Ri} whereas skewness was alomost bimodal; being negative at high \acs{Ri} and positive and low \acs{Ri}.  Iniatially in this study, I applied a similar method and found distributions with lower \acs{Ri} to have positive skew.  Upon exhaustive inspection of local vertical $\theta$  profiles, it became evident that at certain horizontal points high gradients well into the free atmposphere exceded those closer to the location of the \acs{CBL} height reasonably identified by eye.\\
 
-The vertical $\overline{w^{'}\theta^{'}}$ profiles in Figure \ref{fig:fluxprofs2hrs} assume the expected shape becoming negative in the \acs{EL}
-where the upward moving thermals are relatively cooler than the horizontal average and there is also downward
-moving warmer air that has been pinched off or folded in.  Like \citeauthor{SullMoengStev} in \cite{SullMoengStev}
-and \citeauthor{FedConzMir04} in \cite{FedConzMir04} we notice the entrainment ratio is less than .2 ($\approx .1$) 
-for all runs but seems to increase with increased $\gamma$ inline with \citeauthor{Sorbjan}'s assertion in \cite{Sorbjan} 
-that moments of $\theta^{'}$ depend on $\gamma$. Otherwise, there seems to be self similarity in time and across runs
-when scaled by $\overline{w^{'}\theta^{'}_{s}}$ and plotted against scaled height.  So the scaled depth of the 
-region of negative  $\overline{w^{'}\theta^{'}}$ seems more or less constant whereas \citeauthor{FedConzMir04} in 
-\cite{FedConzMir04} seem to show a decrease from about .6 to about .2 with increasing \acs{Ri} and \citeauthor{BrooksFowler2}
-with their slightly different definition in \cite{BrooksFowler2} seem to observe slight and contrasting trends with
-respect to \acs{Ri} depending on whether the output is time averaged or not.
+Locating the \acs{ML} height using the multi-linear regression method employed proved more reliable, based on inspection of hundreds of local vertical $\theta$  profiles.  For a large proportion of these profiles it was impossible even by eye to locate a reliable \acs{CBL} height based on a maximum in the vertical gradient. The distributions were seen to broaden with increased $ (\overline{w^{'}\theta^{'})_{s} $ and narrow with increased $ \gamma $.  When normalized by the height of the maximum average vertical potential gradient ($h$) what apparantly remains is the effect of $\gamma$ on the lower limit or lowest percentile.  The result is an overall narrowing of the scaled distributions with $\gamma$.\\  
 
+Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) conclusion that $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So positive fluctuations due representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative.  The former can easily be explained in terms of an increased lapse rate above ($\gamma$).
 
-
-%\clearpage
-
-\subsection{Visualization of Structures within the Entrainment Layer}
-\FloatBarrier
-
-\citeauthor{SullMoengStev} in \cite{SullMoengStev} show both horizontal and vertical cross sections
-of their domain within the \acs{EL} around the inversion ($h$).  Horizontal cross sections of vertical
-velocity and temperature perturbations clearly show coherent structures with both relatively
-warm and cool air, associated with up-and-downward velocity.  Vertical cross sections show
-impinging plumes and pockets of trapped warmer air.  The weak inversion case seems to show
-convective overturning with apparent folding of warm stable air.  The strong inversion
-case shows less deformation of the inversion interface and the entrainment event 
-shown in the vertical cross section seems to occur via a narrow downward wisp associated
-with an impinging plume.  In both cases, the downward motion of air from above is closely associated
-with upward moving impinging plumes.\\
-
-In our contours of $w^{'}$ and $\theta^{'}$ we see the almost spoke like pattern characteristic of the
-mixed layer (\citeauthor{SchmidtSchu} \cite{SchmidtSchu}) at the lower limit of the \acs{EL}
-and then distinct plumes become clearer at the inversion and above, where there are coherent
-areas of warmer and cooler air associated up and downward vertical velocity perturbations (Figures \ref{fig:conts} and \ref{fig:conts1}).  
-This progression is similar to that seen in \cite{GarciaMellado} by \citeauthor{GarciaMellado}.  
-We do see bigger clearer regions of upward moving air in the weak stability case as compared to the
-the strong stability case. There are pockets of warmer air close to and around the impinging cooler plumes, in line with the concept of wisps being pinched off, or enfolded.
-
-%\clearpage
-
-
-\section{Local Mixed Layer Heights ($h_{0}^{l}$)}
-\label{sec:locmlh}     
-\FloatBarrier
-
-%The gradient method of determining \acs{CBL} height proved to be flawed due to the high gradients
-%well into the stable layer which exceeded that of the transition
-%from \acs{ML} to free atmosphere at points outside an active impinging plume.  
-
-\citeauthor{SullMoengStev} \cite{SullMoengStev} used a centred differencing gradient method for determining local \acs{CBL} height  and observed the distributions
-of $z_{i}^{'} = z_{i}-<z_{i}>$.  They observed positive skew in their weak stability cases which
-they speculated was due to a small number of high reaching plumes.  We initially tried a similar
-method and noticed positive skew, which we found corresponded to local points where the upper variability
-exceeded the gradient between the \acs{ML} and the upper atmosphere. So for our purposes the gradient method was rendered unusable\\
-
-The point of maximum vertical gradient in  a tracer profile should correspond to that in a potential 
-temperature profile but the profiles can be quite different.  For example a Lidar back-scatter profile
-which corresponds directly to tracer concentration profile, has a high value in the \acs{ML} and a low
-value in the upper atmosphere, similar to step function.  Usually the variability within these regions 
-is a lotsmaller than that over the transition region between the two.  So the transition region can be 
-identified using a wavelet of dilation corresponding the the depth of the transition zone.  This is 
-clearly shown by \citeauthor{Brooks} in \cite{Brooks} who uses such a wavelet to identify the local \acs{EL}
-and then one with narrower dilation to identify the \acs{EL} limits.  The gradient method can also be applied
-to a Lidar profile but again this can be noisy. %[references p247 \cite{BrooksFowler2}].  
-\citeauthor{SteynBaldHoff}
-in \cite{SteynBaldHoff} overcame this by fitting smooth idealized curve to the profile.\\
-
-In line with this last method, we fit a three lines to the local profile representing the \acs{ML}, 
-\acs{EL} and upper layer of constant $\gamma$ based on the multilinear regression method outlined by \citeauthor{Vieth} in 
-\cite{Vieth}.  This works well with our very simple set up, IE, each local profile consists
-of a distinct \acs{ML} and upper region of constant $\gamma$. Locally there is not always
-a clear \acs{EL}.  At points where there is neither a sharp gradient nor a clear \acs{EL} 
-and some variation in the slope within the \acs{ML}, a test was needed on the slope of 
-the second line to see if it was significantly less $\gamma$.  If so, it was considered
-to be part of the \acs{ML}.\\
-
-\citeauthor{BrooksFowler2}'s three statistically based entrainment zone limits in 
-\cite{BrooksFowler2} showed decreasing trend with increase in \acs{Ri}. Their resulting
-scaled \acs{EL} is a lotnarrower than that based on our $\frac{\partial \overline{\theta}}{\partial z}$ profile i.e. .05 - 1.5, and even seems narrower than
-what would be the 5th and 95th percentile of our local \acs{ML} heights (see Figure \ref{fig:localhpdf}).  Their lowest
-inversion strength seems to be 1 degree over 100 meters (IE .01 per meter) which is
-the same as our maximum stability, except of course ours is constant, and their highest is
-10 times that. But their lapse rate above is a lot lower ($3k/Km$).  So, this difference cannot simply be explained in terms of inversion strength.\\  %These authors dismiss using the averaged tracer profile based on how the gradients, at the limits based on the local height percentiles on the average profile, relate to the, further scaled by the peak gradient determined from the local peaks in gradient, decrease with decreasing \acs{Ri}. This roughly corresponds to the conceptual difference between the heights of the lowest plumes, and the region where air is mostly (for example on average 95 percent) \acs{ML} air.  It serves as a cautionary note for our study.\\
-
-We see that the local profiles are very different to the average profile and that local
-profiles differ from each other (Figures \ref{fig:rssfitshigh} and \ref{fig:rssfitslow}).  The \acs{EL} is an inherently average phenomena i.e.
-the range in space or, the range in time, over which the plume heights vary.  So
-it is possible to see a local \acs{EL}.  For example in Figure \ref{fig:rssfitslow} (a)
-we see a region above the \acs{ML} which is clearly not part of the stable
-air above.  Here, we can speculate that a plume previously had reached that point
-and some entrainment of warmer air from above had occurred.\\
  
-Overall \citeauthor{SullMoengStev} 
-\cite{SullMoengStev} show decreased variation in the local heights, with increased \acs{Ri} as we do.  Based on the histograms of our local \acs{ML} heights in Figure \ref{fig:localhhist} we see the range or spread
-increases with increased $\overline{w^{'}\theta^{'}}_{s}$ and decreases with increased
-$\gamma$.  When scaled by $h$ in Figure \ref{fig:localhpdf} the spread seems only influenced by $\gamma$.  So once
-again there is a cancellation of the effects of $\overline{w^{'}\theta^{'}}_{s}$ once
-$h$ is introduced.
-
-%\clearpage
-
-\section{Flux Quadrants}
-\label{sec:fluxquadrants}     
 \FloatBarrier
-
-The shape of the average potential temperature profile evolves according to the temperature flux
-profile. In particular warming in the entrainment layer (\acs{EL}), and upper mixed layer (\acs{ML})
-is related to the flux of warmer air up or down to that region.  Lower in the \acs{ML} warming is 
-from the thermals or plumes originating at the surface.  These plumes become cooler than the horizontal
-average in the \acs{EL} where upper stability above the inversion interface causes them to turn downward.
-Here there are accompanying downward moving pockets of warm air associated with the upward moving
-plumes.  All of this was seen in the visual aids presented by \citeauthor{SullMoengStev} in \cite{SullMoengStev}.\\
-
-In \cite{MahrtPaum} \citeauthor{MahrtPaum} examined the joint distributions of $w^{'}$ and $\theta^{'}$ 
-from measurements taken of mixed layers developed in the flow of cold air masses over a warm current.
-Their two dimensional representations clearly show the four quadrants: upward warm, upward cool, downward cool
-and downward warm.\\
-
-\citeauthor{Sorbjan} in \cite{Sorbjan} asserted and demonstrated that the moments involving $\theta^{'}$
-particularly in the upper \acs{ML} and \acs{EL} are strongly influenced by the upper lapse rate $\gamma$.
-Whereas moments of $w^{'}$ were less so.  These effects were seen when the corresponding vertical profiles
-were scaled by the convective scales ($\theta^{*}$ and $w^{*}$).\\
-
-Bearing the above three studies in mind we separate the $w^{'}\theta^{'}$ into the four quadrants and plot
-the average vertical scaled profiles as well as the 2d histograms at $h$ and the \acs{EL} limits.  We
-can confirm that the upper extrema of the four individual quadrants exceed that of the average
-and are higher i.e. close to $h$ (Figure \ref{fig:fluxqadprofs}).  Higher stability results in a more pronounced peak particularly in the
-upward cool quadrant profile which corresponds to increased damping and a sharper decrease in velocity.
-Since warming in this region is associated with downward movement of air from above, the downward warm
-quadrant is important.\\
-
-The 2d histograms at each level show increased spread of both $\theta^{'}$ and $w^{'}$ with increased 
-$\overline{w^{'}\theta^{'}}_{s}$ (Figures \ref{fig:fluxquadsh}, \ref{fig:fluxquadsh0}, \ref{fig:fluxquadsh1}).  There is damping of $w^{'}$ with increased $\gamma$.  To isolate the 
-effects of increased $\gamma$ we should scale by the convective scales ($\theta^{*}$ and $w^{*}$) .
-
-%\clearpage
-
-\section{$h$ and  $\Delta h$ based on Average Profiles}
-\label{sec:hdeltahavprofs}
-\subsection{Reminder of Relevant Definitions}
-\FloatBarrier
-
-Our heights are defined based on the average vertical temperature gradient the principle length scale being $h$ the vertical location of the maximum.  Flux based heights are scaled by $h$ to enable comparison with the frameworks of other studies.  
-
-%\clearpage
-\subsection{$\frac{\Delta h}{h}$ vs $Ri^{-1}$}
-\label{subsec:deltahri}
-\FloatBarrier
-
-The \acs{EL} tops as defined by the point at which the temperature gradient resumes $\gamma$ seem to be scaled well by $h$ (Figure \ref{fig:scaledELlims}).  This seems in contrast to the assertion of \citeauthor{GarciaMellado} in \cite{GarciaMellado} about the upper \acs{EL} i.e. that length and buoyancy in this region are not scaled by the the \acs{CBL} convective scales. The \acs{EL} top as defined where the point at which the buoyancy flux decreases to close to zero, when scaled by $h$ is comparable, but has greater scatter (Figure \ref{fig:scaledELlims1}). But in both cases, the top limit is about 1.15 $\times \ h$, and there is a barely perceptible, possible negative trend.\\  
-
-The scaled lower \acs{EL} limits based on the increase in potential temperature gradient from zero, show a clearer increase but don't show the same kind of collapse across runs as the upper limit does (Figure \ref{fig:scaledELlims}).  The scaled lower limit based on the flux profiles however, do collapse well (Figure \ref{fig:scaledELlims1}).  So we could say with some confidence that $\frac{h-z_{f0}}{h} \approx .2$ and this is comparable to \citeauthor{GarciaMellado}'s lower \acs{EL} sublayer.\\
-  
-So the scaled \acs{EL} as defined by the vertical gradient in the potential temperature profile certainly decreases with respect to time.  The scaled \acs{EL} based on the flux profiles shows slight or no change with respect to time.  This is in line to the findings of \citeauthor{BrooksFowler2} in \cite{BrooksFowler2} even though their definition is slightly different IE $2 \times (z_{f}-z_{f0})$.  But it is in stark contrast to what \citeauthor{FedConzMir04} show in \cite{FedConzMir04} i.e. $\frac{z_{f1}-z_{f0}}{z_{f}}$ decreasing from about .6 to about 0.1.  This could in part be explained by the difference in vertical resolution since according to \citeauthor{SullPat} in \cite{SullPat} the shape of average heat flux profile in the \acs{EL} is sensitive to grid size.\\
-
-\citeauthor{Sorbjan} in \cite{Sorbjan} and \cite{Sorbjan1} demonstrates how the surface and lower \acs{ML} portions of the temperature gradient profile is scaled well by the convective scales but $\gamma$ becomes more important in the \acs{EL}.  From our potential temperature profiles in Figure \ref{fig:pottempprofs2hrs} we see that both $\gamma$ and $\overline{w^{'}\theta^{'}}_{s}$ influence the warming of the \acs{ML}. So this should reflect in particular in the downward flux of warm air from the inversion IE at $h$. That is, increasing $\gamma$ seems to result in an increased slightly positive gradient in the upper \acs{ML} and this should relate to an increase in the downward flux warm air above it, for example at $h$.\\
-
-So, first we define the \acs{EL} lower limit as the point at which the vertical gradient exceeds a positive threshold that's less than $\gamma$ and the same for all runs, at all times. We try three different values and note that there is a seeming decrease in the scaled magnitude with respect to \acs{Ri}, bearing in mind the definition of the \acs{EL} is included in the calculation of $\Delta \theta$ for $Ri$. Grouping according to $\gamma$ is evident.\\
-
-Scaling the vertical potential temperature gradient profiles by $\gamma$ results in collapse to more or less one curve.  The gradient profiles seem to show an increase in the peak gradient as the \acs{EL} seems to narrow. This trend is apparent with respect to time and across runs.  This portion of the profile has been scaled effectively by \citeauthor{Sorbjan1} in \cite{Sorbjan1} using $\frac{\Delta \theta}{\Delta h}$ and \citeauthor{GarciaMellado} using their buoyancy scale $b \approx N^{2} \delta + [\overline{b_{0}}(h) - \overline{b}(h)]$ where $\delta \propto \frac{w^{*}}{N}$ is their length-scale for the upper \acs{EL} sublayer.  Related to $\frac{\Delta \theta}{\Delta h}$ is the entrainment layer stratification parameter $G = \gamma \frac{\Delta h}{\Delta \theta}$ which \citeauthor{FedConzMir04} found to be constant throughout the quasi-steady state regime IE, $\Delta \theta \propto \Delta h$.  This seems to contradict the apparent increase in maximum gradient with decrease in \acs{EL} depth.
-
-\subsection{$\frac{w_{e}}{w^{*}}$ vs $Ri^{-1}$}
-\FloatBarrier
-
-In Figure \ref{fig:hvstimeloglog} $h$ shows a $\frac{1}{2}$ power law relationship to time indicating we are in the regime outlined by \citeauthor{FedConzMir04} in \cite{FedConzMir04}.  Self similarity of the scaled heat flux profiles vs scaled height in Figure \ref{fig:scaledfluxprofs15010} indicate a more or less constant entrainment ratio, but also a more or less constant scaled entrainment depth with respect to time. Our Richardson numbers (\acs{Ri}s) increase with respect to time and again grouping according to $\gamma$ is evident (Figure \ref{fig:invristime}).\\
-
-
-\citeauthor{KatoPhil} successfully related
-the scaled entrainment rate of penetrative shear driven turbulence
-in their water-tank experiment in \cite{KatoPhil}
-to a  dimensionless group formed from the three main characteristics
-of the flow : the buoyancy jump across the interface, the turbulent velocity of the \acs{ML} and the depth of the \acs{ML}. IE
-
-\begin{equation}
-\frac{u_{e}}{u^{*}} \propto \frac{\rho_{0} u^{*2}}{g \delta \rho D} 
-\end{equation}
-
-\citeauthor{DearWill80} related their scaled entrainment of penetrative convection to this dimensionless group, substituting the shear driven velocity scale for the convective one, thus forming the now commonly used Richardson number (\acs{Ri})for the \acs{CBL}.  Their heights were determined from the vertical heat flux profiles.  The heat flux profiles in turn were derived from two successive potential temperature profiles.  The resulting relationship between scaled entrainment rate and \acs{Ri} appears to potentially exhibit both $-1$ and $\frac{-3}{2}$ power laws.\\
-
-\citeauthor{SullMoengStev}'s data in \cite{SullMoengStev} showed some scatter and they speculated that a power law other than $-1$ may have described the relationship at \acs{Ri}s smaller than 14.  They compare the data to this fit:
-
-\begin{equation}
-\frac{w_{e}}{w^{*}}=0.2 Ri^{-1}
-\end{equation}
-
-\citeauthor{Turner86} in \cite{Turner86} attribute the $-\frac{3}{2}$ power law to mixing that depends on the recoil of impinging eddies.  Whereas \citeauthor{FedConzMir04} in \cite{FedConzMir04} derive it from a best fit approximation of the \acs{Ri} calculated using the buoyancy jump across the \acs{EL} to scaled time (after $tN>100$) and applying the zero order model relationship.\\
-
-\citeauthor{BrooksFowler2}'s plot in \cite{BrooksFowler2} has relatively little scatter and exhibits a linear relationship ($-1$ power law) whereas \citeauthor{GarciaMellado}'s data in \cite{GarciaMellado} seems asymptotic to a linear relationship.\\
-
-Our data based on the temperature jump across the entire \acs{EL} shows a seemingly linear relationship (Figure \ref{fig:scaledweinvri}). 
-
-%\clearpage
 
 
 \endinput
