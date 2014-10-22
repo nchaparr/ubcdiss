@@ -8,34 +8,62 @@
 \section{Comparison of general Set-up}
 \FloatBarrier
 
-\citeauthor{SullPat} (\citeyear{SullPat}) found that the shapes of the vertical average potential temperature ($\overline{\theta}$) and average vertical heat flux ($\overline{w^{'}}\theta^{'}$) profiles, as well as the measured \acs{CBL} height vary depending on grid size.  The resolution at which convergence begins is listed in Table \ref{table:gridcomp}.  Untill this point the $\overline{\theta}$ and $\overline{w^{'}}\theta^{'}$ profiles are such that the \acs{EL} is a larger portion of the \acs{CBL} and measured \acs{CBL} height is higher overall.  Overall they concluded that vertical resolution was more critical.  This compliments the conclusion \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) when discussing their resolution test.  That is, to capture the steep vertical gradients in the \acs{EL} requires high resolution.\\
+\citeauthor{SullPat} (\citeyear{SullPat}) found that the shapes of the vertical average potential temperature ($\overline{\theta}$) and average vertical heat flux ($\overline{w^{'}}\theta^{'}$) profiles, as well as the measured \acs{CBL} height vary depending on grid size.  The resolution at which convergence begins is listed in Table \ref{table:gridcomp}.  Untill this point the $\overline{\theta}$ and $\overline{w^{'}}\theta^{'}$ profiles are such that the \acs{EL} is a larger portion of the \acs{CBL} and measured \acs{CBL} height is higher.  Overall they concluded that vertical resolution was more critical.  This compliments the conclusion \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) when discussing their resolution test.  That is, to capture the steep vertical gradients in the \acs{EL} requires high resolution. \\
+
+As \citeauthor{Turner86} discusses in his \citeyear{Turner86} review of turbulent entrainment, the important of smaller scale processes, ie at the molecular level are relatively unimportant.  Large scale engulfment and trapping between thermals dominates.  If $\overline{\theta^{'2}}$ is calculated basedon differences from horizontally averaged $\theta$, ie if the ergodic assumption is drawn upon, then it can be a measure of horizontal variance. Although \citeauthor{SullPat} (\citeyear{SullPat}) found the vertical distance over which $\overline{\theta^{'2}}$ varies more or less converged at the resolution shown in Table \ref{table:gridcomp} the maximum continued to increaase up to their finest grid spacing (5, 5, 2).  This question of whether the mxing within the \acs{EZ} is adequately resolved serves as motivation for \acs{DNS}  studies such as that of \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}). These authors found the entrainment ratio $\frac{\overline{w^{'}\theta^{'}}_{z_{f}}}{\overline{w^{'}\theta^{'}}_{s}}$ to be about 0.1 which is lower than for example what {FedConzMir04} (\citeyear{FedConzMir04}) observed, but close to what was seen in this study. Although they did not directly measure \acs{EZ} depth, based on their heat flux profiles the region of negative flux seems to be about .3 of the height of minimum flux, again this is comparable to what I saw.  Among these author's other conclusions was that the production and destruction rates of \acs{TKE}, as well as the entrainment ratio used to calculate the entrainment rate, were effectively independent of molecular scale processes.\\  
+  
 
 \begin{table}[htbp]
+\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. Those used for resolution tests are not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
+
     \begin{center}
 %\centerline{
-    \begin{tabular}{ p{5cm} p{4cm}}
+    \begin{tabular}{ p{5cm} p{3cm} p{3cm}}
     %\hline
-Publication & \acs{EL} $\Delta x$, $\Delta y$, $\Delta z$ (m)\\ \hline
-      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10  \\ \hline 
-      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20  \\ [.3cm] %\hline
-      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12\\ \hline
-    \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8  \\ \hline
-    This study & 25, 25, 5\\ \hline 
+Publication & \acs{EZ} $\Delta x$, $\Delta y$, $\Delta z$ (m) & Horizonal Domain \\ \hline
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10 & 5 x 5 km
+%\\ \hline 
+      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20 & 5 x 5 km\\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12 & 5 x 5 km\ %\hline
+    \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8 & 5 x 5 km\\ %\hline
+    This study & 25, 25, 5 &  3.4 x 4.8 km\\ \hline 
       
     \end{tabular}
 %}
-\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. Those used for resolution tests are not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
 \label{table:gridcomp}   
 \end{center}    
 \end{table}
 
-The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here. In the \acs{EL} where turbulence is intermittent, the dominant energy containing structures are smaller, and decay to the grid-size is steeper.\\
+The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here. In the \acs{EL} where turbulence is intermittent, the dominant energy containing structures are smaller, and decay to the grid-size is steeper. \\
 
-As \citeauthor{Turner86} discusses in his \citeyear{Turner86} review of turbulent entrainment, the important of smaller scale processes, ie at the molecular level are relatively unimportant.  Large scale engulfment and trapping between thermals dominates. Yet, the steep vertical, and surely horizontal, gradients within the \acs{EL} remain motivational for \acs{DNS} studies such as \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}).  Among these author's conclusions was that the production and destruction rates of \acs{TKE}, as well as the entrainment ratio used to calculate the entrainment rate, were effectively independent of molecular scale processes.\\  
 
 The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. However, given the results of \citeauthor{SullPat} (\citeyear{SullPat}) it could have been an effect of the grid.  Visualizations of horizontal and vertical slices clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height, but remaining less than or on the order of 100 meters.\\   
 
+Brooks and Fowler tried basing heights on average profiles but got lots of scatter and concluded that it was best to use statistics of locally determined heights rather than the mean profile.  Sullivan and moeng's heights based on average profiles produced very jagged oscillating versus time plots. Whereas the heights based on average profiles here, using an ensemble of cases, varied smoothly in time.  This could be attributed to a smoother average based on more horizontal points (10*128*192 vs 100*100 vs 151*151).\\
+
 A comparison of how the \acs{Ri}s were calculated will be left for a later section, but the range was dependent on variation in $\gamma$ and less so on $\overline{w^{'}\theta^{'}}$.  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) imposed a $\theta$ jump of varying strength topped by a constant $\gamma$.  Whereas \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) initialized with a layer of uniform $\theta$ topped by a constant $\gamma$ which was different for each run.  Thesis authors did not vary average surface heat flux ($(\overline{w^{'}\theta^{'}})_{s}$).  They also used a timescale based on $\gamma$ rather than the convective timescale $\tau$.  The results of this study support this, in that the effects of varying $(\overline{w^{'}\theta^{'}})_{s}$ seem to be offset by $h$ and $\tau = \frac{h}{w^{*}}$ depends solely on $\gamma$.\\    
+
+\begin{table}[htbp]
+\caption[]{Grid spacing around the \acs{EL} used in comparable \acs{LES} studies. Those used for resolution tests are not listed here.  For \citeauthor{SullPat}'s \citeyear{SullPat} resolution study I list the grid sizes at which profiles within the \acs{EL} and \acs{CBL} height evolution began to converge.}
+
+    \begin{center}
+%\centerline{
+    \begin{tabular}{ p{5cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+    %\hline
+Publication & $\overline{w^{'}\theta^{'}}_{s}$ W/m2& $\gamma$ K/km & Jump & $\acs{Ri}$ range \\ \hline
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 20 - 450& 3  &.436 - 5.17
+%\\ \hline 
+      {FedConzMir04} (\citeyear{FedConzMir04}) & 150 & 1 - 10 & na\\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) &  10 -100 &  3& 1 - 10 %\hline
+      This study & 60 - 150 & 2.5 - 10&na\\ \hline 
+      
+    \end{tabular}
+%}
+\label{table:initconditcomp}   
+\end{center}    
+\end{table}
+
+
 
 %\clearpage
 
@@ -43,7 +71,7 @@ A comparison of how the \acs{Ri}s were calculated will be left for a later secti
 
 \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) determined local \acs{CBL} height by locating the point of maximum gradient.  Analysis of the resulting distributions showed dependence of standard deviation and skewness on Richardson number.  The normalized standard deviation decreased with increased \acs{Ri} whereas skewness was alomost bimodal; being negative at high \acs{Ri} and positive and low \acs{Ri}.  Iniatially in this study, I applied a similar method and found distributions with lower \acs{Ri} to have positive skew.  Upon exhaustive inspection of local vertical $\theta$  profiles, it became evident that at certain horizontal points high gradients well into the free atmposphere exceded those closer to the location of the \acs{CBL} height reasonably identified by eye.\\
 
-Locating the \acs{ML} height using the multi-linear regression method employed proved more reliable, based on inspection of hundreds of local vertical $\theta$  profiles.  For a large proportion of these profiles it was impossible even by eye to locate a reliable \acs{CBL} height based on a maximum in the vertical gradient. The distributions were seen to broaden with increased $ (\overline{w^{'}\theta^{'})_{s} $ and narrow with increased $ \gamma $.  When normalized by the height of the maximum average vertical potential gradient ($h$) what apparantly remains is the effect of $\gamma$ on the lower limit or lowest percentile.  The result is an overall narrowing of the scaled distributions with $\gamma$.\\  
+Locating the \acs{ML} height using the multi-linear regression method employed proved more reliable, based on inspection of hundreds of local vertical $\theta$  profiles.  For a number of these profiles, ie those at points outside an actively impinging thermal, it was impossible even by eye to locate a reliable \acs{CBL} height based on a maximum in the vertical gradient but there as a discernible \acs{EZ}.  Conversely at points within an active thermal the \acs{ML} tops were characterized by a sharp vertical $\theta$ gradient and the absence of an \acs{EZ} similar to the zero-order model, since here entrainment has yet to begin.  All inspected local profiles showed a clear \acs{ML} and $h^{l}_{0}$. The distributions were seen to broaden with increased $(\overline{w^{'}\theta^{'}})_{s} $ and narrow with increased $ \gamma $.  When normalized by the height of the maximum average vertical potential gradient ($h$) what apparantly remains is the effect of $\gamma$ on the lower limit or lowest percentile. That is, the lowest \acs{ML} heights become lower with at lower $\gamma$ resulting in an apparant increased negative skew.  So, there is an overall narrowing of the scaled distributions with increased $\gamma$. This supports decreaased o f scaled \acs{EZ} depth with increased $\acs{Ri}$ of Section \ref{subsec:ellimscaledprof} since the $\acs{Ri}$s tend to group according to $\gamma$. The approximate range of the scaled \acs{EZ} basd on the $h^{l}_{0}$ distributions is about 0.2 - 0.4 of $h$ whereas that calculatted by  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}} based on distributions of local maximums in gradient was smaller (.05 - .2).  This could be partially explained by the local maximum gradient of the tracer profile being within the \acs{EZ} of points for example outside an actively impinging plume and so higher than  the\acs{ML} top defined here. \\  
 
 Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So positive fluctuations due representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative.  The former can easily be explained in terms of an increased lapse rate above ($\gamma$).\\
 
@@ -71,7 +99,7 @@ When they used \acs{EL} limits based on percentiles of locally determined height
 \begin{table}[htbp]
 \begin{center}
 %\centerline{
-\begin{tabular}{ p{5cm} p{4cm}}
+\begin{tabular}{ p{5cm} p{4cm} p{2cm} p{2cm}}
     %\hline
 Publication & \acs{EL} & \acs{CBL} height & $\Delta \theta$\\ \hline
 \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & $z_{f1} - z_{f0}$ & $z_{f}$ &  $\overline{\theta}(z_{f1})-\overline{\theta}(z_{f0})$\\ [.3cm] %\hline
@@ -83,10 +111,19 @@ Publication & \acs{EL} & \acs{CBL} height & $\Delta \theta$\\ \hline
 
 \section{Relationship of Entrainment Rate to Richardson Number (Q3)}
 
-The magnitudes of \acs{Ri} numbers determined in this and the comparable studies are primarily influenced by the magnitude of the $\theta$ jump. 
+The magnitudes of \acs{Ri} numbers determined in this and the comparable studies are primarily influenced by the magnitude of the $\theta$ jump. So with different definitions you can have the same conditions represented by a different \acs{Ri} value.\\
 
+\citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2})'s \acs{CBL} growth decreased to almost zero at around \acs{Ri}$=100$.\\
 
-\citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2})'s \acs{CBL} growth decreased to almost zero at around \acs{Ri}$=100$.
+I can compare directly to the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}). As they did, I find curves representing
+
+\begin{equation}
+\frac{w_{e}}{w^{*}} \propto Ri^{a} \tag{\ref{eq:ervsri}}
+\end{equation}
+
+and in particular the exponent a, to differ depending on how the $\theta$ jump is defined. They saw an exponent of $-1$ approximately fitting the data where \acs{Ri} was calculated using $\delta \theta$ above (they denote it $\Delta \theta$) and predicted and found a higher exponent when \acs{Ri} is calulated using $\Delta \theta$ (they denote it $\delta \theta$).  Similarly, I find $a$ to be greater or eequal to $-1$ in magnitude using $\Delta \theta$ and less than or equal to $-1$ using $\delta \theta$.  \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) noted this difference but interpreted the curves as asymptoting to two straight lines of different slopes.\\
+
+That there is an analogous distinction between plots of Equation \ref{eq:ervsri} using $\Delta \theta$ vs $\delta \theta$ when all heights are defined on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile lends some credence to this framework.  Scatter is least when the $\theta$ jump is defined accross the \acs{EL}.  In this plot $-\frac{3}{2}$ fits at higher \acs{Ri} (lower \acs{Ri}$^{-1}$) and $-1$ seems to fit at lower \acs{Ri}.  Combined with the apparant change in $b$ for Equation \ref{eq:dhvsri} this could be interpreted as an indication of a change in entrainment regime at increased \acs{Ri}.\\ 
  
 
 \begin{table}[htbp]
@@ -94,10 +131,10 @@ The magnitudes of \acs{Ri} numbers determined in this and the comparable studies
 %\centerline{
 \begin{tabular}{ p{5cm} p{2cm} p{2cm} p{2cm}}
     %\hline
-Publication & \acs{CBL} height & $\Delta \theta$\\ \hline
-\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & $\overline{h_{l}}$ & $\overline{\theta}(z_{f1}) - \overline{\theta}(z_{f})$ & 10 - 100\\ \hline
+Publication & \acs{CBL} height & $\Delta \theta$ & range\\ \hline
 \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & $z_{f}$ & $\overline{\theta}(z_{f1}) - \overline{\theta}(z_{f0})$ & 10 - 40 (10 - 33)\\ [.3cm] %\hline
-\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & &$\overline{\theta}_{0}(z_{f}) - \overline{\theta}(z_{f})$ & 1 - 20 (1 - 10)\\ [.3cm] &%\hline
+\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & $\overline{h_{l}}$ & $\overline{\theta}(z_{f1}) - \overline{\theta}(z_{f})$ & 10 - 100\\ \hline
+\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & & $\overline{\theta}_{0}(z_{f}) - \overline{\theta}(z_{f})$ & 1 - 20 (1 - 10)\\ [.3cm] %\hline
 \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & Average height of local maximum tracer gradient & Average based on local value &10 - >100\\ \hline
 \end{tabular}
 \end{center}    
