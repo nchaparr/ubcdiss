@@ -1,7 +1,7 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{discussion}
+\chapter{Results in Context}
 \label{ch:results}
 \setlength{\parindent}{0cm}
 
@@ -21,10 +21,9 @@ As \citeauthor{Turner86} discusses in his \citeyear{Turner86} review of turbulen
     \begin{tabular}{ p{5cm} p{3cm} p{3cm}}
     %\hline
 Publication & \acs{EZ} $\Delta x$, $\Delta y$, $\Delta z$ (m) & Horizonal Domain \\ \hline
-      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10 & 5 x 5 km
-%\\ \hline 
-      {FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20 & 5 x 5 km\\ [.3cm] %\hline
-      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12 & 5 x 5 km\ %\hline
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 33, 33, 10 & 5 x 5 km \\ %\hline 
+      \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & 100, 100, 20 & 5 x 5 km \\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & 50, 50, 12 & 5 x 5 km %\hline
     \citeauthor{SullPat} (\citeyear{SullPat}) &  20, 20, 8 & 5 x 5 km\\ %\hline
     This study & 25, 25, 5 &  3.4 x 4.8 km\\ \hline 
       
@@ -34,7 +33,7 @@ Publication & \acs{EZ} $\Delta x$, $\Delta y$, $\Delta z$ (m) & Horizonal Domain
 \end{center}    
 \end{table}
 
-The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here. In the \acs{EL} where turbulence is intermittent, the dominant energy containing structures are smaller, and decay to the grid-size is steeper. \\
+The \acs{FFT} energy spectra of horizontal slices at the top of the \acs{ML} show a substantial resolved intertial subrange giving confidence in the choice of horizontal grid size used here. In the \acs{EL} where turbulence is intermittent, the dominant energy containing structures are smaller, and decay to the grid-size is steeper. This confirms the assertion of \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) that the \acs{EZ} is separated into two sublayers in terms of turbulence scales.\\
 
 
 The horizontal domain in this study is smaller than those used in the other studies listed in Table \ref{table:gridcomp}. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) carried out one run on a smaller domain with higher resolution, noticed it resulted in lower \acs{CBL} height and concluded this was due to restricted plume size. However, given the results of \citeauthor{SullPat} (\citeyear{SullPat}) it could have been an effect of the grid.  Visualizations of horizontal and vertical slices clearly showed multiple thermals with diameter increasing with increased \acs{CBL} height, but remaining less than or on the order of 100 meters.\\   
@@ -51,11 +50,11 @@ A comparison of how the \acs{Ri}s were calculated will be left for a later secti
     \begin{tabular}{ p{5cm} p{2cm} p{2cm} p{2cm} p{2cm}}
     %\hline
 Publication & $\overline{w^{'}\theta^{'}}_{s}$ W/m2& $\gamma$ K/km & Jump & $\acs{Ri}$ range \\ \hline
-      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 20 - 450& 3  &.436 - 5.17
+      \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & 20 - 450& 3  &.436 - 5.17 &
 %\\ \hline 
-      {FedConzMir04} (\citeyear{FedConzMir04}) & 150 & 1 - 10 & na\\ [.3cm] %\hline
-      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) &  10 -100 &  3& 1 - 10 %\hline
-      This study & 60 - 150 & 2.5 - 10&na\\ \hline 
+      \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & 300 & 1 - 10 & na & 10 - 40\\ [.3cm] %\hline
+      \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) &  10 -100 &  3& 1 - 10 &%\hline
+      This study & 60 - 150 & 2.5 - 10& na & 10 - 30\\ \hline 
       
     \end{tabular}
 %}
@@ -73,30 +72,19 @@ Publication & $\overline{w^{'}\theta^{'}}_{s}$ W/m2& $\gamma$ K/km & Jump & $\ac
 
 Locating the \acs{ML} height using the multi-linear regression method employed proved more reliable, based on inspection of hundreds of local vertical $\theta$  profiles.  For a number of these profiles, ie those at points outside an actively impinging thermal, it was impossible even by eye to locate a reliable \acs{CBL} height based on a maximum in the vertical gradient but there as a discernible \acs{EZ}.  Conversely at points within an active thermal the \acs{ML} tops were characterized by a sharp vertical $\theta$ gradient and the absence of an \acs{EZ} similar to the zero-order model, since here entrainment has yet to begin.  All inspected local profiles showed a clear \acs{ML} and $h^{l}_{0}$. The distributions were seen to broaden with increased $(\overline{w^{'}\theta^{'}})_{s} $ and narrow with increased $ \gamma $.  When normalized by the height of the maximum average vertical potential gradient ($h$) what apparantly remains is the effect of $\gamma$ on the lower limit or lowest percentile. That is, the lowest \acs{ML} heights become lower with at lower $\gamma$ resulting in an apparant increased negative skew.  So, there is an overall narrowing of the scaled distributions with increased $\gamma$. This supports decreaased o f scaled \acs{EZ} depth with increased $\acs{Ri}$ of Section \ref{subsec:ellimscaledprof} since the $\acs{Ri}$s tend to group according to $\gamma$. The approximate range of the scaled \acs{EZ} basd on the $h^{l}_{0}$ distributions is about 0.2 - 0.4 of $h$ whereas that calculatted by  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}} based on distributions of local maximums in gradient was smaller (.05 - .2).  This could be partially explained by the local maximum gradient of the tracer profile being within the \acs{EZ} of points for example outside an actively impinging plume and so higher than  the\acs{ML} top defined here. \\  
 
-Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So positive fluctuations due representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative.  The former can easily be explained in terms of an increased lapse rate above ($\gamma$).\\
+Potential temperature and vertical velocity fluctuations ($\theta^{'}$ and $w^{'}$) at several vertical levels around the \acs{EL} were plotted as 2 dimensional histograms.  Increased $\overline{w^{'}\theta^{'}}_{s}$ causes an increase in positive temperature fluctuations and verical velocity as thermals become more vigorous, causing a higher $h$ so and a deeper \acs{EZ} over which relatively warmer air is pulled down.  The convective velocity scales ($\theta^{*}$ and $w^{*}$) were appplied to isolate the effects of $\gamma$, although it is accounted for indirectly via $h$ (see Section \ref{subsec:scales}). As shown in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) $\theta^{'}$ is influenced  by $\gamma$.  For example at $h$ there is an apparant increase in the spread, as well as a shift thowards the positive.  So downward moving positive potential temperature fluctuations representing air from the \acs{FA} are more positive and negative fluctuations representing thermals are less negative, when scaled.  The former can easily be attributed to relatively warmer air over a shorter vertical distance (\acs{EZ}) being brought down but an explaination for the latter remains elusive.  I conclude that with incresed $\gamma$ there is a positive deviation from the convective temperature scale.  Also, there is an apparant damping of the scaled velocities associated with positive temperature fluctuations.  So the $w^{*}$ scales these less effectively with increased $\gamma$.  \\
 
-The downward moving warm quadrant ($w^{'-}\theta^{'+}$) at $h$ represents warmer free atmosphere air that is being entrained.  So it's magnitude at a certain point in time is a measure of heating at a successive time in the region below.  In Figure \ref{fig:downwarm} the magnitude increases with respect to time is grouped according to $(\overline{w^{'}\theta^{'}})_{s}$.  Indeed it is an increasing proportion of  $(\overline{w^{'}\theta^{'}})_{s}$ and Figures \ref{fig:downwarm_wvel} and \ref{fig:downwarm_theta} show that its increase is primarily due to the increased positive temperature variance ($\theta^{'+}$).  While the velocity of downward warm quadrant $w^{'-}$ quickly approaches a constant proportion of $w^{*}$, the magnitude of temperature fluctuation approaches a constant proportion of $\gamma \Delta h$ rather than the convective temperature scale $\theta^{*}$.  So the positive horizontal variance in temperature is related to difference in temperature over $\Delta h$ of the inital lapse rate $\gamma$.  The relationship between the horizontal and vertical variance in temperature is clearly shown in the plots of each in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) and \citeauthor{SullMoengStev}'s (\citeyear{SullMoengStev}) and \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado}). Their peaks within the acs{EL} seem to coincide.  In the mixed layer vigorous horizontal and vertical motion renders both close to zero.\\             
+
+At $z_{f}$ and $h$, ie within the \acs{EL} the quadrants of largest magnitude were upward and downward moving relatively cool, thermal,  air ($w^{'-}\theta^{'+}$ and $w^{'+}\theta^{'+}$). The $w^{'-}\theta^{'-}$, $w^{'+}\theta^{'-}$ and $w^{'-}\theta^{'+}$ quadrants do approximately cancel as \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) concluded. The downward moving warm quadrant ($w^{'-}\theta^{'+}$) at $h$ represents warmer free atmosphere air that is being entrained.  So it's magnitude at a certain point in time is an indication of the increased at a successive time in the region below.  In Figure \ref{fig:downwarm} the magnitude increases with respect to time is grouped according to $(\overline{w^{'}\theta^{'}})_{s}$.  Indeed it is an increasing proportion of  $(\overline{w^{'}\theta^{'}})_{s}$ and Figures \ref{fig:downwarm_wvel} and \ref{fig:downwarm_theta} show that its increase is primarily due to the increased positive temperature variance ($\theta^{'+}$).  While the velocity of downward warm quadrant $w^{'-}$ quickly approaches a constant proportion of $w^{*}$, the magnitude of temperature fluctuation approaches a constant proportion of $\gamma \Delta h$ or $\gamma (h_{1}-h)$ rather than the convective temperature scale $\theta^{*}$.  This is similar to the bouyancy scale for the upper \acs{EZ} used by \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado}). So the positive variance in temperature is related to difference in temperature over $\Delta h$ (or $h_{1} - h$) of the inital lapse rate $\gamma$.  A broad explaination is that air from $h_{1}$ (ie at potential temperature $\overline{\theta_{0}}(h_{1})$) is brought down by the motions described in \ref{subsec:cblgrowth} to $h$ at which point much of the air is still at $\overline{\theta_{0}}(h)$.  \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado} describe this region as the upper sub layer within the \acs{EZ} where the buoyancy and turbulence are strongly influenced by $\gamma$. The relationship between the variance and vertical gradient in temperature is clearly shown in the plots of each in \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) and \citeauthor{SullMoengStev}'s (\citeyear{SullMoengStev}) and \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado}). Their peaks within the acs{EL} seem to coincide.  In the mixed layer vigorous horizontal and vertical motion renders both close to zero.  The increased in average potential temperature in the lower \acs{EZ} (and upper \acs{ML}) is in part due to the entrainment of warm air from aloft which can be represented by the magnitude of ($\theta^{'+}_{h}$) coming down from above and this depends on $\gamma$. Another perspective is noticing the increased magnitude of the minimum $\overline{w^{'}\theta^{'}}$, seen here and in both \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) and {FedConzMir04} (\citeyear{FedConzMir04}), in the \acs{EZ} which then leads to increased $-\frac{\partial \overline{w^{'}\theta^{'}}}{\partial z}$ in the lower \acs{EZ}, since the profiles are otherwise similar, and so increased warming per Equation \ref{eq:warming}. \\             
 
 \subsection{Relationship of Entrainment Layer Depth to Richardson Number}
 
-None of the comparable \acs{LES} studies define the \acs{EL} based ont the vertical $\frac{\partial \overline{\theta}}{\partial z}$ profile.  Yet, here, when the profile is scaled by $\gamma$ the resulting scaled \acs{EL} depth as defined in Figure \ref{fig:hdefs1} shows a dependence on Richardson number (\acs{Ri}) 
-
-\begin{equation}
-\frac{\Delta h}{h} \propto Ri ^{b} \tag{\ref{eq:dhvsri}}
-\end{equation}
-
-
-which appears to have an exponent of $-\frac{1}{2}$, as predicted and seen by \citeauthor{Boers89} (\citeyear{Boers89}), at lower \acs{Ri} (higher \acs{Ri}$^{-1}$) possibly increasing to $-1$ at higher \acs{Ri}.  It is possible that there is a change in entrainment mechanism. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) observed enfolding and engulfment at lower \acs{Ri}.  Whereas at higher \acs{Ri} when motion is more restricted, entraiment seemed to occur via trapping of thinner whisps at the edge of an upward moving thermal.  \citeauthor{Turner86} (\citeyear{Turner86}) also distiguishes between entrainment by convective overturning and recoil.\\    
-
-
-Although in this study there is no obvious trend in the upper and lower limits of the \acs{EL} based on the average vertical heat flux, but the scaled magnitude upper limit based on the $\frac{\partial \overline{\theta}}{\partial z}$ does appear to decrease slightly in time.\\
-
-
-Although their heights are defined differently,  \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) see an exponent of of $-\frac{1}{2}$.  They say the decrease in the overall depth is due to a slight decrease in the scaled top limit over time.  However based on their plot, it seems to go from about .5 to .2. \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) found no clear \acs{Ri} dependence of the scaled \acs{EL} depth based on the heat flux profle, but their definition was based on the lower part, i.e, the portion that according to \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) does not vary in time.  In this study when based on the heat flux profiles, there is no clear dependence on \acs{Ri}. This is supported by the similarity in time and accross runs of the vertical turbulent heat flux profiles when scaled by $(\overline{w^{'}\theta^{'}})_{s}$. The most obvious possible cause for this disagreement with the findings of citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) is the difference in grid size shown in Table \ref{table:gridcomp}. Also they used a higher average surface heat flux of about 300 W/m2. My means of defining the limits based on the flux profiles is directly comparable to theirs.\\              
-
-When they used \acs{EL} limits based on percentiles of locally determined heights based on tracer profiles  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) did see a dependence on \acs{Ri}.  The curves representing Equation \ref{eq:dhvsri} seem to separate out for each run and either asypmtote to a straight line, or each have an exponent less in magnitude than $-1$.  Although in this study, before scaling the $\frac{\partial \overline{\theta}}{\partial z}$ profile curves separate out, but in the reverse order.  I see runs with higher stability exhibiting larger \acs{EL} depths while, and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2})'s runs with initially lower \acs{Ri} (higher \acs{Ri}$^{-1}$) have larger \acs{EL} depths than runs with initially higher \acs{Ri}s even where \acs{Ri} values overlap.  Their \acs{EL} depths are much narrower than ours, i.e. they range from about .15 to .05.  This is even narrower than my local distributions of \acs{ML} height seem to indicate.  Nonetheless it is interesting that the curves seem to have an exponent less in magnitude than $-1$.  This is in line with the findings here and in \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).\\ 
+The \acs{EZ} is inhomogenous and on average is a region of transition as clearly represented by the $\overline{\theta}$ profile
+and where thermals overturn or recoil initiating entrainment as represented by the heat flux profile.  The $\overline{\theta}$ profile
+partially characterises the thermodynamic state of the \acs{CBL} as well defining its three layer structure.  It is directly comparable to both bulk models and local $\theta$ profiles which in turn are comparable to a sounding unlike a heat flux profile which is an inherently average quantity.  Neither of the two comparable \acs{LES} (see Table \ref{table:el}) studies define the \acs{EL} based on the vertical $\frac{\partial \overline{\theta}}{\partial z}$ profile.  So, for to enable direct comparison heights were based on the heat flux profile.  Based in this framework \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) show decreasing scaled \acs{EZ} with increaseing $\acs{Ri }$ (decreasing $\acs{Ri}^{-1}$) and an exponent of of $-\frac{1}{2}$.  They say the decrease in the overall depth is due to a slight decrease in the scaled top limit over time.  However based on their plot, it seems to go from about .5 to .2. \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) found no clear \acs{Ri} dependence of the scaled \acs{EL} depth based on the heat flux profle, but their definition was based on the lower part, i.e, the portion that according to \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) does not vary in time.  In this study when based on the heat flux profiles as \citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) did, there is no clear dependence on \acs{Ri}. This is supported by the similarity in time and accross runs of the vertical turbulent heat flux profiles when scaled by $(\overline{w^{'}\theta^{'}})_{s}$. The most obvious possible cause for this disagreement with the findings of citeauthor{FedConzMir04}'s (\citeyear{FedConzMir04}) is the difference in grid size shown in Table \ref{table:gridcomp}.  Inspection of their heat flux profiles confirms a relatively deeper region of negatflux as compared with those seen here (~.4 vs ~.25). Their surface heat flux was twice the highest used here, but their range of $\acs{Ri}$ is comparable to that of this study, which serves as confirmation that $\gamma$ is the more influential parameter.\\              
 
 \begin{table}[htbp]
+\label{table:el}
 \begin{center}
 %\centerline{
 \begin{tabular}{ p{5cm} p{4cm} p{2cm} p{2cm}}
@@ -109,38 +97,36 @@ Publication & \acs{EL} & \acs{CBL} height & $\Delta \theta$\\ \hline
 \end{table}
 
 
+Here, when heights are defined on the vertical potential temperature profile cruves representing Equation \ref{eq:dhvsri} 
+
+\begin{equation}
+\frac{\Delta h}{h} \propto Ri ^{b} \tag{\ref{eq:dhvsri}}
+\end{equation}
+
+are grouped according to $\gamma$ and show an (or slope) exponent which increases in magnitude with increasing $\gamma$.  Overall there is a clear narrowing of the scaled \acs{EZ} depth with increased \acs{Ri} (decreased $\acs{Ri}^{-1}$).   When the $\frac{\partial \overline{\theta}}{\partial z}$ profile is scaled by $\gamma$ the relative magnitudes of the gradient in the upper \acs{EZ} are reversed.  This reflects as a higher \acs{EZ} bottom limit ($h_{0}$) and so a narrower \acs{EZ} with increased $\gamma$.  The resulting scaled \acs{EL} depth as defined in Figure \ref{fig:hdefs1} shows a dependence on Richardson number (\acs{Ri}) which appears to have an exponent of $-\frac{1}{2}$, as predicted and seen by \citeauthor{Boers89} (\citeyear{Boers89}), at lower \acs{Ri} (higher \acs{Ri}$^{-1}$) possibly increasing to $-1$ at higher \acs{Ri}.  Although based on different height definitions \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) concluded an $a = -\frac{1}{2}$ and \citeauthor{BrooksFowler2}'s (\citeyear{BrooksFowler2}) plots show curves with an apparant exponent less in magnitude than $-1$. The curves seem to separate out for each run.  In this study, before scaling the $\frac{\partial \overline{\theta}}{\partial z}$ profile curves separate out, but in the reverse order.  I see runs with higher stability exhibiting larger \acs{EL} depths.  \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2})'s runs with initially lower \acs{Ri} (higher \acs{Ri}$^{-1}$) have larger \acs{EL} depths than runs with initially higher \acs{Ri}s, even where \acs{Ri} values overlap.\\     
+
+Neither study addresses a change in exponent with increased $\acs{Ri}$.  It is possible that there is a change in entrainment mechanism. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) observed enfolding and engulfment at lower \acs{Ri}.  Whereas at higher \acs{Ri} when motion is more restricted, entraiment seemed to occur via trapping of thinner whisps at the edge of an upward moving thermal.  \citeauthor{Turner86} (\citeyear{Turner86}) also distiguishes between entrainment by convective overturning and recoil. \citeauthor{GarciaMellado}'s (\citeyear{GarciaMellado}) refer to a change in entrainment rate due to the effects of increased stability on the upper \acs{EZ} sublayer.  In this study, although the narrowing of the \acs{EZ} as defined here depends predominantly on the magnitude of the potential temperature gradient in the lower \acs{EZ} and upper \acs{ML} the scaled magnitude upper limit based on the $\frac{\partial \overline{\theta}}{\partial z}$ does appear to decrease slightly in time.\\
+
 \section{Relationship of Entrainment Rate to Richardson Number (Q3)}
 
-The magnitudes of \acs{Ri} numbers determined in this and the comparable studies are primarily influenced by the magnitude of the $\theta$ jump. So with different definitions you can have the same conditions represented by a different \acs{Ri} value.\\
-
-\citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2})'s \acs{CBL} growth decreased to almost zero at around \acs{Ri}$=100$.\\
-
-I can compare directly to the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}). As they did, I find curves representing
+The magnitudes of \acs{Ri} numbers determined in this and the comparable studies are primarily influenced by the magnitude of the $\theta$ jump. So with different definitions you can have the same conditions represented by a different \acs{Ri} value. Here, I define it in two ways as both \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) did.  I do this based on the flux profile for the purpose of direct comparison with these studies and to observe how the change in definition effects Equation \ref{eq:ervsri}.\\
 
 \begin{equation}
 \frac{w_{e}}{w^{*}} \propto Ri^{a} \tag{\ref{eq:ervsri}}
 \end{equation}
 
-and in particular the exponent a, to differ depending on how the $\theta$ jump is defined. They saw an exponent of $-1$ approximately fitting the data where \acs{Ri} was calculated using $\delta \theta$ above (they denote it $\Delta \theta$) and predicted and found a higher exponent when \acs{Ri} is calulated using $\Delta \theta$ (they denote it $\delta \theta$).  Similarly, I find $a$ to be greater or eequal to $-1$ in magnitude using $\Delta \theta$ and less than or equal to $-1$ using $\delta \theta$.  \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) noted this difference but interpreted the curves as asymptoting to two straight lines of different slopes.\\
+As in these studies, the larger jump ie that taken accross the \acs{EZ} ($\Delta \theta$) yields a larger $a$ as \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) conclude.  Although \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) interpret their curves as both asymptoting to a straight line ($a=-1$) as the upper \acs{EZ} sublayer narrows. Based on their plots alone, ie in the absence of their justification based on the derivation of the entrainment relation, I would not conclude this asymtotic behavior.  Rather for $Delta \theta$ I see a curve with increasing exponent exceeding magnitude $-1$ at higher $\acs{Ri}$.  For $\delta \theta$ I see a curve with exponent less in magnitude than $-1$.\\
 
 That there is an analogous distinction between plots of Equation \ref{eq:ervsri} using $\Delta \theta$ vs $\delta \theta$ when all heights are defined on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile lends some credence to this framework.  Scatter is least when the $\theta$ jump is defined accross the \acs{EL}.  In this plot $-\frac{3}{2}$ fits at higher \acs{Ri} (lower \acs{Ri}$^{-1}$) and $-1$ seems to fit at lower \acs{Ri}.  Combined with the apparant change in $b$ for Equation \ref{eq:dhvsri} this could be interpreted as an indication of a change in entrainment regime at increased \acs{Ri}.\\ 
- 
 
-\begin{table}[htbp]
-\begin{center}
-%\centerline{
-\begin{tabular}{ p{5cm} p{2cm} p{2cm} p{2cm}}
-    %\hline
-Publication & \acs{CBL} height & $\Delta \theta$ & range\\ \hline
-\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & $z_{f}$ & $\overline{\theta}(z_{f1}) - \overline{\theta}(z_{f0})$ & 10 - 40 (10 - 33)\\ [.3cm] %\hline
-\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) & $\overline{h_{l}}$ & $\overline{\theta}(z_{f1}) - \overline{\theta}(z_{f})$ & 10 - 100\\ \hline
-\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) & & $\overline{\theta}_{0}(z_{f}) - \overline{\theta}(z_{f})$ & 1 - 20 (1 - 10)\\ [.3cm] %\hline
-\citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) & Average height of local maximum tracer gradient & Average based on local value &10 - >100\\ \hline
-\end{tabular}
-\end{center}    
-\end{table}
+\section{Conclusion}
 
+The magnitude and variance of local height increase with increasing $\overline{w^{'}\theta^{'}}_{s}$ and decrease with increasing $\gamma$.  Similarly for the vertical velocity fluctuations in the \acs{EZ}.  However increased $\gamma$ results in an increase in the positive temperature fluctuations at $h$. The magnitude of these positive temperature perturbations at points where vertical velocity is negative represents downward moving entrained air.  Below $h$ in the lower \acs{EZ} the temperature gradient increases with increasing $\gamma$. So, the growth of the idealized dry \acs{CBL} is driven by $\overline{w^{'}\theta^{'}}_{s}$ and suppressed by $\gamma$. But warming is due to $\overline{w^{'}\theta^{'}}_{s}$ and the entrainment of air from aloft the temperature of which in turn depends on $\gamma$.\\
 
+Both the \acs{EZ} depth and \acs{CBL} height based on the average $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile show dependence on \acs{Ri} as seen in other studies and justified theoretically.  This profile serves to characterize the \acs{CBL} and links bulk models to soundings via an \acs{LES}.  So it is a valid way of defining the \acs{CBL} and its \acs{EZ}. Plots of Equations exhibit changes in exponent.  A change in entrainment mechanism or regime with increased $\acs{Ri}$ has been observed in measurement as well as \acs{LES} and justified theoretically. I suggest the change in exponents represent this.\\
+
+Throughout this study threads the influence of $\gamma$.  The convecive time scale $\tau = \frac{w^{*}}{h}$ and $\acs{Ri}$ group according to this parameter.  This justifies  the use of the brunt vaisalla time scale as well as the constant heat flux with varying lapse rate of 
+\citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).  I conclude once the effects of $\overline{w^{'}\theta^{'}}_{s}$ are accounted for through $h$, $\gamma$ remains the dominant parameter in idealized \acs{CBL} entrainment.\\ 
 
 \FloatBarrier
 
