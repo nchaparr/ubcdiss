@@ -133,7 +133,7 @@ In Figures \ref{fig:tempgradfluxprofs1005} and  \ref{fig:fluxprofs2hrs} the $\ov
 \begin{figure}[htbp]
     \centering
     % plot_theta_profs.py [master 9883fda] Round 2 of Plots in Results
-    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_profs2hrs}
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_profs3hrs}
     \caption{$\overline{\theta}$ profiles at 2 hours for all runs}
     \label{fig:pottempprofs2hrs}   % label should change
 \end{figure}
@@ -141,8 +141,8 @@ In Figures \ref{fig:tempgradfluxprofs1005} and  \ref{fig:fluxprofs2hrs} the $\ov
 \begin{figure}[htbp]
     \centering
     %plot_theta_profs.py [master 03d2835] Round 1 of Plots in Results
-    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/flux_profs2hrs}
-    \caption{Scaled $(\overline{w^{'}\theta^{'}})_{s}$ profiles at 2 hours for all runs}
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/flux_profs3hrs}
+    \caption{Scaled $(\overline{w^{'}\theta^{'}})_{s}$ profiles at 3 hours for all runs}
     \label{fig:fluxprofs2hrs}   % label should change
 \end{figure}
 
@@ -161,7 +161,7 @@ turbulent velocity fluctuations were analogous but show lower energy as expected
     \centering
     % fft_chap.py [master 03d2835] Round 1 of Plots in Results
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scalarfftpow_w}
-    \caption[\acs{FFT} energy spectra of $w^{'}$]{Scalar FFT  energy vs wavenumber ($k = \sqrt{k_{x}^{2}+k_{y}^{2}}$) for the 60/2.5 run
+    \caption[\acs{FFT} energy spectra at heights $h_{0}$, $h$ and $h_{1}$ of $w^{'}$]{Scalar FFT  energy vs wavenumber ($k = \sqrt{k_{x}^{2}+k_{y}^{2}}$) for the 60/2.5 run
 at 2 hours.  $E(k)$ is $E(k_{x}, k_{y})$ integrated around circles of radius $k$.  
    $E(k_{x}, k_{y})$ is the total integrated energy over the 2D domain.  
    $k_{x}$ and $k_{y}$ are number of waves per domain length.}
@@ -294,59 +294,46 @@ points where $h^{l}_{0}$ is low.}
 \begin{figure}[htbp]
 \caption[Local \acs{ML} height distributions]{Histograms of $h^{l}_{0}$ at each horizontal point in each ensemble case 
 for $(\overline{w^{'}\theta^{'}})_{s} = 150$ to $60 (W / m^{2})$ (a to c) and $ \gamma = 10$ to $2.5 (K/Km)$ (c to g) at 5 hours}
-%ML_Height_hist.py(sp?) master f992942ade
-\begin{minipage}[b]{0.32\linewidth} 
-        
-        \subfloat[]{\label{main:a}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/ML_Height_hist}}\\
-        \subfloat[]{\label{main:b}      
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec142013/pngs/ML_Height_hist}}\\ 
-        \subfloat[]{\label{main:c}          
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Mar12014/pngs/ML_Height_hist}} 
- \end{minipage}             
-%\quad
-\begin{minipage}[b]{0.32\linewidth}
+\begin{minipage}[b]{0.5\linewidth}
         \subfloat[]{\label{main:d}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Jan152014_1/pngs/ML_Height_hist}}\\
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/ML_Height_hist_10}}\\
        \subfloat[]{\label{main:e}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/ML_Height_hist}}\\
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/ML_Height_hist_5}}\\
        \subfloat[]{\label{main:f}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec202013/pngs/ML_Height_hist}}                 
-\end{minipage}
-\begin{minipage}[b]{0.32\linewidth}
-        %\subfloat[]{\label{main:d}
-        %        \includegraphics[scale=.18]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/ML_Height_hist}}\\
-       
-       %\subfloat[]{\label{main:e}
-       %         \includegraphics[scale=.18]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/ML_Height_hist}}\\
-       \vspace{10mm} 
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/ML_Height_hist_2point5}}                 \end{minipage}
+
+\quad
+
+\begin{minipage}[b]{0.5\linewidth}
+        \subfloat[]{\label{main:d}
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_10}}\\       
+       \subfloat[]{\label{main:e}
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_5}}\\        
        \subfloat[]{\label{main:f}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/ML_Height_hist}}                 
-\end{minipage}
-       
+                \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_2point5}}                 
+\end{minipage}       
         \label{fig:localhhist}
 \end{figure}
-
 \begin{figure}[htbp]
 \caption[Scaled local \acs{ML} height PDFs]{PDFs of $\frac{h^{l}_{0}}{h}$ for $(\overline{w^{'}\theta^{'}})_{s} = 150$ to $60 (W / m^{2})$ (top to bottom) and $ \gamma = 10$ to $2.5 (K/Km)$ (left to right) at 5 hours}
 %ML_Height_hist.py(sp?) master f992942ade
 \begin{minipage}[b]{0.32\linewidth} 
         
-        \subfloat[]{\label{main:a}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/Scaled_ML_Height_hist}}\\
-        \subfloat[]{\label{main:b}      
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec142013/pngs/Scaled_ML_Height_hist}}\\ 
-        \subfloat[]{\label{main:c}          
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Mar12014/pngs/Scaled_ML_Height_hist}} 
+        %\subfloat[]{\label{main:a}
+         %       \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_10}}\\
+        %\subfloat[]{\label{main:b}      
+         %       \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec142013/pngs/Scaled_ML_Height_hist}}\\ 
+        %\subfloat[]{\label{main:c}          
+         %       \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Mar12014/pngs/Scaled_ML_Height_hist}} 
  \end{minipage}             
 %\quad
 \begin{minipage}[b]{0.32\linewidth}
-        \subfloat[]{\label{main:d}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Jan152014_1/pngs/Scaled_ML_Height_hist}}\\
-       \subfloat[]{\label{main:e}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/Scaled_ML_Height_hist}}\\
-       \subfloat[]{\label{main:f}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec202013/pngs/Scaled_ML_Height_hist}}                 
+        %\subfloat[]{\label{main:d}
+         %       \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_5}}\\
+       %\subfloat[]{\label{main:e}
+        %        \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/Scaled_ML_Height_hist}}\\
+       %\subfloat[]{\label{main:f}
+        %        \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec202013/pngs/Scaled_ML_Height_hist}}                 
 \end{minipage}
 \begin{minipage}[b]{0.32\linewidth}
         %\subfloat[]{\label{main:d}
@@ -354,9 +341,9 @@ for $(\overline{w^{'}\theta^{'}})_{s} = 150$ to $60 (W / m^{2})$ (a to c) and $ 
        
        %\subfloat[]{\label{main:e}
        %         \includegraphics[scale=.18]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/ML_Height_hist}}\\
-       \vspace{10mm} 
-       \subfloat[]{\label{main:f}
-                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist}}                 
+       %\vspace{10mm} 
+       %\subfloat[]{\label{main:f}
+                \includegraphics[scale=.22]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_2point5}}                 
 \end{minipage}        
         \label{fig:localhpdf}
 \end{figure}
@@ -418,7 +405,7 @@ The average downward moving quadrant ($\overline{w^{'-}\theta^{'+}}$) at $h$ rep
                 \includegraphics[scale=.36]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_downwarm.pdf}}\\
      
        \end{minipage}
-        \caption[Downward moving warm air at $h$]{Plots of (a) the average downward moving warm air at $h$ ($\overline{w^{\prime-}\theta^{\prime+}}_{h}$) and (b) $\overline{w^{\prime-}\theta^{\prime+}}_{h}$ scaled by the average vertical turbulent heat flux $(\overline{w^{\prime}\theta^{\prime}})_{s}$ vs time}
+        \caption[Downward moving warm air at $h$]{Plots of (a) the average downward moving warm air at $h$ ($\overline{w^{\prime-}\theta^{\prime+}}_{h}$) and (b) $\overline{w^{\prime-}\theta^{\prime+}}_{h}$ scaled by the average vertical turbulent heat flux $ ( \overline{ w^{'}\ theta^{'} } )_{s} $ vs time}
         \label{fig:downwarm}
 \end{figure}\\
 
