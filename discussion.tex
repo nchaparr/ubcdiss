@@ -1,9 +1,11 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{Results in the Context of comparable Studies}
+\chapter{Results in Context}
 \label{ch:results}
 \setlength{\parindent}{0cm}
+
+%need chapter map here
 
 \section{Comparison of general Set-up}
 \FloatBarrier
@@ -71,9 +73,10 @@ Publication & $\overline{w^{'}\theta^{'}}_{s}$& $\gamma$& Initial $\theta$ & $\a
 
 %\clearpage
 
-\section{Local \acs{CBL} Heights and turbulent Fluctuations}
+\section{Entrainment Zone Structure}
 
-\subsection{The Gradient Method is problematic}
+%\subsection{The Gradient Method is problematic}
+\subsection{Local \acs{ML} Heights}
 
 \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) determined local \acs{CBL} height by locating the point of maximum $\theta$ gradient.  Analysis of the resulting distributions showed dependence of standard deviation and skewness on Richardson number ($\acs{Ri}$).  The normalized standard deviation decreased with increased \acs{Ri} whereas skewness was almost bimodal; being negative at high $\acs{Ri}$ and positive and low \acs{Ri}.  Initially in this study, I applied a similar method and found distributions with lower $\acs{Ri}$ to have positive skew.  Upon exhaustive inspection of local vertical $\theta$  profiles such as those in Figure \ref{fig:rssfitslow}, it became evident that at certain horizontal points high gradients well into the free atmosphere exceeded those closer to the location of the \acs{CBL} height reasonably identified by eye.\\
 
@@ -108,7 +111,7 @@ Some air at potential temperature $\theta = \overline{\theta}_{0}(h_{1})$ is bro
 \frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial}{\partial z}\overline{w^{'}\theta^{'}} \tag{\ref{eq:warming1}}
 \end{equation}
 
-\section{Relationship of Scaled Entrainment Zone Depth to Richardson Number ($\acs{Ri}$)}
+\section{Entrainment Zone Boundaries}
 
 The \acs{EZ} is inhomogeneous, but on average is a region of transition as clearly represented by the $\overline{\theta}$ profile.  It's where relatively cooler thermals overturn or recoil initiating entrainment as represented by the vertical heat flux ($\overline{w^{'}\theta^{'}}$) profile.  The $\overline{\theta}$ profile partially characterizes the thermodynamic state of the \acs{CBL} as well defining its three layer structure.  It is directly comparable to both bulk models and local $\theta$ profiles which in turn are comparable to a sounding, unlike a $\overline{w^{'}\theta^{'}}$ profile which is an inherently average quantity.\\
 
@@ -168,7 +171,7 @@ The curves in Figure \ref{fig:BandFEZ} seem to separate out for each run.  In Fi
 
 Neither study referenced in Table 3.3 addresses the change in exponent with increased $\acs{Ri}$ that I observe in Figure \ref{fig:loglogdeltahinvri}.  It is reasonable to suggest that this represents a change in entrainment mechanism. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) observed enfolding and engulfment at lower $\acs{Ri}$.  Whereas at higher $\acs{Ri}$ when motion is more restricted, entrainment seemed to occur via trapping of thinner wisps at the edge of an upward moving thermal.  \citeauthor{Turner86} (\citeyear{Turner86}) also distinguishes between entrainment by convective overturning and recoil. \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) refer to a change in entrainment rate due to the effects of increased stability on the upper \acs{EZ} sub-layer.  In this study, the narrowing of the \acs{EZ} depends predominantly on the magnitude of the average vertical potential temperature gradient $\frac{\partial \overline{\theta}}{\partial z}$ in the lower \acs{EZ} and upper \acs{ML}.  But the scaled magnitude of upper limit in Figure \ref{fig:scaledELlims} (a) does appear to decrease slightly in time.  This could correspond to the slowly decreasing upper sub layer of the \acs{EZ} mentioned in both \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).\\
 
-\section{Relationship of Entrainment Rate to Richardson Number}
+\section{Entrainment Rate Parameterization}
 
 $\acs{Ri}$ magnitude determined in this and the comparable studies is primarily influenced by the magnitude of the $\theta$ jump.  Here, I define it in two ways as \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) did.  I do this based on the $\overline{w^{'}\theta^{'}}$ profile, as in Figure \ref{fig:hdefs1} and Table \ref{table:reldefs} for the purpose of direct comparison and to observe how the change in definition effects Equation \ref{eq:ervsri}.\\
 
@@ -190,18 +193,6 @@ The larger jump, i.e. that taken across the \acs{EZ} ($\Delta \theta$) as in Fig
 \subsection{Extending Comparison to the average Potential Temperature Profile}
 
 There is an analogous distinction between curves representing Equation \ref{eq:ervsri} using $\Delta \theta$ and those using $\delta \theta$, when all heights are based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile.  Scatter is least when the $\theta$ jump is defined across the \acs{EZ}.  In Figure \ref{fig:weinvri} $a=-\frac{3}{2}$ fits at higher $\acs{Ri}$ (lower $\acs{Ri}^{-1}$) and $a=-1$ seems to fit at lower $\acs{Ri}$.  Combined with the apparent change in $b$ for Equation \ref{eq:dhvsri} I interpret this as an indication of a change in entrainment regime at increased $\acs{Ri}$.\\ 
-
-\section{Conclusion}
-
-\subsection{\acs{CBL} Height and \acs{EZ} Depth can be defined based on the average Potential Temperature Profile}
-
-The $\overline{\theta}$ profile characterizes the dry, idealized \acs{CBL} and links bulk models to soundings via an \acs{LES}.  Both the \acs{EZ} depth and \acs{CBL} height based on the average $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile show dependence on $\acs{Ri}$ as seen in other studies and justified theoretically.  So this is a valid way of defining the \acs{CBL} and its \acs{EZ}.  A change in entrainment mechanism or regime with increased $\acs{Ri}$ has been, observed in measurement as well as \acs{LES} based studies, and justified theoretically. I suggest the change in the exponents of Equations \ref{eq:dhvsri} and \ref{eq:ervsri}, seen here, represent this.\\
-
-\subsection{Upper Lapse-rate strongly influences dry, idealized \acs{CBL} Entrainment}
-
-The magnitude and variance, of local height, increase with increasing $\overline{w^{'}\theta^{'}}_{s}$ and decrease with increasing $\gamma$.  The same can be said for the vertical velocity fluctuations ($w^{'}$) in the \acs{EZ}.  However, increased $\gamma$ results in an increase in the positive potential temperature fluctuations ($\theta^{'+}$) at $h$. The magnitude of ($\theta^{'+}$) at points where $w^{'}$ is negative represents downward moving entrained air and depend on $\gamma$.  Below $h$, in the lower \acs{EZ}, the average vertical potential temperature gradient ($\frac{\partial \overline{\theta}}{\partial z}$) also depends $\gamma$. So, the growth of the idealized dry \acs{CBL} is driven by $\overline{w^{'}\theta^{'}}_{s}$ and suppressed by stability ($\gamma$). But \acs{CBL} warming is due, in part, to the entrainment of air from aloft the potential temperature of which in turn depends on $\gamma$.\\
-
-Throughout this entire study, threads the influence of this paramater.  Distributions of scaled local \acs{ML} heights approach apparent similarity, when $\gamma$ is constant but $\overline{w^{'}\theta^{'}}_{s}$ is varied.  Curves representing Equation \ref{eq:dhvsri} group according to $\gamma$ when based on the $\frac{\partial \overline{\theta}}{\partial z}$ profile, but become similar once based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$.  The convective time scale $\tau = \frac{w^{*}}{h}$ and $\acs{Ri}$ group according $\gamma$ lending support to \citeauthor{FedConzMir04} (\citeyear{FedConzMir04})'s use of a the Brunt-Vaisala time scale.  It seems that once the effect of the surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) is accounted for through $h$, $\gamma$ emerges as the dominant parameter in dry, idealized \acs{CBL} entrainment.\\ 
 
 \FloatBarrier
 

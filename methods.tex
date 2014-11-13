@@ -2,117 +2,86 @@
 %%!TEX root = diss.tex
 
 \chapter{Tools}
-\label{ch:methods}
+\label{ch:tools}
+\setlength{\parindent}{0cm}
 
 \section{Large Eddy Simulation}
 \label{sec:LargeEddieSimulation}
-\subsection{Description of The Model}
-System for Atmospheric Modelling (SAM) is a Larg Eddy Simulation with cloud resolving capability.
 
-The dynamical framework of the model uses the anelastic equations of motion.
+System for Atmospheric Modelling (SAM) is a Large Eddy Simulation with cloud resolving capability (\citeauthor{KhairRand} \citeyear{KhairRand}). The dynamical framework uses the anelastic equations of motion, which in tensor notation are:
 
 \begin{equation}
 \frac{\partial u_{i}}{\partial t} = -\frac{1}{\overline{\rho}}\frac{\partial}{\partial x_{i}}(\overline{\rho}u_{i}u_{j} + \tau_{ij}) - \frac{\partial}{\partial x_{i}}\frac{p^{'}}{\overline{\rho}} + \delta_{i3}B + \epsilon_{ij3}f(u_{j} - U_{gj}) + \left( \frac{\partial u_{i}}{\partial t} \right)_{l.s.}
 \end{equation}
+
+and
+
 \begin{equation}
 \frac{\partial}{\partial x_{i}}\overline{\rho}u_{i}=0
 \end{equation}
 
-The prognostic thermodynamical variables are the liquid water/ice moist static energy and water.  Our cases are all dry so the
-those for water are not used and the following pde reduces to the dry version.
+
+The over-bar denotes the horizontal average and prime denotes fluctuations from the average. B is buoyancy $=-g\frac{\rho^{'}}{\rho}$,  $U_{g}$ is the prescribed geostrophic wind and $f$ is the Coriolis parameter.  $\tau_{ij}$ is the sub-grid scale stress tensor and the subscript $l.s.$ denotes the prescribed large scale tendency.\\      
+
+The prognostic thermodynamical variable is the liquid water/ice moist static energy ($h_{L}$). 
 
 \begin{equation}
-\frac{\partial h_{L}}{\partial t} = -\frac{1}{\overline{\rho}}\frac{\partial}{\partial x_{i}}(\overline{\rho} u_{i}h_{L} + F_{hLi}) - \frac{1}{\overline{\rho}}\frac{\partial}{\partial z}(L_{c}P_{r} + L_{s}P_{s} + L_{s}P_{s}) + \left( \frac{\partial h_{L}}{\partial t} \right)_{rad} + \left( \frac{\partial h_{L}}{\partial t} \right)_{mic}
+\frac{\partial h_{L}}{\partial t} = -\frac{1}{\overline{\rho}}\frac{\partial}{\partial x_{i}}(\overline{\rho} u_{i}h_{L} + F_{h_{L}i}) - \left( \frac{\partial h_{L}}{\partial t} \right)_{rad} + \left( \frac{\partial h_{L}}{\partial t} \right)_{mic}
 \end{equation}
 
 where
 
 \begin{equation}
-h_{L} = c_{p}T + gz - L_{c}(q_{c} + q_{r}) - L_{s}(q_{i} + q_{s} + q_{g})
+h_{L} = c_{p}T + gz
 \end{equation}
 
-A simple first-order Smagorinski closure scheme is used to parametrize the subgrid stresses and scalar fluxes. The eddy diffusivity coefficient is calculated using the
-grid scale and only in the vertical if the grid is highly anisotropic.  This is to prevent artificially excessive mixing in the vertical.\\
+So temperature and potential temperature are diagnozed based on this variable, at each time-step.  $F_{h_{L}i}$ is the sub-grid scale flux.  A simple first-order Smagorinski closure scheme is used to parameterize the sub-grid stresses and scalar fluxes. The eddy diffusivity coefficient is based on the grid scale.\\
 
-(Tempeture then diagnosed?)
-
-The model equations are represented discretely on a full staggered Arakawa C-type grid which is uniform in the horizontal and stretched in the vertical. Integration is performed
-using a a third -order Adams-Bashforth scheme with variable time step.  Momentum is advected in flux form with second oreder differencing and conservation of kinetic energy. 
+The model equations are represented discretely on a fully staggered Arakawa C-type grid which is uniform in the horizontal and stretched in the vertical. Integration is performed using a third-order Adams-Bashforth scheme with variable time step.  Momentum is advected in flux form with second order differencing and conservation of kinetic energy. 
 Prognosed scalars are advected using a three dimensional positive definite, monotonic scheme.  Lateral boundaries are periodic.  The top is bounded by a rigid lid, and
-Newtonian damping is applied in the top third of the domain to reduce the effects of gravity waves.  Surface fluxes are computed using Monin-Obvukhov similarity.
+Newtonian damping is applied in the top third of the domain to reduce the effects of gravity waves.  Surface fluxes are computed using Monin-Obvukhov similarity.\\
 
-Radiation is not used in this study.\\
+\section{Handling of Output}
 
+The model was run on parallel computers in a Linux environment using Message Passing Interface (MPI). 3d variable fields were output every 10 - 15 minutes in binary form and converted to Network Common Data Form (NetCDF).  The use of Python was enabled using the netcdf4 interface.  Plotting was done using matplotlib. All analysis, except for the tri-linear regression method for determining local \acs{ML} height, were performed using NumPy and SciPy.
 
-\subsection{Ensemble Cases Initial Conditions}
+\subsection{Tri-Linear Fit for Determining local \acs{ML} height $h_{0}$}
 
-10 cases were run simultaneously, with intial potential temperature profiles differing by a small perturbation based in
-a uniform distribtion, and centered about zero.  All runs were initialized with a surface temerature of 300K, a constant
-lapse rate ($\gamma$) and a constant average surface heat flux, and zero wind.\\
+The following is a modified version of the piecewise linear regression method used in \citeauthor{Vieth} (\citeyear{Vieth}) and was implemented using Cython.  Potential temperature is assumed to be linear function of height 
 
-\begin{table}[!ht]
-    \begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-     Domain & Grid Size & Time Step & Run Time  \\ \hline
-     128 x 194 x 312 & 25m x 25m x 5 - 100m  & 1s & 8 hrs \\ \hline
-     %\end   
-\end{tabular}
-\caption{}
-\label{fig:}   
-\end{center}    
-\end{table}
-
-The model was run on parallel computers using the Message Passing Interface
-(MPI) and grid numbers were chosen based on available processors and computation
- time. 
-
-\subsection{OutPut: NetCDF}
-
-(3d and horizontally averaged Output was dumped every 10 - 15 minutes in binary form.  Output was convertied
-to Network Common Data Form (NetCDF).  To analyze and plot the output in Python the NetCDF4 package was used)
-
-\section{Data Analysis}
-\label{sec:DataAnalysis}
-
-\subsection{Tri-Linear Fit for Determining $h_{0}$}
 \begin{equation}
 \theta = bz + a 
-\end{equation}
+\end{equation}.
+
+Each local $\theta$ profile was assumed to have three linear portions, with slopes ($b_{1}$, $b_{2}$, $b_{3}$) and intercepts ($a_{1}$, $a_{2}$, $a_{3}$) as follows:
+
 \begin{equation}
-b_{1} = \frac{\sum^{j}_{0}z(i) \theta - \frac{1}{j}\sum^{j}_{0}z(i)\sum^{j}_{0}\theta}{\sum^{j}_{0}z(i)^{2} - \frac{1}{j}(\sum^{j}_{0}z(i))^{2}}
+b_{1} = \frac{\sum^{j}_{0}z(i) \theta (i) - \frac{1}{j}\sum^{j}_{0}z(i)\sum^{j}_{0}\theta}{\sum^{j}_{0}z(i)^{2} - \frac{1}{j}(\sum^{j}_{0}z(i))^{2}}
 \end{equation}
 \begin{equation}
 a_{1} = \frac{\sum^{j}_{0}z(i)\theta(i)}{\sum^{j}_{0}z(i)} - b_{1}\frac{\sum^{j}_{0}z(i)^{2}}{\sum^{j}_{0}z(i)}
 \end{equation}
 
 \begin{equation}
-b_{2} = \frac{\sum^{k}_{j}z(i) \theta - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
+b_{2} = \frac{\sum^{k}_{j}z(i) \theta(i) - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
 \end{equation}
 \begin{equation}
 a_{2} = \frac{\sum^{k}_{j}z(i)\theta(i)}{\sum^{k}_{j}z(i)} - b_{2}\frac{\sum^{k}_{j}z(i)^{2}}{\sum^{k}_{j}z(i)}
 \end{equation}
 
 \begin{equation}
-b_{3} = \frac{\sum^{n}_{k}z(i) \theta - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
+b_{3} = \frac{\sum^{n}_{k}z(i) \theta(i) - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
 \end{equation}
 \begin{equation}
 a_{3} = \frac{\sum^{n}_{k}z(i)\theta(i)}{\sum^{n}_{k}z(i)} - b_{3}\frac{\sum^{n}_{k}z(i)^{2}}{\sum^{n}_{j}z(i)}
 \end{equation}
 
+where $z(i)$ and $\theta(i)$ are a local height and potential temperature value at a particular height index $i$.  $j$ is the height index of the \acs{ML} top, $h_{0}$. $k$ is the height index for the top of the \acs{EZ}, $h_{0}$. $n$ is the total number of height levels.  The best fit is that with the smallest residual sum of squares   
+
 \begin{equation}
 RSS(j,k) = \sum^{j}_{0}(\theta(i) - (a_{1} + b_{1}z(i)))^{2} + \sum^{k}_{j}(\theta(i) - (a_{2} + b_{2}z(i)))^{2} + \sum^{n}_{k}(\theta(i) - (a_{3} + b_{3}z(i)))^{2}
-\end{equation}
-
-The top of the mixed layer (\acs{ML}) is then z(j) such that RSS(j, k) is minimum.  Unless there is more variation in slope within the \acs{ML} than
-in the region between the \acs{ML} and the point where $\gamma$ is resumed, ie no identifiable local \acs{EL}, in which case if the slope of the second
-line is small relative to $\gamma$ z(k) is taken to be $h^{l}_{0}$.\\ 
-
-The above equations were written in cython.\\
-
-\subsection{Plots}
-
-The 3 dimensional fields were pulled from the NetCDF files using the 
+\end{equation}.
+ 
 
 \endinput
 

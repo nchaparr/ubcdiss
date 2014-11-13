@@ -1,19 +1,38 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{Conclusion and Future Work}
+\chapter{Conclusion}
 \label{ch:conc}
 \setlength{\parindent}{0cm}
 
-\section{\acs{CBL} Height and \acs{EZ} Depth can be defined based on the average Potential Temperature Profile}
+\section{Major Findings}
+
+The dry idealized convective atmospheric boundary layer was modeled using large eddy simulation.  Although the \acs{CBL} and it's idealised version have been studies extensively and the broad understanding of the dynamics and scaling behiouvior has been established, discussion of details continues.  This study was carried out with the intention of joining this discussion and shedding light on some of these details.  It was guided by the questions outlined in Section \ref{sec:resquest} and answered in Chapter \ref{chap:resans} and concludes with the following three points:    
+
+
+\subsection{The gradient method for determining local heights based on the $\theta$ profile is problematic.}
+
+Local $\theta$ profiles varied depending on location.  The top an active thermal impinging on the free atmosphere is characterized by a steep gradient and is comparable to the zero-order model representation in Figure \ref{fig:0order}.  At other locations, for example where a thermal has overturned or recoiled and some entrainment has been initiated, there is a region over which the $\theta$ profile transitions to the upper lapse rate. That is, ther is a local entrainment zone.  At such locations, there can be gradients well into the \acs{FA} that exceed any within the \acs{EZ}.  
+
+\subsection{\acs{CBL} Height and \acs{EZ} Bounaries can be defined based on the average Potential Temperature Profile}
 
 The $\overline{\theta}$ profile characterizes the dry, idealized \acs{CBL} and links bulk models to soundings via an \acs{LES}.  Both the \acs{EZ} depth and \acs{CBL} height based on the average $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile show dependence on $\acs{Ri}$ as seen in other studies and justified theoretically.  So this is a valid way of defining the \acs{CBL} and its \acs{EZ}.  A change in entrainment mechanism or regime with increased $\acs{Ri}$ has been, observed in measurement as well as \acs{LES} based studies, and justified theoretically. I suggest the change in the exponents of Equations \ref{eq:dhvsri} and \ref{eq:ervsri}, seen here, represent this.\\
 
-\section{Upper Lapse-rate strongly influences dry, idealized \acs{CBL} Entrainment}
+\subsection{Upper Lapse-rate strongly influences dry, idealized \acs{CBL} Entrainment}
 
 The magnitude and variance, of local height, increase with increasing $\overline{w^{'}\theta^{'}}_{s}$ and decrease with increasing $\gamma$.  The same can be said for the vertical velocity fluctuations ($w^{'}$) in the \acs{EZ}.  However, increased $\gamma$ results in an increase in the positive potential temperature fluctuations ($\theta^{'+}$) at $h$. The magnitude of ($\theta^{'+}$) at points where $w^{'}$ is negative represents downward moving entrained air and depend on $\gamma$.  Below $h$, in the lower \acs{EZ}, the average vertical potential temperature gradient ($\frac{\partial \overline{\theta}}{\partial z}$) also depends $\gamma$. So, the growth of the idealized dry \acs{CBL} is driven by $\overline{w^{'}\theta^{'}}_{s}$ and suppressed by stability ($\gamma$). But \acs{CBL} warming is due, in part, to the entrainment of air from aloft the potential temperature of which in turn depends on $\gamma$.\\
 
 Throughout this entire study, threads the influence of this paramater.  Distributions of scaled local \acs{ML} heights approach apparent similarity, when $\gamma$ is constant but $\overline{w^{'}\theta^{'}}_{s}$ is varied.  Curves representing Equation \ref{eq:dhvsri} group according to $\gamma$ when based on the $\frac{\partial \overline{\theta}}{\partial z}$ profile, but become similar once based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$.  The convective time scale $\tau = \frac{w^{*}}{h}$ and $\acs{Ri}$ group according $\gamma$ lending support to \citeauthor{FedConzMir04} (\citeyear{FedConzMir04})'s use of a the Brunt-Vaisala time scale.  It seems that once the effect of the surface heat flux ($\overline{w^{'}\theta^{'}}_{s}$) is accounted for through $h$, $\gamma$ emerges as the dominant parameter in dry, idealized \acs{CBL} entrainment.\\ 
+
+\section{Future Work}
+
+Make the tri-linear regression method better by having a curve for the intrainment zone and identify the location of maximum gradient as a local h.  but this mightn't work at points within an active impinging thermal.  then compare results based on statistics of the local profiles with results based on the average profile.\\
+
+try to nail down the reasons for the disagreement between fedconz antt this study.  the runs could be carried out on a comparable grid and subgrid scal model.\\
+
+two layer structure. \\
+
+mechanism at higher richardson number. successive impinging and recoil followed by a flourish.\\
 
 \FloatBarrier
 

@@ -369,7 +369,7 @@
 %\cleardoublepage	% required by tocloft package
 
 %    6. List of figures (mandatory if thesis has figures)
-%\listoffigures
+\listoffigures
 %\cleardoublepage	% required by tocloft package
 
 %    7. List of illustrations (mandatory if thesis has illustrations)
@@ -391,18 +391,19 @@
 \acresetall	% reset all acronyms used so far
 
 %    1. Introduction
-%\include{intro}
+\include{intro}
 
 %    2. Main body
 % Generally recommended to put each chapter into a separate file
 %\include{relatedwork}
 %\include{concepts}
 \include{methods}
-%\include{results}
-%\include{discussion}
+\include{outputval}
+\include{results}
+\include{discussion}
 %\include{impl}
 %\include{discussion}
-%\include{conclusions}
+\include{conclusion}
 
 %    3. Notes
 %    4. Footnotes
@@ -418,11 +419,11 @@
 
 \end{singlespace}
 
-\appendix
+%\appendix
 %    6. Appendices (including copies of all required UBC Research
 %       Ethics Board's Certificates of Approval)
 %\include{reb-coa}	% pdfpages is useful here
-\include{appendix}
+%\include{appendix}
 
 %\backmatter
 %    7. Index
