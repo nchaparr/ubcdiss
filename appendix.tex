@@ -7,13 +7,13 @@
 \theta = T \left(\frac{p_{0}}{p} \right)^{\frac{R_{d}}{c_{p}}} 
 \end{equation}
 
-$p_{0}$ and $P$ are a reference pressure and pressure respectively. 
+$p_{0}$ and $p$ are a reference pressure and pressure respectively. 
 
 \begin{equation}
 \frac{c_{p}}{\theta}\frac{d\theta}{dt} = \frac{c_{p}}{T} \frac{dT}{dt} - \frac{R_{d}}{p}\frac{dp}{dt} 
 \end{equation}
 
-If changes in pressure are negligible compared to overall pressure, as in the case of that part atmosphere that extends from the surface to 2Km above it. 
+If changes in pressure are negligible compared to overall pressure, as in the case of that part atmosphere that extends from the surface to 2km above it. 
 
 \begin{equation}
 c_{p}\frac{d\theta}{\theta} = c_{p}\frac{dT}{T} - \frac{R_{d}}{p}\frac{dp}{p} 
@@ -35,7 +35,7 @@ then small changes in temperature are approximated by small changes in potential
 d\theta \approx dT \ or \ \theta^{'} \approx T^{'}
 \end{equation}
 
-and at constant pressure change in enthalpy (H) is 
+and at constant pressure change in enthalpy ($H$) is 
 
 \begin{equation}
 dH = c_{p}dT.
@@ -76,7 +76,7 @@ For a dry adiabatic atmosphere
 \frac{\partial \theta}{\partial t} + u_{i}\frac{\partial \theta}{\partial x_{i}} = \nu_{\theta} \frac{\partial^{2}\theta}{\partial x_{i}^{2}} - \frac{1}{c_{p}}\frac{\partial Q^{*}}{\partial x_{i}}
 \end{equation}
 
-$\nu$ and $Q^{*}$ are the thermal diffusivity and net radiation respectively.  If we ignore these two effects then (adiabatic?)
+$\nu$ and $Q^{*}$ are the thermal diffusivity and net radiation respectively.  If we ignore these two effects then
 
 \begin{equation}
 \frac{\partial \theta}{\partial t} + u_{i}\frac{\partial \theta}{\partial x_{i}} = 0
@@ -93,22 +93,22 @@ $\nu$ and $Q^{*}$ are the thermal diffusivity and net radiation respectively.  I
 Averaging and getting rid of average variances and their linear products
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
+\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \overline{\theta^{'}}}{\partial x_{i}} = 0
 \end{equation}
 
 Ignoring mean winds
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
+\frac{\partial \overline{\theta}}{\partial t} + u_{i}^{'}\frac{\partial \overline{\theta^{'}}}{\partial x_{i}} = 0
 \end{equation}
 
 using flux form
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial(u_{i}^{'}\theta^{'})}{\partial x_{i}} - \theta^{'}\frac{\partial u_{i}^{'}}{\partial x_{i}}= 0
+\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial(\overline{u_{i}^{'}\theta^{'}})}{\partial x_{i}} - \theta^{'}\frac{\partial \overline{u_{i}^{'}}}{\partial x_{i}}= 0
 \end{equation}
 
-under the bousinesq assumption $\Delta \dot u_{i} = 0$
+under the bousinesq assumption $\Delta \cdot u_{i} = 0$
 
 \begin{equation}
 \frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial(u_{i}^{'}\theta^{'})}{\partial z}

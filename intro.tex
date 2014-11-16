@@ -26,7 +26,7 @@ Lidar images such as Figure \ref{fig:DuPeFla} show the overall structure of the 
 \begin{figure}[htbp]
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=1]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Lidar_Thermals}
+    \includegraphics[scale=0.3]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Lidar_Thermals}
     \caption[Lidar backscatter image of the \acs{CBL}]{Lidar backscatter image of the \acs{CBL} property of Shane D. Mayor, Department of Geological and Environmental Sciences, Californial State University.  Time is on the bottom axis, back-scatter intensity is on the top. NEED TO ASK ROLAND MORE ABOUT THIS}
     \label{fig:DuPeFla}   % label should change
 \end{figure}
@@ -102,7 +102,7 @@ In terms of tracer concentration, and for example based on a Lidar backscatter p
 
 Since $\overline{\theta}$ modeled by an \acs{LES} is not strictly constant with respect to height in the \acs{ML} (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}), a threshold value for $\overline{\theta}$ or its vertical gradient must be chosen to identify the lower \acs{EZ} boundary.  In their \citeyear{BrooksFowler2} \acs{LES} study \citeauthor{BrooksFowler2} encountered inconsistencies when determining the \acs{EZ} boundaries from the average tracer profile.  Although their tracer profile was quite different to a simulated \acs{CBL} $\overline{\theta}$ profile, this could serve as cautionary note.\\             
 
-Our understanding of the the characteristics and dynamics of the atmospheric \acs{CBL} entrainment layer evolves with the increasing body of measurement (\citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{StullNelEl} \citeyear{StullNelEl}), laboratory (\citeauthor{DearWill80} \citeyear{DearWill80}) and numerical studies (\citeauthor{Deardorff72} \citeyear{Deardorff72}, \citeauthor{Sorbjan} \citeyear{Sorbjan}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}, \citeauthor{GarciaMellado} \citeyear{GarciaMellado}). Parameterizations for \acs{CBL} growth and \acs{EZ} depth are derived based on bulk models and are evaluated using \acs{LES} output and measurements (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Boers89} \citeyear{Boers89}).  So the relationship between theory, numerical simulation and measurement is inextricable and any study based on one must refer to at least one of the others.\\  
+Our understanding of the the characteristics and dynamics of the atmospheric \acs{CBL} entrainment layer evolves with the increasing body of measurement (\citeauthor{Traum11} \citeyear{Traum11}, \citeauthor{StullNelEl} \citeyear{StullNelEl}), laboratory (\citeauthor{DearWill80} \citeyear{DearWill80}) and numerical studies (\citeauthor{Deardorff72} \citeyear{Deardorff72}, \citeauthor{Sorbjan} \citeyear{Sorbjan}, \citeauthor{SullMoengStev} \citeyear{SullMoengStev}, \citeauthor{EbSchu} \citeyear{EbSchu}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}, \citeauthor{GarciaMellado} \citeyear{GarciaMellado}). Parameterizations for \acs{CBL} growth and \acs{EZ} depth are derived based on bulk models and are evaluated using \acs{LES} output and measurements (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Boers89} \citeyear{Boers89}).  So the relationship between theory, numerical simulation and measurement is inextricable and any study based on one must refer to at least one of the others.\\  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Modelling the CBL and EZ}
@@ -120,9 +120,9 @@ Bulk  models for the Convective Boundary layer (\acs{CBL}) based on average, ver
     \label{fig:0order}   % label should change
 \end{figure}
 
-Zero order bulk models assume an \acs{ML} of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitesimally thin layer across which there is a temperature jump ($\delta \theta$) and above which is a constant lapse rate ($\gamma$).  The assumed average vertical turbulent heat flux, $\overline{w^{'}\theta^{'}}$, decreases linearly from the surface up, reaching a maximum negative value $(\overline{w^{'}\theta^{'}})_{h}$ .  This is a constant proportion of the surface value, usually $-.2(\overline{w^{'}\theta^{'}})_{s}$ (see Section 4 in \citeauthor{Tennekes73} \citeyear{Tennekes73} for a discussion). At the temperature inversion $\overline{w^{'}\theta^{'}}$ jumps to zero across the infinitesimally thin layer.  Equations for the evolution of \acs{CBL} height, $\overline{\theta}_{ML}$ and $\delta \theta$ are derived on this basis (\citeauthor{Tennekes73} \citeyear{Tennekes73}).\\
+Zero-order bulk models assume an \acs{ML} of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitesimally thin layer across which there is a temperature jump ($\delta \theta$) and above which is a constant lapse rate ($\gamma$).  The assumed average vertical turbulent heat flux, $\overline{w^{'}\theta^{'}}$, decreases linearly from the surface up, reaching a maximum negative value $(\overline{w^{'}\theta^{'}})_{h}$ .  This is a constant proportion of the surface value, usually $-0.2(\overline{w^{'}\theta^{'}})_{s}$ (see Section 4 in \citeauthor{Tennekes73} \citeyear{Tennekes73} for a discussion). At the temperature inversion $\overline{w^{'}\theta^{'}}$ jumps to zero across the infinitesimally thin layer.  Equations for the evolution of \acs{CBL} height, $\overline{\theta}_{ML}$ and $\delta \theta$ are derived on this basis (\citeauthor{Tennekes73} \citeyear{Tennekes73}).\\
 
-If the \acs{CBL} height ($h$) is rising, air is being drawn in from the stable free atmosphere (FA) layer above and cooled i.e. it is decreasing in enthalpy.  The rate of decrease in enthalpy with respect to time is $c_{p}\rho \delta \theta \frac{dh}{dt}$ (see Section \ref{sec:pottemp}) per unit of horizontal area where $\frac{dh}{dt}$ is the entrainment rate ($w_{e}$).  Since the lapse rate above the inversion is stable \citeauthor{Tennekes73} (\citeyear{Tennekes73}) equates this enthalpy loss to the average vertical turbulent heat flux at the inversion
+If the \acs{CBL} height ($h$) is rising, air is being drawn in from the stable free atmosphere (FA) layer above and mixed with cooler air i.e. there is an overall decrease in enthalpy.  The rate of decrease in enthalpy with respect to time is $c_{p}\rho \delta \theta \frac{dh}{dt}$ (see Section \ref{sec:pottemp}) per unit of horizontal area where, in the absence of subsidence, $\frac{dh}{dt}$ is the entrainment rate ($w_{e}$).  Since the lapse rate above the inversion is stable, \citeauthor{Tennekes73} (\citeyear{Tennekes73}) equates this enthalpy loss to the average vertical turbulent heat flux at the inversion
 
 \begin{equation}
 \delta \theta \frac{dh}{dt} = -(\overline{w^{'}\theta^{'}})_{h}. 
@@ -153,7 +153,7 @@ An assumption about the vertical heat flux at the inversion ($h$), such as the e
 \frac{(\overline{w^{'}\theta^{'}})_{h}}{(\overline{w^{'}\theta^{'}})_{s}} = -.2 \ .
 \end{equation}\\
 
-The relevant quantities in equations 2.2 through 2.5 are idealized, ensemble averages. There is some variation within this class of model.  For example the rate equation for $h$ (entrainment relation) can alternatively be derived based on the turbulent kinetic energy budget (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}) but they are all based on the simplified $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles outlined above.\\  
+The relevant quantities in equations 2.2 through 2.5 are idealized, ensemble averages. There is some variation within this class of model.  For example the rate equation for $h$ (entrainment relation) can alternatively be derived based on the turbulent kinetic energy budget (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Stull76a} \citeyear{Stull76a}, \citeauthor{Stull76b} \citeyear{Stull76b}) but they are all based on the simplified $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles outlined above.\\  
 
 First (and higher) order models assume an \acs{EZ} of finite depth at the top of the ML, defined by two heights:  the top of the ML ($h_{0}$) and the point where \acs{FA} characteristics are resumed ($h_{1}$).  The derivations are more complex and involve assumptions about the \acs{EZ} i.e.: 
 
@@ -163,7 +163,7 @@ First (and higher) order models assume an \acs{EZ} of finite depth at the top of
 \item{$\Delta h = h_{1} - h_{0}$ is related to the zero-order jump at $h$ by two right angled triangles with opposite sides
 of lengths $h_{1} - h$ and $h - h_{0}$ (\citeauthor{BatchGryn} \citeyear{BatchGryn})}
 
-\item{$\Delta h$ or maximum overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the convective vertical velocity scale and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$ is the Brunt-Vaisala frequency (\citeauthor{Stull73} \citeyear{Stull73})}
+\item{$\Delta h$ or maximum overshoot distance $d \propto \frac{w^{*}}{N}$ where $w^{*}$ is the Deardorff convective vertical velocity scale and $N = \sqrt{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}$ is the Brunt-Vaisala frequency (\citeauthor{Stull73} \citeyear{Stull73})}
  
 \item{For $h_{0}<z<h_{1}$ $\overline{\theta} = \overline{\theta}_{ML} + f(z,t) \Delta \theta$ where $f(z,t)$ is a dimensionless shape factor (\citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04})}
 \end{itemize}
@@ -176,7 +176,7 @@ Although development of these models is beyond the scope of this thesis, they ar
 
 Numerical simulation of the \acs{CBL} is carried out by solving the Navier Stokes equations, simplified according to a suitable approximation, on a discrete grid.  Types of simulations can be grouped according to the scales of motion they resolve.  In direct numerical simulations (\acs{DNS}) the full range of spatial and temporal turbulence are resolved from the size of the domain down to the smallest dissipative scales i.e. the Kolmogorov micro-scales (\citeauthor{Kolmog} \citeyear{Kolmog}).  This requires a dense numerical grid and so can be computationally prohibitive.\\
 
-In an \acs{LES} motion on scales smaller than the grid spacing are filtered out and parameterized by a sub-grid scale closure model. General circulation models (\acs{GCM}) solve the Navier Stokes equations on a spherical grid and parameterize smaller scale processes including convection and cloud cover.  \acs{LES} has increasingly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} (\citeyear{Deardorff72}) applied this relatively new method for this purpose.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}), \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} in (\citeyear{BrooksFowler2}) used it to study the structure and scaling behaviour of the \acs{EZ}.\\
+In an \acs{LES} motion on scales smaller than twice or more of the grid spacing are filtered out and parameterized by a sub-grid scale closure model. General circulation models (\acs{GCM}) solve the Navier Stokes equations on a spherical grid and parameterize smaller-scale processes including convection and cloud cover.  \acs{LES} has increasingly been used to better understand the \acs{CBL} since \citeauthor{Deardorff72} (\citeyear{Deardorff72}) devised this relatively new method for this purpose.  \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}), \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}), \citeauthor{EbSchu} (\citeyear{EbSchu}) and \citeauthor{BrooksFowler2} in (\citeyear{BrooksFowler2}) used it to study the structure and scaling behaviour of the \acs{EZ}.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scales and Scaling Relations of the \acs{CBL} and \acs{EZ}}
@@ -196,9 +196,9 @@ Given an average surface vertical heat flux $(\overline{w^{'}\theta^{'}})_{s}$ a
 w^{*} = \left( \frac{gh}{\overline{\theta}}(\overline{w^{'}\theta^{'}})_{s} \right)^{\frac{1}{3}}.
 \end{equation}\\
 
-\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity fluctuations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work supports this, even at the \acs{CBL} top.  The \acs{CBL} entrainment rate ($w_{e} = \frac{dh}{dt}$) depends on the magnitude of $w^{'}$ which is driven by $(\overline{w^{'}\theta^{'}})_{s}$. Stability aloft suppresses $\frac{dh}{dt}$ so the influence of $\gamma$ is indirectly accounted for via $h$ in $w^{*}$.\\
+\citeauthor{Deardorff70} (\citeyear{Deardorff70}) confirmed that this effectively scaled the local vertical turbulent velocity fluctuations ($w^{'}$) in the \acs{CBL}.  \citeauthor{Sorbjan}'s (\citeyear{Sorbjan}) work supports this, even at the \acs{CBL} top.  The \acs{CBL} entrainment rate ($w_{e} = \frac{dh}{dt}$, neglecting large scale subsidence) depends on the magnitude of $w^{'}$ which is driven by $(\overline{w^{'}\theta^{'}})_{s}$. Stability aloft suppresses $\frac{dh}{dt}$ so the influence of $\gamma$ is indirectly accounted for via $h$ in $w^{*}$.\\
 
-\subsubsection{Convective Time Scale ($\tau$)}
+\subsubsection{Deardorff Convective Time Scale ($\tau$)}
 \label{subsubsec:}
 
 It follows that the time a thermal, travelling at velocity scaled by $w^{*}$, takes to reach the top of the \acs{CBL} i.e. travel a distance $h$ is scaled by
@@ -248,13 +248,13 @@ However, in the \acs{EZ} buoyancy acts to suppress buoyant production of \acs{TK
 
 \begin{equation}
 \label{eq:gradri}
-R_{g} = \frac{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\frac{U^{*2}}{L^{2}}} = N^{2}\frac{L^{2}}{U^{*2}},
+R_{g} = \frac{\frac{g}{\overline{\theta}} \frac{\partial \overline{\theta}}{\partial z}}{\frac{V^{*2}}{L^{2}}} = N^{2}\frac{L^{2}}{V^{*2}},
 \end{equation}
 
-where $U^{*}$ and $L^{*}$ are appropriate velocity and length scales.  Applying the bulk approximation to both the numerator and denominator yields the bulk Richardson number:
+where $V^{*}$ and $L^{*}$ are appropriate velocity and length scales.  Applying the bulk approximation to both the numerator and denominator yields the bulk Richardson number:
 
 \begin{equation}
-R_{b} = \frac{\frac{g}{\overline{\theta}} \Delta \theta L^{*}}{U^{*2}}.
+R_{b} = \frac{\frac{g}{\overline{\theta}} \Delta \theta L^{*}}{V^{*2}}.
 \end{equation}
 
 A natural choice of length and velocity scales for the \acs{CBL} are $h$ and $w^{*}$ giving the convective or buoyancy Richardson number:
@@ -386,7 +386,7 @@ The relationship between scaled \acs{EZ} depth and \acs{Ri}
 \frac{\Delta h}{h} \propto  \acs{Ri}^{b} \tag{\ref{eq:dhvsri}}
 \end{equation}
 
-has been explored and justified in field measurement, laboratory and numerical studies.  There is disagreement with respect to its exact form, in part stemming from variation in height and $\theta$ jump definitions, but in general its magnitude relative to h decreases with increasing \acs{Ri}. Although referred to in most relevant studies and relied upon in analytical models, the vertical average potential temperature profile has not been used to define the \acs{EZ} (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{StullNelEl} \citeyear{StullNelEl}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Boers89} \citeyear{Boers89}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}). This leads me to ask \textbf{Q2: Can the \acs{EZ} boundaries be defined based on the $\overline{\theta}$ profile and what is the relationship of the resulting depth ($\Delta h$) to \acs{Ri}?}\\
+has been explored and justified in field measurement, laboratory and numerical studies.  There is disagreement with respect to its exact form, in part stemming from variation in height and $\theta$ jump definitions, but in general its magnitude relative to $h$ decreases with increasing $\acs{Ri}$. Although referred to in most relevant studies and relied upon in analytical models, the vertical average potential temperature profile has not been used to define the \acs{EZ} (\citeauthor{DearWill80} \citeyear{DearWill80}, \citeauthor{StullNelEl} \citeyear{StullNelEl}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Boers89} \citeyear{Boers89}, \citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}). This leads me to ask \textbf{Q2: Can the \acs{EZ} boundaries be defined based on the $\overline{\theta}$ profile and what is the relationship of the resulting depth ($\Delta h$) to \acs{Ri}?}\\
 
 
 A further simplification to the dry, shear-free, \acs{CBL} model without large scale velocities, is to regard the \acs{EZ} depth as infinitesimely small as in Figure \ref{fig:0order}.  The relationship of the scaled, time rate of change of $h$ (entrainment rate: $w_{e}$) to \acs{Ri} can be derived based on this model (\citeauthor{Tennekes73} \citeyear{Tennekes73}, \citeauthor{Deardorff79} \citeyear{Deardorff79}, \citeauthor{FedConzMir04} \citeyear{FedConzMir04})
@@ -411,11 +411,11 @@ Before addressing the questions stated in Section \ref{sec:resquest} I will exam
 \subsubsection{Q1 Entrainment Zone Structure}     
 The \acs{EZ} can be thought of in terms of the distribution of individual thermal heights, or local heights. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) measured local height by locating the vertical point of maximum $\theta$ gradient, and observed the effects of varying \acs{Ri} on the resulting distributions. However this method is problematic when gradients in the upper profile exceed that at the inversion (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  \citeauthor{SteynBaldHoff} (\citeyear{SteynBaldHoff}) fitted an idealized curve to a Lidar backscatter profile.  This method produces a smooth curve based on the full original profile on which a maximum can easily be located.  I will apply a multi-linear regression method outlined in \citeauthor{Vieth} (\citeyear{Vieth}) to the local $\theta$ profile, representing the \acs{ML}, \acs{EZ} and \acs{FA} each with a separate line segment. From this fit, I will locate the \acs{ML} top ($h^{l}_{0}$).  I'll observe how the resulting distributions are effected by changes in $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$ using histograms in Chapter 3 Section 3.\\
 
-\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke the turbulent vertical heat flux $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan} \acs{LES} study \citeauthor{Sorbjan} showed that in the \acs{EZ}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at $h$ and so within the \acs{EZ} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ and hone in specifically on the entrained air at $h$ in Chapter 3 Section 4.\\    
+\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan} \acs{LES} study \citeauthor{Sorbjan} showed that in the \acs{EZ}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at $h$ and so within the \acs{EZ} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ and hone in specifically on the entrained air at $h$ in Chapter 3 Section 4.\\    
 
 \subsubsection{Q2 Entrainment Zone Boundaries}
        
-Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EZ} boundaries are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower boundary requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Chapter 3 section 5.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EZ} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EZ} depth to \acs{Ri} (equation 2.1).  As well as observing this relationship using the height definitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Chapter 3 section 4.\\  
+Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EZ} boundaries are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower boundary requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Chapter 3 section 5.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EZ} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EZ} depth to$\acs{Ri}$(equation 2.1).  As well as observing this relationship using the height definitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Chapter 3 section 4.\\  
 
 \begin{figure}[htbp]
     \centering
@@ -426,23 +426,23 @@ Here I define the \acs{CBL} height as the location of maximum vertical $\overlin
 \end{figure}
 
 \begin{table}[htbp]
+\caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
     \begin{center}
 %\centerline{
-    \begin{tabular}{ p{2cm} p{4cm}  p{3cm}  p{3cm} p{3cm} }
+    \begin{tabular}{ p{1.2cm} p{3.3cm}  p{3.2cm}  p{3cm} p{2.5cm} }
     %\hline
-      \acs{CBL} Height & \acs{ML} $\overline{\theta}$ & $\theta$ Jump & \acs{Ri} \\ \hline 
+      \acs{CBL} Height & \acs{ML} $\overline{\theta}$ & $\theta$ Jump &$\acs{Ri}$\\ \hline 
        $h$ & $\overline{\theta}_{ML} = \frac{1}{h}\int^{h}_{0}\overline{\theta}(z)dz$ & $\Delta \theta=\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & \acs{Ri}$_{\Delta}=\frac{\frac{g}{\overline{\theta}_{ML}}\Delta \theta h}{w^{*2}}$  \\ [.3cm] %\hline
         
        & &$\delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \delta \theta h}{w^{*2}}$ \\ \hline
       \end{tabular}
 %}
-\caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
 \label{table:reldefs}   
 \end{center}    
 \end{table}
 
 \subsubsection{Q3 Entrainment Rate Parameterization}
-As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiates entrainment, which in turn depends on the magnitude of \acs{Ri}.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in table \ref{table:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
+As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiates entrainment, which in turn depends on the magnitude of $\acs{Ri}$.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in Table \ref{table:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
 
 \endinput
 
