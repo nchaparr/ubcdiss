@@ -29,13 +29,13 @@ The prognostic thermodynamical variable is the liquid water/ice moist static ene
 \frac{\partial h_{L}}{\partial t} = -\frac{1}{\overline{\rho}}\frac{\partial}{\partial x_{i}}(\overline{\rho} u_{i}h_{L} + F_{h_{L}i}) - \frac{1}{\overline{\rho}}\frac{\partial}{\partial z}(L_{c}P_{r} + L_{s}P_{s} + L_{s}P_{g}) + \left( \frac{\partial h_{L}}{\partial t} \right)_{rad} + \left( \frac{\partial h_{L}}{\partial t} \right)_{mic}
 \end{equation}
 
-$L_{c}$ and $L_{s}$ are the latent heats of condensation and sublimation.  $P_{r}$, $P_{s}$ and $P_{g}$ are precipitation fluxes of rain, snow and graupel.  These terms reduce to zero in the absence of condensed water and precipitation.  The liquid/ice water static energy is
+$L_{c}$ and $L_{s}$ are the latent heats of condensation and sublimation.  $P_{r}$, $P_{s}$ and $P_{g}$ are precipitation fluxes of rain, snow and graupel.  These terms reduce to zero in the absence of condensed water and precipitation.  The subscripts $rad$ and $mic$ denote tendencies due to radiation and microphysics.  The liquid/ice water static energy is
 
 \begin{equation}
 h_{L} = c_{p}T + gz - L_{c}(q_{c} + q_{r}) - L_{s}(q_{i} + q_{s} + q_{g}) 
 \end{equation}
 
-where $q_{c}$, $q_{r}$, $q_{i}$, $q_{s}$ and $q_{g}$ are the mixing ratios for cloud water, rain, ice, snow and graupel.  Again, these reduce to zero in the absence of condensed water.  Temperature and potential temperature are diagnozed based on this variable, at each time-step.  A simple first-order Smagorinski closure scheme is used to parameterize the sub-grid stresses and scalar fluxes. The eddy diffusivity coefficient is based on the grid scale.\\
+where $q_{c}$, $q_{r}$, $q_{i}$, $q_{s}$ and $q_{g}$ are the mixing ratios for cloud water, rain, ice, snow and graupel.  Again, these reduce to zero in the absence of condensed water.  Temperature and potential temperature are diagnosed based on this variable, at each time-step.  A simple first-order Smagorinski closure scheme is used to parameterize the sub-grid stresses and scalar fluxes. The eddy diffusivity coefficient is based on the grid scale.\\
 
 The model equations are represented discretely on a fully staggered Arakawa C-type grid which is uniform in the horizontal and stretched in the vertical. Integration is performed using a third-order Adams-Bashforth scheme with variable time step.  Momentum is advected in flux form with second order differencing and conservation of kinetic energy. 
 Prognosed scalars are advected using a three dimensional positive definite, monotonic scheme.  Lateral boundaries are periodic.  The top is bounded by a rigid lid, and
@@ -76,7 +76,7 @@ b_{3} = \frac{\sum^{n}_{k}z(i) \theta(i) - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(
 a_{3} = \frac{\sum^{n}_{k}z(i)\theta(i)}{\sum^{n}_{k}z(i)} - b_{3}\frac{\sum^{n}_{k}z(i)^{2}}{\sum^{n}_{j}z(i)}
 \end{equation}
 
-where $z(i)$ and $\theta(i)$ are a local height and potential temperature value at a particular height index $i$.  $j$ is the height index of the \acs{ML} top, $h_{0}$. $k$ is the height index for the top of the \acs{EZ}, $h_{0}$. $n$ is the total number of height levels.  The best fit is that with the smallest residual sum of squares   
+where $z(i)$ and $\theta(i)$ are a local height and potential temperature value at a particular height index $i$.  $j$ is the height index of the \acs{ML} top, $h_{0}$. $k$ is the height index for the top of the \acs{EZ}, $h_{1}$. $n$ is the total number of height levels.  The best fit is that with the smallest residual sum of squares   
 
 \begin{equation}
 RSS(j,k) = \sum^{j}_{0}(\theta(i) - (a_{1} + b_{1}z(i)))^{2} + \sum^{k}_{j}(\theta(i) - (a_{2} + b_{2}z(i)))^{2} + \sum^{n}_{k}(\theta(i) - (a_{3} + b_{3}z(i)))^{2}
