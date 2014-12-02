@@ -109,17 +109,17 @@ Our understanding of the the characteristics and dynamics of the atmospheric \ac
 
 \subsubsection{Bulk Models}
 \label{subsubsec:}
-Bulk  models for the Convective Boundary layer (\acs{CBL}) based on average, vertical profiles of \acs{ML} quantities can be subdivided into: (i) zero order as represented in Figure \ref{fig:0order} and (ii) first (and higher) order bulk models as represented in Figure \ref{fig:1storder}. Order refers to the number of prognostic variables, and increased order corresponds to increasing complexity in the shape of the  $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles at the top of the \acs{ML}.\\
+Bulk  models for the Convective Boundary layer (\acs{CBL}) based on average, vertical profiles of \acs{ML} quantities can be subdivided into: (i) zero order as represented in Figure \ref{fig:0order} and (ii) first (and higher) order jump bulk models as represented in Figure \ref{fig:1storder}.  Increased order corresponds to increasing complexity in the shape of the  $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles at the top of the \acs{ML}.\\
 
 \begin{figure}[htbp]
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.55]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/zero_order.pdf}
-    \caption[Zero order \acs{CBL}]{Simplified version of Figure is \ref{fig:1storder} such that the \acs{EZ} is infinitesimely thin. (a) $h$ is the height of the  inversion and $\delta \theta$ the corresponding temperature jump, that is, the difference between $\overline{\theta}_{ML}$ and $\overline{\theta}_{0}(h)$. This is different, although related, to the jump across the \acs{EZ} in Figure \ref{fig:1storder} $\Delta \theta$. (b) The $\overline{w^{'}\theta^{'}}$ profile is linear and decreasing until it reaches a maximum negative value at $h$ of $-.2(\overline{w^{'}\theta^{'}})_{s}$. Here there is a discontinuity as it jumps to zero.}
+    \caption[Zero order jump representation of the \acs{CBL}]{Simplified version of Figure is \ref{fig:1storder} such that the \acs{EZ} is infinitesimely thin. (a) $h$ is the height of the  inversion and $\delta \theta$ the corresponding temperature jump, that is, the difference between $\overline{\theta}_{ML}$ and $\overline{\theta}_{0}(h)$. This is different, although related, to the jump across the \acs{EZ} in Figure \ref{fig:1storder} $\Delta \theta$. (b) The $\overline{w^{'}\theta^{'}}$ profile is linear and decreasing until it reaches a maximum negative value at $h$ of $-.2(\overline{w^{'}\theta^{'}})_{s}$. Here there is a discontinuity as it jumps to zero.}
     \label{fig:0order}   % label should change
 \end{figure}
 
-Zero-order bulk models assume an \acs{ML} of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitesimally thin layer across which there is a temperature jump ($\delta \theta$) and above which is a constant lapse rate ($\gamma$).  The assumed vertical heat flux, $\overline{w^{'}\theta^{'}}$, decreases linearly from the surface up, reaching a maximum negative value $(\overline{w^{'}\theta^{'}})_{h}$ .  This is a constant proportion of the surface value, usually $-0.2(\overline{w^{'}\theta^{'}})_{s}$ (see Section 4 in \citeauthor{Tennekes73} \citeyear{Tennekes73} for a discussion). At the temperature inversion $\overline{w^{'}\theta^{'}}$ jumps to zero across the infinitesimally thin layer.  Equations for the evolution of \acs{CBL} height, $\overline{\theta}_{ML}$ and $\delta \theta$ are derived on this basis (\citeauthor{Tennekes73} \citeyear{Tennekes73}).\\
+Zero-order jump bulk models assume an \acs{ML} of uniform potential temperature ($\overline{\theta}_{ML}$) topped by an infinitesimally thin layer across which there is a temperature jump ($\delta \theta$) and above which is a constant lapse rate ($\gamma$).  The assumed vertical heat flux, $\overline{w^{'}\theta^{'}}$, decreases linearly from the surface up, reaching a maximum negative value $(\overline{w^{'}\theta^{'}})_{h}$ .  This is a constant proportion of the surface value, usually $-0.2(\overline{w^{'}\theta^{'}})_{s}$ (see Section 4 in \citeauthor{Tennekes73} \citeyear{Tennekes73} for a discussion). At the temperature inversion $\overline{w^{'}\theta^{'}}$ jumps to zero across the infinitesimally thin layer.  Equations for the evolution of \acs{CBL} height, $\overline{\theta}_{ML}$ and $\delta \theta$ are derived on this basis (\citeauthor{Tennekes73} \citeyear{Tennekes73}).\\
 
 If the \acs{CBL} height ($h$) is rising, air is being drawn in from the stable free atmosphere (FA) layer above and mixed with cooler air i.e. there is an overall decrease in enthalpy.  The rate of decrease in enthalpy with respect to time is $c_{p}\rho \delta \theta \frac{dh}{dt}$ (see Section \ref{sec:pottemp}) per unit of horizontal area where, in the absence of subsidence, $\frac{dh}{dt}$ is the entrainment rate ($w_{e}$).  Since the lapse rate above the inversion is stable, \citeauthor{Tennekes73} (\citeyear{Tennekes73}) equates this enthalpy loss to the average vertical turbulent heat flux at the inversion
 
@@ -154,7 +154,7 @@ An assumption about the vertical heat flux at the inversion ($h$), such as the e
 
 The relevant quantities in equations 2.2 through 2.5 are idealized, ensemble averages. There is some variation within this class of model.  For example the rate equation for $h$ (entrainment relation) can alternatively be derived based on the turbulent kinetic energy budget (\citeauthor{FedConzMir04} \citeyear{FedConzMir04}, \citeauthor{Stull76a} \citeyear{Stull76a}, \citeauthor{Stull76b} \citeyear{Stull76b}) but they are all based on the simplified $\overline{\theta}$ and $\overline{w^{'}\theta^{'}}$ profiles outlined above.\\  
 
-First (and higher) order models assume an \acs{EZ} of finite depth at the top of the ML, defined by two heights:  the top of the ML ($h_{0}$) and the point where \acs{FA} characteristics are resumed ($h_{1}$).  The derivations are more complex and involve assumptions about the \acs{EZ} i.e.: 
+First (and higher) order jump models assume an \acs{EZ} of finite depth at the top of the ML, defined by two heights:  the top of the ML ($h_{0}$) and the point where \acs{FA} characteristics are resumed ($h_{1}$).  The derivations are more complex and involve assumptions about the \acs{EZ} i.e.: 
 
 \begin{itemize}
 \item{$\Delta h = h_{1} - h_{0}$ = Constant (\citeauthor{Betts74} \citeyear{Betts74})}
@@ -409,53 +409,6 @@ A further simplification to the dry, shear-free, \acs{CBL} model without large s
 \end{equation}
  
 This will be referred to as the entrainment relation.  Although that there is such a relationship is well established, discussion as to the power exponent of \acs{Ri} is unresolved and results from studies justify values of both $-\frac{3}{2}$ and $-1$. See \citeauthor{Traum11} (\citeyear{Traum11}) for a summary and review.  \citeauthor{Turner86} (\citeyear{Turner86}) explains this disparity in terms of entrainment mechanism such that the higher value occurs when thermals recoil rather than overturn in response to a stronger $\theta$ jump (or inversion).  Whereas \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) notice a deviation from the lower power ($-1$) at lower \acs{Ri} and attribute it to the effect of a the shape of $\overline{\theta}$ within a thicker \acs{EZ}.  Both \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{GarciaMellado} (\citeyear{GarciaMellado}) show how the definition of the $\theta$ jump influences the time rate  of change of \acs{Ri} and so effects $a$. \textbf{Q3 (Entrainment Rate Parameterization): How does defining the $\theta$ jump based on the vertical $\overline{\theta}$ profile across the \acs{EZ} as in Figure \ref{fig:1storder} vs at the inversion ($h$) as in Figure \ref{fig:0order}, affect the entrainment relation and in particular $a$?}\\
-
-
-\section{Approach to Research Questions}
-\label{sec:Approach}
-\subsubsection{General Setup}
-
-I modelled the dry shear free \acs{CBL} and \acs{EZ} using \acs{LES}, specifically the cloud resolving model System for Atmospheric Modelling (SAM) to be outlined in Chapter 2.  An ensemble of 10 cases was run to obtain true ensemble averages and turbulent potential temperature variances ($\theta^{'}$), each case had a domain of area 3.2 x 4.8 Km$^{2}$. Grid spacing was influenced by the resolution study of \citeauthor{SullPat} (\citeyear{SullPat}) and the vertical grid within the \acs{EZ} was of higher resolution than that applied in other comparable work.  The runs were initialized with a constant $(\overline{w^{'}\theta^{'}})_{s}$ acting a against a uniform $\gamma$.  So, the  $\theta$ jump arose from the overshoot of the thermals, rather than being initially imposed as in \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}).\\
-
-\subsubsection{Verifying Output}
-
-Before addressing the questions stated in Section \ref{sec:resquest} I will examine the modeled output to make sure it represents a realistic turbulent \acs{CBL} in Chapter \ref{ch:outver}. I will verify that the averaged vertical profiles are as expected and coherent thermals are being produced.  FFT energy density spectra will show if there is adequate scale separation between the structures of greatest energy and the grid spacing, and if realistic, isotropic turbulence is being modelled.  
-
-\subsubsection{Q1 (Entrainment Zone Structure)}     
-The \acs{EZ} can be thought of in terms of the distribution of individual thermal heights, or local heights. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) measured local height by locating the vertical point of maximum $\theta$ gradient, and observed the effects of varying \acs{Ri} on the resulting distributions. However this method is problematic when gradients in the upper profile exceed that at the inversion (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  \citeauthor{SteynBaldHoff} (\citeyear{SteynBaldHoff}) fitted an idealized curve to a Lidar backscatter profile.  This method produces a smooth curve based on the full original profile on which a maximum can easily be located.  I will apply a multi-linear regression method outlined in \citeauthor{Vieth} (\citeyear{Vieth}) to the local $\theta$ profile, representing the \acs{ML}, \acs{EZ} and \acs{FA} each with a separate line segment. From this fit, I will locate the \acs{ML} top ($h^{l}_{0}$).  I'll observe how the resulting distributions are effected by changes in $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$ using histograms in Chapter 3 Section 3.\\
-
-\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan1} \acs{LES} study \citeauthor{Sorbjan1} concluded that in the \acs{EZ}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is practically independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at $h$ and so within the \acs{EZ} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ and hone in specifically on the entrained air at $h$ in Section \ref{subsec:downwarm}.\\    
-
-\subsubsection{Q2 (Entrainment Zone Boundaries)}
-       
-Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EZ} boundaries are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower boundary requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Section \ref{sec:deltahri}.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EZ} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EZ} depth to $\acs{Ri}$ (equation 2.1).  As well as observing this relationship using the height definitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Section \ref{susec:fluxbound}.\\  
-
-\subsubsection{Q3 (Entrainment Rate Parameterization)}
-As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiates entrainment, which in turn depends on the magnitude of $\acs{Ri}$.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in Table \ref{table:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
-
-\begin{figure}[htbp]
-    \centering
-    %plot_height.py[master 1573b9d] h vs time plot
-    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs.pdf}
-    \caption[Height definitions]{Height definitions based on the average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
-    \label{fig:hdefs}   % label should change
-\end{figure}
-
-\begin{table}[htbp]
-\caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
-    \begin{center}
-%\centerline{
-    \begin{tabular}{ p{1.2cm} p{3.3cm}  p{3.2cm}  p{3cm} p{2.5cm} }
-    %\hline
-      \acs{CBL} Height & \acs{ML} $\overline{\theta}$ & $\theta$ Jump &$\acs{Ri}$\\ \hline 
-       $h$ & $\overline{\theta}_{ML} = \frac{1}{h}\int^{h}_{0}\overline{\theta}(z)dz$ & $\Delta \theta=\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & \acs{Ri}$_{\Delta}=\frac{\frac{g}{\overline{\theta}_{ML}}\Delta \theta h}{w^{*2}}$  \\ [.3cm] %\hline
-        
-       & &$\delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \delta \theta h}{w^{*2}}$ \\ \hline
-      \end{tabular}
-%}
-\label{tab:reldefs}   
-\end{center}    
-\end{table}
 
 \endinput
 

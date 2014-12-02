@@ -1,9 +1,55 @@
 %% The following is a directive for TeXShop to indicate the main file
 %%!TEX root = diss.tex
 
-\chapter{Tools}
+\chapter{Research Approach and Tools}
+
 \label{ch:tools}
 \setlength{\parindent}{0cm}
+\section{Approach to Research Questions}
+\label{sec:Approach}
+\subsubsection{General Setup}
+
+I modelled the dry shear free \acs{CBL} and \acs{EZ} using \acs{LES}, specifically the cloud resolving model System for Atmospheric Modelling (SAM) to be outlined in Chapter 2.  An ensemble of 10 cases was run to obtain true ensemble averages and turbulent potential temperature variances ($\theta^{'}$), each case had a domain of area 3.2 x 4.8 Km$^{2}$. Grid spacing was influenced by the resolution study of \citeauthor{SullPat} (\citeyear{SullPat}) and the vertical grid within the \acs{EZ} was of higher resolution than that applied in other comparable work.  The runs were initialized with a constant $(\overline{w^{'}\theta^{'}})_{s}$ acting a against a uniform $\gamma$.  So, the  $\theta$ jump arose from the overshoot of the thermals, rather than being initially imposed as in \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}).\\
+
+\subsubsection{Verifying Output}
+
+Before addressing the questions stated in Section \ref{sec:resquest} I will examine the modeled output to make sure it represents a realistic turbulent \acs{CBL} in Chapter \ref{ch:outver}. I will verify that the averaged vertical profiles are as expected and coherent thermals are being produced.  FFT energy density spectra will show if there is adequate scale separation between the structures of greatest energy and the grid spacing, and if realistic, isotropic turbulence is being modelled.  
+
+\subsubsection{Entrainment Zone Structure}     
+The \acs{EZ} can be thought of in terms of the distribution of individual thermal heights, or local heights. \citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) measured local height by locating the vertical point of maximum $\theta$ gradient, and observed the effects of varying \acs{Ri} on the resulting distributions. However this method is problematic when gradients in the upper profile exceed that at the inversion (\citeauthor{BrooksFowler2} \citeyear{BrooksFowler2}).  \citeauthor{SteynBaldHoff} (\citeyear{SteynBaldHoff}) fitted an idealized curve to a Lidar backscatter profile.  This method produces a smooth curve based on the full original profile on which a maximum can easily be located.  I will apply a multi-linear regression method outlined in \citeauthor{Vieth} (\citeyear{Vieth}) to the local $\theta$ profile, representing the \acs{ML}, \acs{EZ} and \acs{FA} each with a separate line segment. From this fit, I will locate the \acs{ML} top ($h^{l}_{0}$).  I'll observe how the resulting distributions are effected by changes in $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$ using histograms in Section \ref{subsec:locmlh}\\
+
+\citeauthor{SullMoengStev} (\citeyear{SullMoengStev}) broke $w^{'}\theta^{'}$ into four quadrants and used this combined with local flow visualizations to show how \acs{CBL} thermals impinge and draw down warm air from above. \citeauthor{MahrtPaum} (\citeyear{MahrtPaum}) used 2 dimensional contour plots of local $w^{'}$ and $\theta^{'}$ measurements to analyze their joint distributions.  In his \citeyear{Sorbjan1} \acs{LES} study \citeauthor{Sorbjan1} concluded that in the \acs{EZ}, $\theta^{'}$ is strongly influenced by $\gamma$  whereas $w^{'}$ is practically independent thereof.  Influenced by these three studies, I will use 2 dimensional histograms at $h$ and so within the \acs{EZ} to look at how the distributions of local $w^{'}$ and $\theta^{'}$ are effected by changes in $\gamma$ and $(\overline{w^{'}\theta^{'}})_{s}$ .  I will magnify the effects of $\gamma$, by applying the convective scales, $\theta^{*}$ and $w^{*}$ and hone in specifically on the entrained air at $h$ in Section \ref{subsec:downwarm}.\\    
+
+\subsubsection{Entrainment Zone Boundaries}
+       
+Here I define the \acs{CBL} height as the location of maximum vertical $\overline{\theta}$ gradient as in Figure \ref{fig:hdefs}.  The lower and upper \acs{EZ} boundaries are then the points at which $\frac{\partial \overline{\theta}}{\partial z}$ significantly exceeds zero and where it resumes $\gamma$.  The lower boundary requires choice of a threshold value which should be small, positive and less than $\gamma$. Since it is somewhat arbitrary I will compare results based on three different threshold values in Section \ref{sec:deltahri}.  \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) defined the \acs{EZ} in terms of the vertical $\overline{w^{'}\theta^{'}}$ profiles as in Figure \ref{fig:hdefs} but disagreed on the shape of the relationship of scaled \acs{EZ} depth to $\acs{Ri}$ (equation 2.1).  As well as observing this relationship using the height definitions based on the $\overline{\theta}$ profile, I will apply the definitions based on the $\overline{w^{'}\theta^{'}}$ profile for comparison with \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}) and \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) in Section \ref{susec:fluxbound}.\\  
+
+\subsubsection{Entrainment Rate Parameterization}
+As discussed in see Section \ref{subsec:erri} the form of the entrainment relation is thought to vary based on the mechanism that initiates entrainment, which in turn depends on the magnitude of $\acs{Ri}$.  Furthermore the ways in which the height and $\theta$ jump are defined have an effect. I will vary the definition of the $\theta$ jump as outlined in Table \ref{tab:reldefs} in order to discern between how this, and variation in initial conditions, influence the entrainment relation and in particular $a$. I will reproduce this analysis using height definitions based on $\overline{w^{'}\theta^{'}}$ for comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}).
+
+\begin{figure}[htbp]
+    \centering
+    %plot_height.py[master 1573b9d] h vs time plot
+    \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs.pdf}
+    \caption[Height definitions]{Height definitions based on the average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
+    \label{fig:hdefs}   % label should change
+\end{figure}
+
+\begin{table}[htbp]
+\caption[Height definitions]{Definitions based on the vertical $\overline{\theta}$ profile in Figure \ref{fig:hdefs}.  To obtain those based on the $\overline{w^{'}\theta^{'}}$ profile, replace $h_{0}$, $h$ and $h_{0}$ with $z_{f0}$, $z_{f}$ and $z_{f1}$}
+    \begin{center}
+%\centerline{
+    \begin{tabular}{ p{1.2cm} p{3.3cm}  p{3.2cm}  p{3cm} p{2.5cm} }
+    %\hline
+      \acs{CBL} Height & \acs{ML} $\overline{\theta}$ & $\theta$ Jump &$\acs{Ri}$\\ \hline 
+       $h$ & $\overline{\theta}_{ML} = \frac{1}{h}\int^{h}_{0}\overline{\theta}(z)dz$ & $\Delta \theta=\overline{\theta}(h_{1})-\overline{\theta}(h_{0})$ & \acs{Ri}$_{\Delta}=\frac{\frac{g}{\overline{\theta}_{ML}}\Delta \theta h}{w^{*2}}$  \\ [.3cm] %\hline
+        
+       & &$\delta \theta = \overline{\theta}_{0}(h)- \overline{\theta}_{ML}$ & \acs{Ri}$_{\delta}=\frac{\frac{g}{\overline{\theta}_{ML}} \delta \theta h}{w^{*2}}$ \\ \hline
+      \end{tabular}
+%}
+\label{tab:reldefs}   
+\end{center}    
+\end{table}
 
 \section{Large Eddy Simulation}
 \label{sec:LargeEddieSimulation}
@@ -43,45 +89,7 @@ Newtonian damping is applied in the top third of the domain to reduce the effect
 
 \section{Handling of Output}
 
-The model was run on parallel computers in a Linux environment using Message Passing Interface (MPI). 3d variable fields were output every 10 - 15 minutes in binary form and converted to Network Common Data Form (NetCDF).  The use of Python was enabled using the netcdf4 interface.  Plotting was done using matplotlib. All analysis, except for the tri-linear regression method for determining local \acs{ML} height, were performed using NumPy and SciPy.
-
-\subsection{Tri-Linear Fit for Determining local \acs{ML} height $h^{l}_{0}$}
-\label{subsec:trilin}
-The following is a modified version of the piecewise linear regression method used in \citeauthor{Vieth} (\citeyear{Vieth}) and was implemented using Cython.  Potential temperature is assumed to be linear function of height 
-
-\begin{equation}
-\theta = bz + a 
-\end{equation}.
-
-Each local $\theta$ profile was assumed to have three linear portions, with slopes ($b_{1}$, $b_{2}$, $b_{3}$) and intercepts ($a_{1}$, $a_{2}$, $a_{3}$) as follows:
-
-\begin{equation}
-b_{1} = \frac{\sum^{j}_{0}z(i) \theta (i) - \frac{1}{j}\sum^{j}_{0}z(i)\sum^{j}_{0}\theta}{\sum^{j}_{0}z(i)^{2} - \frac{1}{j}(\sum^{j}_{0}z(i))^{2}}
-\end{equation}
-\begin{equation}
-a_{1} = \frac{\sum^{j}_{0}z(i)\theta(i)}{\sum^{j}_{0}z(i)} - b_{1}\frac{\sum^{j}_{0}z(i)^{2}}{\sum^{j}_{0}z(i)}
-\end{equation}
-
-\begin{equation}
-b_{2} = \frac{\sum^{k}_{j}z(i) \theta(i) - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
-\end{equation}
-\begin{equation}
-a_{2} = \frac{\sum^{k}_{j}z(i)\theta(i)}{\sum^{k}_{j}z(i)} - b_{2}\frac{\sum^{k}_{j}z(i)^{2}}{\sum^{k}_{j}z(i)}
-\end{equation}
-
-\begin{equation}
-b_{3} = \frac{\sum^{n}_{k}z(i) \theta(i) - (k-j) a_{1}+b_{1}z(j)}{\sum^{k}_{j}z(i) - (k-j)z(j)}
-\end{equation}
-\begin{equation}
-a_{3} = \frac{\sum^{n}_{k}z(i)\theta(i)}{\sum^{n}_{k}z(i)} - b_{3}\frac{\sum^{n}_{k}z(i)^{2}}{\sum^{n}_{j}z(i)}
-\end{equation}
-
-where $z(i)$ and $\theta(i)$ are a local height and potential temperature value at a particular height index $i$.  $j$ is the height index of the \acs{ML} top, $h_{0}$. $k$ is the height index for the top of the \acs{EZ}, $h_{1}$. $n$ is the total number of height levels.  The best fit is that with the smallest residual sum of squares   
-
-\begin{equation}
-RSS(j,k) = \sum^{j}_{0}(\theta(i) - (a_{1} + b_{1}z(i)))^{2} + \sum^{k}_{j}(\theta(i) - (a_{2} + b_{2}z(i)))^{2} + \sum^{n}_{k}(\theta(i) - (a_{3} + b_{3}z(i)))^{2}
-\end{equation}.
- 
+The model was run on parallel computers in a Linux environment using Message Passing Interface (MPI). 3d variable fields were output every 10 - 15 minutes in binary form and converted to Network Common Data Form (NetCDF).  The use of Python was enabled using the netcdf4 interface.  Plotting was done using matplotlib. Most analyses were performed using NumPy and SciPy.  The tri-linear regression method, described in Appendix \ref{sec:trilin}, for determining local \acs{ML} height was implimented using Cython.
 
 \endinput
 

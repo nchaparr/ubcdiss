@@ -1,0 +1,63 @@
+% This text is proprietary.
+% It's a part of presentation made by myself.
+% It may not used commercial.
+% The noncommercial use such as private and study is free
+% Sep. 2005 
+% Author: Sascha Frank 
+% University Freiburg 
+% www.informatik.uni-freiburg.de/~frank/
+
+
+\documentclass{beamer}
+\setbeamertemplate{footline}[frame number]
+\usepackage{units}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{movie15}
+
+
+%\usepackage{multimedia}
+%\newcommand{\mmhalf}{\nicefrac{1}{2}}
+
+
+%\usepackage[noplaybutton]{media9}
+%\usepackage[colorlinks]{hyperref}
+%\usepackage{attachfile2}
+
+%\newcommand{\includemovie}[2][]{
+%    \includemedia[
+%        #1,
+%        activate=pageopen,transparent,
+%        addresource=#2.mp4,addresource=#2.png,
+%        flashvars={
+%            file=#2.mp4&image=#2.png&
+%            stretching=uniform&start=0&
+%            screencolor=white& %improves render in light backgrounds
+%            controlbar.position=over&controlbar.idlehide=true&
+%            autostart=true&repeat=always&smoothing=true
+            %&bufferlength=10 % may improve repetition of short videos
+%        }
+%    ]{ % for disabled content (in most cases this is fallback)
+%        \begin{tabular}{ll}
+%            \mbox{
+            %   \href{run:#2.mp4} % for not embedded fallback
+ %               \textattachfile[color={0 0 0}]{#2.mp4} % for embedded fallback
+  %              {\texttt{|\kern-.23em>}} % poor play button
+   %         } & \raisebox{-\height}{\includegraphics[#1]{#2}}
+%        \end{tabular}
+%    }{player.swf}
+%}
+%
+\begin{document}
+
+%\includemovie[width=5cm]{im} %%no extension!
+
+\begin{frame}[t]{}
+ \begin{figure}[ht]
+   \includemovie[autoplay, repeat=50]{8cm}{6cm}{theta.avi}
+ \end{figure}
+\end{frame}
+
+
+\end{document}
+
