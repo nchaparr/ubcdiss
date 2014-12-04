@@ -163,14 +163,13 @@ $\theta$ profile
 
 \begin{frame}
 \frametitle{3}
+\fontsize{12pt}{7.2}\selectfont
 \begin{figure}[htbp]
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.45]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs.pdf}
-\fontsize{12pt}{7.2}\selectfont
-    \caption[]{Height definitions based on the average vertical profiles.\\
-$\theta_{0}$ is the initial potential temperature.}
-    \label{fig:hdefs}   % label should change
+    \caption{Height definitions based on the average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
+    %\label{fig:hdefs}   % label should change
 \end{figure}
 \end{frame}
 
@@ -209,11 +208,7 @@ $\theta_{0}$ is the initial potential temperature.}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rss_fit_high}
-\caption{Local $\theta$ profile at a single horizontal point where\\ 
-height is relatively high, at 5 simulated hours (left).\\
-On the right Tri-linear fit to the local $\theta$ profile with \\
-a line for each of the 3 layers: mixed layer (ML), EZ and free \\
-atmosphere (FA).}
+\caption{Local $\theta$ profile at a single horizontal point where height is relatively high, at 5 simulated hours (left).  On the right Tri-linear fit to the local $\theta$ profile with a line for each of the 3 layers: mixed layer (ML), EZ and free atmosphere (FA).}
 \end{figure}
 \end{frame}
 
@@ -244,10 +239,7 @@ atmosphere (FA).}
     \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/Scaled_ML_Height_hist_10}
    \end{column}     
 \end{columns}
-\caption{Distribution of local ML heights (left).\\
-PDF of local ML heights scaled by $h$ (right).\\
-$h$ is the CBL height based on maximum average\\
- vertical $\theta$ gradient.}
+\caption{Distribution of local ML heights (left).  PDF of local ML heights scaled by $h$ (right).  $h$ is the CBL height based on maximum average  vertical $\theta$ gradient.}
 \end{figure}
 \end{frame}
 
@@ -307,9 +299,8 @@ with decreased stability}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/theta_flux_profs}
-\caption{Evolution of (left) Ensemble and horizontally averaged $\theta$,\\
-(middle) its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$)\\
-and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
+\caption{Evolution of (left) Ensemble and horizontally averaged $\theta$, (middle) its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$) and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
+\caption{}
 \end{figure}
 \end{frame}
 
@@ -321,16 +312,19 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_grad_profs}
+\caption{Threshold value for defining the lower EZ boundary based on $\frac{\partial \overline{\theta}}{\partial z}$}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{16}
-\FrameText{Now look at EZ based on the Average profile:
-}
+\fontsize{12pt}{7.2}\selectfont
+%\FrameText{Now look at EZ based on the Average profile:
+%}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahstime}
+\caption{Scaled upper and lower EZ boundaries defined based on $\frac{\partial \overline{\theta}}{\partial z}$}
 \end{figure}
 
 \end{frame}
@@ -338,41 +332,49 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 \begin{frame}
 \frametitle{17}
 \FrameText{\bf{\large Conclusion:}
+\vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{The scaled lowest local heights decrease with decreased stability}
-\item \bf{\large scaled lower EZ boundary increases with increased $Ri$}\\
+\item \textcolor{gray}{The scaled lowest local heights decrease\\
+with decreased stability}
+\vspace{5mm}
+\item \bf{\large The scaled lower EZ boundary increases with\\
+increased $Ri$}\\
 \end{itemize}
 }
 \end{frame}
 
 \begin{frame}
+\fontsize{12pt}{7.2}\selectfont
 \frametitle{18}
-\FrameText{Now look at relationship of scaled EZ depth to Richardson number:
-}
+%\FrameText{Now look at relationship of scaled EZ depth to Richardson number:
+%}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri}
 \end{figure}
-
 \end{frame}
 
 \begin{frame}
+\fontsize{12pt}{7.2}\selectfont
 \frametitle{19}
-\FrameText{Now look at relationship of scaled EZ depth to Richardson number $\frac{\Delta h}{h} \propto Ri ^{b}$:
-}
+%\FrameText{Now look at relationship of scaled EZ depth to Richardson number :
+%}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri}
+\caption{Plot of relationship of scaled EZ depth to $Ri$: $\frac{\Delta h}{h} \propto Ri ^{b}$}
 \end{figure}
-
 \end{frame}
 
 \begin{frame}
 \frametitle{20}
 \FrameText{\bf{\large Conclusion}:
+\vspace{5mm}
 \begin{itemize}
 \item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+\vspace{5mm}
 \item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$} \\
+\vspace{5mm}
 \item \bf{ \large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$}\\
 \bf{ \large group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$}
 \end{itemize}
@@ -381,9 +383,10 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 
 \begin{frame}
 \frametitle{21}
-\FrameText{But if I define the EZ based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ 
-}
-
+%\FrameText{But if I define the EZ based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ 
+%}
+\fontsize{12pt}{7.2}\selectfont
+\begin{figure}
 \begin{columns}[T]
    \begin{column}{.5\textwidth}
    \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_grad_profs} 
@@ -393,13 +396,16 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
     \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_theta_grad_profs}
    \end{column}     
 \end{columns}
+\caption{Definition of lower EZ boundary based on $\frac{\partial \overline{\theta}}{\partial z}$ (left) and $\frac{\partial \overline{\theta}}{\partial z}\/gamma$ (right)}
+\end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{22}
-\FrameText{The order of lower boundary heights is reversed -- increased $\gamma$ yields higher lower EZ boundary 
-}
-
+%\FrameText{The order of lower boundary heights is reversed -- increased $\gamma$ yields higher lower EZ boundary 
+%}
+\fontsize{12pt}{7.2}\selectfont
+\begin{figure}
 \begin{columns}[T]
    \begin{column}{.5\textwidth}
    \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_grad_profs_zoomin} 
@@ -409,15 +415,20 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
     \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_theta_grad_profs_zoomin}
    \end{column}     
 \end{columns}
+\caption{As previous slide, but zoomed in to show reversal in order of the magnitude of the lower EZ boundary.}
+\end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{23}
+\fontsize{12pt}{7.2}\selectfont
 \FrameText{:
 }
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_4}
+\caption{Plot of relationship of scaled EZ depth to $Ri$: $\frac{\Delta h}{h} \propto Ri ^{b}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}\/gamma$}
+
 \end{figure}
 
 \end{frame}
@@ -425,24 +436,31 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 \begin{frame}
 \frametitle{24}
 \FrameText{\bf{\large Conclusion}:
+\vspace{5mm}
 \begin{itemize}
 \item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+\vspace{5mm}
 \item \textcolor{gray}{scaled lower boundary based on average profile increases with increased stability and over time}
-\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$} 
+\vspace{5mm}
+\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$\\
+when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$\\
+but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$} 
 \end{itemize}
 }
 \end{frame}
 
-\begin{frame}
-\frametitle{25}
-\FrameText{The downward moving warm potential temperature fluctuations ($\theta^{'+}_{h} \ where w^{'}<0$) at $h$ ``warms'' the air below
-}
-\end{frame}
+%\begin{frame}
+%\frametitle{25}
+%\FrameText{The downward moving warm potential temperature fluctuations ($\theta^{'+}_{h} \ where w^{'}<0$) at $h$ ``warms'' the air below
+%}
+%\end{frame}
 
 \begin{frame}
+\fontsize{12pt}{7.2}\selectfont
 \frametitle{26}
-\FrameText{$\theta^{'+}_{h} \ where w^{'}<0$ is effectively scaled by $\delta h \gamma$, where $\delta h = h_{1} - h$:
-}
+%\FrameText{$\theta^{'+}_{h} \ where w^{'}<0$ is effectively scaled by $\delta h \gamma$, where $\delta h = h_{1} - h$:
+%}
+\begin{figure}
 \begin{columns}[T]
    \begin{column}{.5\textwidth}
    \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/downwarm_theta.pdf} 
@@ -452,54 +470,77 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
     \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_downwarm_theta2.pdf}
    \end{column}     
 \end{columns}
+\caption{(left) Plot of the downward moving warm potential temperature fluctuation at h ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$). (right) $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ scaled by $\delta h \gamma$}
+\end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{27}
-\FrameText{Why $\delta h \gamma$ is so effective:}
+\fontsize{12pt}{7.2}\selectfont
+%\FrameText{Why $\delta h \gamma$ is so effective:}
 \begin{figure}
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/tera2_cp/nchaparr/ubcdiss/pngs/deltagamma}
+\caption{Representation of potential temperature flucation scale for the EZ $\delta h \gamma$}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{28}
 \FrameText{\bf{\large Conclusion:}
+\vspace{5mm}
 \begin{itemize}
 \item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+\vspace{5mm}
 \item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$}
-\item \textcolor{gray}{curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$} 
-\item \bf{\large downward moving positive potential temperature fluctuations at $h$ are scaled by $\delta h \gamma$}
+\vspace{5mm}
+\item \textcolor{gray}{curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\partial \overline{\theta}}{\partial z}/\gamma$}
+\vspace{5mm} 
+\item \bf{\large downward moving positive potential temperature\\
+fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by $\delta h \gamma$}
 \end{itemize}
 }
 \end{frame}
 
 \begin{frame}
 \frametitle{29}
-\FrameText{The exponent of $\frac{\Delta h}{h} \propto Ri^{b}$ is in line with theory and results of other studies, and changes:
-}
+\fontsize{12pt}{7.2}\selectfont
+%\FrameText{The exponent of $\frac{\Delta h}{h} \propto Ri^{b}$ is in line with theory and results of other studies, and changes:
+%}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/loglog_scaleddeltahinvri_4}
+\caption{Plot of relationship of scaled EZ depth to $Ri$: $\frac{\Delta h}{h} \propto Ri ^{b}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}\/gamma$ in log-log coordinates}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{30}
-\FrameText{As does the exponent of $\frac{w_{e}}{w^{*}} \propto  Ri^{a}$:}
+\fontsize{12pt}{7.2}\selectfont
+%\FrameText{As does the exponent of $\frac{w_{e}}{w^{*}} \propto  Ri^{a}$:}
 \begin{figure}
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri_Delta}
+\caption{Plot of relationship of scaled CBL entrainment rate to $Ri$: $\frac{w_{e}}{w^{*}} \propto  Ri^{a}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}\/gamma$ in log-log coordinates}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{31}
-\FrameText{\bf{\large Conclusion:}
+\FrameText{\bf{\large Conclusions:}
+\vspace{5mm}
 \begin{itemize}
-\item \bf{\large scaled lowest local heights increase with increased stability}
-\item \bf{\large scaled lower boundary based on average profile increases with increased $Ri$}
-\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$} 
-\item \bf{\large downward moving positive potential temperature fluctuations at $h$ are scaled by $\delta h \gamma$}
+\item \bf{\large scaled lowest local heights increase with\\
+ increased stability}
+\vspace{5mm}
+\item \bf{\large scaled lower boundary based on average profile\\
+increases with increased $Ri$}
+\vspace{5mm}
+\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$\\
+when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse\\
+when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$}
+\vspace{5mm} 
+\item \bf{\large downward moving positive potential temperature\\
+fluctuations at $h$ are scaled by $\delta h \gamma$}
+\vspace{5mm}
 \item \bf{\large there is a change in entrainment regime with increased richardson number}
 \end{itemize}
 }
@@ -508,10 +549,15 @@ and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 \begin{frame}
 \frametitle{32}
 \FrameText{\bf{\large Conclusion:}
+\vspace{5mm}
 \begin{itemize}
-\item \bf{\large scaled EZ depth decreases with increasd Richardson number}
-\item \bf{\large $\frac{\partial \overline{\theta}}{\partial z}$ in the upper (CBL) and the downward moving positive potential temperature fluctuations at $h$ are depend on $\gamma$}
-\item \bf{\large there is a change in entrainment regime with increased richardson number}
+\item \bf{\large scaled EZ depth decreases with increasd $Ri$}
+\vspace{5mm}
+\item \bf{\large $\frac{\partial \overline{\theta}}{\partial z}$ in the upper (CBL) and  $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ depend on $\gamma$}
+\vspace{5mm}
+\item \bf{\large there is a change in entrainment regime with increased $Ri$}
+\vspace{5mm}
+\item \bf{\large definitions of CBL height and EZ boundaries based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid}
 \end{itemize}
 }
 \end{frame}
