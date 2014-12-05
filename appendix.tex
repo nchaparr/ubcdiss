@@ -112,7 +112,7 @@ using flux form
 under the bousinesq assumption $\Delta \cdot u_{i} = 0$
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial(u_{i}^{'}\theta^{'})}{\partial z}
+\frac{\partial \overline{\theta}}{\partial t} = -\frac{\partial\overline{(u_{i}^{'}\theta^{'})}}{\partial z}
 \end{equation}
 
 ignoring horizontal fluxes
@@ -156,7 +156,8 @@ a_{3} = \frac{\sum^{n}_{k}z(i)\theta(i)}{\sum^{n}_{k}z(i)} - b_{3}\frac{\sum^{n}
 where $z(i)$ and $\theta(i)$ are a local height and potential temperature value at a particular height index $i$.  $j$ is the height index of the \acs{ML} top, $h_{0}$. $k$ is the height index for the top of the \acs{EZ}, $h_{1}$. $n$ is the total number of height levels.  The best fit is that with the smallest residual sum of squares   
 
 \begin{equation}
-RSS(j,k) = \sum^{j}_{0}(\theta(i) - (a_{1} + b_{1}z(i)))^{2} + \sum^{k}_{j}(\theta(i) - (a_{2} + b_{2}z(i)))^{2} + \sum^{n}_{k}(\theta(i) - (a_{3} + b_{3}z(i)))^{2}
+RSS(j,k) = \sum^{j}_{0}(\theta(i) - (a_{1} + b_{1}z(i)))^{2} + \sum^{k}_{j}(\theta(i) - (a_{2} + b_{2}z(i)))^{2} + \sum^{n}_{k}(\theta(i) \\
+- (a_{3} + b_{3}z(i)))^{2}
 \end{equation}.
 
 
