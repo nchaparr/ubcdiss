@@ -1,4 +1,4 @@
-%% The following is a directive for TeXShop to indicate the main file 
+%% The following is a directive for TeXShop to indicate the main file  
 %%!TEX root = diss.tex
 
 \chapter{Research Answers}
@@ -21,7 +21,7 @@ To answer \textbf{Q2 (Entrainment Zone Boundaries):}\\
 
 \textbf{of the resulting scaled depth ($\frac{\Delta h}{h}$) to \acs{Ri}?}\\
 
-in Section \ref{sec:deltahri}, Equation \ref{eq:dhvsri} will be plotted using height definitions based on the $\frac{\partial \overline{\theta}}{\partial z}$ profile as in Figure \ref{fig:hdefs} and Table \ref{table:reldefs}.  Since the choice of a threshold to determine the lower \acs{EZ} boundary is somewhat arbitrary, plots will be reproduced using two additional values. For comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}), Equation \ref{eq:dhvsri} will be plotted using heights based on the average heat flux ($\overline{w^{'}\theta^{'}}$) profile.\\   
+in Section \ref{sec:deltahri}, Equation \ref{eq:dhvsri} will be plotted using height definitions based on the $\frac{\partial \overline{\theta}}{\partial z}$ profile as in Figure \ref{fig:hdefs} and Table \ref{tab:reldefs}.  Since the choice of a threshold to determine the lower \acs{EZ} boundary is somewhat arbitrary, plots will be reproduced using two additional values. For comparison with the results of \citeauthor{FedConzMir04} (\citeyear{FedConzMir04}) and \citeauthor{BrooksFowler2} (\citeyear{BrooksFowler2}), Equation \ref{eq:dhvsri} will be plotted using heights based on the average heat flux ($\overline{w^{'}\theta^{'}}$) profile.\\   
 
 In Section \ref{sec:weri} the temperature jump will be defined in four ways to answer 
 
@@ -258,13 +258,11 @@ Figure \ref{fig:downwarm_wvel} shows that the velocity component $\overline{w^{'
 Using a multi-linear regression method, the local \acs{ML} heights ($h^{l}_{0}$) 
 were determined.  Although at each horizontal point an \acs{ML} of almost uniform $\theta$ based on the local profiles is evident, the region directly above it differs depending on location as well as from the average profile. 
 Since there is no reliable, local definition of $h$, 
-I take the distributions of local \acs{ML} height ($h^{l}_{0}$) to be a measure of \acs{CBL} height variance in space and so the \acs{EZ}.
- These distributions approached similarity when scaled by $h$, showing an increase in the lower 
-boundary (or percentile) with increased $\gamma$.  \bf{I interpret this result as an indication that increased $\gamma$ results in a narrower scaled \acs{EZ} depth}.\\
+I take the distributions of local \acs{ML} height ($h^{l}_{0}$) to be a measure of \acs{CBL} height variance in space and so the \acs{EZ}. Overall \acs{ML} height and it's variance increase with increasing $\overline{(w^{'}\theta^{'})}_{s}$ and decrease with increasing $\gamma$. These distributions approached similarity when scaled by $h$, showing an increase in the lower boundary (or percentile) with increased $\gamma$.  I interpret this result as an indication that increased $\gamma$ results in a narrower scaled \acs{EZ} depth.\\
 
-\bf{Two dimensional distributions of the local turbulent fluctuations, $w^{'}$ and $\theta^{'}$ at $h$, show some variation with $\gamma$ when scaled by the convective scales $w^{*}$ and $\theta^{*}$.  The distribution of $\frac{w^{'}}{w^{*}}$ where $\frac{\theta^{'}}{\theta^{*}}$ is positive narrows, while $\frac{\theta^{'}}{\theta^{*}}$ shifts positively.}\\
+Two dimensional distributions of the local turbulent fluctuations, $w^{'}$ and $\theta^{'}$ at $h$, widen with increasing $\overline{(w^{'}\theta^{'})}_{s}$ and narrow with increased $\gamma$.  Both $w^{'}$ and $\theta^{'}$ at $h$ show some variation with $\gamma$ when scaled by the convective scales $w^{*}$ and $\theta^{*}$.  The distribution of $\frac{w^{'}}{w^{*}}$ where $\frac{\theta^{'}}{\theta^{*}}$ is positive narrows, while $\frac{\theta^{'}}{\theta^{*}}$ shifts positively.\\
 
-Plots of the average downward moving warm quadrant at $h$ ( $(\overline{w^{'-}\theta^{'+}})_{h}$ ) show dependence on $(\overline{w^{'}\theta^{'}})_{s}$. Breaking $(\overline{w^{'-}\theta^{'+}})_{h}$ into its two components reveals dependence on both $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$. The average downward moving velocity at $h$ ( $(\overline{w^{'-}})_{h}$ ), at points where there is a positive potential temperature fluctuation ($\theta^{'+}$), show clear dependence on $w^{*}$.  Whereas the average positive potential temperature fluctuation $\overline{\theta^{'+}}_{h}$ where $w^{'}$ is negative seems to approach a constant value of $\delta h \gamma$. So as one would expect, the potential temperature of the entrained warm air depends on $\gamma$.
+Plots of the average downward moving warm quadrant at $h$ ( $(\overline{w^{'-}\theta^{'+}})_{h}$ ) show dependence on $(\overline{w^{'}\theta^{'}})_{s}$. Breaking $(\overline{w^{'-}\theta^{'+}})_{h}$ into its two components reveals dependence on both $(\overline{w^{'}\theta^{'}})_{s}$ and $\gamma$. The average downward moving velocity at $h$ ( $(\overline{w^{'-}})_{h}$ ), at points where there is a positive potential temperature fluctuation ($\theta^{'+}$), show clear dependence on $w^{*}$.  Whereas the average positive potential temperature fluctuation $\overline{\theta^{'+}}_{h}$ where $w^{'}$ is scaled by, and possibly approaches a constant value of $\delta h \gamma$. So as one would expect, the potential temperature of the entrained warm air depends on $\gamma$.
 
 \clearpage
 
@@ -301,7 +299,7 @@ according to $\gamma$ is evident in Figure \ref{fig:scaledeltahinvri}.\\
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/theta_grad_profs}
-    \caption[$\frac{\partial \overline{\theta}}{\partial z}$ profiles with threshold at $.0002Kkm^{-1}$]{$\frac{\partial \overline{\theta}}{\partial z}$ profiles with threshold at $.0002Kkm^{-1}$.  Black lines represent the threshold at $\frac{\partial \overline{\theta}}{\partial z} = 0.0002$ for the lower \acs{EZ} boundary, as well as the three lapse rates ($0.0025, \ 0.005$ and $.01 \ Km^{-1}$ ).}
+    \caption[$\frac{\partial \overline{\theta}}{\partial z}$ Profiles with Threshold at $.0002Kkm^{-1}$]{$\frac{\partial \overline{\theta}}{\partial z}$ profiles with threshold at $.0002Kkm^{-1}$.  Black lines represent the threshold at $\frac{\partial \overline{\theta}}{\partial z} = 0.0002$ for the lower \acs{EZ} boundary, as well as the three lapse rates ($0.0025, \ 0.005$ and $.01 \ Km^{-1}$ ).}
     \label{fig:thresh}   % label should change
 \end{figure}
 
@@ -319,7 +317,7 @@ according to $\gamma$ is evident in Figure \ref{fig:scaledeltahinvri}.\\
   %              \includegraphics[scale=.36]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri1}}\\
        
    %    \end{minipage}
-        \caption{Scaled EZ depth ($\frac{h_{1}-h_{0}}{h}$) vs inverse Richardson number ($\acs{Ri}_{Delta}^{-1}$) with threshold at $.0002Kkm^{-1}$}
+        \caption{Scaled EZ Depth ($\frac{h_{1}-h_{0}}{h}$) vs inverse Richardson Number ($\acs{Ri}_{Delta}^{-1}$) with threshold at $.0002Kkm^{-1}$}
          \label{fig:scaledeltahinvri}
 \end{figure}
 
@@ -334,7 +332,7 @@ In Figure \ref{fig:scaledeltahinvri2}, a lower threshold value ($.0001Kkm^{-1}$)
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_5}
-    \caption{Scaled EZ depth vs inverse Richardson Number with threshold at $.0004Kkm^{-1}$}
+    \caption{Scaled EZ depth vs inverse Richardson Number with Threshold at $.0004Kkm^{-1}$}
     \label{fig:scaledeltahinvri1}   % label should change
 \end{figure}
 
@@ -342,7 +340,7 @@ In Figure \ref{fig:scaledeltahinvri2}, a lower threshold value ($.0001Kkm^{-1}$)
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_6}
-    \caption{Scaled EZ depth vs inverse Richardson number (\acs{Ri}$^{-1}$) with threshold at $.0001Kkm^{-1}$}
+    \caption{Scaled EZ Depth vs inverse Richardson Number (\acs{Ri}$^{-1}$) with threshold at $.0001Kkm^{-1}$}
     \label{fig:scaledeltahinvri2}   % label should change
 \end{figure}
 
@@ -365,7 +363,7 @@ from a switch in the relative magnitudes of the vertical potential temperature g
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_theta_grad_profs}
-    \caption{Scaled $\frac{\partial \overline{\theta}}{\partial z}$ profiles with threshold at .03}
+    \caption{Scaled $\frac{\partial \overline{\theta}}{\partial z}$ Profiles with Threshold at .03}
     \label{fig:thresh3}   % label should change
 \end{figure}
 
@@ -377,14 +375,14 @@ Figure \ref{fig:loglogdeltahinvri} supports an exponent $b = -\frac{1}{2}$ at lo
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.44]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_4}
-    \caption[scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$]{Plot of scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$. \acs{EZ} boundaries and so $\Delta \theta = \overline{\theta}(h_{1}) - \overline{\theta}(h_{0})$ are based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile.}
+    \caption[Scaled \acs{EZ} Depth vs \acs{Ri}$^{-1}$]{Plot of scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$. \acs{EZ} boundaries and so $\Delta \theta = \overline{\theta}(h_{1}) - \overline{\theta}(h_{0})$ are based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile.}
     \label{fig:deltahinvri_scaled}   % label should change
 \end{figure}                      
 \vspace{-50mm}
 \begin{figure}[b]
 \centering
 \includegraphics[scale=.44]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/loglog_scaleddeltahinvri_4}\\
-\caption[Log-log plot of scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$]{Scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$ based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile in log-log coordinates to identify likely values of the exponent $b$}
+\caption[Log-log Plot of scaled \acs{EZ} Depth vs \acs{Ri}$^{-1}$]{Scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$ based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile in log-log coordinates to identify likely values of the exponent $b$}
 \label{fig:loglogdeltahinvri}
 \end{figure}
 
@@ -397,7 +395,7 @@ When based on the vertical heat flux profile, the scaled \acs{EZ} depth ($\frac{
 \begin{figure}[htbp]
     \centering
 \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_h_f0_time}              
-\caption[Scaled \acs{EZ} Boundaries based on the vertical heat flux profile]{Plot of scaled upper ($\frac{z_{f1}}{z_{f}}$) and lower ($\frac{z_{f0}}{z_{f}}$) \acs{EZ} boundaries based on vertical heat flux profile}
+\caption[Scaled \acs{EZ} Boundaries based on the vertical Heat Flux Profile]{Plot of scaled upper ($\frac{z_{f1}}{z_{f}}$) and lower ($\frac{z_{f0}}{z_{f}}$) \acs{EZ} boundaries based on vertical heat flux profile}
     \label{fig:scaledEZlims1}   % label should change
 \end{figure}
 
@@ -405,7 +403,7 @@ When based on the vertical heat flux profile, the scaled \acs{EZ} depth ($\frac{
     \centering
     %plot_height.py [master fd5c6b1] delta h vs time1  
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_f}
-    \caption[scaled \acs{EZ} depth vs \acs{Ri}$^{-1}$ based on the vertical heat flux profile]{Plots of scaled \acs{EZ} depth vs $\acs{Ri}_{\Delta}^{-1}$. \acs{EZ} boundaries and so $\Delta \theta$ are based on the $\frac{\overline{w^{'}\theta^{'}}}{(\overline{w^{'}\theta^{'}})_{s}}$ profile.}
+    \caption[Scaled \acs{EZ} Depth vs \acs{Ri}$^{-1}$ based on the vertical Heat Flux Profile]{Plots of scaled \acs{EZ} depth vs $\acs{Ri}_{\Delta}^{-1}$. \acs{EZ} boundaries and so $\Delta \theta$ are based on the $\frac{\overline{w^{'}\theta^{'}}}{(\overline{w^{'}\theta^{'}})_{s}}$ profile.}
     \label{fig:deltahinvri_scaled}   % label should change
 \end{figure}
 
@@ -423,7 +421,7 @@ were produced based on two additional threshold values yielding analogous result
 
 The importance of $\gamma$ is revealed again as the curves representing equation \ref{eq:dhvsri} become similar when heights are based on the scaled $\frac{\partial \overline{\theta}}{\partial z}$ profile, $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$. Further inspection shows that this change primarily occurs at the lower \acs{EZ} boundary ($h_{0}$) when $\frac{\partial \overline{\theta}}{\partial z}$ is measured as proportion of $\gamma$. The influence of $\gamma$ on $\frac{\partial \overline{\theta}}{\partial z}$ at $h_{0}$ ties in with the influence of $\gamma$ on downward moving $\theta^{'+}$ at $h$ shown in Section \ref{subsec:downwarm}.  This prompts the use of the scaled profiles for the heights ($h_{0}$, $h$, $h_{1}$ and $z_{f0}$, $z_{f}$, $z_{f1}$) in the subsequent section.\\
 
-\bf{These results support a varying exponent $b$ in Equation \ref{eq:dhvsri} which is lower in magnitude ($-\frac{1}{2}$) at lower \acs{Ri} and approaches $-1$ at higher \acs{Ri}.  This is in line with theory and the results of comparable studies so the \acs{EZ} boundary definitions based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid.}  For comparison with results from other studies these heights are also based on the vertical $\overline{w^{'}\theta^{'}}$ profiles as shown in Figure \ref{fig:hdefs}. I find no clear dependence of the scaled \acs{EZ} depth on \acs{Ri} within this framework. \\
+These results support a varying exponent $b$ in Equation \ref{eq:dhvsri} which is lower in magnitude ($-\frac{1}{2}$) at lower \acs{Ri} and approaches $-1$ at higher \acs{Ri}.  This is in line with theory and the results of comparable studies so the \acs{EZ} boundary definitions based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid.  For comparison with results from other studies these heights are also based on the vertical $\overline{w^{'}\theta^{'}}$ profiles as shown in Figure \ref{fig:hdefs}. I find no clear dependence of the scaled \acs{EZ} depth on \acs{Ri} within this framework. \\
 
 \clearpage
 
@@ -443,7 +441,7 @@ Figure \ref{fig:hdefs1} and the corresponding Richardson numbers (\acs{Ri}) will
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs_1.pdf}
-    \caption[Height definitions]{Height definitions based on the scaled average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
+    \caption[Height Definitions]{Height definitions based on the scaled average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
     \label{fig:hdefs1}   % label should change
 \end{figure}
 
@@ -456,7 +454,7 @@ focus on the attainment of a quasi-steady state regime in which their zero-order
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/hvstime}
-    \caption{$h$ vs time for all runs}
+    \caption{$h$ vs Time for all Runs}
     \label{fig:hvstime}   % label should change
 \end{figure}
 
@@ -464,7 +462,7 @@ focus on the attainment of a quasi-steady state regime in which their zero-order
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.5]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/hstimelog}
-    \caption{$h$ vs time for all runs on log-log coordinates}
+    \caption{$h$ vs Time for all Runs on log-log Coordinates}
     \label{fig:loghvstime}   % label should change
 \end{figure}
 
@@ -499,7 +497,7 @@ The inverse Richardson numbers (\acs{Ri}$_{\Delta}^{-1}$ and \acs{Ri}$_{\delta}^
                 \includegraphics[scale=.34]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime_delta}}\\
        
        \end{minipage}
-        \caption[Richardson numbers based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$]{Inverse Richardson number vs time based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$
+        \caption[Richardson Numbers based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$]{Inverse Richardson number vs time based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$
 profile using $\Delta \theta$ across the \acs{EZ} in (a) and $\delta \theta$ at $h$ in (b).  See Table \ref{tab:reldefs}.}
         \label{fig:invristime}
 \end{figure}
@@ -532,7 +530,7 @@ possibly approaches a value of $a = -1$ at higher \acs{Ri}$_{\delta}$ but a valu
           %plot_height [master 01c3721] scaledweinvri1
                 \includegraphics[scale=.34]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri_delta}}\\       
        \end{minipage}
-        \caption[Scaled entrainment rate vs inverse Richardson number]{Scaled entrainment rate vs inverse Richardson number (\acs{Ri}$^{-1}$), in log-log coordinates, where \acs{Ri} is based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile using $\Delta \theta$ across the \acs{EZ} in (a) and $\delta \theta$ at $h$ in (b). See Figure \ref{fig:hdefs1}.}
+        \caption[Scaled Entrainment Rate vs inverse Richardson Number (i)]{Scaled entrainment rate vs inverse Richardson number (\acs{Ri}$^{-1}$), in log-log coordinates, where \acs{Ri} is based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile using $\Delta \theta$ across the \acs{EZ} in (a) and $\delta \theta$ at $h$ in (b). See Figure \ref{fig:hdefs1}.}
         \label{fig:weinvri}
 \end{figure}
 
@@ -555,7 +553,7 @@ Richardson numbers with $\Delta \theta$ and $\delta \theta$ based on the $\overl
                 \includegraphics[scale=.34]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/invristime_delta_f}}\\
        
        \end{minipage}
-        \caption[Richardson numbers based on $\frac{\overline{w^{'}\theta^{'}}}{\overline{w^{'}\theta^{'}}_{s}}$]{Inverse Richardson number vs time based on the $\frac{\overline{w^{'}\theta^{'}}}{\overline{w^{'}\theta^{'}}_{s}}$
+        \caption[Richardson Numbers based on $\frac{\overline{w^{'}\theta^{'}}}{\overline{w^{'}\theta^{'}}_{s}}$]{Inverse Richardson number vs time based on the $\frac{\overline{w^{'}\theta^{'}}}{\overline{w^{'}\theta^{'}}_{s}}$
 profile using $\Delta \theta$ across the \acs{EZ} in (a) and $\delta \theta$ at $z_{f}$ in (b).  See Figure \ref{fig:hdefs} and Table \ref{tab:reldefs}.}
         \label{fig:invristime_f}
 \end{figure}
@@ -575,13 +573,13 @@ In Figure \ref{fig:weinvri_f} the axes are in log-log coordinates and all height
                 \includegraphics[scale=.335]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri_delta_f}}\\
        
        \end{minipage}
-        \caption[Scaled entrainment rate vs inverse Richardson number (ii)]{Scaled entrainment rate vs inverse Richardson number (\acs{Ri}$^{-1}$), in log-log coordinates, where \acs{Ri} is based on the $\frac{\overline{w^{'}\theta^{'}}}{(\overline{w^{'}\theta^{'}})_{s}}$
+        \caption[Scaled Entrainment Rate vs inverse Richardson Number (ii)]{Scaled entrainment rate vs inverse Richardson number (\acs{Ri}$^{-1}$), in log-log coordinates, where \acs{Ri} is based on the $\frac{\overline{w^{'}\theta^{'}}}{(\overline{w^{'}\theta^{'}})_{s}}$
 profile using $\Delta h$ across the \acs{EZ} in (a) and $\delta \theta$ at $z_{f}$ in (b).  See Figure \ref{fig:hdefs} and Table \ref{tab:reldefs}.}
         \label{fig:weinvri_f}
 \end{figure}
 
 \subsection{Answer to Q3}
-In conclusion the relationship of scaled entrainment rate to \acs{Ri}$_{\Delta}$ based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile shows the least scatter over time and between runs in Figure \ref{fig:weinvri}.  Here the exponent seems to start at a value close to $-1$ increasing in magnitude, with higher \acs{Ri}, to close to $-\frac{3}{2}$.  This apparent change with increased \acs{Ri} mirrors that seen with Equation \ref{eq:dhvsri} in Figure \ref{fig:loglogdeltahinvri}.  It's possible that it represents a change in entrainment mechanism as discussed in Section \ref{subsec:scales}.  \bf{Overall the definition of the temperature jump certainly has an effect, $\Delta \theta$ yielding a value of $a$ higher in magnitude than $\delta \theta$.}
+In conclusion the relationship of scaled entrainment rate to \acs{Ri}$_{\Delta}$ based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile shows the least scatter over time and between runs in Figure \ref{fig:weinvri}.  Here the exponent seems to start at a value close to $-1$ increasing in magnitude, with higher \acs{Ri}, to close to $-\frac{3}{2}$.  This apparent change with increased \acs{Ri} mirrors that seen with Equation \ref{eq:dhvsri} in Figure \ref{fig:loglogdeltahinvri}.  It's possible that it represents a change in entrainment mechanism as discussed in Section \ref{subsec:scales}.  Overall the definition of the temperature jump certainly has an effect, $\Delta \theta$ yielding a value of $a$ higher in magnitude than $\delta \theta$.
 
 \endinput
 

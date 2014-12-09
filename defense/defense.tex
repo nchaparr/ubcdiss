@@ -34,8 +34,8 @@
 \put(-28.45,-142){\includegraphics[width=\paperwidth]{FrontPage.png}}
 \end{picture}
 \FrameText{
-\textcolor{white}{\bf{\LARGE The Effects of two Parameters on idealised Convecitve Boundary Layer Entrainment}}\\
-\textcolor{white}{\bf{\LARGE MSc Defense}}\\
+\textcolor{white}{\bf{\LARGE The Effects of two Parameters on idealized Convective Boundary Layer Entrainment}}\\
+\textcolor{white}{\bf{\LARGE M.Sc. Defense}}\\
 \textcolor{white}{\bf{Niamh Chaparro}}}
 \end{frame}
 
@@ -44,7 +44,7 @@
 %\FrameText{what is the convective boundary layer and its entrainment zone}
 \begin{figure}
 \centering
-\includegraphics[scale = 1, trim = 0 15 0 0, clip]{/newtera/tera/phil/nchaparr/tera2_cp/nchaparr/ubcdiss/pngs/cbl}
+\includegraphics[scale = 1.2, trim = 0 15 0 0, clip]{/newtera/tera/phil/nchaparr/tera2_cp/nchaparr/ubcdiss/pngs/cbl}
 \fontsize{12pt}{7.2}\selectfont
 \caption{Representation of the time evolution of the convective boundary layer adapted from Stull 1988.}
 \end{figure}
@@ -63,7 +63,7 @@
 \item knowledge of EZ depth and lifting condensation level\\
  enables cloud cover prediction
 \vspace{10mm}
-\item parametrizations for both are required in\\ 
+\item parameterizations for both are required in\\ 
 global circulation models (GCMs)
 \end{itemize}
 %\textcolor{white}{\bf{\LARGE }}\\
@@ -80,7 +80,8 @@ global circulation models (GCMs)
 \begin{itemize}
 \item measurement based
 \vspace{10mm} 
-\item numerical models that use the Navier Stokes Equations: large eddy simulation (LES), direct numerical simulation (DNS)
+\item numerical models that solve the Navier Stokes Equations:\\
+large eddy simulation (LES), direct numerical simulation (DNS)
 \vspace{10mm}
 \item bulk models based on average quantities and simplified profiles
 \end{itemize}
@@ -93,13 +94,14 @@ global circulation models (GCMs)
 \FrameText{There is ongoing discussion about:
 \vspace{10mm}
 \begin{itemize}
-\item the critical resolution for capturing entrainment
+\item the critical discrete resolution for capturing entrainment\\
+in numerical models
 \vspace{10mm}
-\item the multitude of definitions (e.h. CBL height, EZ boundaries)
+\item the multitude of definitions of CBL height and EZ boundaries
 \vspace{10mm}
 \item the form of the relationships of CBL growth\\ 
 ($w_{e}$ entrainment rate) and EZ depth ($\Delta h$)  to \\
-convecitive Richardson number ($Ri$ defined later)
+convective Richardson number ($Ri$ defined later)
 \end{itemize}
 }
 \end{frame}
@@ -108,10 +110,11 @@ convecitive Richardson number ($Ri$ defined later)
 \begin{frame}
 \frametitle{4}
 \fontsize{12pt}{7.2}\selectfont
-\FrameText{I set out to:
+\FrameText{I set out to model a dry, idealized CBL\\
+without large scale winds and:
 \vspace{10mm}
 \begin{itemize}
-\item apply resolution at which convergence occured\\
+\item apply optimal discrete resolution\\
 (Peter P. Sullivan and Edward G. Patton 2011)
 \vspace{10mm}  
 \item define CBL height and EZ limits based on the average \\
@@ -127,18 +130,18 @@ $\theta$ profile
 \begin{frame}
 \frametitle{5}
 \fontsize{12pt}{7.2}\selectfont
-\FrameText{I modeled a dry idealized CBL, wihout large scale winds\\using the LES System for Atmospheric Modelling (SAM):
-\vspace{10mm}
+\FrameText{I used the LES, System for Atmospheric Modelling (SAM) which:
+\vspace{7mm}
 \begin{itemize}
-\item Anelastic equations of motion
-\vspace{10mm} 
-\item Liquid/Ice static energy ($h_{l}$) is the prognosed thermodynamical variable
-\vspace{10mm}
-\item First order Smagorinksi closure
-\vspace{10mm}
-\item Fully stagered Arakawa c grid
-\vspace{10mm}
-\item three dimensional positive definite advection of scalars
+\item solves the Anelastic equations of motion on a cully staggered\\
+Arakawa c grid
+\vspace{7mm} 
+\item prognoses Liquid/Ice static energy ($h_{l}$) 
+\vspace{7mm}
+\item uses first order Smagorinksi closure
+\vspace{7mm}
+\item advects scalars using a three dimensional positive\\
+definite scheme
 \end{itemize}
 }
 \end{frame}
@@ -179,7 +182,7 @@ $\theta$ profile
 \caption[]{Definitions based on the vertical $\overline{\theta}$ profile in Figure 2.}
     \begin{center}
 %\centerline{
-    \begin{tabular}{ p{1cm} p{2cm} p{2cm}  p{2cm}  p{2cm} p{2.5cm} }
+    \begin{tabular}{ p{.9cm} p{1.9cm} p{2cm}  p{2.3cm}  p{2cm}}
     %\hline
       CBL& ML $\overline{\theta}$ & Deardorff & $\theta$ Jump &Richardson\\
       Height&($\overline{\theta}_{ML}$)&Velocity&($\Delta \theta$)&Number\\
@@ -197,6 +200,7 @@ $\theta$ profile
 %\begin{frame}[t]{}
  \begin{figure}[ht]
    \includemovie[autoplay, repeat=50]{8cm}{6cm}{theta.avi}
+ \caption[]{Horizontal slice of Potential Temperature ($\theta$): Darker shading represents $\theta$ close to the mixed layer average ($\overline{\theta}_{ML}$) and lighter represents warmer $\theta$.}
  \end{figure}
 %\end{frame}
 %\FrameText{\bf{\large}}
@@ -205,6 +209,7 @@ $\theta$ profile
 \begin{frame}
 \frametitle{8}
 \fontsize{12pt}{7.2}\selectfont
+\vspace{3.25mm}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rss_fit_high}
@@ -285,8 +290,8 @@ $\theta$ profile
 \FrameText{\bf{\large Conclusion:}
 \vspace{5mm}
 \begin{itemize}
-\item \bf{\large The scaled lowest local CBL heights decrease\\
-with decreased stability}
+\item \bf{\large The scaled lowest local CBL heights increase\\
+with increased stability}
 \end{itemize}
 }
 \end{frame}
@@ -298,9 +303,8 @@ with decreased stability}
 \fontsize{12pt}{7.2}\selectfont
 \begin{figure}
 \centering
-\includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/theta_flux_profs}
+\includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/theta_flux_profs}
 \caption{Evolution of (left) Ensemble and horizontally averaged $\theta$, (middle) its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$) and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
-\caption{}
 \end{figure}
 \end{frame}
 
@@ -334,8 +338,8 @@ with decreased stability}
 \FrameText{\bf{\large Conclusion:}
 \vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{The scaled lowest local heights decrease\\
-with decreased stability}
+\item \textcolor{gray}{The scaled lowest local heights increase\\
+with inccreased stability}
 \vspace{5mm}
 \item \bf{\large The scaled lower EZ boundary increases with\\
 increased $Ri$}\\
@@ -343,16 +347,6 @@ increased $Ri$}\\
 }
 \end{frame}
 
-\begin{frame}
-\fontsize{12pt}{7.2}\selectfont
-\frametitle{18}
-%\FrameText{Now look at relationship of scaled EZ depth to Richardson number:
-%}
-\begin{figure}
-\centering
-\includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri}
-\end{figure}
-\end{frame}
 
 \begin{frame}
 \fontsize{12pt}{7.2}\selectfont
@@ -396,7 +390,7 @@ increased $Ri$}\\
     \includegraphics[scale = 0.28]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaled_theta_grad_profs}
    \end{column}     
 \end{columns}
-\caption{Definition of lower EZ boundary based on $\frac{\partial \overline{\theta}}{\partial z}$ (left) and $\frac{\partial \overline{\theta}}{\partial z}\/gamma$ (right)}
+\caption{Definition of lower EZ boundary based on $\frac{\partial \overline{\theta}}{\partial z}$ (left) and $\frac{\partial \overline{\theta}}{\partial z}/ \gamma$ (right)}
 \end{figure}
 \end{frame}
 
@@ -424,10 +418,11 @@ increased $Ri$}\\
 \fontsize{12pt}{7.2}\selectfont
 \FrameText{:
 }
+\vspace{3mm}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaleddeltahinvri_4}
-\caption{Plot of relationship of scaled EZ depth to $Ri$: $\frac{\Delta h}{h} \propto Ri ^{b}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}\/gamma$}
+\caption{Plot of relationship of scaled EZ depth to $Ri$: $\frac{\Delta h}{h} \propto Ri ^{b}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}/ \gamma$}
 
 \end{figure}
 
@@ -456,6 +451,17 @@ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\parti
 %\end{frame}
 
 \begin{frame}
+\frametitle{27}
+\fontsize{12pt}{7.2}\selectfont
+%\FrameText{Why $\delta h \gamma$ is so effective:}
+\begin{figure}
+\includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/tera2_cp/nchaparr/ubcdiss/pngs/deltagamma}
+\caption{Representation of potential temperature fluctuation scale for the EZ $\delta h \gamma$}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
 \fontsize{12pt}{7.2}\selectfont
 \frametitle{26}
 %\FrameText{$\theta^{'+}_{h} \ where w^{'}<0$ is effectively scaled by $\delta h \gamma$, where $\delta h = h_{1} - h$:
@@ -474,15 +480,6 @@ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\parti
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{27}
-\fontsize{12pt}{7.2}\selectfont
-%\FrameText{Why $\delta h \gamma$ is so effective:}
-\begin{figure}
-\includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/tera2_cp/nchaparr/ubcdiss/pngs/deltagamma}
-\caption{Representation of potential temperature flucation scale for the EZ $\delta h \gamma$}
-\end{figure}
-\end{frame}
 
 \begin{frame}
 \frametitle{28}
@@ -506,6 +503,7 @@ fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by
 \fontsize{12pt}{7.2}\selectfont
 %\FrameText{The exponent of $\frac{\Delta h}{h} \propto Ri^{b}$ is in line with theory and results of other studies, and changes:
 %}
+\vspace{3mm}
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/loglog_scaleddeltahinvri_4}
@@ -518,6 +516,7 @@ fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by
 \fontsize{12pt}{7.2}\selectfont
 %\FrameText{As does the exponent of $\frac{w_{e}}{w^{*}} \propto  Ri^{a}$:}
 \begin{figure}
+\vspace{3mm}
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/scaledweinvri_Delta}
 \caption{Plot of relationship of scaled CBL entrainment rate to $Ri$: $\frac{w_{e}}{w^{*}} \propto  Ri^{a}$ with EZ boundaries based on $\frac{\partial \overline{\theta}}{\partial z}\/gamma$ in log-log coordinates}
 \end{figure}
@@ -526,38 +525,40 @@ fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by
 \begin{frame}
 \frametitle{31}
 \FrameText{\bf{\large Conclusions:}
-\vspace{5mm}
+\vspace{2.8mm}
 \begin{itemize}
 \item \bf{\large scaled lowest local heights increase with\\
  increased stability}
-\vspace{5mm}
+\vspace{2.8mm}
 \item \bf{\large scaled lower boundary based on average profile\\
 increases with increased $Ri$}
-\vspace{5mm}
+\vspace{2.8mm}
 \item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$\\
 when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse\\
 when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$}
-\vspace{5mm} 
+\vspace{2.8mm} 
 \item \bf{\large downward moving positive potential temperature\\
 fluctuations at $h$ are scaled by $\delta h \gamma$}
-\vspace{5mm}
-\item \bf{\large there is a change in entrainment regime with increased richardson number}
+\vspace{2.8mm}
+\item \bf{\large there is a change in entrainment regime with increased Richardson number}
 \end{itemize}
 }
 \end{frame}
 
 \begin{frame}
 \frametitle{32}
-\FrameText{\bf{\large Conclusion:}
+\FrameText{\bf{\large Conclusions:}
 \vspace{5mm}
 \begin{itemize}
-\item \bf{\large scaled EZ depth decreases with increasd $Ri$}
+\item \bf{\large scaled EZ depth decreases with increased $Ri$}
 \vspace{5mm}
-\item \bf{\large $\frac{\partial \overline{\theta}}{\partial z}$ in the upper (CBL) and  $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ depend on $\gamma$}
+\item \bf{\large $\frac{\partial \overline{\theta}}{\partial z}$ in the upper CBL\\ and  $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ depend on $\gamma$}
 \vspace{5mm}
-\item \bf{\large there is a change in entrainment regime with increased $Ri$}
+\item \bf{\large there is a change in entrainment regime with\\
+increased $Ri$}
 \vspace{5mm}
-\item \bf{\large definitions of CBL height and EZ boundaries based on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid}
+\item \bf{\large definitions of CBL height and EZ boundaries based\\
+on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid}
 \end{itemize}
 }
 \end{frame}
