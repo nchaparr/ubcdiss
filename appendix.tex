@@ -13,7 +13,7 @@ $p_{0}$ and $p$ are a reference pressure and pressure respectively.
 \frac{c_{p}}{\theta}\frac{d\theta}{dt} = \frac{c_{p}}{T} \frac{dT}{dt} - \frac{R_{d}}{p}\frac{dp}{dt} 
 \end{equation}
 
-If changes in pressure are negligible compared to overall pressure, as in the case of that part atmosphere that extends from the surface to 2km above it. 
+If changes in pressure are negligible compared to overall pressure, as in the case of that part atmosphere that extends from the surface to 2 km above it. 
 
 \begin{equation}
 c_{p}\frac{d\theta}{\theta} = c_{p}\frac{dT}{T} - \frac{R_{d}}{p}\frac{dp}{p} 
@@ -91,22 +91,22 @@ $\nu$ and $Q^{*}$ are the thermal diffusivity and net radiation respectively.  I
 \frac{\partial \overline{\theta}}{\partial t} + \frac{\partial \theta^{'}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \overline{\theta}}{\partial x_{i}} + \overline{u_{i}}\frac{\partial \theta^{'}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}} = 0
 \end{equation}
 
-Averaging and getting rid of average variances and their linear products
+Applying Reynolds averaging gives
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + u_{i}^{'}\frac{\partial \overline{\theta^{'}}}{\partial x_{i}} = 0
+\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}}\frac{\partial \overline{\theta}}{\partial x_{i}} + \overline{u_{i}^{'}\frac{\partial\theta^{'}}{\partial x_{i}}} = 0
 \end{equation}
 
 Ignoring mean winds
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + u_{i}^{'}\frac{\partial \overline{\theta^{'}}}{\partial x_{i}} = 0
+\frac{\partial \overline{\theta}}{\partial t} + \overline{u_{i}^{'}\frac{\partial \theta^{'}}{\partial x_{i}}} = 0
 \end{equation}
 
 using flux form
 
 \begin{equation}
-\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial(\overline{u_{i}^{'}\theta^{'}})}{\partial x_{i}} - \theta^{'}\frac{\partial \overline{u_{i}^{'}}}{\partial x_{i}}= 0
+\frac{\partial \overline{\theta}}{\partial t} + \frac{\partial(\overline{u_{i}^{'}\theta^{'}})}{\partial x_{i}} - \overline{\theta^{'}\frac{\partial u_{i}^{'}}{\partial x_{i}}}= 0
 \end{equation}
 
 under the bousinesq assumption $\Delta \cdot u_{i} = 0$
@@ -124,7 +124,7 @@ ignoring horizontal fluxes
 
 \section{Tri-Linear Fit for Determining local \acs{ML} height $h^{l}_{0}$}
 \label{sec:trilin}
-The following is a modified version of the piecewise linear regression method used in \citeauthor{Vieth} (\citeyear{Vieth}) and was implemented using Cython.  Potential temperature is assumed to be linear function of height 
+The following is a modified version of the piecewise linear regression method used in \citeauthor{Vieth} (\citeyear{Vieth}) and was implemented using Cython (\citeauthor{behnel2010} \citeyear{behnel2010}).  Potential temperature is assumed to be linear function of height 
 
 \begin{equation}
 \theta = bz + a 

@@ -34,8 +34,9 @@
 \put(-28.45,-142){\includegraphics[width=\paperwidth]{FrontPage.png}}
 \end{picture}
 \FrameText{
-\textcolor{white}{\bf{\LARGE The Effects of two Parameters on idealized Convective Boundary Layer Entrainment}}\\
-\textcolor{white}{\bf{\LARGE M.Sc. Defense}}\\
+\textcolor{white}{\bf{\Large The Effects of two Parameters on idealized\\
+Convective Boundary Layer Entrainment}}\\
+\textcolor{white}{\bf{\Large M.Sc. Defense}}\\
 \textcolor{white}{\bf{Niamh Chaparro}}}
 \end{frame}
 
@@ -66,8 +67,8 @@
 \item parameterizations for both are required in\\ 
 global circulation models (GCMs)
 \end{itemize}
-%\textcolor{white}{\bf{\LARGE }}\\
-%\textcolor{white}{\bf{\LARGE }}\\
+%\textcolor{white}{\bf{\Large }}\\
+%\textcolor{white}{\bf{\Large }}\\
 %\textcolor{white}{\bf{, MSc , }}
 }
 \end{frame}
@@ -77,14 +78,14 @@ global circulation models (GCMs)
 \fontsize{12pt}{7.2}\selectfont
 \FrameText{Three types of CBL entrainment Studies:
 \vspace{10mm}
-\begin{itemize}
+\begin{enumerate}
 \item measurement based
 \vspace{10mm} 
 \item numerical models that solve the Navier Stokes Equations:\\
 large eddy simulation (LES), direct numerical simulation (DNS)
 \vspace{10mm}
 \item bulk models based on average quantities and simplified profiles
-\end{itemize}
+\end{enumerate}
 }
 
 \end{frame}
@@ -110,17 +111,16 @@ convective Richardson number ($Ri$ defined later)
 \begin{frame}
 \frametitle{4}
 \fontsize{12pt}{7.2}\selectfont
-\FrameText{I set out to model a dry, idealized CBL\\
-without large scale winds and:
+\FrameText{I modelled a dry, idealized CBL w/out large scale winds and:
 \vspace{10mm}
 \begin{itemize}
-\item apply optimal discrete resolution\\
+\item applied optimal discrete resolution ($\Delta x = 25m$, $\Delta y = 25m$ and $\Delta z = 5m$)\\
 (Peter P. Sullivan and Edward G. Patton 2011)
 \vspace{10mm}  
-\item define CBL height and EZ limits based on the average \\
+\item defined CBL height and EZ limits based on the average \\
 $\theta$ profile
 \vspace{10mm}
-\item investigate the resulting relationships of $w_{e}$ and \\
+\item investigated the resulting relationships of $w_{e}$ and \\
  $\Delta h$ to $Ri$:
 \end{itemize}
 }
@@ -130,10 +130,10 @@ $\theta$ profile
 \begin{frame}
 \frametitle{5}
 \fontsize{12pt}{7.2}\selectfont
-\FrameText{I used the LES, System for Atmospheric Modelling (SAM) which:
+\FrameText{I used LES, System for Atmospheric Modelling (SAM) which:
 \vspace{7mm}
 \begin{itemize}
-\item solves the Anelastic equations of motion on a cully staggered\\
+\item solves the Anelastic equations of motion on an\\
 Arakawa c grid
 \vspace{7mm} 
 \item prognoses Liquid/Ice static energy ($h_{l}$) 
@@ -150,7 +150,7 @@ definite scheme
 \frametitle{6}
 \begin{table}[!ht]
 \fontsize{12pt}{7.2}\selectfont
-\caption{Table of 10-ensemble Runs in terms of the two external parameters: surface heat flux ($\overline{w^{'} \theta^{'}_{s}}$) and initial lapse rate $\gamma$}
+\caption{Table of 10-ensemble runs in terms of the two external parameters: surface heat flux ($\overline{w^{'} \theta^{'}_{s}}$) and initial Lapse Rate $\gamma$.  These legends will be used in plots throughout.}
     \centering
     \begin{tabular}{ | l | l | l | l |}
     \hline
@@ -161,7 +161,7 @@ definite scheme
 \end{tabular}
 \label{fig:tableofruns}   
 \end{table}
-\footnotetext{Incomplete run: EZ exceeded high resolution vertical grid after 7 hours}
+\footnotetext{Incomplete Run: EZ exceeded high resolution vertical grid after 7 hours}
 \end{frame}
 
 \begin{frame}
@@ -171,7 +171,7 @@ definite scheme
     \centering
     %plot_height.py[master 1573b9d] h vs time plot
     \includegraphics[scale=.45]{/newtera/tera/phil/nchaparr/python/Plotting/Dec252013/pngs/height_defs.pdf}
-    \caption{Height definitions based on the average vertical profiles. $\theta_{0}$ is the initial potential temperature.}
+    \caption{Height definitions based on the average vertical profiles: $\theta_{0}$ is the initial potential temperature. $\Delta h = h_{1} - h_{0}$}
     %\label{fig:hdefs}   % label should change
 \end{figure}
 \end{frame}
@@ -200,7 +200,7 @@ definite scheme
 %\begin{frame}[t]{}
  \begin{figure}[ht]
    \includemovie[autoplay, repeat=50]{8cm}{6cm}{theta.avi}
- \caption[]{Horizontal slice of Potential Temperature ($\theta$): Darker shading represents $\theta$ close to the mixed layer average ($\overline{\theta}_{ML}$) and lighter represents warmer $\theta$.}
+ \caption[]{Horizontal slice of potential temperature ($\theta$): darker shading represents $\theta$ close to the mixed layer average ($\overline{\theta}_{ML}$) and lighter represents warmer $\theta$.}
  \end{figure}
 %\end{frame}
 %\FrameText{\bf{\large}}
@@ -213,7 +213,7 @@ definite scheme
 \begin{figure}
 \centering
 \includegraphics[scale=.4]{/newtera/tera/phil/nchaparr/python/Plotting/Mar52014/pngs/rss_fit_high}
-\caption{Local $\theta$ profile at a single horizontal point where height is relatively high, at 5 simulated hours (left).  On the right Tri-linear fit to the local $\theta$ profile with a line for each of the 3 layers: mixed layer (ML), EZ and free atmosphere (FA).}
+\caption{Local $\theta$ profile at a single horizontal point where height is relatively high, at 5 simulated hours (right).  Tri-linear fit to the local $\theta$ profile (left) with a line for each of the 3 layers: mixed layer (ML), EZ and free atmosphere (FA).}
 \end{figure}
 \end{frame}
 
@@ -287,10 +287,10 @@ definite scheme
 
 \begin{frame}
 \frametitle{13}
-\FrameText{\bf{\large Conclusion:}
+\FrameText{\bf{\Large Conclusion:}
 \vspace{5mm}
 \begin{itemize}
-\item \bf{\large The scaled lowest local CBL heights increase\\
+\item \bf{\Large The scaled lowest local CBL heights increase\\
 with increased stability}
 \end{itemize}
 }
@@ -304,7 +304,7 @@ with increased stability}
 \begin{figure}
 \centering
 \includegraphics[scale=.35]{/newtera/tera/phil/nchaparr/python/Plotting/Nov302013/pngs/theta_flux_profs}
-\caption{Evolution of (left) Ensemble and horizontally averaged $\theta$, (middle) its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$) and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
+\caption{Evolution of (left) ensemble and horizontally averaged $\theta$, (middle) its vertical gradient ($\frac{\partial \overline{\theta}}{\partial z}$) and (right) vertical heat flux ($\overline{w^{'}\theta^{'}}$)}
 \end{figure}
 \end{frame}
 
@@ -335,14 +335,14 @@ with increased stability}
 
 \begin{frame}
 \frametitle{17}
-\FrameText{\bf{\large Conclusion:}
+\FrameText{\bf{\Large Conclusion:}
 \vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{The scaled lowest local heights increase\\
-with inccreased stability}
-\vspace{5mm}
-\item \bf{\large The scaled lower EZ boundary increases with\\
-increased $Ri$}\\
+%\item \textcolor{gray}{The scaled lowest local heights increase\\
+%with inccreased stability}
+%\vspace{5mm}
+\item \bf{\Large The scaled lower EZ boundary increases \\
+with increased $Ri$}
 \end{itemize}
 }
 \end{frame}
@@ -362,15 +362,16 @@ increased $Ri$}\\
 
 \begin{frame}
 \frametitle{20}
-\FrameText{\bf{\large Conclusion}:
+\FrameText{\bf{\Large Conclusion}:
 \vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
-\vspace{5mm}
-\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$} \\
-\vspace{5mm}
-\item \bf{ \large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$}\\
-\bf{ \large group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$}
+%\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+%\vspace{5mm}
+%\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$} \\
+%\vspace{5mm}
+\item \bf{\Large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according\\
+
+to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$}
 \end{itemize}
 }
 \end{frame}
@@ -430,15 +431,15 @@ increased $Ri$}\\
 
 \begin{frame}
 \frametitle{24}
-\FrameText{\bf{\large Conclusion}:
+\FrameText{\bf{\Large Conclusion}:
 \vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
-\vspace{5mm}
-\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased stability and over time}
-\vspace{5mm}
-\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$\\
-when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$\\
+%\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+%\vspace{5mm}
+%\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased stability and over time}
+%\vspace{5mm}
+\item \bf{\Large curves representing $\frac{\Delta h}{h} \propto Ri ^{b}$ group\\
+according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$\\
 but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$} 
 \end{itemize}
 }
@@ -483,17 +484,20 @@ but collapse when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\parti
 
 \begin{frame}
 \frametitle{28}
-\FrameText{\bf{\large Conclusion:}
+\FrameText{\bf{\Large Conclusion:}
 \vspace{5mm}
 \begin{itemize}
-\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
-\vspace{5mm}
-\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$}
-\vspace{5mm}
-\item \textcolor{gray}{curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\partial \overline{\theta}}{\partial z}/\gamma$}
-\vspace{5mm} 
-\item \bf{\large downward moving positive potential temperature\\
-fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by $\delta h \gamma$}
+%\item \textcolor{gray}{scaled lowest local heights increase with increased stability}
+%\vspace{5mm}
+%\item \textcolor{gray}{scaled lower boundary based on average profile increases with increased $Ri$}
+%\vspace{5mm}
+%\item \textcolor{gray}{curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$ when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse when EZ is based on $\frac{\partial \overline{\theta}}{\partial z}/\gamma$}
+%\vspace{5mm} 
+\item \bf{\Large downward moving positive potential \\
+
+temperature fluctuations at $h$ \\
+
+($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by $\delta h \gamma$}
 \end{itemize}
 }
 \end{frame}
@@ -522,45 +526,46 @@ fluctuations at $h$ ($\overline{\theta^{'+}}_{h}$ where $w^{'}<0$) are scaled by
 \end{figure}
 \end{frame}
 
+
 \begin{frame}
-\frametitle{31}
-\FrameText{\bf{\large Conclusions:}
-\vspace{2.8mm}
+\frametitle{32}
+\FrameText{\bf{\large Specific Conclusions:}
+\vspace{3mm}
 \begin{itemize}
-\item \bf{\large scaled lowest local heights increase with\\
- increased stability}
-\vspace{2.8mm}
-\item \bf{\large scaled lower boundary based on average profile\\
-increases with increased $Ri$}
-\vspace{2.8mm}
-\item \bf{\large curves representing  $\frac{\Delta h}{h} \propto Ri ^{b}$ group according to $\gamma$\\
-when EZ is defined based on $\frac{\partial \overline{\theta}}{\partial z}$ but collapse\\
-when EZ is based on $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$}
-\vspace{2.8mm} 
-\item \bf{\large downward moving positive potential temperature\\
-fluctuations at $h$ are scaled by $\delta h \gamma$}
-\vspace{2.8mm}
-\item \bf{\large there is a change in entrainment regime with increased Richardson number}
+\item \bf{\large scaled EZ depth decreases with increased $Ri$}
+\vspace{3mm}
+\item \bf{\large $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ and $\frac{\partial \overline{\theta}}{\partial z}$ in the upper CBL\\
+depend on $\gamma$}
+\vspace{3mm}
+\item \bf{\large there is a change in entrainment regime with\\
+increased $Ri$}
+\vspace{3mm}
+\item \bf{\large definitions of CBL height and EZ boundaries based\\
+on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid}
 \end{itemize}
 }
 \end{frame}
 
 \begin{frame}
 \frametitle{32}
-\FrameText{\bf{\large Conclusions:}
-\vspace{5mm}
+\FrameText{
+\bf{\large General Conclusions:}
+\vspace{3mm}
 \begin{itemize}
-\item \bf{\large scaled EZ depth decreases with increased $Ri$}
-\vspace{5mm}
-\item \bf{\large $\frac{\partial \overline{\theta}}{\partial z}$ in the upper CBL\\ and  $\overline{\theta^{'+}}_{h}$ where $w^{'}<0$ depend on $\gamma$}
-\vspace{5mm}
-\item \bf{\large there is a change in entrainment regime with\\
-increased $Ri$}
-\vspace{5mm}
-\item \bf{\large definitions of CBL height and EZ boundaries based\\
-on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile are valid}
+\item \bf{\large given agreement with a recent DNS study\\ 
+SAM effectively models idealized CBL entrainment\\
+at this resolution}
+\vspace{3mm}
+%\item \bf{\Huge}
+%\vspace{3mm}
+
+\item \bf{\large Parametrizations f\\
+and entrainment zone thickness\\
+may need take regime change into consideration\\
+ie include a critical $Ri$}
 \end{itemize}
 }
+
 \end{frame}
 
 \begin{frame}
@@ -569,10 +574,24 @@ on the $\frac{\frac{\partial \overline{\theta}}{\partial z}}{\gamma}$ profile ar
 \begin{thebibliography}{99}
 \bibitem{SullPat} Peter P. Sullivan and Edward G. Patton 2011: \emph{The Effect of Mesh Resolution on Convective Boundary Layer Statistics and Structures Generated by Large Eddie Simulation}. Journal of the Atmospheric Sciences, 58, 2395-2415.
 \bibitem{Stull-BLMetIntro} Roland Stull 1988: \emph{An Introduction to Boundary Layer Meteorology}. Kluwer Academic Publishers.
-
 \end{thebibliography}
 \end{frame}
 
+\begin{frame}
+\frametitle{33}
+\vspace{5mm}
+\centering
+\bf{\Huge Thank You}\\
+
+\hspace{20mm} especially to Douw, Phil and Roland :)
+\end{frame}
+
+\begin{frame}
+\frametitle{33}
+\vspace{5mm}
+\centering
+\bf{\Huge Questions?}\\
+\end{frame}
 
 \end{document}
 

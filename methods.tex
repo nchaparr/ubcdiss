@@ -89,7 +89,7 @@ Newtonian damping is applied in the top third of the domain to reduce the effect
 
 \section{Handling of Output}
 
-The model was run on parallel computers in a Linux environment using Message Passing Interface (MPI). 3d variable fields were output every 10 - 15 minutes in binary form and converted to Network Common Data Form (NetCDF).  The use of Python was enabled using the netcdf4 interface.  Plotting was done using matplotlib. Most analyses were performed using NumPy and SciPy.  The tri-linear regression method, described in Appendix \ref{sec:trilin}, for determining local \acs{ML} height was implemented using Cython.
+The model was run on parallel computers in a Linux environment using Message Passing Interface (MPI). 3d variable fields were output every 10 - 15 minutes in binary form and converted to Network Common Data Form (NetCDF).  The use of Python was enabled using the netcdf4 interface.  Plotting was done using matplotlib (\citeauthor{Hunter:2007} \citeyear{Hunter:2007}). Most analyses were performed using NumPy and SciPy (\citeauthor{Jones} \citeyear{Jones}).  The tri-linear regression method, described in Appendix \ref{sec:trilin}, for determining local \acs{ML} height was implemented using Cython.
 
 \endinput
 
